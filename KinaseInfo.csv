@@ -1,0 +1,537 @@
+Kinase Symbol ,Kinase Name,Group,Family,SubFamily,Uniprot Accession Number
+ABL1,Tyrosine-protein kinase ABL1,TK,Abl,,P00519
+ACK,Activated CDC42 kinase 1,TK,Ack,,Q07912
+ACTR2,Activin receptor type-2A,TKL,STKR,STKR2,P27037
+ACTR2B,Activin receptor type-2B,TKL,STKR,STKR2,Q13705
+ADCK4,Uncharacterized aarF domain-containing protein kinase 4,Atypical,ABC1,ABC1-A,Q96D53
+Trb1,Tribbles homolog 1,CAMK,Trbl,,Q96RU8
+BRSK2,Serine/threonine-protein kinase BRSK2,CAMK,CAMKL,BRSK,Q8IWQ3
+Wnk2,Serine/threonine-protein kinase WNK2,Other,WNK,,Q9Y3S1
+AKT1,RAC-alpha serine/threonine-protein kinase,AGC,Akt,,P31749
+AKT2,RAC-beta serine/threonine-protein kinase,AGC,Akt,,P31751
+AKT3,RAC-gamma serine/threonine-protein kinase,AGC,Akt,,Q9Y243
+CaMK1g,Calcium/calmodulin-dependent protein kinase type 1G,CAMK,CAMK1,,Q96NX5
+ALK,ALK tyrosine kinase receptor,TK,ALK,,Q9UM73
+ALK1,Serine/threonine-protein kinase receptor R3,TKL,STKR,STKR1,P37023
+ALK2,Activin receptor type-1,TKL,STKR,STKR1,Q04771
+BMPR1A,Bone morphogenetic protein receptor type-1A,TKL,STKR,STKR1,P36894
+ALK4,Activin receptor type-1B,TKL,STKR,STKR1,P36896
+TGFbR1,TGF-beta receptor type-1,TKL,STKR,STKR1,P36897
+BMPR1B,Bone morphogenetic protein receptor type-1B,TKL,STKR,STKR1,O00238
+AMPKa1,5'-AMP-activated protein kinase catalytic subunit alpha-1,CAMK,CAMKL,AMPK,Q13131
+AMPKa2,5'-AMP-activated protein kinase catalytic subunit alpha-2,CAMK,CAMKL,AMPK,P54646
+ANPa,Atrial natriuretic peptide receptor 1,RGC,RGC,,P16066
+ANPb,Atrial natriuretic peptide receptor 2,RGC,RGC,,P20594
+ARAF,Serine/threonine-protein kinase A-Raf,TKL,RAF,,P10398
+ABL2,Abelson tyrosine-protein kinase 2,TK,Abl,,P42684
+ATM,Serine-protein kinase ATM,Atypical,PIKK,ATM,Q13315
+ATR,Serine/threonine-protein kinase ATR,Atypical,PIKK,ATR,Q13535
+AurC,Aurora kinase C,Other,Aur,,Q9UQB9
+AXL,Tyrosine-protein kinase receptor UFO,TK,Axl,,P30530
+BARK1,Beta-adrenergic receptor kinase 1,AGC,GRK,BARK,P25098
+BCKDK,[3-methyl-2-oxobutanoate dehydrogenase [lipoamide]] kinase,Atypical,PDHK,,O14874
+GCK,Mitogen-activated protein kinase kinase kinase kinase 2,STE,STE20,KHS,Q12851
+BLK,Tyrosine-protein kinase Blk,TK,Src,,P51451
+BRAF,Serine/threonine-protein kinase B-raf,TKL,RAF,,P15056
+BRK,Protein-tyrosine kinase 6,TK,Src,,Q13882
+BTK,Tyrosine-protein kinase BTK,TK,Tec,,Q06187
+BUBR1,Mitotic checkpoint serine/threonine-protein kinase BUB1 beta,Other,BUB,,O60566
+CDK7,Cyclin-dependent kinase 7,CMGC,CDK,CDK7,P50613
+CaMK1a,Calcium/calmodulin-dependent protein kinase type 1,CAMK,CAMK1,,Q14012
+CaMK2a,Calcium/calmodulin-dependent protein kinase type II subunit alpha,CAMK,CAMK2,,Q9UQM7
+CaMK2b,Calcium/calmodulin-dependent protein kinase type II subunit beta,CAMK,CAMK2,,Q13554
+CaMK2g,Calcium/calmodulin-dependent protein kinase (CaM kinase) II gamma,CAMK,CAMK2,,Q13555
+CaMK4,Calcium/calmodulin-dependent protein kinase type IV,CAMK,CAMK1,,Q16566
+VACAMKL,CaM kinase-like vesicle-associated protein,CAMK,CAMK-Unique,,Q8NCB2
+DCAMKL1,Serine/threonine-protein kinase DCLK1,CAMK,DCAMKL,,O15075
+CASK,Peripheral plasma membrane protein CASK,CAMK,CASK,,O14936
+CDC2,Cyclin-dependent kinase 1,CMGC,CDK,CDC2,P06493
+CDC7,Cell division cycle 7-related protein kinase,Other,CDC7,,O00311
+CDK2,Cyclin-dependent kinase 2,CMGC,CDK,CDK2,P24941
+CDK3,Cyclin-dependent kinase 3,CMGC,CDK,CDK2,Q00526
+CDK4,Cyclin-dependent kinase 4,CMGC,CDK,CDK4,P11802
+CDK5,Cyclin-dependent kinase 5,CMGC,CDK,CDK5,Q00535
+CDK6,Cyclin-dependent kinase 6,CMGC,CDK,CDK4,Q00534
+CDK8,Cyclin-dependent kinase 8,CMGC,CDK,CDK8,P49336
+PKG1,cGMP-dependent protein kinase,AGC,PKG,,Q13976
+PKG2,cGMP-dependent protein kinase 2,AGC,PKG,,Q13237
+CHED,Cyclin-dependent kinase 13,CMGC,CDK,CRK7,Q14004
+CHK1,Serine/threonine-protein kinase Chk1,CAMK,CAMKL,CHK1,O14757
+CHK2,Serine/threonine-protein kinase Chk2,CAMK,RAD53,,O96017
+CK1a,Casein kinase I isoform alpha,CK1,CK1,,P48729
+CK1d,Casein kinase I isoform delta,CK1,CK1,,P48730
+CK1e,Casein kinase I isoform epsilon,CK1,CK1,,P49674
+CK1g2,Casein kinase I isoform gamma-2,CK1,CK1,,P78368
+CK1g3,Casein kinase I isoform gamma-3,CK1,CK1,,Q9Y6M4
+CK2a1,Casein kinase II subunit alpha,CMGC,CK2,,P68400
+CK2a2,Casein kinase II subunit alpha',CMGC,CK2,,P19784
+CLK1,Dual specificity protein kinase CLK1,CMGC,CLK,,P49759
+CLK2,Dual specificity protein kinase CLK2,CMGC,CLK,,P49760
+CLK3,Dual specificity protein kinase CLK3,CMGC,CLK,,P49761
+COT,Mitogen-activated protein kinase kinase kinase 8,STE,STE-Unique,,P41279
+FMS,Macrophage colony-stimulating factor 1 receptor,TK,PDGFR,,P07333
+CSK,Tyrosine-protein kinase CSK,TK,Csk,,P41240
+MARK3,MAP/microtubule affinity-regulating kinase 3,CAMK,CAMKL,MARK,P27448
+CYGD,Retinal guanylyl cyclase 1,RGC,RGC,,Q02846
+CYGF,Retinal guanylyl cyclase 2,RGC,RGC,,P51841
+DAPK1,Death-associated protein kinase 1,CAMK,DAPK,,P53355
+DAPK2,Death-associated protein kinase 2,CAMK,DAPK,,Q9UIK4
+DLK,Mitogen-activated protein kinase kinase kinase 12,TKL,MLK,LZK,Q12852
+DMPK1,Myotonin-protein kinase,AGC,DMPK,GEK,Q09013
+DMPK2,Serine/threonine-protein kinase MRCK gamma,AGC,DMPK,GEK,Q6DT37
+DNAPK,DNA-dependent protein kinase catalytic subunit,Atypical,PIKK,DNAPK,P78527
+DYRK1B,Dual specificity tyrosine-phosphorylation-regulated kinase 1B,CMGC,DYRK,DYRK1,Q9Y463
+DYRK2,Dual specificity tyrosine-phosphorylation-regulated kinase 2,CMGC,DYRK,DYRK2,Q92630
+DYRK4,Dual specificity tyrosine-phosphorylation-regulated kinase 4,CMGC,DYRK,DYRK2,Q9NR20
+eEF2K,Eukaryotic elongation factor 2 kinase,Atypical,Alpha,eEF2K,O00418
+EGFR,Epidermal growth factor receptor,TK,EGFR,,P00533
+PKR,Interferon-induced,Other,PEK,,P19525
+MARK2,Serine/threonine-protein kinase MARK2,CAMK,CAMKL,MARK,Q7KZI7
+EphA1,Ephrin type-A receptor 1,TK,Eph,,P21709
+EphA2,Ephrin type-A receptor 2,TK,Eph,,P29317
+EphA3,Ephrin type-A receptor 3,TK,Eph,,P29320
+EphA4,Ephrin type-A receptor 4,TK,Eph,,P54764
+EphA5,Ephrin type-A receptor 5,TK,Eph,,P54756
+EphA8,Ephrin type-A receptor 8,TK,Eph,,P29322
+EphB1,Ephrin type-B receptor 1,TK,Eph,,P54762
+EphB2,Ephrin type-B receptor 2,TK,Eph,,P29323
+EphB3,Ephrin type-B receptor 3,TK,Eph,,P54753
+EphB4,Ephrin type-B receptor 4,TK,Eph,,P54760
+EphB6,Ephrin type-B receptor 6,TK,Eph,,O15197
+Erk1,Mitogen-activated protein kinase 3,CMGC,MAPK,ERK1,P27361
+Erk2,Mitogen-activated protein kinase 1,CMGC,MAPK,ERK1,P28482
+Erk3,Mitogen-activated protein kinase 6,CMGC,MAPK,ERK3,Q16659
+Erk4,Mitogen-activated protein kinase 4,CMGC,MAPK,ERK3,P31152
+FAK,Focal adhesion kinase 1,TK,FAK,,Q05397
+FER,Tyrosine-protein kinase Fer,TK,Fer,,P16591
+FES,Tyrosine-protein kinase Fes/Fps,TK,Fer,,P07332
+FGFR1,Fibroblast growth factor receptor 1,TK,FGFR,,P11362
+FGFR2,Fibroblast growth factor receptor 2,TK,FGFR,,P21802
+FGFR3,Fibroblast growth factor receptor 3,TK,FGFR,,P22607
+FGFR4,Fibroblast growth factor receptor 4,TK,FGFR,,P22455
+FGR,Tyrosine-protein kinase Fgr,TK,Src,,P09769
+FLT3,Receptor-type tyrosine-protein kinase FLT3,TK,PDGFR,,P36888
+FLT1,Vascular endothelial growth factor receptor 1,TK,VEGFR,,P17948
+FLT4,Vascular endothelial growth factor receptor 3,TK,VEGFR,,P35916
+FRAP,Serine/threonine-protein kinase mTOR,Atypical,PIKK,FRAP,P42345
+FYN,Tyrosine-protein kinase Fyn,TK,Src,,P06241
+GAK,Cyclin-G-associated kinase,Other,NAK,,O14976
+GPRK4,G protein-coupled receptor kinase 4,AGC,GRK,GRK,P32298
+GPRK5,G protein-coupled receptor kinase 5,AGC,GRK,GRK,P34947
+GPRK6,G protein-coupled receptor kinase 6,AGC,GRK,GRK,P43250
+Trb2,Tribbles homolog 2,CAMK,Trbl,,Q92519
+GSK3A,Glycogen synthase kinase-3 alpha,CMGC,GSK,,P49840
+GSK3B,Glycogen synthase kinase-3 beta,CMGC,GSK,,P49841
+HCK,Tyrosine-protein kinase HCK,TK,Src,,P08631
+ErbB2,Receptor tyrosine-protein kinase erbB-2,TK,EGFR,,P04626
+ErbB3,Receptor tyrosine-protein kinase erbB-3,TK,EGFR,,P21860
+ErbB4,Receptor tyrosine-protein kinase erbB-4,TK,EGFR,,Q15303
+HIPK1,Homeodomain-interacting protein kinase 1,CMGC,DYRK,HIPK,Q86Z02
+HPK1,Mitogen-activated protein kinase kinase kinase kinase 1,STE,STE20,KHS,Q92918
+HSER,Heat-stable enterotoxin receptor,RGC,RGC,,P25092
+IGF1R,Insulin-like growth factor 1 receptor,TK,InsR,,P08069
+IKKa,Inhibitor of nuclear factor kappa-B kinase subunit alpha,Other,IKK,,O15111
+IKKb,Inhibitor of nuclear factor kappa-B kinase subunit beta,Other,IKK,,O14920
+ILK,Integrin-linked protein kinase,TKL,MLK,ILK,Q13418
+INSR,Insulin receptor,TK,InsR,,P06213
+IRAK1,Interleukin-1 receptor-associated kinase 1,TKL,IRAK,,P51617
+IRAK2,Interleukin-1 receptor-associated kinase-like 2,TKL,IRAK,,O43187
+IRAK3,Interleukin-1 receptor-associated kinase 3,TKL,IRAK,,Q9Y616
+IRE1,Serine/threonine-protein kinase/endoribonuclease IRE1,Other,IRE,,O75460
+IRR,Insulin receptor-related protein,TK,InsR,,P14616
+ITK,Tyrosine-protein kinase ITK/TSK,TK,Tec,,Q08881
+JAK1,Tyrosine-protein kinase JAK1,TK,Jak,,P23458
+JAK2,Tyrosine-protein kinase JAK2,TK,Jak,,O60674
+JAK3,Tyrosine-protein kinase JAK3,TK,Jak,,P52333
+JNK1,Mitogen-activated protein kinase 8,CMGC,MAPK,JNK,P45983
+JNK2,Mitogen-activated protein kinase 9,CMGC,MAPK,JNK,P45984
+JNK3,Mitogen-activated protein kinase 10,CMGC,MAPK,JNK,P53779
+KHS1,Mitogen-activated protein kinase kinase kinase kinase 5,STE,STE20,KHS,Q9Y4K4
+IKKe,Inhibitor of nuclear factor kappa-B kinase subunit epsilon,Other,IKK,,Q14164
+NuaK1,NUAK family SNF1-like kinase 1,CAMK,CAMKL,NuaK,O60285
+MAST3,Microtubule-associated serine/threonine-protein kinase 3,AGC,MAST,,O60307
+Fused,Serine/threonine-protein kinase 36,Other,ULK,,Q9NRP7
+PIM3,Serine/threonine-protein kinase pim-3,CAMK,PIM,,Q86V86
+KIT,Mast/stem cell growth factor receptor Kit,TK,PDGFR,,P10721
+CDKL2,Cyclin-dependent kinase-like 2,CMGC,CDKL,,Q92772
+CDKL1,Cyclin-dependent kinase-like 1,CMGC,CDKL,,Q00532
+KSR1,Kinase suppressor of Ras 1,TKL,RAF,KSR,Q8IVT5
+LCK,Tyrosine-protein kinase Lck,TK,Src,,P06239
+LIMK2,LIM domain kinase 2,TKL,LISK,LIMK,P53671
+LKB1,Serine/threonine-protein kinase STK11,CAMK,CAMKL,LKB,Q15831
+LTK,Leukocyte tyrosine kinase receptor,TK,ALK,,P29376
+LYN,Tyrosine-protein kinase Lyn,TK,Src,,P07948
+MAK,Serine/threonine-protein kinase MAK,CMGC,RCK,,P20794
+MAPKAPK2,MAP kinase-activated protein kinase 2,CAMK,MAPKAPK,MK2,P49137
+MAPKAPK3,MAP kinase-activated protein kinase 3,CAMK,MAPKAPK,MK2,Q16644
+MAPKAPK5,MAP kinase-activated protein kinase 5,CAMK,MAPKAPK,MK5,Q8IW41
+MARK1,Serine/threonine-protein kinase MARK1,CAMK,CAMKL,MARK,Q9P0L2
+MAST2,Microtubule-associated serine/threonine-protein kinase 2,AGC,MAST,,Q6P0Q8
+MAP2K1,Dual specificity mitogen-activated protein kinase kinase 1,STE,STE7,,Q02750
+MAP2K2,Dual specificity mitogen-activated protein kinase kinase 2,STE,STE7,,P36507
+MAP2K5,Dual specificity mitogen-activated protein kinase kinase 5,STE,STE7,,Q13163
+MAP2K6,Dual specificity mitogen-activated protein kinase kinase 6,STE,STE7,,P52564
+MAP3K1,Mitogen-activated protein kinase kinase kinase 1,STE,STE11,,Q13233
+MAP3K2,Mitogen-activated protein kinase kinase kinase 2,STE,STE11,,Q9Y2U5
+MAP3K3,Mitogen-activated protein kinase kinase kinase 3,STE,STE11,,Q99759
+MAP3K4,Mitogen-activated protein kinase kinase kinase 4,STE,STE11,,Q9Y6R4
+MAP3K5,Mitogen-activated protein kinase kinase kinase 5,STE,STE11,,Q99683
+MER,Tyrosine-protein kinase Mer,TK,Axl,,Q12866
+MET,Hepatocyte growth factor receptor,TK,Met,,P08581
+MISR2,Anti-Muellerian hormone type-2 receptor,TKL,STKR,STKR2,Q16671
+MAP2K7,Dual specificity mitogen-activated protein kinase kinase 7,STE,STE7,,O14733
+smMLCK,Myosin light chain kinase,CAMK,MLCK,,Q15746
+MLK1,Mitogen-activated protein kinase kinase kinase 9,TKL,MLK,MLK,P80192
+MLK2,Mitogen-activated protein kinase kinase kinase 10,TKL,MLK,MLK,Q02779
+DYRK1A,Dual specificity tyrosine-phosphorylation-regulated kinase 1A,CMGC,DYRK,DYRK1,Q13627
+MNK1,MAP kinase-interacting serine/threonine-protein kinase 1,CAMK,MAPKAPK,MNK,Q9BUB5
+MNK2,MAP kinase-interacting serine/threonine-protein kinase 2,CAMK,MAPKAPK,MNK,Q9HBH9
+MOS,Proto-oncogene serine/threonine-protein kinase mos,Other,MOS,,P00540
+MAP2K3,Dual specificity mitogen-activated protein kinase kinase 3,STE,STE7,,P46734
+MAP2K4,Dual specificity mitogen-activated protein kinase kinase 4,STE,STE7,,P45985
+MRCKb,Serine/threonine-protein kinase MRCK beta,AGC,DMPK,GEK,Q9Y5S2
+MSK1,Ribosomal protein S6 kinase alpha-5,AGC,RSK,MSK,O75582
+MSK2,Ribosomal protein S6 kinase alpha-4,AGC,RSK,MSK,O75676
+MST1,Serine/threonine-protein kinase 4,STE,STE20,MST,Q13043
+MST2,Serine/threonine-protein kinase 3,STE,STE20,MST,Q13188
+MST3,Serine/threonine-protein kinase 24,STE,STE20,YSK,Q9Y6E0
+MUSK,Muscle,TK,Musk,,O15146
+MYT1,Membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase,Other,WEE,,Q99640
+NDR1,Serine/threonine-protein kinase 38,AGC,NDR,,Q15208
+NEK1,Serine/threonine-protein kinase Nek1,Other,NEK,,Q96PY6
+NEK2,Serine/threonine-protein kinase Nek2,Other,NEK,,P51955
+NEK3,Serine/threonine-protein kinase Nek3,Other,NEK,,P51956
+NIK,Mitogen-activated protein kinase kinase kinase 14,STE,STE-Unique,,Q99558
+NLK,Serine/threonine-protein kinase NLK,CMGC,MAPK,nmo,Q9UBE8
+NEK4,Serine/threonine-protein kinase Nek4,Other,NEK,,P51957
+IRAK4,Interleukin-1 receptor-associated kinase 4,TKL,IRAK,,Q9NWZ3
+PIK3R4,Phosphoinositide 3-kinase regulatory subunit 4,Other,VPS15,,Q99570
+ROCK2,Rho-associated protein kinase 2,AGC,DMPK,ROCK,O75116
+p38a,Mitogen-activated protein kinase 14,CMGC,MAPK,p38,Q16539
+p70S6K,Ribosomal protein S6 kinase beta-1,AGC,RSK,RSKp70,P23443
+p70S6Kb,Ribosomal protein S6 kinase beta-2,AGC,RSK,RSKp70,Q9UBS0
+PAK1,Serine/threonine-protein kinase PAK 1,STE,STE20,PAKA,Q13153
+PAK2,Serine/threonine-protein kinase PAK 2,STE,STE20,PAKA,Q13177
+PAK3,Serine/threonine-protein kinase PAK 3,STE,STE20,PAKA,O75914
+PKCh,Protein kinase C eta type,AGC,PKC,PKCh,P24723
+PCTAIRE1,Cyclin-dependent kinase 16,CMGC,CDK,PCTAIRE,Q00536
+PCTAIRE2,Cyclin-dependent kinase 17,CMGC,CDK,PCTAIRE,Q00537
+PCTAIRE3,Cyclin-dependent kinase 18,CMGC,CDK,PCTAIRE,Q07002
+PDGFRa,Platelet-derived growth factor receptor alpha,TK,PDGFR,,P16234
+PDGFRb,Platelet-derived growth factor receptor beta,TK,PDGFR,,P09619
+PDK1,3-phosphoinositide-dependent protein kinase 1,AGC,PDK1,,O15530
+PDHK1,[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 1,Atypical,PDHK,,Q15118
+PDHK2,[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 2,Atypical,PDHK,,Q15119
+PDHK3,[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 3,Atypical,PDHK,,Q15120
+PDHK4,[Pyruvate dehydrogenase [lipoamide]] kinase isozyme 4,Atypical,PDHK,,Q16654
+PEK,Eukaryotic translation initiation factor 2-alpha kinase 3,Other,PEK,PEK,Q9NZJ5
+PFTAIRE1,Cyclin-dependent kinase 14,CMGC,CDK,PFTAIRE,O94921
+PHKg1,Phosphorylase b kinase gamma catalytic chain,CAMK,PHK,,Q16816
+PHKg2,Phosphorylase b kinase gamma catalytic chain,CAMK,PHK,,P15735
+PIM1,Serine/threonine-protein kinase pim-1,CAMK,PIM,,P11309
+PIM2,Serine/threonine-protein kinase pim-2,CAMK,PIM,,Q9P1W9
+CDK10,Cyclin-dependent kinase 10,CMGC,CDK,CDK10,Q15131
+CDK9,Cyclin-dependent kinase 9,CMGC,CDK,CDK9,P50750
+PITSLRE,Cyclin-dependent kinase 11B,CMGC,CDK,CDK11,P21127
+MELK,Maternal embryonic leucine zipper kinase,CAMK,CAMKL,MELK,Q14680
+MRCKa,Serine/threonine-protein kinase MRCK alpha,AGC,DMPK,GEK,Q5VT25
+PKACa,cAMP-dependent protein kinase catalytic subunit alpha,AGC,PKA,,P17612
+PKACb,cAMP-dependent protein kinase catalytic subunit beta,AGC,PKA,,P22694
+PKACg,cAMP-dependent protein kinase catalytic subunit gamma,AGC,PKA,,P22612
+PKCa,Protein kinase C alpha type,AGC,PKC,PKCa,P17252
+PKCb,Protein kinase C beta type,AGC,PKC,PKCa,P05771
+PKCd,Protein kinase C delta type,AGC,PKC,PKCd,Q05655
+PKCe,Protein kinase C epsilon type,AGC,PKC,PKCh,Q02156
+PKCg,Protein kinase C gamma type,AGC,PKC,PKCa,P05129
+PKCi,Protein kinase C iota type,AGC,PKC,PKCi,P41743
+PKD1,Serine/threonine-protein kinase D1,CAMK,PKD,,Q15139
+PKCt,Protein kinase C theta type,AGC,PKC,PKCd,Q04759
+PKCz,Protein kinase C zeta type,AGC,PKC,PKCi,Q05513
+PRKX,cAMP-dependent protein kinase catalytic subunit PRKX,AGC,PKA,,P51817
+HIPK3,Homeodomain-interacting protein kinase 3,CMGC,DYRK,HIPK,Q9H422
+PLK1,Serine/threonine-protein kinase PLK1,Other,PLK,,P53350
+PLK3,Serine/threonine-protein kinase PLK3,Other,PLK,,Q9H4B4
+PKN1,Serine/threonine-protein kinase N1,AGC,PKN,,Q16512
+PKN2,Serine/threonine-protein kinase N2,AGC,PKN,,Q16513
+PRKY,Serine/threonine-protein kinase PRKY,AGC,PKA,,O43930
+PRP4,Serine/threonine-protein kinase PRP4 homolog,CMGC,DYRK,PRP4,Q13523
+PSKH1,Serine/threonine-protein kinase H1,CAMK,PSK,,P11801
+RAF1,RAF proto-oncogene serine/threonine-protein kinase,TKL,RAF,,P04049
+RET,Proto-oncogene tyrosine-protein kinase receptor Ret,TK,Ret,,P07949
+RHOK,Rhodopsin kinase,AGC,GRK,GRK,Q15835
+RIPK1,Receptor-interacting serine/threonine-protein kinase 1,TKL,RIPK,,Q13546
+RIPK2,Receptor-interacting serine/threonine-protein kinase 2,TKL,RIPK,,O43353
+RIPK3,Receptor-interacting serine/threonine-protein kinase 3,TKL,RIPK,,Q9Y572
+ROCK1,Rho-associated protein kinase 1,AGC,DMPK,ROCK,Q13464
+RON,Macrophage-stimulating protein receptor,TK,Met,,Q04912
+ROR1,Tyrosine-protein kinase transmembrane receptor ROR1,TK,Ror,,Q01973
+ROR2,Tyrosine-protein kinase transmembrane receptor ROR2,TK,Ror,,Q01974
+ROS,Proto-oncogene tyrosine-protein kinase ROS,TK,Sev,,P08922
+RSK3,Ribosomal protein S6 kinase alpha-2,AGC,RSK,RSKp90,Q15349
+RSK2,Ribosomal protein S6 kinase alpha-3,AGC,RSK,RSKp90,P51812
+RSK1,Ribosomal protein S6 kinase alpha-1,AGC,RSK,RSKp90,Q15418
+RYK,Tyrosine-protein kinase RYK,TK,Ryk,,P34925
+PLK4,Serine/threonine-protein kinase PLK4,Other,PLK,,O00444
+p38b,Mitogen-activated protein kinase 11,CMGC,MAPK,p38,Q15759
+p38g,Mitogen-activated protein kinase 12,CMGC,MAPK,p38,P53778
+p38d,Mitogen-activated protein kinase 13,CMGC,MAPK,p38,O15264
+MAST1,Microtubule-associated serine/threonine-protein kinase 1,AGC,MAST,,Q9Y2H9
+SGK1,Serine/threonine-protein kinase Sgk1,AGC,SGK,,O00141
+SLK,STE20-like serine/threonine-protein kinase,STE,STE20,SLK,Q9H2G2
+PLK2,Serine/threonine-protein kinase PLK2,Other,PLK,,Q9NYY3
+MLK3,Mitogen-activated protein kinase kinase kinase 11,TKL,MLK,MLK,Q16584
+SRC,Proto-oncogene tyrosine-protein kinase Src,TK,Src,,P12931
+SRPK1,SRSF protein kinase 1,CMGC,SRPK,,Q96SB4
+SRPK2,SRSF protein kinase 2,CMGC,SRPK,,P78362
+CDKL5,Cyclin-dependent kinase-like 5,CMGC,CDKL,,O76039
+TAO2,Serine/threonine-protein kinase TAO2,STE,STE20,TAO,Q9UL54
+SYK,Tyrosine-protein kinase SYK,TK,Syk,,P43405
+TAK1,Mitogen-activated protein kinase kinase kinase 7,TKL,MLK,TAK1,O43318
+BMPR2,Bone morphogenetic protein receptor type-2,TKL,STKR,STKR2,Q13873
+TEC,Tyrosine-protein kinase Tec,TK,Tec,,P42680
+TIE2,Angiopoietin-1 receptor,TK,Tie,,Q02763
+TESK1,Dual specificity testis-specific protein kinase 1,TKL,LISK,TESK,Q15569
+TGFbR2,TGF-beta receptor type-2,TKL,STKR,STKR2,P37173
+TIE1,Tyrosine-protein kinase receptor Tie-1,TK,Tie,,P35590
+TTN,Titin,CAMK,MLCK,,Q8WZ42
+TLK1,Serine/threonine-protein kinase tousled-like 1,Other,TLK,,Q9UKI8
+TLK2,Serine/threonine-protein kinase tousled-like 2,Other,TLK,,Q86UE8
+TNK1,Non-receptor tyrosine-protein kinase TNK1,TK,Ack,,Q13470
+Trio,Triple functional domain protein,CAMK,Trio,,O75962
+TRKA,High affinity nerve growth factor receptor,TK,Trk,,P04629
+TRKB,BDNF/NT-3 growth factors receptor,TK,Trk,,Q16620
+TRKC,NT-3 growth factor receptor,TK,Trk,,Q16288
+TRRAP,Transformation/transcription domain-associated protein,Atypical,PIKK,TRRAP,Q9Y4A5
+TTK,Dual specificity protein kinase TTK,Other,TTK,,P33981
+TXK,Tyrosine-protein kinase TXK,TK,Tec,,P42681
+TYK2,Non-receptor tyrosine-protein kinase TYK2,TK,Jak,,P29597
+TYRO3,Tyrosine-protein kinase receptor TYRO3,TK,Axl,,Q06418
+ULK1,Serine/threonine-protein kinase ULK1,Other,ULK,,O75385
+ULK2,Serine/threonine-protein kinase ULK2,Other,ULK,,Q8IYT8
+VRK1,Serine/threonine-protein kinase VRK1,CK1,VRK,,Q99986
+VRK2,Serine/threonine-protein kinase VRK2,CK1,VRK,,Q86Y07
+Wee1,Wee1-like protein kinase,Other,WEE,,P30291
+YES,Tyrosine-protein kinase Yes,TK,Src,,P07947
+YSK1,Serine/threonine-protein kinase 25,STE,STE20,YSK,O00506
+ZAP70,Tyrosine-protein kinase ZAP-70,TK,Syk,,P43403
+LZK,Mitogen-activated protein kinase kinase kinase 13,TKL,MLK,LZK,O43283
+DDR1,Epithelial discoidin domain-containing receptor 1,TK,DDR,,Q08345
+ADCK1,Uncharacterized aarF domain-containing protein kinase 1,Atypical,ABC1,ABC1-B,Q86TW2
+KDR,Vascular endothelial growth factor receptor 2,TK,VEGFR,,P35968
+ALK7,Activin receptor type-1C,TKL,STKR,STKR1,Q8NER5
+AurB,Aurora kinase B,Other,Aur,,Q96GD4
+AurA,Aurora kinase A,Other,Aur,,O14965
+Erk5,Mitogen-activated protein kinase 7,CMGC,MAPK,ERK5,Q13164
+BUB1,Mitotic checkpoint serine/threonine-protein kinase BUB1,Other,BUB,,O43683
+DDR2,Discoidin domain-containing receptor 2,TK,DDR,,Q16832
+CCK4,Inactive tyrosine-protein kinase 7,TK,CCK4,,Q13308
+LIMK1,LIM domain kinase 1,TKL,LISK,LIMK,P53667
+LMR1,Serine/threonine-protein kinase LMTK1,TK,Lmr,,Q6ZMQ8
+LMR2,Serine/threonine-protein kinase LMTK2,TK,Lmr,,Q8IWU2
+LMR3,Serine/threonine-protein kinase LMTK3,TK,Lmr,,Q96Q04
+EphA7,Ephrin type-A receptor 7,TK,Eph,,Q15375
+BMX,Cytoplasmic tyrosine-protein kinase BMX,TK,Tec,,P51813
+CTK,Megakaryocyte-associated tyrosine-protein kinase,TK,Csk,,P42679
+FRK,Tyrosine-protein kinase FRK,TK,Src,,P42685
+NEK6,Serine/threonine-protein kinase Nek6,Other,NEK,,Q9HC98
+NEK7,Serine/threonine-protein kinase Nek7,Other,NEK,,Q8TDX7
+AAK1,AP2-associated protein kinase 1,Other,NAK,,Q2M2I8
+ChaK1,Transient receptor potential cation channel subfamily M member 7,Atypical,Alpha,ChaK,Q96QT4
+PYK2,Protein-tyrosine kinase 2-beta,TK,FAK,,Q14289
+SRM,Tyrosine-protein kinase Srms,TK,Src,,Q9H3Y6
+LOK,Serine/threonine-protein kinase 10,STE,STE20,SLK,O94804
+KHS2,Mitogen-activated protein kinase kinase kinase kinase 3,STE,STE20,KHS,Q8IVH8
+OSR1,Serine/threonine-protein kinase OSR1,STE,STE20,FRAY,O95747
+PAK6,Serine/threonine-protein kinase PAK 6,STE,STE20,PAKB,Q9NQU5
+PAK4,Serine/threonine-protein kinase PAK 4,STE,STE20,PAKB,O96013
+MST4,Serine/threonine-protein kinase MST4,STE,STE20,YSK,Q9P289
+STLK3,STE20/SPS1-related proline-alanine-rich protein kinase,STE,STE20,FRAY,Q9UEW8
+STLK5,STE20-related kinase adapter protein alpha,STE,STE20,STLK,Q7RTN6
+STLK6,STE20-related kinase adapter protein beta,STE,STE20,STLK,Q9C0K7
+TAO3,Serine/threonine-protein kinase TAO3,STE,STE20,TAO,Q9H2K8
+TAO1,Serine/threonine-protein kinase TAO1,STE,STE20,TAO,Q7L7X3
+HGK,Mitogen-activated protein kinase kinase kinase kinase 4,STE,STE20,MSN,O95819
+TNIK,TRAF2 and NCK-interacting protein kinase,STE,STE20,MSN,Q9UKE5
+MINK,Misshapen-like kinase 1,STE,STE20,MSN,Q8N4C8
+NRK,Nik-related protein kinase,STE,STE20,MSN,Q7Z2Y5
+LATS1,Serine/threonine-protein kinase LATS1,AGC,NDR,,O95835
+LATS2,Serine/threonine-protein kinase LATS2,AGC,NDR,,Q9NRM7
+CDK11,Cyclin-dependent kinase 19,CMGC,CDK,CDK8,Q9BWU1
+NIM1,Serine/threonine-protein kinase NIM1,CAMK,CAMKL,NIM1,Q8IY84
+ULK3,Serine/threonine-protein kinase ULK3,Other,ULK,,Q6PHR2
+CLIK1L,Serine/threonine-protein kinase PDIK1L,Other,NKF4,,Q8N165
+TTBK2,Tau-tubulin kinase 2,CK1,TTBK,,Q6IQ55
+SCYL1,N-terminal kinase-like protein,Other,SCY1,,Q96KG9
+MASTL,Serine/threonine-protein kinase greatwall,AGC,MAST,,Q96GX5
+PINK1,Serine/threonine-protein kinase PINK1,Other,NKF2,,Q9BXM7
+ULK4,Serine/threonine-protein kinase ULK4,Other,ULK,,Q96C45
+MLKL,Mixed lineage kinase domain-like protein,TKL,TKL-Unique,,Q8NB16
+DCAMKL3,Serine/threonine-protein kinase DCLK3,CAMK,DCAMKL,,Q9C098
+SgK493,Protein kinase domain-containing protein,Other,SgK493,,Q504Y2
+PFTAIRE2,Cyclin-dependent kinase 15,CMGC,CDK,PFTAIRE,Q96Q40
+STK33,Serine/threonine-protein kinase 33,CAMK,STK33,,Q9BYT3
+PRPK,TP53-regulating kinase,Other,Bud32,,Q96S44
+Erk7,Mitogen-activated protein kinase 15,CMGC,MAPK,ERK7,Q8TD08
+CDKL4,Cyclin-dependent kinase-like 4,CMGC,CDKL,,Q5MAI5
+SCYL3,Protein-associating with the carboxyl-terminal domain of ezrin,Other,SCY1,,Q8IZE3
+YANK3,Serine/threonine-protein kinase 32C,AGC,YANK,,Q86UX6
+NEK9,Serine/threonine-protein kinase Nek9,Other,NEK,,Q8TD19
+TSSK3,Testis-specific serine/threonine-protein kinase 3,CAMK,TSSK,,Q96PN8
+NuaK2,NUAK family SNF1-like kinase 2,CAMK,CAMKL,NuaK,Q9H093
+RSKL2,Ribosomal protein S6 kinase-like 1,AGC,RSKL,,Q9Y6S9
+TSSK2,Testis-specific serine/threonine-protein kinase 2,CAMK,TSSK,,Q96PF2
+SCYL2,SCY1-like protein 2,Other,SCY1,,Q6P3W7
+NEK8,Serine/threonine-protein kinase Nek8,Other,NEK,,Q86SG6
+BARK2,Beta-adrenergic receptor kinase 2,AGC,GRK,BARK,P35626
+NRBP1,Nuclear receptor-binding protein,Other,NRBP,,Q9UHY1
+PKD2,Serine/threonine-protein kinase D2,CAMK,PKD,,Q9BZL6
+YANK2,Serine/threonine-protein kinase 32B,AGC,YANK,,Q9NY57
+CaMKK2,Calcium/calmodulin-dependent protein kinase kinase 2,Other,CAMKK,CAMKK-Meta,Q96RR4
+CCRK,Cyclin-dependent kinase 20,CMGC,CDK,,Q8IZL9
+CLK4,Dual specificity protein kinase CLK4,CMGC,CLK,,Q9HAZ1
+CRK7,Cyclin-dependent kinase 12,CMGC,CDK,CRK7,Q9NYV4
+DRAK1,Serine/threonine-protein kinase 17A,CAMK,DAPK,,Q9UEE5
+DRAK2,Serine/threonine-protein kinase 17B,CAMK,DAPK,,O94768
+DYRK3,Dual specificity tyrosine-phosphorylation-regulated kinase 3,CMGC,DYRK,DYRK2,O43781
+PKD3,Serine/threonine-protein kinase D3,CAMK,PKD,,O94806
+GCN2,Eukaryotic translation initiation factor 2-alpha kinase 4,Other,PEK,GCN2,Q9P2K8
+SgK494,Uncharacterized serine/threonine-protein kinase SgK494,AGC,RSKR,,Q96LW2
+SgK495,Serine/threonine-protein kinase 40,CAMK,SgK495,,Q8N2I9
+CLIK1,Serine/threonine-protein kinase 35,Other,NKF4,,Q8TDR2
+HH498,Serine/threonine-protein kinase TNNI3K,TKL,MLK,HH498,Q59H18
+HIPK2,Homeodomain-interacting protein kinase 2,CMGC,DYRK,HIPK,Q9H2X6
+HRI,Eukaryotic translation initiation factor 2-alpha kinase 1,Other,PEK,,Q9BQI3
+ICK,Serine/threonine-protein kinase ICK,CMGC,RCK,,Q9UPZ9
+IRE2,Serine/threonine-protein kinase/endoribonuclease IRE2,Other,IRE,,Q76MJ5
+PASK,PAS domain-containing serine/threonine-protein kinase,CAMK,CAMKL,PASK,Q96RG2
+NDR2,Serine/threonine-protein kinase 38-like,AGC,NDR,,Q9Y2H1
+QSK,Serine/threonine-protein kinase SIK3,CAMK,CAMKL,QIK,Q9Y2K2
+HUNK,Hormonally up-regulated neu tumor-associated kinase,CAMK,CAMKL,HUNK,P57058
+MAP3K6,Mitogen-activated protein kinase kinase kinase 6,STE,STE11,,O95382
+ZAK,Mitogen-activated protein kinase kinase kinase MLT,TKL,MLK,ZAK,Q9NYL2
+MOK,MAPK/MAK/MRK overlapping kinase,CMGC,RCK,,Q9UQ07
+MPSK1,Serine/threonine-protein kinase 16,Other,NAK,,O75716
+MSSK1,SRSF protein kinase 3,CMGC,SRPK,,Q9UPE1
+Wnk1,Serine/threonine-protein kinase WNK1,Other,WNK,,Q9H4A3
+CDKL3,Cyclin-dependent kinase-like 3,CMGC,CDKL,,Q8IVW4
+PAK5,Serine/threonine-protein kinase PAK 7,STE,STE20,PAKB,Q9P286
+PKN3,Serine/threonine-protein kinase N3,AGC,PKN,,Q6P5Z2
+QIK,Serine/threonine-protein kinase SIK2,CAMK,CAMKL,QIK,Q9H0K1
+MARK4,MAP/microtubule affinity-regulating kinase 4,CAMK,CAMKL,MARK,Q96L34
+SgK496,Dual serine/threonine and tyrosine protein kinase,Other,Dusty,,Q6XUX3
+RSKL1,Ribosomal protein S6 kinase delta-1,AGC,RSKL,,Q96S38
+RSK4,Ribosomal protein S6 kinase alpha-6,AGC,RSK,RSKp90,Q9UK32
+NRBP2,Nuclear receptor-binding protein 2,Other,NRBP,,Q9NSY0
+SgK071,Protein kinase-like protein SgK071,Other,SgK071,,Q8NE28
+SGK2,Serine/threonine-protein kinase Sgk2,AGC,SGK,,Q9HBY8
+SSTK,Testis-specific serine/threonine-protein kinase 6,CAMK,TSSK,,Q9BXA6
+SGK3,Serine/threonine-protein kinase Sgk3,AGC,SGK,,Q96BR1
+TTBK1,Tau-tubulin kinase 1,CK1,TTBK,,Q5TCY1
+DCAMKL2,Serine/threonine-protein kinase DCLK2,CAMK,DCAMKL,,Q8N568
+Slob,PX domain-containing protein kinase-like protein,Other,Slob,,Q7Z7A4
+PBK,Lymphokine-activated killer T-cell-originated protein kinase,Other,TOPK,,Q96KB5
+SuRTK106,Tyrosine-protein kinase STYK1,TK,TK-Unique,,Q6J9G0
+TBK1,Serine/threonine-protein kinase TBK1,Other,IKK,,Q9UHD2
+TESK2,Dual-specificity testis-specific protein kinase 2,TKL,LISK,TESK,Q96S53
+Trad,HCG2039851,CAMK,Trio,,O60229
+TSSK4,Testis-specific serine/threonine-protein kinase 4,CAMK,TSSK,,Q6SA08
+VRK3,Inactive serine/threonine-protein kinase VRK3,CK1,VRK,,Q8IV63
+caMLCK,Myosin light chain kinase 3,CAMK,MLCK,,Q32MK0
+SPEG,Striated muscle preferentially expressed protein kinase,CAMK,Trio,,Q15772
+CK1a2,Casein kinase I isoform alpha-like,CK1,CK1,,Q8N752
+ANKRD3,Receptor-interacting serine/threonine-protein kinase 4,TKL,RIPK,,P57078
+NEK5,Serine/threonine-protein kinase Nek5,Other,NEK,,Q6P3R8
+CaMK1d,Calcium/calmodulin-dependent protein kinase type 1D,CAMK,CAMK1,,Q8IU85
+MAP3K19,Mitogen-activated protein kinase kinase kinase 19,STE,STE11,,Q56UN5
+NEK11,Serine/threonine-protein kinase Nek11,Other,NEK,,Q8NG66
+GPRK7,G protein-coupled receptor kinase 7,AGC,GRK,GRK,Q8WTQ7
+SgK069,Serine/threonine-protein kinase SBK2,Other,NKF1,,P0C263
+HIPK4,Homeodomain-interacting protein kinase 4,CMGC,DYRK,HIPK,Q8NE63
+MYO3B,Myosin-IIIb,STE,STE20,NinaC,Q8WXR4
+Wnk4,Serine/threonine-protein kinase WNK4,Other,WNK,,Q96J92
+SgK110,Putative uncharacterized serine/threonine-protein kinase SgK110,Other,NKF1,,P0C264
+BRSK1,Serine/threonine-protein kinase BRSK1,CAMK,CAMKL,BRSK,Q8TDC3
+Obscn,Obscurin,CAMK,Trio,,Q5VST9
+PSKH2,Serine/threonine-protein kinase H2,CAMK,PSK,,Q96QS6
+SIK,Serine/threonine-protein kinase SIK1,CAMK,CAMKL,QIK,P57059
+KSR2,Kinase suppressor of Ras 2,TKL,RAF,,Q6VAB6
+RIOK3,Serine/threonine-protein kinase RIO3,Atypical,RIO,RIO3,O14730
+ADCK3,Chaperone activity of bc1 complex-like,Atypical,ABC1,ABC1-A,Q8NI60
+RIOK1,Serine/threonine-protein kinase RIO1,Atypical,RIO,RIO1,Q9BRS2
+YANK1,Serine/threonine-protein kinase 32A,AGC,YANK,,Q8WU08
+SNRK,SNF-related serine/threonine-protein kinase,CAMK,CAMKL,SNRK,Q9NRH2
+EphA10,Ephrin type-A receptor 10,TK,Eph,,Q5JZY3
+SgK196,Protein kinase-like protein SgK196,Other,Other-Unique,,Q9H5K3
+MYO3A,Myosin-IIIa,STE,STE20,NinaC,Q8NEV4
+Wnk3,Serine/threonine-protein kinase WNK3,Other,WNK,,Q9BYP7
+SgK223,Tyrosine-protein kinase SgK223,Other,NKF3,,Q86YV5
+NEK10,Serine/threonine-protein kinase Nek10,Other,NEK,,Q6ZWH5
+EphA6,Ephrin type-A receptor 6,TK,Eph,,Q9UF33
+CK1g1,Casein kinase I isoform gamma-1,CK1,CK1,,Q9HCP0
+SgK269,Pseudopodium-enriched atypical kinase 1,Other,NKF3,,Q9H792
+SBK,Serine/threonine-protein kinase SBK1,Other,NKF1,,Q52WX2
+SgK396,Serine/threonine-protein kinase 31,Other,Other-Unique,,Q9BXU1
+SgK288,Ankyrin repeat and protein kinase domain-containing protein 1,TKL,RIPK,,Q8NFD2
+KIS,Serine/threonine-protein kinase Kist,Other,KIS,,Q8TAS1
+CaMK1b,Calcium/calmodulin-dependent protein kinase type 1B,CAMK,CAMK1,,Q6P2M8
+TBCK,TBC domain-containing protein kinase-like protein,Other,TBCK,,Q8TEA7
+SMG1,Serine/threonine-protein kinase SMG1,Atypical,PIKK,SMG1,Q96Q15
+skMLCK,Myosin light chain kinase 2,CAMK,MLCK,,Q9H1R3
+MAP3K7,Mitogen-activated protein kinase kinase kinase 15,STE,STE11,,Q6ZN16
+LRRK2,Leucine-rich repeat serine/threonine-protein kinase 2,TKL,LRRK,,Q5S007
+MLK4,Mitogen-activated protein kinase kinase kinase MLK4,TKL,MLK,MLK,Q5TCX8
+Haspin,Serine/threonine-protein kinase haspin,Other,Haspin,,Q8TF76
+Trb3,Tribbles homolog 3,CAMK,Trbl,,Q96RU7
+CRIK,Citron Rho-interacting kinase,AGC,DMPK,,O14578
+CaMKK1,Calcium/calmodulin-dependent protein kinase kinase 1,Other,CAMKK,CAMKK-Meta,Q8N5S9
+LRRK1,Leucine-rich repeat serine/threonine-protein kinase 1,TKL,LRRK,,Q38SD2
+SgK307,Inactive serine/threonine-protein kinase TEX14,Other,NKF5,,Q8IWB6
+MAST4,Microtubule-associated serine/threonine-protein kinase 4,AGC,MAST,,O15021
+CaMK2d,Calcium/calmodulin-dependent protein kinase type II subunit delta,CAMK,CAMK2,,Q13557
+BIKE,BMP-2-inducible protein kinase,Other,NAK,,Q9NSY1
+TSSK1,Testis-specific serine/threonine-protein kinase 1,CAMK,TSSK,,Q9BXA7
+SgK424,Inactive serine/threonine-protein kinase TEX14,Other,NKF5,,Q8IWB6
+SgK085,Myosin light chain kinase family member 4,CAMK,MLCK,,Q86YV6
+ADCK2,Uncharacterized aarF domain-containing protein kinase 2,Atypical,ABC1,ABC1-C,Q7Z695
+DAPK3,Death-associated protein kinase 3,CAMK,DAPK,,O43293
+Wee1B,Wee1-like protein kinase 2,Other,WEE,,P0C1S8
+RNAseL,2-5A-dependent ribonuclease,Other,Other-Unique,,Q05823
+ChaK2,Transient receptor potential cation channel subfamily M member 6,Atypical,Alpha,ChaK,Q9BX84
+RIOK2,Serine/threonine-protein kinase RIO2,Atypical,RIO,RIO2,Q9BVS4
+AlphaK2,Alpha-protein kinase 2,Atypical,Alpha,,Q86TB3
+AlphaK3,Alpha-protein kinase 1,Atypical,Alpha,,Q96QP1
+BRD2,Bromodomain-containing protein 2,Atypical,BRD,,P25440
+BRD3,Bromodomain-containing protein 3,Atypical,BRD,,Q15059
+BRD4,BRD4 protein,Atypical,BRD,,O60885
+BRDT,Bromodomain testis-specific protein,Atypical,BRD,,Q58F21
+AlphaK1,Alpha-protein kinase 3,Atypical,Alpha,,Q96L96
+ADCK5,Uncharacterized aarF domain-containing protein kinase 5,Atypical,ABC1,ABC1-D,Q3MIX3
+TIF1a,Transcription intermediary factor 1-alpha,Atypical,TIF1,,O15164
+TIF1b,Transcription intermediary factor 1-beta,Atypical,TIF1,,Q13263
+TIF1g,E3 ubiquitin-protein ligase TRIM33,Atypical,TIF1,,Q9UPN9
+JAK1_b,Tyrosine-protein kinase JAK1,TK,JakB,,P23458
+JAK2_b,Tyrosine-protein kinase JAK2,TK,JakB,,O60674
+JAK3_b,Tyrosine-protein kinase JAK3,TK,JakB,,P52333
+MSK1_b,Ribosomal protein S6 kinase alpha-5,CAMK,RSKb,MSKb,O75582
+MSK2_b,Ribosomal protein S6 kinase alpha-4,CAMK,RSKb,MSKb,O75676
+RSK3_b,Ribosomal protein S6 kinase alpha-2,CAMK,RSKb,RSKb,Q15349
+RSK2_b,Ribosomal protein S6 kinase alpha-3,CAMK,RSKb,RSKb,P51812
+RSK1_b,Ribosomal protein S6 kinase alpha-1,CAMK,RSKb,RSKb,Q15418
+TYK2_b,Non-receptor tyrosine-protein kinase TYK2,TK,JakB,,P29597
+GCN2_b,Eukaryotic translation initiation factor 2-alpha kinase 4,STE,STE-Unique,,Q9P2K8
+RSK4_b,Ribosomal protein S6 kinase alpha-6,CAMK,RSKb,RSKb,Q9UK32
+SPEG_b,Striated muscle preferentially expressed protein kinase,CAMK,Trio,,Q15772
+Obscn_b,Obscurin,CAMK,Trio,,Q5VST9
+PAN3,PAB-dependent poly(A)-specific ribonuclease subunit 3,Other,PAN3,,Q58A45
+FASTK,Fas-activated serine/threonine kinase,Atypical,FAST,,Q14296
+G11,Serine/threonine-protein kinase 19,Atypical,G11,,P49842
+TAF1,Transcription initiation factor TFIID subunit 1,Atypical,TAF1,,P21675
+TAF1L,Transcription initiation factor TFIID subunit 1-like,Atypical,TAF1,,Q8IZX4
+BCR,Breakpoint cluster region protein,Atypical,BCR,,P11274
+ABR,Active breakpoint cluster region-related protein,Atypical,BCR,,Q12979
+TIF1D,Tripartite motif-containing protein 66,Atypical,TIF1,,B5MCJ9
+GTF2F1,nan,Atypical,GTF2F1,,Q6IBK5
+Col4A3BP,Collagen type IV alpha-3-binding protein,Atypical,Col4A3BP,,Q9Y5P4
+BLVRA,Biliverdin reductase A,Atypical,BLVRA,,P53004
+BAZ1A,Bromodomain adjacent to zinc finger domain protein 1A,Atypical,BAZ,,Q9NRL2
+BAZ1B,Tyrosine-protein kinase BAZ1B,Atypical,BAZ,,Q9UIG0
