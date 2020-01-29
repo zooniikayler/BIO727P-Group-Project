@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+      <!-- Jumbatron-->
+      <div class="container-fluid padding">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h1 class="display-4">Search Inhibitors</h1>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <div class="col-12">
+          <p class="lead">Welcome to Kinase Kinpendium a web application that allowes researches to access background information on all known Human Kinases, their phosphorylation sites, the inhibitors that work on them and upload sample data to be analysed (we need to give explanation of the types of sample data format and how it is generated etc)</p>
+        </div>
+        <hr>
+      
+
+      <!-- Search bar -->
+      <form class="form-inline mr-auto ml-auto">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+      </form>
+{% endblock content %}
