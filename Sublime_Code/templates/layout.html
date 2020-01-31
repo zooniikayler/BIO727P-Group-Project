@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
     <!-- CSS Style Sheet -->
-    <style>
+    <!-- <style>
       {background-color;#42455a}
-    </style>
+    </style> -->
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1">
 
-    <title>Kinase Kinpendium</title>
+    {% if title %}
+        <title>Kinase Kinpendium - {{ title }}</title>
+    {% else %}
+        <title>Kinase Kinpendium</title>
+    {% endif %}
 
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"> -->
 
     <! -- Boostrap scripts: jquery JS, and jQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -30,12 +36,13 @@
       
 
   <!-- NAVIGATION -->
+    <div class="nav-masthead">
       <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <! -- (NEED TO FILL IN CSS FILE COMMENTS WITH DETAILS ABOUT MD(MEDIUM TO BE ABLE TO VIEW STUFF IN TABLES AND MOBILE to be able to see 768 pixels 
         These are known as media queries https://getbootstrap.com/docs/4.0/layout/overview/) -->
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-        <img src="/static/img/bootstrap-solid.png" width="30" height="30" alt=""> Kinase Kinpendium</a>
+        <a class="nav-brand" href="#">
+        <img src="/static/img/bootstrap-solid.png" width="50" height="50" alt=""> Kinase Kinpendium</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,7 +55,7 @@
               <a class="nav-link" href="/Kinases">Kinases</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Phosphosites">Phosphosites</a>
+              <a class="nav-link" href="/Substrates">Substrates</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/Inhibitors">Inhibitors</a>
@@ -57,11 +64,15 @@
               <a class="nav-link" href="/About_us">About Us</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="/Phosphosites">Phosphosites</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/Data_Analysis">Data Analysis</a>
             </li>
           </ul>
       </div>
       </nav>
+    </div>
 
       <style>
         .navbar {
