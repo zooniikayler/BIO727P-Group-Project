@@ -1,35 +1,32 @@
-from flask import Flask, render_template, request
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, validators, TextField 
-from wtforms.validators import Required, InputRequired
-from flask_wtf import Form
-from wtforms import SelectField
+import os
+from flask import Flask, render_template, request, url_for
+from forms import KinaseSearchForm, SubstrateSearchForm, InhibitorSearchForm
 
+
+#instantiate flask app
 app = Flask(__name__)
 
+#instantiate sqlalchemy objects
 app.config['SECRET_KEY'] = "DontTellAnyone"
 
-##################### Index Page ################################
+
+############################  Home   #############################################################
+
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/Home')
 def Home():
 	return render_template('Home.html')
 
-#####################  Kinases   #######################
-@app.route('/Kinases')
+############################  Kinases   ##########################################################
 
-class KinaseSearchForm(Form):
-	choices = [('Kinase Symbol', 'Kinase Symbol')] # Define choices for the kinase search
-	search = StringField("Enter valid Kinase Name", choices=choices, validators=[InputRequired()]) #Search Field will include choices defined
-	submit = SubmitField("Search", [validators.DataRequired()])
-
+@app.route('/Kinases', methods=['GET', 'POST'])
 def Kinases():
 	form = KinaseSearchForm()
-	if form.validate_on_submit():
+	if form.validate():
 		return 'Form Successfully Submitted'
 	return	render_template('Kinases.html', form=form)
 
-#####################  About us  #######################
+############################  About us   #########################################################
 
 @app.route('/About_us')
 def About_us():
@@ -39,14 +36,33 @@ def About_us():
 def Data_Analysis():
 	return	render_template('Data_Analysis.html')
 
-@app.route('/Inhibitors')
+############################  Inhibitors   ########################################################
+
+@app.route('/Inhibitors', methods=['GET', 'POST'])
 def Inhibitors():
-	return	render_template('Inhibitors.html')
+	form = InhibitorSearchForm()
+	if form.validate():
+		return 'Form Successfully Submitted'
+	return	render_template('Inhibitors.html', form=form)
+
+############################  Substrates   ########################################################
+@app.route('/Substrates', methods=['GET', 'POST'])
+def Substrates():
+	form = SubstrateSearchForm()
+	if form.validate():
+		return 'Form Succesfully Submitted'
+	return	render_template('Substrates.html', form=form)
 
 @app.route('/Phosphosites')
 def Phosphosites():
-	return	render_template('Phosphosites.html')
+	form = phosphositesSearchForm()
+	if form.validate():
+		return "Form Successfully Submitted "
+	return	render_template('phosphosites.html')
+
 
 
 if __name__=='__main__':
-	app.run(degub=True)
+	app.run(debug=True)
+	# from waitress import serve
+	# serve(app, host="0.0.0.0", port=8080)
