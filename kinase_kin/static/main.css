@@ -1,0 +1,21 @@
+/* * {
+	background: #1abc9c;
+	padding: 0px;
+	margin: 0px;
+} */
+
+
+.title-display{
+text-align: center;
+font-size: 250%;
+padding: 50px;
+color: #f8f9fa;
+background: #1abc9c;
+}
+
+
+.jumbotron{
+	color: #f8f9fa;
+	font-size: 50px;
+	font-family: 'Poppins', sans-serif;
+}
