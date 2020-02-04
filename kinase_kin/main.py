@@ -99,7 +99,7 @@ def kinase_results(search):
     
     else:
         #displaying results
-        return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results)
+        return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
 
 @app.route('/Kinases/<Kinase_Symbol>)
 def profile(Kinase_Symbol):
