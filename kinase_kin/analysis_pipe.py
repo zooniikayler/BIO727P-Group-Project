@@ -22,7 +22,7 @@ df_user['FC_log2'] = np.log2(df_user['FC4'])
 df_user = df_user.join(df_home[["KINASE_SYMBOL", "SUB_GENE", "SUB_MOD_RSD"]].set_index(["SUB_GENE", "SUB_MOD_RSD"]),
                  on= ['Substrate', 'Position'])
 
-df_home = df_user.join(df_home[["KINASE_SYMBOL", "SUB_ACC_ID", "SUB_MOD_RSD"]].set_index(["SUB_ACC_ID", "SUB_MOD_RSD"]),
+df_user = df_user.join(df_home[["KINASE_SYMBOL", "SUBSTRATE_SYMBOL", "SUB_MOD_RSD"]].set_index(["SUBSTRATE_SYMBOL", "SUB_MOD_RSD"]),
                  on= ['Substrate', 'Position'], rsuffix= '_sub_acc')
 
 #cleaning data, removing Nans, O, infinity
