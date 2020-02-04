@@ -15,7 +15,7 @@ class KinaseInfo(db.Model):
     Function = db.Column('Function', db.String)
     Genomic_location = db.Column('Genomic_Location', db.String)
     Subcellular_Location = db.Column('Subcellular_Location', db.String)
-    PDB_Image_link = db.Column('PDB_Image_link' db.String)
+    PDB_Image_link = db.Column('PDB_Image_link', db.String)
     
 class Substrate(db.Model):
     """"""
