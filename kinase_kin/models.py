@@ -17,7 +17,7 @@ class KinaseInfo(db.Model):
     Subcellular_Location = db.Column('Subcellular_Location', db.String)
     PDB_Image_link = db.Column('PDB_Image_link', db.String)
     
-class Substrate(db.Model):
+class SubstrateInfo(db.Model):
     """"""
     __tablename__ = "Substrate"
     
