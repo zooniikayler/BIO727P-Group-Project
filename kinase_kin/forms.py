@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import Form, StringField, SelectField, validators , SubmitField
+from wtforms import Form, StringField, SelectField, validators, SubmitField, FileField
 from wtforms.validators import DataRequired
+from flask_wtf.file import FileRequired, FileField, FileAllowed
 
 # Create search forms for the three searches on the site
 
@@ -24,6 +25,10 @@ class phosphositesSearchForm(Form):
     choices = [('Phosphosite', 'Phosphosite')]
     select = SelectField(choices=choices)
     search = StringField('',[validators.DataRequired()])
+
+class FileForm(Form):
+    file = FileField(validators=[FileRequired()])
+    submit = SubmitField('Submit')
 
 #class Data_Analysis(Form):
 	#file = FileField("Upload File tp be analysed", validators=[InputRequired()])
