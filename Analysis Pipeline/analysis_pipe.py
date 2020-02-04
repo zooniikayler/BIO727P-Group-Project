@@ -1,11 +1,15 @@
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import sqlite3
 
+#connecting to the database
+conn = sqlite3.connect("KinaseDatabasev1.db")
+SQL_Query = pd.read_sql_query("SELECT Substrate.Kinase, Substrate.Substrate_Symbol,Substrate.Sub_Gene, Substrate.Sub_Mod_Rsd FROM Substrate",conn)
 
 #import data as dataFrame
 df_user = pd.read_table("sample_file.txt")
-df_home = pd.read_csv("kin_sub_final.csv")
+df_home = pd.DataFrame(SQL_Query, columns=['Kinase','Substrate_Symbol','Sub_Gene','Sub_Mod_Rsd'])
 
 #preparing uploaded data
 #requires CSV uploaded with columns [1] Substrates(Position) [2] control_mean [3] condition_mean [4] FC [5] p_val [6] Any
@@ -19,16 +23,16 @@ df_user.columns = ('Substrate', 'control_mean2', 'condition_mean3', 'FC4', 'pval
 df_user['FC_log2'] = np.log2(df_user['FC4'])
 
 #adds the kinase names to the dataframe with user's data if their is a matching SUB_MOD_RSD and SUB_GENE
-df_user = df_user.join(df_home[["KINASE_SYMBOL", "SUB_GENE", "SUB_MOD_RSD"]].set_index(["SUB_GENE", "SUB_MOD_RSD"]),
+df_user = df_user.join(df_home[["Kinase", "Sub_Gene", "Sub_Mod_Rsd"]].set_index(["Sub_Gene", "Sub_Mod_Rsd"]),
                  on= ['Substrate', 'Position'])
 
-df_home = df_user.join(df_home[["KINASE_SYMBOL", "SUB_ACC_ID", "SUB_MOD_RSD"]].set_index(["SUB_ACC_ID", "SUB_MOD_RSD"]),
+df_home = df_user.join(df_home[["Kinase", "Substrate_Symbol", "Sub_Mod_Rsd"]].set_index(["Substrate_Symbol", "Sub_Mod_Rsd"]),
                  on= ['Substrate', 'Position'], rsuffix= '_sub_acc')
 
 #cleaning data, removing Nans, O, infinity
 df_user = df_user.dropna()
 df_user= df_user.dropna(axis=0)
-df_user = df_user.dropna(subset = ['KINASE_SYMBOL'])
+df_user = df_user.dropna(subset = ['Kinase'])
 df_user = df_user[(df_user.FC_log2 != "inf")]
 df_user = df_user[(df_user.FC_log2 != "0")]
 
@@ -37,20 +41,20 @@ df_user = df_user[(df_user.FC_log2 != "0")]
 def mean_score(kinase, dataset):
     '''mean of the log2 FC of all phosphosites in the substrate set'''
 
-    sub_set = dataset[dataset['KINASE_SYMBOL'] == kinase]
+    sub_set = dataset[dataset['Kinase'] == kinase]
     return sub_set['FC_log2'].mean()
 
 def alt_score(threshold, kinase, dataset):
     '''mean of the log2 FC for all SIGNIFICANT phosphosites in each substrate set'''
-    sub_set = dataset[(dataset['KINASE_SYMBOL'] == kinase) & (dataset['pval5'] < threshold)]
+    sub_set = dataset[(dataset['Kinase'] == kinase) & (dataset['pval5'] < threshold)]
     return print(sub_set['FC_log2'].mean())
 
 def delta_score(threshold, kinase, dataset):
     '''number of significant positive phosphosite minus
     significant down-regulated sites in each substrate set'''
-    sub_set_neg = dataset[(dataset['KINASE_SYMBOL'] == kinase) & (dataset['pval5'] < threshold) &
+    sub_set_neg = dataset[(dataset['Kinase'] == kinase) & (dataset['pval5'] < threshold) &
                       (dataset['FC_log2'] < 0)]
-    sub_set_pos = dataset[(dataset['KINASE_SYMBOL'] == kinase) & (dataset['pval5'] < threshold) &
+    sub_set_pos = dataset[(dataset['Kinase'] == kinase) & (dataset['pval5'] < threshold) &
                           (dataset['FC_log2'] > 0)]
     return len(sub_set_pos)-len(sub_set_neg)
 
