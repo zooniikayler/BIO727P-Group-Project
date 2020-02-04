@@ -4,8 +4,7 @@ class KinaseInfo(db.Model):
     """"""
     __tablename__ = "KinaseInfo"
    
-    Unique_ID = db.Column('Unique_ID', db.Integer, primary_key = True)
-    Uniprot_Accession_Number = db.Column('Uniprot_Accession_Number', db.String)
+    Uniprot_Accession_Number = db.Column('Uniprot_Accession_Number', db.String, primary_key = True)
     Kinase_Symbol = db.Column('Kinase_Symbol', db.String)
     Kinase_Name = db.Column('Kinase_Name', db.String)
     Groups = db.Column('Groups', db.String)
@@ -34,6 +33,8 @@ class SubstrateInfo(db.Model):
 
 class InhibitorInfo(db.Model):
     """"""
+    __tablename__ = "InhibitorInfo"
+    
     Inhibitor_Name = db.Column('Inhibitor_Name', db.String, primary_key = True)
     CHEMBLID = db.Column('CHEMBLID', db.String)
     Kinase_Target = db.Column('Kinase_Target', db.String)
