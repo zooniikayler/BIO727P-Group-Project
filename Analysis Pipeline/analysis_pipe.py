@@ -65,7 +65,7 @@ def volcano_plot(user_data):
     return fig.show()
 #barplot showing kinase activity
 def kinase_barplot(user_data):
-    y_plot = set(user_data.KINASE_SYMBOL)
+    y_plot = set(user_data.Kinase)
     x_plot = []
 
     for k in y_plot:
@@ -90,8 +90,9 @@ def kinase_barplot(user_data):
     fig.show()
     return
 
-#prepare_user_data(df_user1, df_home1) #returns df_user1
-kinase_barplot(df_user)
+
+
+
 
 
 
