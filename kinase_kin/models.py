@@ -25,7 +25,7 @@ class Substrate(db.Model):
     Kin_ACC_ID = db.Column('Kin_ACC_ID', db.String)
     Kin_Gene = db.Column('Kin_Gene', db.String)
     Kinase = db.Column('Kinase', db.String)
-    Substrate = db.Column('Substrate', db.String)
+    Substrate_Symbol = db.Column('Substrate_Symbol', db.String)
     SubFamily = db.Column('SubFamily', db.String)
     Sub_ACC_ID = db.Column('Sub_Gene', db.String)
     Sub_Mod_Rsd = db.Column('Sub_Mod_Rsd', db.String)
