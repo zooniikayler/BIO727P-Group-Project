@@ -84,7 +84,7 @@ def kinase_results(search):
 			substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
 					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-			substrate_results = substrate_qry(all)
+			substrate_results = substrate_qry.all()
 
 		elif search.data['select'] == 'Uniprot Accession Number': #check Uniprot Accession Number search was selected
 			qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.contains(search_string)) #qry uniprot accession number 
@@ -94,12 +94,27 @@ def kinase_results(search):
 		flash('No results found!') #flash error message
 		return redirect('/Kinases') #return back to kinase search
 
-	elif search.data['select'] == 'Uniprot Accession Number':
-		qry
+	elif search.data['select'] == 'Uniprot Accession Number': # if user selected uniprot accession number
+		return render_template('uniprot.html', results=results)
+    
+    else:
+        #displaying results
+        return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results)
 
-
-
-
+@app.route('/Kinases/<Kinase_Symbol>)
+def profile(Kinase_Symbol):
+    qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))
+    results= qry.all()
+    
+    inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo)\
+            .join(InhibitorInfo, KinaseInfo.Kinase_Symbol== InhibitorInfo.Kinase_Target)
+    inhibitor_results = inhibitor_qry.all()
+      
+    substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
+					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
+    substrate_results = substrate_qry.all()
+    
+    return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results)
 
 ############################  About us   #########################################################
 
