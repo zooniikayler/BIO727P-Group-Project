@@ -114,7 +114,7 @@ def profile(Kinase_Symbol):
 					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
     substrate_results = substrate_qry.all()
     
-    return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results)
+    return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
 
 ############################  About us   #########################################################
 
