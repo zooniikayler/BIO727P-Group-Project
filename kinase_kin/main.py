@@ -53,7 +53,6 @@ def Home():
 
 @app.route('/Kinases', methods=['GET', 'POST'])
 def Kinases():
-<<<<<<< HEAD
 	search = KinaseSearchForm(request.form) #request search from & run request
 	#may need to try submit as difference in forms
 	if request.method== 'POST': #if user posting search string to get info from db
@@ -110,12 +109,6 @@ def kinprofile(Kinase_Symbol):
     substrate_results = substrate_qry.all()
     
     return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
-=======
-	form = KinaseSearchForm()
-	if form.validate():
-		return 'Form Successfully Submitted'
-	return	render_template('Kinases.html', form=form)
->>>>>>> 5d14e89088782ecf959ce17627c0778c298684f6
 
 ############################  About us   #########################################################
 
@@ -159,9 +152,6 @@ def results():
 	barplot_dict = dict(y_axis, x_axis)
 
 	return render_template("results.html")
-
-
-
 
 
 ############################  Inhibitors   ########################################################
