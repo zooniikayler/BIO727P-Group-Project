@@ -85,7 +85,7 @@ def kinase_results(search):
 			results=qry.all()
 
 	if not results:
-		flash('No results found!') #flash error message
+		flash('No results found. Please search again') #flash error message
 		return redirect('/Kinases') #return back to kinase search
 
 	elif search.data['select'] == 'Uniprot Accession Number': # if user selected uniprot accession number
