@@ -1,6 +1,7 @@
-from flask import Flask, render_template, flash, redirect, request, url_for
-from .analysis_pipe import *
+from flask import Flask, render_template, flash, redirect, request, url_for, send_from_directory
 
+from kinase_kin.analysis_pipe import *
+import numpy as np
 
 #from forms import FileRequired
 import os
@@ -21,14 +22,14 @@ class KinaseSearchForm(Form):
 
 
 class InhibitorSearchForm(Form):
-	choices = [(' CHEMBL ID', 'CHEMBL ID'), ('Inhibitor Name', 'Inhibitor Name')]
-	select = StringField('Enter a Kinase Inhibitor Name', choices=choices) # Define choices for the inhibitor search
-	search = StringField('',validators=[DataRequired()])
+	#choices = [(' CHEMBL_ID', 'CHEMBL_ID'), ('INN_Name', 'INN_Name')]
+	search = StringField('Enter a Kinase Inhibitor Name', validators=[DataRequired()]) # Define choices for the inhibitor search
+	submit = SubmitField("Search")
 
 class SubstrateSearchForm(Form):
-	choices = [('Substrate', 'Substrate')]# Define choices for the phosphosite search
-	select = StringField('Enter Substrate Name', choices=choices) # Define choices for the inhibitor search
-	search = StringField('',validators=[DataRequired()])
+	#choices = [('Substrate', 'Substrate')]# Define choices for the phosphosite search
+	search = StringField('Enter a Substrate', validators=[DataRequired()])
+	submit = SubmitField('Search')
 
 class phosphositesSearchForm(Form):
     choices = [('Phosphosite', 'Phosphosite')]
@@ -53,64 +54,13 @@ def Home():
 
 @app.route('/Kinases', methods=['GET', 'POST'])
 def Kinases():
-	search = KinaseSearchForm(request.form) #request search from & run request
-	#may need to try submit as difference in forms
-	if request.method== 'POST': #if user posting search string to get info from db
-		return kinase_results(search)
-	return	render_template('Kinases.html', form=search)
-
-@app.route('/kinase_results')
-def kinase_results(search):
-	results = []
-	search_string = search.data['search'] #when given user input data
-	#search_string = search_string.upper()
-
-	if search_string:
-		if search.data['select']=='Kinase Name': #check if kinase symbol was selected
-			qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(search_string))
-			results= qry.all() #output all query results
-
-			inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo)\
-					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
-					.join(InhibitorInfo, KinaseInfo.Kinase_Symbol == InhibitorInfo.Kinase_Target) #run join query to find all inhibitors with the corresponding kinase symbol target
-			inhibitor_results = inhibitor_qry.all()
-
-			substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
-					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
-					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-			substrate_results = substrate_qry.all()
-
-		elif search.data['select'] == 'Uniprot Accession Number': #check Uniprot Accession Number search was selected
-			qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.contains(search_string)) #qry uniprot accession number 
-			results=qry.all()
-
-	if not results:
-		flash('No results found. Please search again') #flash error message
-		return redirect('/Kinases') #return back to kinase search
-
-	elif search.data['select'] == 'Uniprot Accession Number': # if user selected uniprot accession number
-		return render_template('uniprot.html', results=results)
-    else:
-        #displaying results
-        return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results)
-
-@app.route('/Kinases/<Kinase_Symbol>)
-def kinprofile(Kinase_Symbol):
-    
-    qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))
-    results= qry.all()
-    
-    inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo)\
-            .join(InhibitorInfo, KinaseInfo.Kinase_Symbol== InhibitorInfo.Kinase_Target)
-    inhibitor_results = inhibitor_qry.all()
-      
-    substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
-					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-    substrate_results = substrate_qry.all()
-    
-    return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
+	form = KinaseSearchForm()
+	if form.validate():
+		return 'Form Successfully Submitted'
+	return	render_template('Kinases.html', form=form)
 
 ############################  About us   #########################################################
+
 
 @app.route('/About_us')
 def About_us():
@@ -118,11 +68,15 @@ def About_us():
 
 ############################  Data Analysis   #########################################################
 
-UPLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__))
-ALLOWED_EXTENSIONS= {'csv'}
+
+UPLOAD_FOLDER = ('/Users/zooniikayler/PycharmProjects/BIO727P-Group-Project/kinase_kin/Data_Upload' )
+
+ALLOWED_EXTENSIONS= {'csv', 'tsv'}
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
-    return '.' in filename and \
+	return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
@@ -131,102 +85,69 @@ def Upload():
 	form=FileForm()
 	if request.method == 'POST':
 		if request.files:
-			file = request.files['file']
-				#return redirect(request.url)
-			#if file.filename == '':
-				#flash('No file selected')
-				#return redirect(request.url)
+			file=request.files['file']
+			if file.filename == '':
+				flash('No file selected')
+				return redirect(request.url)
+			filename = secure_filename(file.filename)
+			#filename = np.random()
 			if file and allowed_file(file.filename):
-				upload_directory = os.path.join(app.instance_path)
-				if not os.path.exists(upload_directory):
-					os.makedirs(upload_directory)
-				file.save(os.path.join(upload_directory, secure_filename(file.filename)))
-				return redirect(url_for('results'))
-	return	render_template('Data_Analysis.html', form=form)
+				if not os.path.exists(UPLOAD_FOLDER):
+					os.makedirs(UPLOAD_FOLDER)
+				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+				return redirect(url_for('results', filename = filename))
+	return render_template('Data_Analysis.html', form=form)
 
 
-@app.route('/results')
+
+@app.route('/data_results')
 def results():
-	y_axis = set(create_df_user('instance/sample_file.csv').Kinase)
-	x_axis = kinase_barplot_x(create_df_user('instance/sample_file.csv'))
-	barplot_dict = dict(y_axis, x_axis)
+	filename = request.args.get('filename')
+	df= create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+	x_axis = list(set(df.Kinase))  # getting unique set of kinases from uploaded file
+	y_axis = kinase_barplot_x(df)  # getting mean score for each kinase
 
-	return render_template("results.html")
+	list_obj = []  # creating dictionary of kinases/activity
+	for a in range(len(x_axis)):
+		obj = {
+			"x": x_axis[a],
+			"y": y_axis[a],
+		}
+		list_obj.append(obj)
+
+	sorted_list = sorted(list_obj, key=lambda k: k[
+		'y'])  # sorting dictionary of kinases/activity so they appear in ascending order
+
+	volcano_y = list(df.FC4)  # extracting fold change data from the uploaded file
+	volcano_x = list(df.pval5)  # extracting pvalues from the uploaded file
+
+	barplot_x = [item['x'] for item in sorted_list]  # extracting x from dictionary
+	barplot_y = [item['y'] for item in sorted_list]  # extracting y from dictionary
+	colours = [i for i in range(len(x_axis))]  # creating a color index for each kinase
+	return render_template("data_results.html", y_axis=barplot_y, x_axis=barplot_x, colours = colours,  volcano_x=volcano_x, volcano_y = volcano_y)
+
+#arguments are passing the variables from python for use in html script
 
 
 ############################  Inhibitors   ########################################################
 
 @app.route('/Inhibitors', methods=['GET', 'POST'])
 def Inhibitors():
-    search = InhibitorSearchForm(request.form) #request search from & run request
-	#may need to try submit as difference in forms
-	if request.method== 'POST': #if user posting search string to get info from db
-		return inhibitor_results(search)
-	return	render_template('inhibitor_results.html', form=search)
-
-@app.route('/Inhibitors_results')
-def inhibitor_results(search):
-    results = []
-    search_string = search.data['search']
-    
-    if search_string:
-        if search.data['select'] == 'CHEMBL ID':
-            qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.ilike(search_string))
-            results = qry.all()
-        elif search.data['select'] == 'Inhibitor Name':
-            qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.ilike(search_string))
-            results = qry.all()
-        else:
-            qry = db_session.query(InhibitorInfo)
-            results = qry.all()
-   
-    if not results:
-        flash('No results found. Please search again')
-        return redirect ('/Inhibitors)
-    else:
-        return render_template('inhibitor_results.html')
-
-@app.route('/Inhibitors/<chEMBL_ID>')
-def inhibitorprofile(chEMBL_ID):
-    qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.ilike(chEMBL_ID))
-    results = qry.all()
-    return render_template('inhibitor_results.html', results=results)
+	form = InhibitorSearchForm()
+	if form.validate():
+		return 'Form Successfully Submitted'
+	return	render_template('Inhibitors.html', form=form)
 
 ############################  Substrates   ########################################################
 @app.route('/Substrates', methods=['GET', 'POST'])
 def Substrates():
-	search = SubstrateSearchForm(request.form) #request search from & run request
-	#may need to try submit as difference in forms
-	if request.method== 'POST': #if user posting search string to get info from db
-		return substrate_results(search)
-	return	render_template('Substrate_results.html', form=search)
+	form = SubstrateSearchForm()
+	if form.validate():
+		return 'Form Succesfully Submitted'
+	return	render_template('Substrates.html', form=form)
 
-@app.route('/Substrate_results')
-def substrate_results(search):
-    results= []
-    search_string = search.data['search']
-    
-    if search_string:
-        if search.data['select'] == 'Substrate':
-            qry.db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(search))
-            results = qry.all()
-        else:
-            qry = db_session.query(SubstrateInfo)
-            results = qry.all()
-    
-    if not results:
-        flash('No results found. Please search again')#
-        return redirect('/Substrates')
-    else:
-        return render_template('substrate_results.html)
 
-@app.route('/Substrates/<sub>)
-def substrateprofile(sub):
-    qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(sub))
-    results = qry.all()
-    return render_template('Substrate_results.html', results = results)
 
-############################################################################
 if __name__=='__main__':
 	app.run(debug=True)
 	# from waitress import serve

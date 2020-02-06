@@ -33,8 +33,9 @@ def create_df_user(filepath):
                      on= ['Substrate', 'Position'], rsuffix= '_sub_acc')
 
     #cleaning data, removing Nans, O, infinity
+    df_user = df_user.replace([np.inf, -np.inf], np.nan)
     df_user = df_user.dropna()
-    df_user= df_user.dropna(axis=0)
+    df_user = df_user.dropna(axis=0)
     df_user = df_user.dropna(subset = ['Kinase'])
     df_user = df_user[(df_user.FC_log2 != "inf")]
     df_user = df_user[(df_user.FC_log2 != "0")]
@@ -70,6 +71,7 @@ def volcano_plot(user_data):
 #barplot showing kinase activity
 def kinase_barplot_x(user_data):
     x_plot = []
+    y_plot = set(user_data.Kinase)
     for k in y_plot:
         x = mean_score(k, user_data)
         x_plot.append(x)
@@ -77,24 +79,6 @@ def kinase_barplot_x(user_data):
 
 
 
-
-
-#    labels = ['Activity','Kinase']
-#    kin_activity = pd.DataFrame(columns=labels)
-#    kin_activity['Activity']=x_plot
-#    kin_activity['Kinase']=y_plot
-#    kin_activity.sort_values(['Activity'], ascending=[True])
-
-#    fig = px.bar(kin_activity, color='Activity',  y='Activity', x='Kinase')
-#    fig.update_layout(
-#        title='Relative Kinase Activity' + " User Uploaded Data",
-#        xaxis_tickfont_size=14,
-#        yaxis=dict(
-#            title='Activity',
-#            titlefont_size=16,
-#            tickfont_size=14))
-#    fig.update_layout(xaxis={'categoryorder':'total ascending'})
-#    fig.show()
 
 
 
