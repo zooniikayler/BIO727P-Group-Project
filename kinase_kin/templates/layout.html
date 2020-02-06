@@ -4,12 +4,13 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="href="https://www.w3schools.com/w3css/4/w3.css">
 
     {% if title %}
-        <title>Kinase Kinpendium - {{ title }}</title>
+        <title> {{ title }}</title>
     {% else %}
-        <title>Kinase Kinpendiummmmmm</title>
+        <title>Kinase Kinpendium</title>
     {% endif %}
 
     <!-- Bootstrap CSS link -->
@@ -23,19 +24,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- can include fontawsome link to link social media accounts i.e GitHib? -->
     <!-- here is also where you include the link to the css stylesheet script for this page!!-->
+
+    <!-- Custom fonts for this theme -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+  <link href="static/main.css" rel="stylesheet" > 
+
     
   </head>
 
-  <!-- BODY-->
+
 
   <body>
-      
-
   <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-      <a class="nav-brand" href="/">
-      <img src="/static/img/bootstrap-solid.png" width="50" height="50" alt="">Kinase Kinpendium</a>
+    <nav class="navbar  navbar-expand navbar-light bg-light sticky-top-top">
+    <div class="container">
+      <a class="nav-brand" href="/Home"></a">
+      <img src="/static/img/bootstrap-solid.png" width="50" height="50" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,9 +70,18 @@
     </div>
     </nav>
 
-      {% block content %} {% endblock %}
 
 
 
-</body>
-</html>
+
+  </body>
+{% block content %} 
+{% endblock %}
+  </html>
+<!-- End Page Content -->
+
+
+<!-- Footer -->
+<!-- <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+  <p class="w3-medium">A QMUL MSc Bioinformatics Project </p>
+</footer> -->

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<doctype html>
+<title>Search Substrates</title>
+<head>
+    <script src="http://ebi-uniprot.github.io/CDN/protvista/protvista.js"></script>
+    <link href="http://ebi-uniprot.github.io/CDN/protvista/main.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/tabs.css">
+</head>
+
+<div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <br>
+      {% if result %}
+      <center> <h3><b>Profile</b></h3> <center>
+      <h5> Substrate: <span class="w3-teal"><td>{{ result.Sub_Gene.upper() }}</td></span></h5>
+      {% else %}
+      {% endif %}
+    </div>
+<div class="tabset">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="info" checked>
+  <label for="tab1">Information</label>
+  <!-- Tab 2 -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="annot">
+  <label for="tab2">Substrate Protein Annotation</label>
+  <!-- Tab 3 -->
+  <input type="radio" name="tabset" id="tab3" aria-controls="inter">
+  <label for="tab3">Genome Browser</label>
+
+  <div class="tab-panels">
+    <section id="info" class="tab-panel">
+      {% if result %}
+      <div>
+        <h4 class="w3-border-bottom w3-border-light-grey w3-padding-12 w3-light-grey"> Information </h4>
+        <h5> Substrate: <span class="w3-opacity">{{ result.Sub_Gene.upper() }}</span></h5>
+        <h5> Gene: <span class="w3-opacity">{{ result.Substrate_Symbol }}</span></h5>
+        <h5> Substrate Phosphorylator : <span class="w3-opacity">{{ url_for(result.Kinase) }}</span></h5>
+        <h5> Substrate Accession Number: <span class="w3-opacity">{{ result.Sub_ACC_ID }}</span></h5>
+        <h5> Modified Residue: <span class="w3-opacity">{{ result.Sub_Mod_Rsd }}</span></h5>
+        <h5> Amino Acid Site of Phosphorylation: <span class="w3-opacity">{{ result.Site_AA }}</span></h5>
+        <h5> Substrate Domain: <span class="w3-opacity">{{ result.Sub_Domain }}</span></h5>
+        <!-- <h5> Chromosome: <span class="w3-opacity">{{ result.loc }}</span></h5> -->
+      </div>
+    </section>
+
+    <section id="annot" class="tab-panel">
+      <h4 class="w3-border-bottom w3-border-light-grey w3-padding-12 w3-light-grey">{{ result.substrate.upper() }} Protein Annotation </h4>
+          <center>
+              <div id="my_graph"></div>
+          </center>
+
+      {% else %}
+      <center><div> Result Not Found </div></center>
+      {% endif %}
+      <script>
+
+          window.onload = function () {
+              var yourDiv = document.getElementById('my_graph');
+              var ProtVista = require('ProtVista');
+              var instance = new ProtVista({
+                  el: yourDiv,
+                  uniprotacc: '{{ result.Sub_ACC_ID }}'
+              });
+          }
+      </script>
+    </section>
+    
+    <!-- Need relevant info and section for Genome Browser
+    <section id="annot" class="tab-panel">
+      <h4 class="w3-border-bottom w3-border-light-grey w3-padding-12 w3-light-grey">{{ result.substrate.upper() }} Protein Annotation </h4>
+          <center>
+              <div id="my_graph"></div>
+          </center> -->
+
+  </div>
+
+</div>
+
+{% endblock %}

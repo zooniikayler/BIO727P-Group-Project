@@ -18,7 +18,7 @@ class KinaseInfo(db.Model):
     
 class SubstrateInfo(db.Model):
     """"""
-    __tablename__ = "Substrate"
+    __tablename__ = "SubstrateInfo"
     
     Substrate_ID = db.Column('Substrate_ID', db.Integer, primary_key = True)
     Kin_ACC_ID = db.Column('Kin_ACC_ID', db.String)
@@ -26,7 +26,8 @@ class SubstrateInfo(db.Model):
     Kinase = db.Column('Kinase', db.String)
     Substrate_Symbol = db.Column('Substrate_Symbol', db.String)
     SubFamily = db.Column('SubFamily', db.String)
-    Sub_ACC_ID = db.Column('Sub_Gene', db.String)
+    Sub_ACC_ID = db.Column('Sub_ACC_ID', db.String)
+    Sub_Gene = db.Column('Sub_Gene', db.String)
     Sub_Mod_Rsd = db.Column('Sub_Mod_Rsd', db.String)
     Site_AA = db.Column('Site_AA', db.String)
     Sub_Domain = db.Column('Sub_Domain', db.String)

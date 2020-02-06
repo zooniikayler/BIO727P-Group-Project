@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<doctype html>
+<head>
+    <title> Inhibitor Search Results</title>
+    <!-- link Stylesheets for the tabs and the main style sheet -->
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/tabs.css">
+</head>
+<!-- loop through results -->
+{% for x in results %}
+<div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <br>
+      <center> <h3><b>Results</b></h3> <center>
+      <h5> <span class="w3-teal"><td>{{ x.CHEMBLID }}</td></span></h5>
+      <h5> <span class="w3-teal"><td>{{ x.Inhibitor_Name.upper() }}</td></span></h5>
+
+    </div>
+
+<!-- define tab area -->
+<div class="tabset">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="info" checked>
+  <label for="tab1">Background Information</label>
+  <!-- Tab 2 -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="prop">
+  <label for="tab2">Inhibitor Properties</label>
+
+  <div class="tab-panels">
+    <section id="info" class="tab-panel">
+      <h4 class="w3-border-bottom w3-border-light-gray w3-padding-12 w3-cyan"> Information </h4>
+      <!-- figure for chembl structure-->
+      <figure style="">
+          <img src="{{ x.image }}" style="width:300px;height:300px;border:1px solid grey" alt='missing' />
+          <figcaption>{{ x.CHEMBLID }}</figcaption>
+      </figure>
+      <br>
+      <h5> Inhibitor Name: <span class="w3-opacity"><td>{{ x.Inhibitor_Name.upper() }}</td></span>
+      <h5> Kainase Targets: <span class="w3-opacity"><td>{{ url_for(x.Kinase_Target) }}</td></span>
+      <h5> Canonical Smiles: <span class="w3-opacity"><td>{{ x.Smiles }}</td></span>
+      <h5> Standard InCHI Key: <span class="w3-opacity"><td>{{ x.InCHI_Key }}</td></span>
+
+      <!-- <h5> Kinase Target(s): <span class="w3-opacity"><a href="{{ url_for('profile', kinase = x.target1) }}">{{ x.target1 }}</a>
+        <a href="{{ url_for('profile', kinase = x.target2) }}">{{ x.target2 }}</a></span> -->
+
+    </section>
+
+    <section id="prop" class="tab-panel">
+      <h4 class="w3-border-bottom w3-border-light-grey w3-padding-12 w3-light-grey"> Properties </h4>
+      <div class="container">
+        <br>
+        <table class="zui-table" align="left">   <!-- use the zui table style sheet -->
+            <thead>
+                <tr>
+                    <th>RoF</th>
+                    <th>MW</th>
+                    <th>LogP</th>
+                    <th>TPSA</th>
+                    <th>HBA</th>
+                    <th>HBD</th>
+                    <th>NRB</th>
+                    <th>Kinase_Families</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ x.RoF }}</td>
+                    <td>{{ x.MW }}</td>
+                    <td>{{ x.LogP }}</td>
+                    <td>{{ x.TPSA }}</td>
+                    <td>{{ x.HBA }}</td>
+                    <td>{{ x.HBD }}</td>
+                    <td>{{ x.NRB}}</td>
+                    <td>{{ x.Kinase_Families}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br><br><br><br><br><br><br>
+      </div>
+    </section>
+      </div>
+    {% endfor %}
+{% endblock %}
