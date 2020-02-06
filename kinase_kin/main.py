@@ -100,19 +100,18 @@ def kinase_results(search):
 
 @app.route('/Kinases/<Kinase_Symbol>')
 def profile(Kinase_Symbol):
-	qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))
-	results= qry.all()
-
-	# inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))\
-	# 		.join(InhibitorInfo, KinaseInfo.Kinase_Symbol== InhibitorInfo.Kinase_Target)
-
-	# substrate_qry = db_session.query(KinaseInfo, SubstrateInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))\
-	# 		.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-	results = qry.all()
-	# inhibitor_results = inhibitor_qry.all()
-	# substrate_results = substrate_qry.all()
-	return render_template('kinase_results.html', results=results)
-	# , inhibitor_results = inhibitor_results, substrate_results = substrate_results)
+    qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))
+    results= qry.all()
+    
+    inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo)\
+            .join(InhibitorInfo, KinaseInfo.Kinase_Symbol== InhibitorInfo.Kinase_Target)
+    inhibitor_results = inhibitor_qry.all()
+      
+    substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
+					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
+    substrate_results = substrate_qry.all()
+    
+    return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
 
 ############################  About us   #########################################################
 
