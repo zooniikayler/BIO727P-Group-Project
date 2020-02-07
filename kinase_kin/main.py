@@ -1,23 +1,19 @@
-from flask import Flask, render_template, flash, redirect, request, url_for
+from flask import Flask, render_template, flash, redirect, request, url_for, send_from_directory
+
+from kinase_kin.analysis_pipe import *
+import numpy as np
 
 #from forms import FileRequired
 import os
-
 from werkzeug.utils import secure_filename
-from wtforms import Form, StringField, SelectField, validators, FileField, SubmitField
+from wtforms import Form, StringField, SelectField, validators, SubmitField, FileField
 from wtforms.validators import DataRequired
 from flask_wtf.file import FileRequired, FileField, FileAllowed
 
-from db_creator import init_db, db_session
-from models import KinaseInfo, SubstrateInfo, InhibitorInfo
-from app import app
-
 
 class FileForm(Form):
-	file = FileField(validators=[FileRequired()])
-	submit = SubmitField('Submit')
-#NameError: name 'SubmitField' is not defined
-##################################################################
+    file = FileField(validators=[FileRequired()])
+    submit = SubmitField('Submit')
 
 class KinaseSearchForm(Form):
 	choices = [('Kinase Name', 'Kinase Name'), ('Uniprot Accession Number', 'Uniprot Accession Number')] # Define choices for the kinase search
@@ -35,19 +31,13 @@ class SubstrateSearchForm(Form):
 	select = SelectField('Search for Substrate:', choices=choices) 
 	search = StringField('Search',validators=[DataRequired()])
 
-# class phosphositesSearchForm(Form):
-#     choices = [('Phosphosite', 'Phosphosite')]
-#     select = SelectField(choices=choices)
-#     search = StringField('',[validators.DataRequired()])
 ############################################################################################
 
 init_db() #initialise the db
 
-############################################################################################
-
-
 
 ############################  Home   #############################################################
+
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/Home')
 def Home():
@@ -62,6 +52,7 @@ def Kinases():
 	if request.method== 'POST': #if user posting search string to get info from db
 		return kinase_results(search) #Run kinase search function
 	return	render_template('Kinases.html', form=search)
+
 
 @app.route('/kinase_results')
 def kinase_results(search):
@@ -113,7 +104,9 @@ def profile(Kinase_Symbol):
     
     return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
 
+
 ############################  About us   #########################################################
+
 
 @app.route('/About_us')
 def About_us():
@@ -121,37 +114,65 @@ def About_us():
 
 ############################  Data Analysis   #########################################################
 
-UPLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__))
-ALLOWED_EXTENSIONS= {'csv', 'tsv', 'txt'}
+
+UPLOAD_FOLDER = ('/Users/zooniikayler/PycharmProjects/BIO727P-Group-Project/kinase_kin/Data_Upload' )
+
+ALLOWED_EXTENSIONS= {'csv', 'tsv'}
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
 	return '.' in filename and \
-		filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route('/Data_Analysis', methods = ['GET', 'POST'])
-def Data_Analysis():
+def Upload():
 	form=FileForm()
 	if request.method == 'POST':
 		if request.files:
-			file = request.files['file']
-				#return redirect(request.url)
-			#if file.filename == '':
-				#flash('No file selected')
-				#return redirect(request.url)
+			file=request.files['file']
+			if file.filename == '':
+				flash('No file selected')
+				return redirect(request.url)
+			filename = secure_filename(file.filename)
+			#filename = np.random()
 			if file and allowed_file(file.filename):
-
-				upload_directory = os.path.join(app.instance_path, 'uploaded_file')
-				if not os.path.exists(upload_directory):
-					os.makedirs(upload_directory)
-				file.save(os.path.join(upload_directory, secure_filename(file.filename)))
-				return redirect(url_for('Home'))
-	return	render_template('Data_Analysis.html', form=form)
+				if not os.path.exists(UPLOAD_FOLDER):
+					os.makedirs(UPLOAD_FOLDER)
+				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+				return redirect(url_for('results', filename = filename))
+	return render_template('Data_Analysis.html', form=form)
 
 
-@app.route('/results', methods=['GET', 'POST'])
+
+@app.route('/data_results')
 def results():
-	return render_template("results.html")
+	filename = request.args.get('filename')
+	df= create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+	x_axis = list(set(df.Kinase))  # getting unique set of kinases from uploaded file
+	y_axis = kinase_barplot_x(df)  # getting mean score for each kinase
+
+	list_obj = []  # creating dictionary of kinases/activity
+	for a in range(len(x_axis)):
+		obj = {
+			"x": x_axis[a],
+			"y": y_axis[a],
+		}
+		list_obj.append(obj)
+
+	sorted_list = sorted(list_obj, key=lambda k: k[
+		'y'])  # sorting dictionary of kinases/activity so they appear in ascending order
+
+	volcano_y = list(df.FC4)  # extracting fold change data from the uploaded file
+	volcano_x = list(df.pval5)  # extracting pvalues from the uploaded file
+
+	barplot_x = [item['x'] for item in sorted_list]  # extracting x from dictionary
+	barplot_y = [item['y'] for item in sorted_list]  # extracting y from dictionary
+	colours = [i for i in range(len(x_axis))]  # creating a color index for each kinase
+	return render_template("data_results.html", y_axis=barplot_y, x_axis=barplot_x, colours = colours,  volcano_x=volcano_x, volcano_y = volcano_y)
+
+#arguments are passing the variables from python for use in html script
 
 
 ############################  Inhibitors   ########################################################
@@ -191,7 +212,6 @@ def inhibitorprofile(Inhibitor_Name):
 	qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.ilike(Inhibitor_Name))
 	results = qry.all()
 	return render_template('inhibitor_results.html', results=results)
-
 
 ############################  Substrates   ########################################################
 @app.route('/Substrates', methods=['GET', 'POST'])
