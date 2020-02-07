@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<doctype html>
+<html class="no-js" lang="">
+<title>Kinase Search Results</title>
+<head>
+    <title> Kinase Database</title>
+    <script src="http://ebi-uniprot.github.io/CDN/protvista/protvista.js"></script> <!-- protvista script source -->
+    <link href="http://ebi-uniprot.github.io/CDN/protvista/css/main.css" rel="stylesheet"/> <!-- protvista CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/tabs.css?version=3423"> <!-- main CSS -->
+
+    <!-- protVista Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+<!-- </head> -->
+
+<!-- Loop through results -->
+{% if results %}
+  {% for x in results %} 
+
+  <div class="w3-card-4 w3-margin w3-light-blue">
+      <div class="w3-container">
+        <br>
+
+        <center> <h3><b>Kinase</b></h3> <center>
+        <span class="w3-teal"><td>{{ x.Kinase_Symbol.upper() }}</td></span></h5>
+    	</div>
+
+  <!-- Define tabs -->
+  <div class="tabset">
+    <!-- Kinase_Symbol Tab -->
+    <input type="radio" name="tabset" id="tab1" aria-controls="info" checked>
+    <label for="tab1">General Information</label>
+    <!-- Annotation Tab -->
+    <input type="radio" name="tabset" id="tab3" aria-controls="annot">
+    <label for="tab3">{{ x.Kinase_Symbol.upper()}} Features</label>
+    <!-- Inhibitors Tab -->
+    <input type="radio" name="tabset" id="tab5" aria-controls="inhib">
+    <label for="tab5">Known {{ x.Kinase_Symbol.upper() }} Inhibitors</label>
+    <!-- Substrates Tab -->
+    <input type="radio" name="tabset" id="tab6" aria-controls="subs">
+    <label for="tab6">{{ x.Kinase_Symbol.upper() }} Substrates</label>
+      <!-- Genome Browser Tab -->
+    <input type="radio" name="tabset" id="tab6" aria-controls="subs">
+    <label for="tab6">{{ x.Kinase_Symbol.upper() }} Genome Browser</label>
+
+
+
+    <!-- Define tab area -->
+    <div class="tab-panels">
+      <!-- General Information -->
+      <section id="Information" class="tab-panel">
+        <h4 class="w3-border-bottom w3-border-light-red w3-padding-12 w3-light-cayan"></h4>
+        
+        <!-- figure for Kinase structure-->
+          <figure style="">
+            <img src="{{ x.PDB_Image_link }}" style="width:300px;height:300px;border:1px solid blue" alt='missing' />
+            <figcaption>{{ x.Kinase_Symbol.upper()}}</figcaption>
+        </figure>
+
+        
+
+
+        <br>
+        <h5> Kinase Name: <span class="w3-opacity"><td>{{ x.Kinase_Name }}</td></span>
+        <h5> Gene: <span class="w3-opacity"><td>{{ x.gene_name }}</td></span>
+        <h5> Synonyms: <span class="w3-opacity"><td>{{ x. Synonym }}</td></span>
+        <h5> Genomic Location: <span class="w3-opacity"><td>{{ x.Genomic_location }}</td></span>
+        <h5> Uniprot Accession Number: <span class="w3-opacity"><td>{{ x.Uniprot_Accession_Number }}</td></span>
+        <br>
+        <br>
+        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-cyan"></h4>
+        <h5> Family: <span class="w3-opacity"><td>{{ x.Family }}</td></span>
+        <h5> SubFamily: <span class="w3-opacity"><td>{{ x.SubFamily }}</td></span></h5>
+        <h5> Subcellular Location: <span class="w3-opacity"><td>{{ x.Subcellular_Location }}</td></span></h5>
+        <br>
+        <br>
+        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-cayan"></h4>
+        <h5> Function: <span class="w3-opacity"><td>{{ x.Function }}</td></span>
+
+      </section>
+
+      <!-- Kinase Annotation -->
+      <section id="annot" class="tab-panel">
+        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-teal">{{ x.Kinase_Symbol.upper() }} Kinase Annotation </h4>
+        <!-- Provista javascript -->
+        <div id="yourDiv" style="width:1024px; margin:auto;"></div>
+        <center><script>
+            window.onload = function() {
+                var yourDiv = document.getElementById('yourDiv');
+                var ProtVista = require('ProtVista');
+                var instance = new ProtVista({
+                    el: yourDiv,
+                    uniprotacc: '{{ x.Uniprot_Accession_Number }}',
+
+                    //These categories will **not** be rendered.
+                    exclusions: ['SEQUENCE_INFORMATION', 'STRUCTURAL', 'TOPOLOGY', 'MUTAGENESIS', 'MOLECULE_PROCESSING']
+                });
+            }
+        </script></center>
+      </section>
+
+
+  	<!-- Inhibitors -->
+  	<section id="inhib" class="tab-panel">
+      	{% if inhibitor_results %}
+  	    <!-- Define table CSS -->
+  	    <style>
+  	      table {
+  	        font-family: arial, sans-serif;
+  	        border-collapse: collapse;
+  	        width: 100%;
+  	      }
+
+  	      td, th {
+  	        border: 1px solid #1abc9c;
+  	        text-align: left;
+  	        padding: 8px;
+  	      }
+
+  	      tr:nth-child(even) {
+  	        background-color: #f2f2f2;
+  	      }
+  	      </style>
+
+  	      <table>
+
+  	      <tr>
+  	        <td><b>ChEMBL ID</td>
+  	        <td><b>Name</td>
+  	      </tr>
+  	      <tr>
+  	         {% for x in inhibitor_results  %}
+
+  	         <td><a href="{{ url_for('inhibprofile', chembl = x.inhibitor_information.CHEMBLID) }}">{{ x.InhibitorInfo.Inhibitor_Name }}</a>
+  	         <td>{{ x.inhibitor_information.CHEMBLID }}</td>
+  	      </tr>
+  	      {% endfor %}
+  	      </table>
+  	  	{% else %}
+  	  	<!-- if there are no results render the following: -->
+  	    	<center> No known GSK kinase inhibitors found </center>
+        {% endif %}
+    	</section>
+
+    	<!--  substrates -->
+  	<section id="subs" class="tab-panel">
+  	<div class="container">
+  		<style>
+  		  table {
+  		    font-family: arial, sans-serif;
+  		    border-collapse: collapse;
+  		    width: 100%;
+  		  }
+
+  		  td, th {
+  		    border: 1px solid #1abc9c;
+  		    text-align: left;
+  		    padding: 8px;
+  		  }
+
+  		  tr:nth-child(even) {
+  		    background-color: #f2f2f2;
+  		  }
+  		</style>
+
+  		<table>
+  		<tr>
+  		{% for x in substrate_results %}
+  		<!-- Internal hyperlink -->
+  		  <table>
+  		     <td><a href="{{ url_for('substrateprofile', sub = x.SubstrateInfo.Substrate_Symbol) }}">{{ x.SubstrateInfo.Substrate_Symbol }}</a>
+  		  </table>
+  		</tr>
+  		{% endfor %}
+  	</section>
+    </div>
+  </div>
+{% else %}
+<br>
+  <center> No Results - Please try again! </center>
+  {% endfor %}
+{% endif %}
+  
+<div class="w3-row"></div>
+
+{% endblock %}

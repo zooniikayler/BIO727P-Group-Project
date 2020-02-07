@@ -2,7 +2,7 @@ from app import db
 
 class KinaseInfo(db.Model):
     """"""
-    __tablename__ = "KinaseInfo"
+    __tablename__ = "KinaseInfo" #Selects the the KinaseInfo table from the db
    
     Uniprot_Accession_Number = db.Column('Uniprot_Accession_Number', db.String, primary_key = True)
     Kinase_Symbol = db.Column('Kinase_Symbol', db.String)
@@ -18,26 +18,26 @@ class KinaseInfo(db.Model):
     
 class SubstrateInfo(db.Model):
     """"""
-    __tablename__ = "Substrate"
+    __tablename__ = "SubstrateInfo" #Selects the the SubstrateInfo table from the db
     
     Substrate_ID = db.Column('Substrate_ID', db.Integer, primary_key = True)
     Kin_ACC_ID = db.Column('Kin_ACC_ID', db.String)
     Kin_Gene = db.Column('Kin_Gene', db.String)
     Kinase = db.Column('Kinase', db.String)
     Substrate_Symbol = db.Column('Substrate_Symbol', db.String)
-    Sub_Gene = db.Column('Sub_Gene', db.String)
     Sub_ACC_ID = db.Column('Sub_ACC_ID', db.String)
+    Sub_Gene = db.Column('Sub_Gene', db.String)
     Sub_Mod_Rsd = db.Column('Sub_Mod_Rsd', db.String)
     Site_AA = db.Column('Site_AA', db.String)
     Sub_Domain = db.Column('Sub_Domain', db.String)
+    HU_CHR_LOC = db.Column('HU_CHR_LOC', db.String)
 
 class InhibitorInfo(db.Model):
     """"""
-    __tablename__ = "InhibitorInfo"
+    __tablename__ = "Inhibitor_Info" #Selects the the Inhibitor_Info table from the db
     
     Inhibitor_Name = db.Column('Inhibitor_Name', db.String, primary_key = True)
     CHEMBLID = db.Column('CHEMBLID', db.String)
-    Kinase_Target = db.Column('Kinase_Target', db.String)
     Smiles = db.Column('Smiles', db.String)
     InCHI_Key = db.Column('InCHI_Key', db.String)
     RoF = db.Column('RoF', db.Integer)
@@ -49,3 +49,10 @@ class InhibitorInfo(db.Model):
     NRB = db.Column('NRB', db.Integer)  
     Kinase_Families = db.Column('Kinase_Families', db.String)
     Image_link = db.Column('Image_link', db.String)  
+
+class InhibitorRef(db.Model):
+    """"""
+    __tablename__ = "InhibitorRef" #Selects the the InhibitorRef table from the db
+    
+    CHEMBL_ID = db.Column("CHEMBL_ID", db.String)
+    Kinase_Target = db.Column('Kinase_Target', db.String)

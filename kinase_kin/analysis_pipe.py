@@ -8,7 +8,7 @@ import sqlite3
 #connecting to the database
 def create_df_user(filepath):
     conn = sqlite3.connect("KinaseDatabasev1.db")
-    SQL_Query = pd.read_sql_query("SELECT Substrate.Kinase, Substrate.Substrate_Symbol,Substrate.Sub_Gene, Substrate.Sub_Mod_Rsd FROM Substrate",conn)
+    SQL_Query = pd.read_sql_query("SELECT SubstrateInfo.Kinase, SubstrateInfo.Substrate_Symbol,SubstrateInfo.Sub_Gene, SubstrateInfo.Sub_Mod_Rsd FROM SubstrateInfo",conn)
 
     #import data as dataFrame
     df_user = pd.read_table(filepath)
