@@ -1,26 +1,44 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="kinase">
-      <form method="POST" action="">
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Search for Human Kinases</legend>
-            <div class="form-group">
-                {{ form.search.label(class="form-control-label") }}
-                {% if form.search.errors %}
-                    {{ form.search(class="form-control form-control-lg is-valid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.search.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.search(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-        </fieldset>
-        <div class="form-group">
-            {{ form.submit(class="btn btn-outline-info") }}
-        </div>
-      </form>
-    </div>
+<title>Kinase Search</title>
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+
+<br>
+    <center>
+        <header class="w3-center w3-margin-bottom">
+            <p>Search for a Protein Kinase via it's Kinase Symbol or Uniprot Accession Number. <
+        {% with messages = get_flashed_messages() %}
+        <!-- if there is an error message then output this message -->
+            {% if messages %}
+                <l class=flashes>
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+                </l>
+    </center>
+  {% endif %}
+{% endwith %}
+
+<!-- Search Function -->
+{% from "helperforms.html" import render_field %}
+<form method=post>
+  <div class="search">
+    <div class="wrap">
+
+      <!-- drop down menu -->
+      {{ form.select(class_="searchTerm")}}<!-- 'class_' is based on a style located in the main CSS sheet -->
+      <br>
+      <br>
+      <!-- search bar -->
+      {{ form.search(class_="searchTerm", placeholder="Type in the Kinase Symbol") }}
+      <p>
+      <br>
+      <br>
+    <input type=submit value=Search class=searchButton>
+  </div>
+ </div>
+</form>
+<br>
+<br>
+
 {% endblock content %}

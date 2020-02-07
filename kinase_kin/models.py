@@ -18,7 +18,7 @@ class KinaseInfo(db.Model):
     
 class SubstrateInfo(db.Model):
     """"""
-    __tablename__ = "Substrate"
+    __tablename__ = "SubstrateInfo"
     
     Substrate_ID = db.Column('Substrate_ID', db.Integer, primary_key = True)
     Kin_ACC_ID = db.Column('Kin_ACC_ID', db.String)

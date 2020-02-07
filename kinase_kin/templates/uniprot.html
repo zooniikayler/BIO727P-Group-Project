@@ -28,20 +28,13 @@
 	        <!-- Loop through results and allocate them to table -->
 	        {% for x in results %}
 	        <tr>
-	           <td>Kinase: <a href="{{ url_for('profile', kinase = x.kinase) }}">{{ x.kinase }}</a></td>
-	           <td>{{ x. }}</td>
-	           <td>{{ x.gene_name }}</td>
+	           <td>Kinase Uniprot Acc Num: <a href="{{ url_for('profile', kinase = x.Kinase_Symbol) }}">{{ x.Kinase_Symbol}}</a></td>
+	           <td>{{ x.Uniprot_Accession_Number }}</td>
+	           <td>{{ x.Kinase_Symbol}}</td>
 	        </tr>
 	        {% endfor %}
 	        </table>
-	</div>
-	
-
-
-
-
-
-</div>
+{% endblock %}
 
 
 
