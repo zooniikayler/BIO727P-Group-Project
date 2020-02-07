@@ -34,7 +34,7 @@ class SubstrateInfo(db.Model):
 
 class InhibitorInfo(db.Model):
     """"""
-    __tablename__ = "InhibitorInfo"
+    __tablename__ = "Inhibitor_Info"
     
     Inhibitor_Name = db.Column('Inhibitor_Name', db.String, primary_key = True)
     CHEMBLID = db.Column('CHEMBLID', db.String)
