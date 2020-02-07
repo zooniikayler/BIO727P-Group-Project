@@ -5,4 +5,4 @@ Current Dependencies for Documentation:
 Pandas
 Numpy
 Scipy.rankdata
-mySQLdb
+sqlite3

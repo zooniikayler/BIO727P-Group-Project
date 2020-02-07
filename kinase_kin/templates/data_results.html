@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+
+</head>
+<!-- Load plotly.js into the DOM -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js">
+</script>
+ <center><h1> Data Analysis Results </h1></center>
+
+<body>
+
+
+
+<div id='barplot'><!-- Plotly chart will be drawn inside this DIV --></div>
+<br>
+<br>
+<center><h3>  Relative Kinase Activity Explained: </h3></center>
+<center><p>  The kinase activity in this plot was calculated by taking the mean fold change of all substrates affected by each kinase. Thus, the kinase with the greatest mean effect size is shown to be most "active". </p></center>
+<div id='volcano'><!-- Plotly chart will be drawn inside this DIV --></div>
+<!-- put |safe -->
+
+<script>
+var data = [
+  {
+    x: {{ x_axis |safe }},
+    y: {{ y_axis }},
+    type: 'bar',
+    marker: {
+       color: {{ colours }}
+    }
+  }
+
+];
+var layout = {
+  title:'Your Data Relative Kinase Activity'};
+
+Plotly.newPlot('barplot', data, layout);
+
+</script>
+
+<script>
+
+var trace2 = {
+  x: {{ volcano_x }},
+  y: {{ volcano_y }},
+  mode: 'markers',
+  type: 'scatter',
+  name: {{ Kinase }}
+  marker: { size: 12 }
+};
+
+var data = [ trace2 ];
+
+var layout = {
+  xaxis: {
+    label: 'Log2 of Fold Change'
+    range: [ -2, 2 ]
+  },
+  yaxis: {
+    range: [-1, 10]
+    label: 'P-Value'
+  },
+  title:'Your Data Volcano Plot'
+};
+
+Plotly.newPlot('volcano', data, layout);</script>
+
+
+</body>
+
+
+</html>
+{% endblock %}
+
+
