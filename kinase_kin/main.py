@@ -65,9 +65,9 @@ def kinase_results(search):
 			qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(search_string))
 			results= qry.all() #output all query results
 
-			inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo)\
-					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
-					.join(InhibitorInfo, KinaseInfo.Kinase_Symbol== InhibitorInfo.Kinase_Target) #run join query to find all inhibitors with the corresponding kinase symbol target
+			inhibitor_qry = db_session.query(InhibitorRef, InhibitorInfo)\
+					.filter(InhibitorRef.Kinase_Target.ilike(search_string))\
+					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
 			inhibitor_results = inhibitor_qry.all()
 
 			substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
@@ -252,3 +252,4 @@ if __name__=='__main__':
 	app.run(debug=True)
 	# from waitress import serve
 	# serve(app, host="0.0.0.0", port=8080)
+    
