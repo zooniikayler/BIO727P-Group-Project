@@ -4,6 +4,12 @@ import plotly.express as px
 import sqlite3
 
 
+def check_format(filepath):
+    df = pd.read_table(filepath)
+    if len(df.columns) != 7:
+        return 1
+    else:
+        return 0
 
 #connecting to the database
 def create_df_user(filepath):

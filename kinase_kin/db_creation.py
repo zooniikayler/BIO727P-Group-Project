@@ -23,8 +23,8 @@ con.commit() # saves the chages to the database
 cur.excute("CREATE TABLE SubstrateInfo(Substrate_ID PRIMARY KEY NOT NULL, Substrate_ID VARCHAR(50), Kin_ACC_ID TEXT NOT NULL, Kin_Gene TEXT,Kinase TEXT NOT NULL,Substrate_Symbol TEXT NOT NULL, Sub_ACC_ID TEXT NOT NULL,Sub_Gene  TEXT NOT NULL, Sub_Mod_Rsd TEXT NOT NULL,Site_AA VARCHAR(30),Sub_Domain TEXT, FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol));")
 #Populating the substrate table
 with open ('Substrate_FINAL.csv', 'r') as STable:
-	dr4 = csv.DictReader(STable) # Uses first line in file as column headings
-  to_db4 = [(i['SUBSTRATE_ID'],i['KIN_ACC_ID'],i['KIN_GENE'],i['KINASE'],i['SUBSTRATE_SYMBOL'],i['SUB_ACC_ID'], i['SUB_GENE'], i['SUB_MOD_RSD'], i['SITE_+/-7_AA'], i['SUB_DOMAIN']) for i in dr4]
+    dr4 = csv.DictReader(STable) # Uses first line in file as column headings
+    to_db4 = [(i['SUBSTRATE_ID'],i['KIN_ACC_ID'],i['KIN_GENE'],i['KINASE'],i['SUBSTRATE_SYMBOL'],i['SUB_ACC_ID'], i['SUB_GENE'], i['SUB_MOD_RSD'], i['SITE_+/-7_AA'], i['SUB_DOMAIN']) for i in dr4]
 
 cur.executemany("INSERT INTO Substrate(Substrate_ID,Kin_ACC_ID,Kin_Gene,Kinase,Substrate_Symbol,Sub_ACC_ID,Sub_Gene,Sub_Mod_Rsd,Site_AA,Sub_Domain) VALUES (?,?,?,?,?,?,?,?,?,?);", to_db4)
 con.commit() # saves the chages to the database
