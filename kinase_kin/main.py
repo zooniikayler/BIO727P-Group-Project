@@ -1,7 +1,10 @@
 from flask import Flask, render_template, flash, redirect, request, url_for, send_from_directory
-
+from kinase_kin.app import app
 from kinase_kin.analysis_pipe import *
 import numpy as np
+from kinase_kin.db_creator import *
+from kinase_kin.models import *
+from kinase_kin.db_creation import *
 
 #from forms import FileRequired
 import os
@@ -9,6 +12,8 @@ from werkzeug.utils import secure_filename
 from wtforms import Form, StringField, SelectField, validators, SubmitField, FileField
 from wtforms.validators import DataRequired
 from flask_wtf.file import FileRequired, FileField, FileAllowed
+
+
 
 
 class FileForm(Form):
@@ -38,7 +43,7 @@ init_db() #initialise the db
 
 ############################  Home   #############################################################
 
-@app.route('/', methods=['GET', 'POST'])
+
 @app.route('/Home')
 def Home():
 	return render_template('Home.html')
@@ -115,15 +120,16 @@ def About_us():
 ############################  Data Analysis   #########################################################
 
 
-UPLOAD_FOLDER = ('/Users/zooniikayler/PycharmProjects/BIO727P-Group-Project/kinase_kin/Data_Upload' )
+UPLOAD_FOLDER = '/Users/zooniikayler/PycharmProjects/BIO727P-Group-Project/kinase_kin/Data_Upload'
 
 ALLOWED_EXTENSIONS= {'csv', 'tsv'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+
 def allowed_file(filename):
 	return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+		filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route('/Data_Analysis', methods = ['GET', 'POST'])
@@ -145,10 +151,12 @@ def Upload():
 	return render_template('Data_Analysis.html', form=form)
 
 
-
 @app.route('/data_results')
 def results():
 	filename = request.args.get('filename')
+	if check_format(os.path.join(app.config['UPLOAD_FOLDER'], filename)) == 1:
+		return redirect(url_for('format_error'))
+
 	df= create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 	x_axis = list(set(df.Kinase))  # getting unique set of kinases from uploaded file
 	y_axis = kinase_barplot_x(df)  # getting mean score for each kinase
@@ -173,6 +181,13 @@ def results():
 	return render_template("data_results.html", y_axis=barplot_y, x_axis=barplot_x, colours = colours,  volcano_x=volcano_x, volcano_y = volcano_y)
 
 #arguments are passing the variables from python for use in html script
+
+############################  Error Message   ########################################################
+
+
+@app.route('/error-message')
+def format_error():
+	render_template("format_error.html")
 
 
 ############################  Inhibitors   ########################################################
@@ -243,7 +258,7 @@ def substrate_results(search):
 
 @app.route('/Substrates/<Substrate_Symbol>')
 def substrateprofile(Substrate_Symbol):
-	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate_Symbols))
+	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate_Symbol))
 	results = qry.all()
 	return render_template('Substrate_results.html', results = results)
 
