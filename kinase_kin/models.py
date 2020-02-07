@@ -25,15 +25,16 @@ class SubstrateInfo(db.Model):
     Kin_Gene = db.Column('Kin_Gene', db.String)
     Kinase = db.Column('Kinase', db.String)
     Substrate_Symbol = db.Column('Substrate_Symbol', db.String)
-    Sub_Gene = db.Column('Sub_Gene', db.String)
+    SubFamily = db.Column('SubFamily', db.String)
     Sub_ACC_ID = db.Column('Sub_ACC_ID', db.String)
+    Sub_Gene = db.Column('Sub_Gene', db.String)
     Sub_Mod_Rsd = db.Column('Sub_Mod_Rsd', db.String)
     Site_AA = db.Column('Site_AA', db.String)
     Sub_Domain = db.Column('Sub_Domain', db.String)
 
 class InhibitorInfo(db.Model):
     """"""
-    __tablename__ = "InhibitorInfo"
+    __tablename__ = "Inhibitor_Info"
     
     Inhibitor_Name = db.Column('Inhibitor_Name', db.String, primary_key = True)
     CHEMBLID = db.Column('CHEMBLID', db.String)
