@@ -2,8 +2,8 @@ from flask import Flask, render_template, flash, redirect, request, url_for, sen
 from kinase_kin.app import app
 from kinase_kin.analysis_pipe import *
 import numpy as np
-from kinase_kin.db_creator import *
-from kinase_kin.models import *
+from kinase_kin.db_creator import init_db, db_session
+from kinase_kin.models import KinaseInfo,SubstrateInfo,InhibitorInfo,InhibitorRef
 from kinase_kin.db_creation import *
 
 #from forms import FileRequired

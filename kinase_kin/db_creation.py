@@ -10,7 +10,7 @@ print("Opened database successfully")
 
 #######1: THE KINASE INFORMATION##########
 # Creating the table for the general kinase inforamtion
-cur.execute("CREATE TABLE KinaseInfo(Uniprot_Accession_Number TEXT PRIMARY KEY NOT NULL, Kinase_Symbol VARCHAR(20) NOT NULL, Kinase_Name VARCHAR(150) NOT NULL, Groups TEXT, Family VARCHAR(20), SubFamily VARCHAR(20), Synonym VARVHAR(100), Function TEXT, Genomic_Location TEXT, Subcellular_Location TEXT, PDB_Image_link TEXT):")
+cur.execute("CREATE TABLE IF NOT EXISTS KinaseInfo(Uniprot_Accession_Number TEXT PRIMARY KEY NOT NULL, Kinase_Symbol VARCHAR(20) NOT NULL, Kinase_Name VARCHAR(150) NOT NULL, Groups TEXT, Family VARCHAR(20), SubFamily VARCHAR(20), Synonym VARVHAR(100), Function TEXT, Genomic_Location TEXT, Subcellular_Location TEXT, PDB_Image_link TEXT):")
 #Populating the general kinase inforamation table
 with open ('KinaseInfoFINAL.csv', 'r') as KTable:
 	dr_1 = csv.DictReader(KTable) # Uses first line in file as column headings
