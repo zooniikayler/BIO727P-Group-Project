@@ -1,4 +1,4 @@
-from app import db
+from kinase_kin.app import db
 
 class KinaseInfo(db.Model):
     """"""
@@ -54,5 +54,5 @@ class InhibitorRef(db.Model):
     """"""
     __tablename__ = "InhibitorRef" #Selects the the InhibitorRef table from the db
     
-    CHEMBL_ID = db.Column("CHEMBL_ID", db.String)
+    CHEMBL_ID = db.Column("CHEMBL_ID", db.String, primary_key = True)
     Kinase_Target = db.Column('Kinase_Target', db.String)
