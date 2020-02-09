@@ -1,13 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb  7 16:06:46 2020
-
-@author: n7iqb
-"""
-
 import sqlite3,csv # Importing the required modules
 
-conn = sqlite3.connect("KinaseDatabase.db") #Creates the databasefile in memory
+conn = sqlite3.connect("KinaseDatabasev1.db") #Creates the databasefile in memory
 
 c = conn.cursor() #cursor object that connects to the database
 
@@ -113,9 +106,10 @@ c.execute("""CREATE TABLE SubstrateInfo(
             Sub_ACC_ID TEXT NOT NULL,
             Sub_Gene TEXT NOT NULL,
             Sub_Mod_Rsd TEXT NOT NULL,
-            Site_AA VARCHAR(25),
+            Site_AA VARCHAR(30),
             Sub_Domain TEXT,
-            HU_CHR_LOC TEXT,
+            Chromosome INTEGER,
+            Leg TEXT,
             FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol)
             )""")
 
@@ -132,9 +126,10 @@ with open('Substrate_FINAL.csv','r') as STable:
                i['SUB_MOD_RSD'], 
                i['SITE_AA'], 
                i['SUB_DOMAIN'],
-               i['HU_CHR_LOC']) for i in dr4]
+               i['CHROMOSOME'],
+               i['LEG']) for i in dr4]
     
-c.executemany("INSERT INTO SubstrateInfo(Substrate_ID,Kin_ACC_ID,Kin_Gene,Kinase,Substrate_Symbol,Sub_ACC_ID,Sub_Gene,Sub_Mod_Rsd,Site_AA,Sub_Domain,HU_CHR_LOC) VALUES (?,?,?,?,?,?,?,?,?,?,?);", to_db4)
+c.executemany("INSERT INTO SubstrateInfo(Substrate_ID,Kin_ACC_ID,Kin_Gene,Kinase,Substrate_Symbol,Sub_ACC_ID,Sub_Gene,Sub_Mod_Rsd,Site_AA,Sub_Domain,Chromosome,Leg) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);", to_db4)
 
 conn.commit() # saves the chages to the database
 

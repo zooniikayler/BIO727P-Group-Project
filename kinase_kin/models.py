@@ -30,7 +30,8 @@ class SubstrateInfo(db.Model):
     Sub_Mod_Rsd = db.Column('Sub_Mod_Rsd', db.String)
     Site_AA = db.Column('Site_AA', db.String)
     Sub_Domain = db.Column('Sub_Domain', db.String)
-    HU_CHR_LOC = db.Column('HU_CHR_LOC', db.String)
+    Chromosome = db.Column('Chromosome', db.Integer)
+    Leg = db.Column('Leg', db.Integer)
 
 class InhibitorInfo(db.Model):
     """"""
