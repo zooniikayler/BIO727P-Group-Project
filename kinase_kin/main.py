@@ -244,7 +244,7 @@ def substrate_results(search):
 
 	if search_string:
 		if search.data['select'] == 'Substrate':
-			qry.db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(search))
+			qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(search))
 			results = qry.all()
 		else:
 			qry = db_session.query(SubstrateInfo)
