@@ -4,7 +4,6 @@ from kinase_kin.analysis_pipe import *
 import numpy as np
 from kinase_kin.db_creator import init_db, db_session
 from kinase_kin.models import KinaseInfo,SubstrateInfo,InhibitorInfo,InhibitorRef
-from kinase_kin.db_creation import *
 
 #from forms import FileRequired
 import os
@@ -43,7 +42,7 @@ init_db() #initialise the db
 
 ############################  Home   #############################################################
 
-
+@app.route('/')
 @app.route('/Home')
 def Home():
 	return render_template('Home.html')
@@ -81,7 +80,7 @@ def kinase_results(search):
 			substrate_results = substrate_qry.all()
 
 		elif search.data['select'] == 'Uniprot Accession Number': #check Uniprot Accession Number search was selected
-			Uniprot_qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.contains(search_string)) #qry uniprot accession number 
+			Uniprot_qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.ilike(search_string)) #qry uniprot accession number 
 			Uniprot_results= Uniprot_qry.all()
 
 	if not results:
@@ -100,7 +99,7 @@ def profile(Kinase_Symbol):
     results= qry.all()
     
     inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo)\
-            .join(InhibitorInfo, KinaseInfo.Kinase_Symbol== InhibitorInfo.Kinase_Target)
+            .join(InhibitorRef, KinaseInfo.Kinase_Symbol== InhibitorRef.Kinase_Target)
     inhibitor_results = inhibitor_qry.all()
       
     substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
@@ -198,7 +197,7 @@ def Inhibitors():
 	#may need to try submit as difference in forms
 	if request.method== 'POST':
 		return inhibitor_results(search)
-	return	render_template('inhibitor_results.html', form=search)
+	return	render_template('Inhibitors.html', form=search)
 
 @app.route('/Inhibitors_results')
 def inhibitor_results(search):
@@ -235,7 +234,7 @@ def Substrates():
 	#may need to try submit as difference in forms
 	if request.method== 'POST': #if user posting search string to get info from db
 		return substrate_results(search)
-	return	render_template('Substrate_results.html', form=search)
+	return	render_template('Substrates.html', form=search)
 
 @app.route('/Substrate_results')
 def substrate_results(search):
@@ -244,7 +243,7 @@ def substrate_results(search):
 
 	if search_string:
 		if search.data['select'] == 'Substrate':
-			qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(search))
+			qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.contains(search))
 			results = qry.all()
 		else:
 			qry = db_session.query(SubstrateInfo)
@@ -254,12 +253,23 @@ def substrate_results(search):
 		flash('No results found. Please search again')#
 		return redirect('/Substrates')
 	else:
-		return render_template('substrate_results.html')
+		return render_template('substrate_results.html', results=results)
 
-@app.route('/Substrates/<Substrate_Symbol>')
-def substrateprofile(Substrate_Symbol):
-	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate_Symbol))
+
+	# sub_obj = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(search)).first()
+
+	# if sub_obj:
+	# 	results['Substrate_Name'] = sub_obj.Substrate_Symbol
+	# return render_template('substrate_results.html', results=results)
+
+
+
+
+@app.route('/Substrates/<Substrate>')
+def substrateprofile(Substrate):
+	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate))
 	results = qry.all()
+
 	return render_template('Substrate_results.html', results = results)
 
 ######################################################################################################
