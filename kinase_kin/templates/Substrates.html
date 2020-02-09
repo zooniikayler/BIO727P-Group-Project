@@ -1,28 +1,28 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="content-section">
-      <form method="POST" action="">
-      
- 
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Search for Substrate</legend>
-            <div class="form-group">
-                {{ form.search.label(class="form-control-label") }}
-                {% if form.search.errors %}
-                    {{ form.search(class="form-control form-control-lg is-valid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.search.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.search(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-        </fieldset>
-        <div class="form-group">
-            {{ form.search(class="btn btn-outline-info") }}
+
+
+<!-- search Function -->
+{% from "helperforms.html" import render_field %}
+  <form method="POST">
+    <div class="search">
+        <div class="wrap">
+
+
+            <!-- drop down menu -->
+            {{ form.select(class="searchTerm")}}
+            <br>
+            <br>
+
+            {{ form.search(class="searchTerm", placeholder="Type in the Substrate Name")}}
+            <p></p>
+            <br>
+            <br>
+        <input type="submit" value="Search" class=searchButton>
         </div>
-      </form>
     </div>
+</form>
+<br>
+<br>
+
 {% endblock content %}

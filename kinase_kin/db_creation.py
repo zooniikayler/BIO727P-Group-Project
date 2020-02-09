@@ -16,8 +16,7 @@ c.execute("""CREATE TABLE KinaseInfo(
           Function TEXT,
           Genomic_Location TEXT,
           Subcellular_Location TEXT,
-          PDB_Image_link TEXT)
-          """)
+          PDB_Image_link TEXT)""")
 
 #Populating the general kinase inforamation table
 with open('Kinase_InfoFINAL.csv','r') as KTable: 
@@ -43,8 +42,7 @@ c.execute("""CREATE TABLE InhibitorRef(
            InhibitorRef_ID INTEGER PRIMARY KEY,
            CHEMBL_ID TEXT,
            Kinase_Target TEXT,
-           FOREIGN KEY(Kinase_Target) REFERENCES KinaseInfo(Kinase_Symbol)
-           )""")
+           FOREIGN KEY(Kinase_Target) REFERENCES KinaseInfo(Kinase_Symbol))""")
 
 #Populating the table for the inhibitor reference table
 with open('Inhibitor_refFINAL.csv','r') as IRTable:
@@ -72,8 +70,7 @@ c.execute("""CREATE TABLE Inhibitor_Info(
             NRB NUMERIC,
             Kinase_Families TEXT,
             Image_link TEXT,
-            FOREIGN KEY(CHEMBLID) REFERENCES InhibitorRef(CHEMBL_ID)
-            )""")
+            FOREIGN KEY(CHEMBLID) REFERENCES InhibitorRef(CHEMBL_ID))""")
 
 #Populating the Inhibitor_info table
 with open('Inhibitor_InfoFINAL.csv','r') as IITable:
@@ -106,12 +103,11 @@ c.execute("""CREATE TABLE SubstrateInfo(
             Sub_ACC_ID TEXT NOT NULL,
             Sub_Gene TEXT NOT NULL,
             Sub_Mod_Rsd TEXT NOT NULL,
-            Site_AA VARCHAR(30),
+            Site_AA TEXT,
             Sub_Domain TEXT,
-            Chromosome INTEGER,
+            Chromosome TEXT,
             Leg TEXT,
-            FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol)
-            )""")
+            FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol))""")
 
 #Populating the substrate table
 with open('Substrate_FINAL.csv','r') as STable:

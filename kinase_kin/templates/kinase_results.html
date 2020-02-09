@@ -29,8 +29,7 @@
       <div class="w3-container">
         <br>
 
-        <center> <h3><b>Kinase</b></h3> <center>
-        <span class="w3-teal"><td>{{ x.Kinase_Symbol.upper() }}</td></span></h5>
+        <center> <h3><b>{{ x.Kinase_Symbol.upper() }}</b></h3> <center>
     	</div>
 
   <!-- Define tabs -->
@@ -139,8 +138,8 @@
   	      <tr>
   	         {% for x in inhibitor_results  %}
 
-  	         <td><a href="{{ url_for('inhibprofile', chembl = x.inhibitor_information.CHEMBLID) }}">{{ x.InhibitorInfo.Inhibitor_Name }}</a>
-  	         <td>{{ x.inhibitor_information.CHEMBLID }}</td>
+  	         <td><a href="{{ url_for('inhibitor_results', chembl = x.InhibitorInfo.CHEMBLID) }}">{{ x.InhibitorInfo.Inhibitor_Name }}</a>
+  	         <td>{{ x.InhibitorInfo.CHEMBLID }}</td>
   	      </tr>
   	      {% endfor %}
   	      </table>
@@ -176,7 +175,7 @@
   		{% for x in substrate_results %}
   		<!-- Internal hyperlink -->
   		  <table>
-  		     <td><a href="{{ url_for('substrateprofile', sub = x.SubstrateInfo.Substrate_Symbol) }}">{{ x.SubstrateInfo.Substrate_Symbol }}</a>
+  		     <td><a href="{{ url_for('substrate_results', Substrate = x.SubstrateInfo.Substrate_Symbol) }}">{{ x.SubstrateInfo.Substrate_Symbol }}</a>
   		  </table>
   		</tr>
   		{% endfor %}

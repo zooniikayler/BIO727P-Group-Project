@@ -26,7 +26,7 @@
 
 	        <table>
 	        <!-- Loop through results and allocate them to table -->
-	        {% for x in results %}
+	        {% for x in Uniprot_results %}
 	        <tr>
 	           <td>Kinase Uniprot Acc Num: <a href="{{ url_for('profile', kinase = x.Kinase_Symbol) }}">{{ x.Kinase_Symbol}}</a></td>
 	           <td>{{ x.Uniprot_Accession_Number }}</td>
