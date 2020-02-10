@@ -170,26 +170,60 @@ def results():
 
 	df= create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 	x_axis = list(set(df.Kinase))  # getting unique set of kinases from uploaded file
-	y_axis = kinase_barplot_x(df)  # getting mean score for each kinase
+	y_axis_mean = kinase_barplot_x(df)  # getting mean score for each kinase
 
-	list_obj = []  # creating dictionary of kinases/activity
+	y_axis_delta = kinase_delta(df)
+
+	list_obj = []  # creating dictionary of kinases/activity for mean score
 	for a in range(len(x_axis)):
 		obj = {
 			"x": x_axis[a],
-			"y": y_axis[a],
+			"y": y_axis_mean[a],
 		}
 		list_obj.append(obj)
 
-	sorted_list = sorted(list_obj, key=lambda k: k[
+
+	list_obj_delta = []  # creating dictionary of kinases/activity for delta score
+	for a in range(len(x_axis)):
+		obj = {
+			"x": x_axis[a],
+			"y": y_axis_delta[a],
+		}
+		list_obj_delta.append(obj)
+
+
+
+	sorted_list_mean = sorted(list_obj, key=lambda k: k[
 		'y'])  # sorting dictionary of kinases/activity so they appear in ascending order
 
-	volcano_y = list(df.FC4)  # extracting fold change data from the uploaded file
-	volcano_x = list(df.pval5)  # extracting pvalues from the uploaded file
+	volcano_x = list(df.FC_log2)  # extracting fold change data from the uploaded file
+	volcano_y = list(df.pval5)  # extracting pvalues from the uploaded file
 
-	barplot_x = [item['x'] for item in sorted_list]  # extracting x from dictionary
-	barplot_y = [item['y'] for item in sorted_list]  # extracting y from dictionary
+	barplot_x = [item['x'] for item in sorted_list_mean]  # extracting x from dictionary
+	barplot_y = [item['y'] for item in sorted_list_mean]  # extracting y from dictionary
 	colours = [i for i in range(len(x_axis))]  # creating a color index for each kinase
-	return render_template("data_results.html", y_axis=barplot_y, x_axis=barplot_x, colours = colours,  volcano_x=volcano_x, volcano_y = volcano_y)
+
+	tten_x1 = barplot_x[:10]
+	tten_x2 = barplot_x[-10:]
+	tten_y1 = barplot_y[:10]
+	tten_y2 = barplot_y[-10:]
+
+	tten_x = tten_x1 + tten_x2
+	tten_y = tten_y1 + tten_y2
+
+
+	#list_obj_delta2 = {x:y for x, y in list_obj_delta.items() if y != 0} #removing values of 0
+
+	#sorted_list_delta = sorted(list_obj_delta2, key=lambda k: k[
+	#	'y'])  # sorting dictionary of kinases/activity so they appear in ascending order
+
+	#delta_x = [item['x'] for item in sorted_list_delta]  # extracting x from dictionary
+	#delta_y = [item['y'] for item in sorted_list_delta]  # extracting y from dictionary
+
+	#delta_x = delta_x[]
+
+	return render_template("data_results.html", y_axis=barplot_y, x_axis=barplot_x, colours=colours,  volcano_x=volcano_x,
+						volcano_y=volcano_y, tten_x=tten_x, tten_y=tten_y)
 
 #arguments are passing the variables from python for use in html script
 

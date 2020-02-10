@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd8670bf-db7d-4347-aa49-c1c5754c4719" name="Default Changelist" comment="uploaded files go to UPLOAD_FOLDER">
+      <change afterPath="$PROJECT_DIR$/kinase_kin/Data_Upload/sample_file.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kinase_kin/Data_Upload/sample_file2.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kinase_kin/analysis_pipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/analysis_pipe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinase_kin/db_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/db_creation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kinase_kin/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinase_kin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinase_kin/templates/Data_Analysis.html" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/templates/Data_Analysis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinase_kin/templates/format_error.html" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/templates/format_error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinase_kin/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/static/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinase_kin/templates/data_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/kinase_kin/templates/data_results.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kinase_kin/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1866">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="1882">
+              <caret line="225" column="43" selection-start-line="225" selection-start-column="43" selection-end-line="225" selection-end-column="43" />
               <folding>
                 <element signature="e#0#96#0" expanded="true" />
               </folding>
@@ -30,19 +31,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kinase_kin/models.py">
+        <entry file="file://$PROJECT_DIR$/kinase_kin/templates/data_results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kinase_kin/templates/format_error.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="361">
+              <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -51,56 +43,18 @@
         <entry file="file://$PROJECT_DIR$/kinase_kin/templates/Data_Analysis.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kinase_kin/db_creation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kinase_kin/templates/Kinases.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kinase_kin/analysis_pipe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-296">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="165">
+              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kinase_kin/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kinase_kin/db_creator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,25 +105,26 @@
         <option value="$PROJECT_DIR$/Analysis Pipeline/analysis_pipe.py" />
         <option value="$PROJECT_DIR$/kinase_kin/__init__.py" />
         <option value="$PROJECT_DIR$/kinase_kin/templates/results.html" />
-        <option value="$PROJECT_DIR$/kinase_kin/templates/data_results.html" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scipy_tutorial.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/back_up_data_analysis.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/back_up_results.html" />
-        <option value="$PROJECT_DIR$/kinase_kin/analysis_pipe.py" />
         <option value="$PROJECT_DIR$/kinase_kin/app.py" />
         <option value="$PROJECT_DIR$/kinase_kin/db_creation.py" />
         <option value="$PROJECT_DIR$/kinase_kin/templates/Data_Analysis.html" />
-        <option value="$PROJECT_DIR$/kinase_kin/main.py" />
         <option value="$PROJECT_DIR$/kinase_kin/models.py" />
         <option value="$PROJECT_DIR$/kinase_kin/templates/format_error.html" />
+        <option value="$PROJECT_DIR$/kinase_kin/static/main.css" />
+        <option value="$PROJECT_DIR$/kinase_kin/analysis_pipe.py" />
+        <option value="$PROJECT_DIR$/kinase_kin/templates/data_results.html" />
+        <option value="$PROJECT_DIR$/kinase_kin/main.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/back_up_data_analysis.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/back_up_results.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="26" />
+    <option name="x" value="20" />
     <option name="y" value="23" />
-    <option name="width" value="1654" />
-    <option name="height" value="977" />
+    <option name="width" value="1537" />
+    <option name="height" value="947" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -187,7 +142,18 @@
             <path>
               <item name="BIO727P-Group-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="BIO727P-Group-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Analysis Pipeline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BIO727P-Group-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BIO727P-Group-Project" type="462c0819:PsiDirectoryNode" />
               <item name="kinase_kin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BIO727P-Group-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BIO727P-Group-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="kinase_kin" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BIO727P-Group-Project" type="b2602c69:ProjectViewProjectNode" />
@@ -198,6 +164,11 @@
             <path>
               <item name="BIO727P-Group-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="BIO727P-Group-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
@@ -440,23 +411,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="21" y="23" width="1442" height="946" extended-state="0" />
-    <editor active="true" />
+    <frame x="20" y="23" width="1537" height="947" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15763547" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14775726" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.5411682" weight="0.3266979" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5794045" weight="0.34011298" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.578125" weight="0.33918127" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290398" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.7344913" weight="0.30847457" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.5249824" visible="true" weight="0.37236533" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.4750176" side_tool="true" visible="true" weight="0.37236533" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3299435" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.52242744" visible="true" weight="0.4269006" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.47757256" side_tool="true" visible="true" weight="0.4269006" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49835527" weight="0.32982457" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -576,92 +546,102 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/back_up_results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kinase_kin/templates/data_results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/back_up_data_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kinase_kin/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/kinase_kin/db_creator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kinase_kin/db_creation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kinase_kin/templates/Data_Analysis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kinase_kin/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kinase_kin/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="459">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kinase_kin/templates/format_error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinase_kin/db_creation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinase_kin/templates/Kinases.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinase_kin/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinase_kin/db_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinase_kin/static/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinase_kin/templates/Data_Analysis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kinase_kin/analysis_pipe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-296">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="165">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/back_up_data_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="71" selection-start-line="97" selection-start-column="71" selection-end-line="97" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/back_up_results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinase_kin/templates/data_results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kinase_kin/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1866">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="1882">
+          <caret line="225" column="43" selection-start-line="225" selection-start-column="43" selection-end-line="225" selection-end-column="43" />
           <folding>
             <element signature="e#0#96#0" expanded="true" />
           </folding>

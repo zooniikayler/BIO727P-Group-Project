@@ -5,6 +5,7 @@
 <!-- Load plotly.js into the DOM -->
 <script src="https://cdn.plot.ly/plotly-latest.min.js">
 </script>
+
  <center><h1> Data Analysis Results </h1></center>
 
 <body>
@@ -14,10 +15,29 @@
 <div id='barplot'><!-- Plotly chart will be drawn inside this DIV --></div>
 <br>
 <br>
-<center><h3>  Relative Kinase Activity Explained: </h3></center>
-<center><p>  The kinase activity in this plot was calculated by taking the mean fold change of all substrates affected by each kinase. Thus, the kinase with the greatest mean effect size is shown to be most "active". </p></center>
+<center><h3>  Relative Kinase Activity Mean Score Explained: </h3></center>
+<center><p>  The kinase activity in this plot was calculated by taking the mean of the log2 of fold change of all substrates affected by each kinase. Thus, the kinase with the greatest mean effect size is shown to be most "active". To see more Kinases, click and drag to select the area you wish to zoom in on. </p></center>
+
+<div id='barplot2'><!-- Plotly chart will be drawn inside this DIV --></div>
+<br>
+<br>
+<center><h3>  Top Ten Kinase Activities Explained: </h3></center>
+<center><p>  These are the Kinases showing the greatest change in activity level.
+
+<div id='alternative_score'><!-- Plotly chart will be drawn inside this DIV --></div>
+<br>
+<br>
+<center><h3>  Alternative Kinase Score Explained: </h3></center>
+<center><p>  For each kinase, this shows the number of substrates with a positive fold change minus the number of substrates with a negative fold change. Only kinases with significant p-value (<0.05) shown.
+
+
 <div id='volcano'><!-- Plotly chart will be drawn inside this DIV --></div>
+
+ <center><p>  For each kinase, this shows the number of substrates with a positive fold change minus the number of substrates with a negative fold change.
+
 <!-- put |safe -->
+
+
 
 <script>
 var data = [
@@ -32,35 +52,76 @@ var data = [
 
 ];
 var layout = {
-  title:'Your Data Relative Kinase Activity'};
+  title:'Full Data Set Relative Kinase Activity'};
 
 Plotly.newPlot('barplot', data, layout);
 
 </script>
 
+
+<script>
+var data = [
+  {
+    x: {{ tten_x |safe }},
+    y: {{ tten_y }},
+    type: 'bar',
+    marker: {
+       color: [1,1,1,1,1,1,1,1,1,1,20,20,20,20,20,20,20,20,20,20]
+    }
+  }
+
+];
+var layout = {
+  title:'Top 10 Kinases with Changed Activity'};
+
+Plotly.newPlot('barplot2', data, layout);
+
+</script>
+
+<script>
+var data = [
+  {
+    x: ['Not', 'Working'],
+    y: [1,2],
+    type: 'bar',
+    marker: {
+       color: {{ colours }}
+    }
+  }
+
+];
+var layout = {
+  title:'Alternative Kinase Activity Score'};
+
+Plotly.newPlot('alternative_score', data, layout);
+
+</script>
+
+
+
 <script>
 
-var trace2 = {
-  x: {{ volcano_x }},
-  y: {{ volcano_y }},
+var trace = {
+  x: {{volcano_x}},
+  y: {{volcano_y}},
   mode: 'markers',
   type: 'scatter',
-  name: {{ Kinase }}
+  name: 'Team A',
+  text: ['A-1', 'A-2', 'A-3', 'A-4', 'A-5'],
   marker: { size: 12 }
 };
 
-var data = [ trace2 ];
+
+var data = [ trace ];
 
 var layout = {
   xaxis: {
-    label: 'Log2 of Fold Change'
-    range: [ -2, 2 ]
+    range: [ -4, 4 ]
   },
   yaxis: {
-    range: [-1, 10]
-    label: 'P-Value'
+    range: [0, 2]
   },
-  title:'Your Data Volcano Plot'
+  title:'Volcano Plot'
 };
 
 Plotly.newPlot('volcano', data, layout);</script>
