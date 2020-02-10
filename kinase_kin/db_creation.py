@@ -57,10 +57,15 @@ conn.commit() # saves the chages to the database
 
 #Creating the table for the information on the inhibitors
 c.execute("""CREATE TABLE Inhibitor_Info(
-            Inhibitor_Name TEXT PRIMARY KEY,
-            CHEMBLID TEXT,
+            Inhibitor_Name TEXT PRIMARY KEY NOT NULL,
+            CHEMBLID TEXT NOT NULL,
             Smiles TEXT,
+            Brand_Name TEXT,
+            Phase INTEGER,
             InCHI_Key TEXT,
+            LigID TEXT,
+            PDBID TEXT,
+            Type TEXT,
             RoF INTEGER,
             MW NUMERIC,
             LogP NUMERIC,
@@ -69,6 +74,8 @@ c.execute("""CREATE TABLE Inhibitor_Info(
             HBD NUMERIC,
             NRB NUMERIC,
             Kinase_Families TEXT,
+            Chirality TEXT,
+            Inhibitor_Synonyms TEXT,
             Image_link TEXT,
             FOREIGN KEY(CHEMBLID) REFERENCES InhibitorRef(CHEMBL_ID))""")
 
@@ -78,7 +85,12 @@ with open('Inhibitor_InfoFINAL.csv','r') as IITable:
     to_db3 = [(i['INN_Name'],
                i['CHEMBL_ID'],
                i['Smiles'],
+               i['BrandName'],
+               i['Phase'],
                i['InChi_Key'],
+               i['LigID'],
+               i['pdbID'],
+               i['Type'],
                i['RoF'],
                i['MW'], 
                i['LogP'], 
@@ -86,16 +98,18 @@ with open('Inhibitor_InfoFINAL.csv','r') as IITable:
                i['HBA'], 
                i['HBD'], 
                i['NRB'], 
-               i['Kinase families'], 
-               i['image_link']) for i in dr3]
+               i['Kinase families'],
+               i['Chirality'],
+               i['Synonyms'],
+               i['ImageLink']) for i in dr3]
     
-c.executemany("INSERT INTO Inhibitor_Info(Inhibitor_Name,CHEMBLID,Smiles,InCHI_Key,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase_Families,Image_link) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);", to_db3)
+c.executemany("INSERT INTO Inhibitor_Info(Inhibitor_Name,CHEMBLID,Smiles,Brand_Name,Phase,InCHI_Key,LigID,PDBID,Type,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase_Families,Chirality,Inhibitor_Synonyms,Image_link) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);", to_db3)
 
 conn.commit() # saves the chages to the database
 
 # Creating the table for the substrate information
 c.execute("""CREATE TABLE SubstrateInfo(
-            Substrate_ID TEXT PRIMARY KEY NOT NULL,
+            Substrate_ID INTEGER PRIMARY KEY NOT NULL,
             Kin_ACC_ID TEXT NOT NULL,
             Kin_Gene TEXT,
             Kinase TEXT NOT NULL,
@@ -105,8 +119,8 @@ c.execute("""CREATE TABLE SubstrateInfo(
             Sub_Mod_Rsd TEXT NOT NULL,
             Site_AA TEXT,
             Sub_Domain TEXT,
-            Chromosome TEXT,
-            Leg TEXT,
+            Chromosome NUMERIC,
+            Leg NUMERIC,
             FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol))""")
 
 #Populating the substrate table
