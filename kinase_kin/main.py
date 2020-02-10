@@ -69,44 +69,56 @@ def kinase_results(search):
 			qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(search_string))
 			results= qry.all() #output all query results
 
-			inhibitor_qry = db_session.query(InhibitorRef, InhibitorInfo)\
+			inhib_qry = db_session.query(InhibitorRef, InhibitorInfo)\
 					.filter(InhibitorRef.Kinase_Target.ilike(search_string))\
 					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
-			inhibitor_results = inhibitor_qry.all()
+			inhib_results = inhib_qry.all()
 
-			substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
+			sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
 					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-			substrate_results = substrate_qry.all()
+			sub_results = sub_qry.all()
 
 		elif search.data['select'] == 'Uniprot Accession Number': #check Uniprot Accession Number search was selected
-			Uniprot_qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.ilike(search_string)) #qry uniprot accession number 
-			Uniprot_results= Uniprot_qry.all()
+			qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.ilike(search_string)) #qry uniprot accession number 
+			results= qry.all()
+
+			inhib_qry = db_session.query(InhibitorRef, InhibitorInfo)\
+					.filter(InhibitorRef.Kinase_Target.ilike(search_string))\
+					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
+			inhib_results = inhib_qry.all()
+
+			sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
+					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
+					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
+			sub_results = sub_qry.all()
+
+		else:
+			qry = db_session.query(KinaseInfo)
+			results = qry.all()
 
 	if not results:
 		flash('No results found!') #flash error message
 		return redirect('/Kinases') #return back to kinase search
 
-	elif search.data['select'] == 'Uniprot Accession Number': # if user selected uniprot accession number
-		return render_template('uniprot.html', Uniprot_results=Uniprot_results)
 
 	else:
-		return render_template('kinase_results.html', results=results, inhibitor_results=inhibitor_results, substrate_results=substrate_results)
+		return render_template('kinase_results.html', results=results, inhib_results=inhib_results, sub_results=sub_results)
 
 @app.route('/Kinases/<Kinase_Symbol>')
 def profile(Kinase_Symbol):
     qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))
     results= qry.all()
     
-    inhibitor_qry = db_session.query(KinaseInfo, InhibitorInfo)\
+    inhib_qry = db_session.query(KinaseInfo, InhibitorInfo)\
             .join(InhibitorRef, KinaseInfo.Kinase_Symbol== InhibitorRef.Kinase_Target)
-    inhibitor_results = inhibitor_qry.all()
+    inhib_results = inhib_qry.all()
       
-    substrate_qry = db_session.query(KinaseInfo, SubstrateInfo)\
+    sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-    substrate_results = substrate_qry.all()
+    sub_results = subs_qry.all()
     
-    return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
+    return render_template('kinase_results.html', results=results, inhib_results = inhib_results, sub_results = sub_results)
 
 
 ############################  About us   #########################################################
@@ -193,10 +205,9 @@ def format_error():
 
 @app.route('/Inhibitors', methods=['GET', 'POST'])
 def Inhibitors():
-	search = InhibitorSearchForm(request.form) #request search from & run request
-	#may need to try submit as difference in forms
+	search = InhibitorSearchForm(request.form) 
 	if request.method== 'POST':
-		return inhibitor_results(search)
+		return inhibitor_results(search) #return inhibitor search function
 	return	render_template('Inhibitors.html', form=search)
 
 @app.route('/Inhibitors_results')
@@ -207,7 +218,9 @@ def inhibitor_results(search):
 	if search_string:
 		if search.data['select'] == 'CHEMBL ID':
 			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.ilike(search_string))
+			# .join(InhibitorInfo,InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID)
 			results = qry.all()
+
 		elif search.data['select'] == 'Inhibitor Name':
 			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.ilike(search_string))
 			results = qry.all()
@@ -218,8 +231,9 @@ def inhibitor_results(search):
 	if not results:
 		flash('No results found. Please search again')
 		return redirect ('/Inhibitors')
+
 	else:
-		return render_template('inhibitor_results.html')
+		return render_template('inhibitor_results.html', results=results)
 
 @app.route('/Inhibitors/<Inhibitor_Name>')
 def inhibitorprofile(Inhibitor_Name):

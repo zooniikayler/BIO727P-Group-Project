@@ -1,4 +1,4 @@
-INN_Name,CHEMBL_ID,Smiles,InChi_Key,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase families,image_link
+INN_Name,CHEMBL_ID,Smiles,InChi_Key,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase families,Image_link
 Abemaciclib,CHEMBL3301610,Smiles=CCN1CCN(CC1)Cc2ccc(nc2)Nc3ncc(c(n3)c4cc5c(c(c4)F)nc(n5C(C)C)C)F,InChiKey=UZWDCWONPYILKI-UHFFFAOYSA-N,1,506.3,4.9,75,8,1,7,CMGC,www.icoa.fr/pkidb/static/img/mol/Abemaciclib.svg
 Acalabrutinib,CHEMBL3707348,Smiles=CC#CC(=O)N1CCC[C@H]1c2nc(c3n2ccnc3N)c4ccc(cc4)C(=O)Nc5ccccn5,InChiKey=WDENQIQQYWYTPO-IBGZPJMESA-N,0,465.2,3.3,118.5,7,2,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Abivertinib.svg
 Adavosertib,CHEMBL1976040,Smiles=CC(C)(c1cccc(n1)n2c3c(cnc(n3)Nc4ccc(cc4)N5CCN(CC5)C)c(=O)n2CC=C)O,InChiKey=BKWJAKQVGHWELA-UHFFFAOYSA-N,1,500.3,2.9,104.3,10,2,7,Other,www.icoa.fr/pkidb/static/img/mol/Acalabrutinib.svg
