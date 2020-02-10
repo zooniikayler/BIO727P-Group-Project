@@ -69,11 +69,6 @@ def delta_score(threshold, kinase, dataset):
                           (dataset['FC_log2'] > 0)]
     return len(sub_set_pos)-len(sub_set_neg)
 
-
-#volcano plot highlighting significant fold changes (plotly), x and y given as DataFrame columns
-def volcano_plot(user_data):
-    fig = px.scatter(user_data, x="FC_log2", y="pval5", color="pval5",hover_data=["Substrate"])
-    return fig.show()
 #barplot showing kinase activity
 def kinase_barplot_x(user_data):
     x_plot = []
@@ -83,6 +78,14 @@ def kinase_barplot_x(user_data):
         x_plot.append(x)
     return x_plot
 
+
+def kinase_delta(user_data):
+    x_plot = []
+    y_plot = set(user_data.Kinase)
+    for k in y_plot:
+        x = delta_score(0.05,k, user_data)
+        x_plot.append(x)
+    return x_plot
 
 
 

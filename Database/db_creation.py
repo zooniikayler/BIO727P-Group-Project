@@ -16,8 +16,7 @@ c.execute("""CREATE TABLE KinaseInfo(
           Function TEXT,
           Genomic_Location TEXT,
           Subcellular_Location TEXT,
-          PDB_Image_link TEXT)
-          """)
+          PDB_Image_link TEXT)""")
 
 #Populating the general kinase inforamation table
 with open('Kinase_InfoFINAL.csv','r') as KTable: 
@@ -43,8 +42,7 @@ c.execute("""CREATE TABLE InhibitorRef(
            InhibitorRef_ID INTEGER PRIMARY KEY,
            CHEMBL_ID TEXT,
            Kinase_Target TEXT,
-           FOREIGN KEY(Kinase_Target) REFERENCES KinaseInfo(Kinase_Symbol)
-           )""")
+           FOREIGN KEY(Kinase_Target) REFERENCES KinaseInfo(Kinase_Symbol))""")
 
 #Populating the table for the inhibitor reference table
 with open('Inhibitor_refFINAL.csv','r') as IRTable:
@@ -59,10 +57,15 @@ conn.commit() # saves the chages to the database
 
 #Creating the table for the information on the inhibitors
 c.execute("""CREATE TABLE Inhibitor_Info(
-            Inhibitor_Name TEXT PRIMARY KEY,
-            CHEMBLID TEXT,
+            Inhibitor_Name TEXT PRIMARY KEY NOT NULL,
+            CHEMBLID TEXT NOT NULL,
             Smiles TEXT,
+            Brand_Name TEXT,
+            Phase INTEGER,
             InCHI_Key TEXT,
+            LigID TEXT,
+            PDBID TEXT,
+            Type TEXT,
             RoF INTEGER,
             MW NUMERIC,
             LogP NUMERIC,
@@ -71,9 +74,10 @@ c.execute("""CREATE TABLE Inhibitor_Info(
             HBD NUMERIC,
             NRB NUMERIC,
             Kinase_Families TEXT,
+            Chirality TEXT,
+            Inhibitor_Synonyms TEXT,
             Image_link TEXT,
-            FOREIGN KEY(CHEMBLID) REFERENCES InhibitorRef(CHEMBL_ID)
-            )""")
+            FOREIGN KEY(CHEMBLID) REFERENCES InhibitorRef(CHEMBL_ID))""")
 
 #Populating the Inhibitor_info table
 with open('Inhibitor_InfoFINAL.csv','r') as IITable:
@@ -81,7 +85,12 @@ with open('Inhibitor_InfoFINAL.csv','r') as IITable:
     to_db3 = [(i['INN_Name'],
                i['CHEMBL_ID'],
                i['Smiles'],
+               i['BrandName'],
+               i['Phase'],
                i['InChi_Key'],
+               i['LigID'],
+               i['pdbID'],
+               i['Type'],
                i['RoF'],
                i['MW'], 
                i['LogP'], 
@@ -89,10 +98,12 @@ with open('Inhibitor_InfoFINAL.csv','r') as IITable:
                i['HBA'], 
                i['HBD'], 
                i['NRB'], 
-               i['Kinase families'], 
-               i['image_link']) for i in dr3]
+               i['Kinase families'],
+               i['Chirality'],
+               i['Synonyms'],
+               i['ImageLink']) for i in dr3]
     
-c.executemany("INSERT INTO Inhibitor_Info(Inhibitor_Name,CHEMBLID,Smiles,InCHI_Key,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase_Families,Image_link) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);", to_db3)
+c.executemany("INSERT INTO Inhibitor_Info(Inhibitor_Name,CHEMBLID,Smiles,Brand_Name,Phase,InCHI_Key,LigID,PDBID,Type,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase_Families,Chirality,Inhibitor_Synonyms,Image_link) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);", to_db3)
 
 conn.commit() # saves the chages to the database
 
@@ -106,12 +117,11 @@ c.execute("""CREATE TABLE SubstrateInfo(
             Sub_ACC_ID TEXT NOT NULL,
             Sub_Gene TEXT NOT NULL,
             Sub_Mod_Rsd TEXT NOT NULL,
-            Site_AA VARCHAR(30),
+            Site_AA TEXT,
             Sub_Domain TEXT,
-            Chromosome INTEGER,
-            Leg TEXT,
-            FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol)
-            )""")
+            Chromosome NUMERIC,
+            Leg NUMERIC,
+            FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol))""")
 
 #Populating the substrate table
 with open('Substrate_FINAL.csv','r') as STable:
