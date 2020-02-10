@@ -6,7 +6,7 @@
 <br>
     <center>
         <header class="w3-center w3-margin-bottom">
-            <p>Search for a Protein Kinase via it's Kinase Symbol or Uniprot Accession Number. <
+            <p>Search for a Protein Kinase via it's Kinase Symbol or Uniprot Accession Number.</p>
         {% with messages = get_flashed_messages() %}
         <!-- if there is an error message then output this message -->
             {% if messages %}
@@ -21,17 +21,18 @@
 
 <!-- Search Function -->
 {% from "helperforms.html" import render_field %}
-<form method=post>
+<form method="POST">
   <div class="search">
     <div class="wrap">
 
       <!-- drop down menu -->
-      {{ form.select(class_="searchTerm")}}<!-- 'class_' is based on a style located in the main CSS sheet -->
+      {{ form.select(class_="searchTerm")}}
       <br>
       <br>
+
       <!-- search bar -->
-      {{ form.search(class_="searchTerm", placeholder="Type in the Kinase Symbol") }}
-      <p>
+      {{ form.search(class_="searchTerm", placeholder="Type in the Kinase Name or Uniprot Accession Number") }}
+      <p></p>
       <br>
       <br>
     <input type=submit value=Search class=searchButton>
