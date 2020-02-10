@@ -170,9 +170,12 @@ def results():
 
 	df= create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 	x_axis = list(set(df.Kinase))  # getting unique set of kinases from uploaded file
-	y_axis_mean = kinase_barplot_x(df)  # getting mean score for each kinase
+	#y_axis_mean = kinase_barplot_x(df)  # getting mean score for each kinase
 
-	y_axis_delta = kinase_delta(df)
+	y_value = lambda y: mean_score(y, dataset=df)
+	y_axis_mean = [y_value(x) for x in x_axis]
+
+	#y_axis_delta = kinase_delta(df)
 
 	list_obj = []  # creating dictionary of kinases/activity for mean score
 	for a in range(len(x_axis)):
@@ -183,13 +186,13 @@ def results():
 		list_obj.append(obj)
 
 
-	list_obj_delta = []  # creating dictionary of kinases/activity for delta score
-	for a in range(len(x_axis)):
-		obj = {
-			"x": x_axis[a],
-			"y": y_axis_delta[a],
-		}
-		list_obj_delta.append(obj)
+	#list_obj_delta = []  # creating dictionary of kinases/activity for delta score
+	#for a in range(len(x_axis)):
+	#	obj = {
+	#		"x": x_axis[a],
+	#		"y": y_axis_delta[a],
+	#	}
+	#	list_obj_delta.append(obj)
 
 
 
