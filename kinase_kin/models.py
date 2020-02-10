@@ -20,7 +20,7 @@ class SubstrateInfo(db.Model):
     """"""
     __tablename__ = "SubstrateInfo" #Selects the the SubstrateInfo table from the db
     
-    Substrate_ID = db.Column('Substrate_ID', db.Integer, primary_key = True)
+    Substrate_ID = db.Column('Substrate_ID', db.String, primary_key = True)
     Kin_ACC_ID = db.Column('Kin_ACC_ID', db.String)
     Kin_Gene = db.Column('Kin_Gene', db.String)
     Kinase = db.Column('Kinase', db.String)
