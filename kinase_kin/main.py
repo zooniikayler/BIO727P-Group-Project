@@ -311,8 +311,6 @@ def substrate_results(search):
 	# return render_template('substrate_results.html', results=results)
 
 
-
-
 @app.route('/Substrates/<Substrate>')
 def substrateprofile(Substrate):
 	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate))

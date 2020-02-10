@@ -95,7 +95,7 @@ conn.commit() # saves the chages to the database
 
 # Creating the table for the substrate information
 c.execute("""CREATE TABLE SubstrateInfo(
-            Substrate_ID INTEGER PRIMARY KEY NOT NULL,
+            Substrate_ID TEXT PRIMARY KEY NOT NULL,
             Kin_ACC_ID TEXT NOT NULL,
             Kin_Gene TEXT,
             Kinase TEXT NOT NULL,
