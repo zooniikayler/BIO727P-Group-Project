@@ -3,7 +3,8 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #060101;
-  background: #343a40 ;
+  background: #ffffff ;
+  font-weight: 700;
 }
 s
 h1,
@@ -18,7 +19,7 @@ h6 {
 
 header.masthead {
   position: relative;
-  background-color: #343a40;
+  background-color: #ffffff;
   background: url("../img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
@@ -27,7 +28,7 @@ header.masthead {
 
 header.masthead .overlay {
   position: absolute;
-  background-color: #212529;
+  background-color: #ffffff;
   height: 100%;
   width: 100%;
   top: 0;
