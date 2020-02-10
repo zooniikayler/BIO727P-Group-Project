@@ -254,12 +254,13 @@ def inhibitor_results(search):
 
 	if search_string:
 		if search.data['select'] == 'CHEMBL ID':
-			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.ilike(search_string))
-			# .join(InhibitorInfo,InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID)
+			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.ilike(search_string))\
+			.join(InhibitorInfo,InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID)
 			results = qry.all()
 
 		elif search.data['select'] == 'Inhibitor Name':
-			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.ilike(search_string))
+			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.ilike(search_string))\
+            .join(InhibitorInfo,InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID)
 			results = qry.all()
 		else:
 			qry = db_session.query(InhibitorInfo)

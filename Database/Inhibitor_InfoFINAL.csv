@@ -1,222 +1,637 @@
-INN_Name,CHEMBL_ID,Smiles,InChi_Key,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase families,Image_link
-Abemaciclib,CHEMBL3301610,Smiles=CCN1CCN(CC1)Cc2ccc(nc2)Nc3ncc(c(n3)c4cc5c(c(c4)F)nc(n5C(C)C)C)F,InChiKey=UZWDCWONPYILKI-UHFFFAOYSA-N,1,506.3,4.9,75,8,1,7,CMGC,www.icoa.fr/pkidb/static/img/mol/Abemaciclib.svg
-Acalabrutinib,CHEMBL3707348,Smiles=CC#CC(=O)N1CCC[C@H]1c2nc(c3n2ccnc3N)c4ccc(cc4)C(=O)Nc5ccccn5,InChiKey=WDENQIQQYWYTPO-IBGZPJMESA-N,0,465.2,3.3,118.5,7,2,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Abivertinib.svg
-Adavosertib,CHEMBL1976040,Smiles=CC(C)(c1cccc(n1)n2c3c(cnc(n3)Nc4ccc(cc4)N5CCN(CC5)C)c(=O)n2CC=C)O,InChiKey=BKWJAKQVGHWELA-UHFFFAOYSA-N,1,500.3,2.9,104.3,10,2,7,Other,www.icoa.fr/pkidb/static/img/mol/Acalabrutinib.svg
-Afatinib,CHEMBL1173655,Smiles=CN(C)C/C=C/C(=O)Nc1cc2c(cc1O[C@H]3CCOC3)ncnc2Nc4ccc(c(c4)Cl)F,InChiKey=ULXXDDBFHOBEHA-CWDCEQMOSA-N,0,485.2,4.4,88.6,7,2,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Acalisib.svg
-Afuresertib,CHEMBL2219422,Smiles=Cn1c(c(cn1)Cl)c2cc(sc2Cl)C(=O)N[C@@H](Cc3cccc(c3)F)CN,InChiKey=AFJRDFWMXUECEW-LBPRGKRZSA-N,0,426,3.9,72.9,5,2,6,AGC,www.icoa.fr/pkidb/static/img/mol/Acumapimod.svg
-Alectinib,CHEMBL1738797,Smiles=CCc1cc2c(cc1N3CCC(CC3)N4CCOCC4)C(c5c(c6ccc(cc6[nH]5)C#N)C2=O)(C)C,InChiKey=KDGFLJKFZUIJMX-UHFFFAOYSA-N,0,482.3,4.8,72.4,5,1,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Adavosertib.svg
-Alisertib,CHEMBL483158,Smiles=COc1cccc(c1C2=NCc3cnc(nc3-c4c2cc(cc4)Cl)Nc5ccc(c(c5)OC)C(=O)O)F,InChiKey=ZLHFILGSQDJULK-UHFFFAOYSA-N,2,518.1,5.7,105.9,7,2,6,Other,www.icoa.fr/pkidb/static/img/mol/Afatinib.svg
-Allitinib,CHEMBL1947204,Smiles=C=CC(=O)Nc1ccc2c(c1)c(ncn2)Nc3ccc(c(c3)Cl)OCc4cccc(c4)F,InChiKey=MVZGYPSXNDCANY-UHFFFAOYSA-N,1,448.1,5.9,76.1,5,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Afuresertib.svg
-Alpelisib,CHEMBL2396661,Smiles=Cc1c(sc(n1)NC(=O)N2CCC[C@H]2C(=O)N)c3ccnc(c3)C(C)(C)C(F)(F)F,InChiKey=STUWGJZDJHPWGZ-LBPRGKRZSA-N,0,441.1,3.8,101.2,5,2,4,Atypical,www.icoa.fr/pkidb/static/img/mol/Alectinib.svg
-Altiratinib,CHEMBL3545365,Smiles=c1cc(ccc1NC(=O)C2(CC2)C(=O)Nc3cc(c(cc3F)Oc4ccnc(c4)NC(=O)C5CC5)F)F,InChiKey=GNNDEPIMDAZHRQ-UHFFFAOYSA-N,1,510.2,5,109.4,5,3,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Alisertib.svg
-Alvocidib,CHEMBL428690,Smiles=CN1CC[C@@H]([C@@H](C1)O)c2c(cc(c3c2oc(cc3=O)c4ccccc4Cl)O)O,InChiKey=BIIVYFLTOXDAOV-YVEFUNNKSA-N,0,401.1,3.3,94.1,6,3,2,,www.icoa.fr/pkidb/static/img/mol/Allitinib.svg
-Amcasertib,CHEMBL3707349,Smiles=CCN(CC)CCNC(=O)c1c(c([nH]c1C)/C=C\2/c3cc(ccc3NC2=O)c4csc(n4)c5ccccc5)C,InChiKey=QDWKGEFGLQMDAM-ULJHMMPZSA-N,2,539.2,6,90.1,5,3,9,Tyr,www.icoa.fr/pkidb/static/img/mol/Alpelisib.svg
-Amuvatinib,CHEMBL2103851,Smiles=c1ccc2c(c1)c3c(o2)c(ncn3)N4CCN(CC4)C(=S)NCc5ccc6c(c5)OCO6,InChiKey=FOFDIMHVKGYHRU-UHFFFAOYSA-N,0,447.1,3.3,75.9,7,1,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Altiratinib.svg
-Apitolisib,CHEMBL1922094,Smiles=Cc1c(sc2c1nc(nc2N3CCOCC3)c4cnc(nc4)N)CN5CCN(CC5)C(=O)[C@H](C)O,InChiKey=YOVVNQKCSKSHKT-HNNXBMFYSA-N,1,498.2,0.9,133.8,11,2,5,Atypical,www.icoa.fr/pkidb/static/img/mol/Alvocidib.svg
-Axitinib,CHEMBL1289926,Smiles=CNC(=O)c1ccccc1Sc2ccc3c(c2)[nH]nc3/C=C/c4ccccn4,InChiKey=RITAVMQDGBJQJZ-FMIVXFBMSA-N,0,386.1,4.6,70.7,4,2,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Amcasertib.svg
-Bafetinib,CHEMBL206834,Smiles=Cc1ccc(cc1Nc2nccc(n2)c3cncnc3)NC(=O)c4ccc(c(c4)C(F)(F)F)CN5CC[C@@H](C5)N(C)C,InChiKey=ZGBAJMQHJDFTQJ-DEOSSOPVSA-N,2,576.3,5.4,99.2,8,2,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Amuvatinib.svg
-Balamapimod,CHEMBL2104954,Smiles=Cn1ccnc1Sc2ccc(cc2Cl)Nc3c4cc(c(cc4ncc3C#N)N5CCC(CC5)N6CCCC6)OC,InChiKey=CVAKNHIXTWLGJO-UHFFFAOYSA-N,2,573.2,6.5,82.2,9,1,7,"TKL
-STE",www.icoa.fr/pkidb/static/img/mol/Anlotinib.svg
-Barasertib,CHEMBL415049,Smiles=CCN(CCCOc1ccc2c(c1)ncnc2Nc3cc(n[nH]3)CC(=O)Nc4cccc(c4)F)CCOP(=O)(O)O,InChiKey=GBJVVSCPOBPEIT-UHFFFAOYSA-N,1,587.2,3.6,174.8,9,5,15,Other,www.icoa.fr/pkidb/static/img/mol/Apatinib.svg
-Baricitinib,CHEMBL2105759,Smiles=CCS(=O)(=O)N1CC(C1)(CC#N)n2cc(cn2)c3c4cc[nH]c4ncn3,InChiKey=XUZMWHLSFXCVMG-UHFFFAOYSA-N,0,371.1,1.1,120.6,7,1,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Apitolisib.svg
-Bemcentinib,CHEMBL3809489,Smiles=c1ccc-2c(c1)CCCc3c2nnc(c3)n4c(nc(n4)Nc5ccc6c(c5)CC[C@H](CC6)N7CCCC7)N,InChiKey=KXMZDGSRSGHMMK-VWLOTQADSA-N,1,506.3,4.9,97.8,8,2,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Asciminib.svg
-Bentamapimod,CHEMBL3545213,Smiles=N#CC(c1nc2ccccc2s1)c5nc(OCc3ccc(cc3)CN4CCOCC4)ncc5,InChiKey=XCPPIJCBCWUBNT-UHFFFAOYSA-N,0,457.2,4.2,84.2,8,0,7,CMGC,www.icoa.fr/pkidb/static/img/mol/Avapritinib.svg
-Berzosertib,CHEMBL3989870,Smiles=CC(C)S(=O)(=O)c1ccc(cc1)c2cnc(c(n2)c3cc(no3)c4ccc(cc4)CNC)N,InChiKey=JZCWLJDSIRUGIN-UHFFFAOYSA-N,0,463.2,3.9,124,8,2,7,,www.icoa.fr/pkidb/static/img/mol/Axitinib.svg
-Bimiralisib,CHEMBL4084907,Smiles=c1c(c(c[nH]c1=N)c2nc(nc(n2)N3CCOCC3)N4CCOCC4)C(F)(F)F,InChiKey=ADGGYDAFIHSYFI-UHFFFAOYSA-N,0,411.2,1,103.2,8,2,3,,www.icoa.fr/pkidb/static/img/mol/Bafetinib.svg
-Binimetinib,CHEMBL3187723,Smiles=Cn1cnc2c1cc(c(c2F)Nc3ccc(cc3F)Br)C(=O)NOCCO,InChiKey=ACWZRVQXLIRSDF-UHFFFAOYSA-N,0,440,3,88.4,6,3,6,STE,www.icoa.fr/pkidb/static/img/mol/Balamapimod.svg
-Bosutinib,CHEMBL288441,Smiles=CN1CCN(CC1)CCCOc2cc3c(cc2OC)c(c(cn3)C#N)Nc4cc(c(cc4Cl)Cl)OC,InChiKey=UBPYILGKFZZVDX-UHFFFAOYSA-N,2,529.2,5.2,82.9,8,1,9,"Atypical
+INN_Name,CHEMBL_ID,Smiles,BrandName,Phase,InChi_Key,LigID,pdbID,Type,RoF,MW,LogP,TPSA,HBA,HBD,NRB,Kinase families,Chirality,Synonyms,ImageLink
+Abemaciclib,CHEMBL3301610,Smiles=CCN1CCN(CC1)Cc2ccc(nc2)Nc3ncc(c(n3)c4cc5c(c(c4)F)nc(n5C(C)C)C)F,Verzenio,4,InChiKey=UZWDCWONPYILKI-UHFFFAOYSA-N,'6ZV',5l2s,1,1,506.3,4.9,75,8,1,7,CMGC,Achiral Molecule,"Verzenio
+Abemaciclib
+LY-2835219",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3301610.svg?engine=indigo
+Acalabrutinib,CHEMBL3707348,Smiles=CC#CC(=O)N1CCC[C@H]1c2nc(c3n2ccnc3N)c4ccc(cc4)C(=O)Nc5ccccn5,Calquence,4,InChiKey=WDENQIQQYWYTPO-IBGZPJMESA-N,,,,0,465.2,3.3,118.5,7,2,4,Tyr,Single Stereoisomer,"Calquence
+ACP-196
+Acalabrutinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3707348.svg?engine=indigo
+Adavosertib,CHEMBL1976040,Smiles=CC(C)(c1cccc(n1)n2c3c(cnc(n3)Nc4ccc(cc4)N5CCN(CC5)C)c(=O)n2CC=C)O,,2,InChiKey=BKWJAKQVGHWELA-UHFFFAOYSA-N,'8X7',5v5y 5vd0 5vdk,1,1,500.3,2.9,104.3,10,2,7,Other,,"AZD-1775
+MK-1775",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1976040.svg?engine=indigo
+Afatinib,CHEMBL1173655,Smiles=CN(C)C/C=C/C(=O)Nc1cc2c(cc1O[C@H]3CCOC3)ncnc2Nc4ccc(c(c4)Cl)F,Gilotrif,4,InChiKey=ULXXDDBFHOBEHA-CWDCEQMOSA-N,'0WM',4g5j,1,0,485.2,4.4,88.6,7,2,8,Tyr,Single Stereoisomer,"Giotrif;Gilotrif
+Afatinib
+BIBW-2992",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1173655.svg?engine=indigo
+Afuresertib,CHEMBL2219422,Smiles=Cn1c(c(cn1)Cl)c2cc(sc2Cl)C(=O)N[C@@H](Cc3cccc(c3)F)CN,,2,InChiKey=AFJRDFWMXUECEW-LBPRGKRZSA-N,,,,0,426,3.9,72.9,5,2,6,AGC,Single Stereoisomer,"GSK2110183
+Afuresertib
+GSK2110183C",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2219422.svg?engine=indigo
+Alectinib,CHEMBL1738797,Smiles=CCc1cc2c(cc1N3CCC(CC3)N4CCOCC4)C(c5c(c6ccc(cc6[nH]5)C#N)C2=O)(C)C,Alecensa,4,InChiKey=KDGFLJKFZUIJMX-UHFFFAOYSA-N,'EMH',3aox 5xv7,1,0,482.3,4.8,72.4,5,1,3,Tyr,Achiral Molecule,"Alectinib
+CH-5424802
+AF-802",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1738797.svg?engine=indigo
+Alisertib,CHEMBL483158,Smiles=COc1cccc(c1C2=NCc3cnc(nc3-c4c2cc(cc4)Cl)Nc5ccc(c(c5)OC)C(=O)O)F,,3,InChiKey=ZLHFILGSQDJULK-UHFFFAOYSA-N,'A5B',5ia0,1,2,518.1,5.7,105.9,7,2,6,Other,Achiral Molecule,"MLN-8237
+Alisertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL483158.svg?engine=indigo
+Allitinib,CHEMBL1947204,Smiles=C=CC(=O)Nc1ccc2c(c1)c(ncn2)Nc3ccc(c(c3)Cl)OCc4cccc(c4)F,,1,InChiKey=MVZGYPSXNDCANY-UHFFFAOYSA-N,,,,1,448.1,5.9,76.1,5,2,7,Tyr,,"AST-1306
+ALL-3",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1947204.svg?engine=indigo
+Alpelisib,CHEMBL2396661,Smiles=Cc1c(sc(n1)NC(=O)N2CCC[C@H]2C(=O)N)c3ccnc(c3)C(C)(C)C(F)(F)F,Piqray,4,InChiKey=STUWGJZDJHPWGZ-LBPRGKRZSA-N,'1LT',4jps,,0,441.1,3.8,101.2,5,2,4,Atypical,Single Stereoisomer,"NVP-BYL719
+Alpelisib
+BYL-719",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2396661.svg?engine=indigo
+Altiratinib,CHEMBL3545365,Smiles=c1cc(ccc1NC(=O)C2(CC2)C(=O)Nc3cc(c(cc3F)Oc4ccnc(c4)NC(=O)C5CC5)F)F,,1,InChiKey=GNNDEPIMDAZHRQ-UHFFFAOYSA-N,,,,1,510.2,5,109.4,5,3,8,Tyr,Achiral Molecule,"DCC-2701
+Altiratinib
+DP-5164",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545365.svg?engine=indigo
+Alvocidib,CHEMBL428690,Smiles=CN1CC[C@@H]([C@@H](C1)O)c2c(cc(c3c2oc(cc3=O)c4ccccc4Cl)O)O,,3,InChiKey=BIIVYFLTOXDAOV-YVEFUNNKSA-N,'CPB',1c8k 1e1y 3blr 3ebp 4o71,,0,401.1,3.3,94.1,6,3,2,,Single Stereoisomer,"L-86-8275
+Flavopiridol
+MDL-107826A
+HL-275
+HMR-1275
+Alvocidib
+NSC-649890
+L-868275",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL428690.svg?engine=indigo
+Amcasertib,CHEMBL3707349,Smiles=CCN(CC)CCNC(=O)c1c(c([nH]c1C)/C=C\2/c3cc(ccc3NC2=O)c4csc(n4)c5ccccc5)C,,2,InChiKey=QDWKGEFGLQMDAM-ULJHMMPZSA-N,,,,2,539.2,6,90.1,5,3,9,Tyr,Achiral Molecule,"BBI-503
+Amcasertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3707349.svg?engine=indigo
+Amuvatinib,CHEMBL2103851,Smiles=c1ccc2c(c1)c3c(o2)c(ncn3)N4CCN(CC4)C(=S)NCc5ccc6c(c5)OCO6,,2,InChiKey=FOFDIMHVKGYHRU-UHFFFAOYSA-N,,,,0,447.1,3.3,75.9,7,1,3,Tyr,Achiral Molecule,"MP-470
+HPK56
+Amuvatinib
+HPK-56",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103851.svg?engine=indigo
+Apitolisib,CHEMBL1922094,Smiles=Cc1c(sc2c1nc(nc2N3CCOCC3)c4cnc(nc4)N)CN5CCN(CC5)C(=O)[C@H](C)O,,2,InChiKey=YOVVNQKCSKSHKT-HNNXBMFYSA-N,'980',3tl5,,1,498.2,0.9,133.8,11,2,5,Atypical,Single Stereoisomer,"GDC-0980.1
+RG-7422
+G-038390.1
+GDC-0980
+Apitolisib
+G-038390",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1922094.svg?engine=indigo
+Axitinib,CHEMBL1289926,Smiles=CNC(=O)c1ccccc1Sc2ccc3c(c2)[nH]nc3/C=C/c4ccccn4,Inlyta,4,InChiKey=RITAVMQDGBJQJZ-FMIVXFBMSA-N,'AXI',4ag8 4agc 4twp 4wa9,2,0,386.1,4.6,70.7,4,2,5,Tyr,Achiral Molecule,"Inlyta
+AG-13736
+Axitinib
+AG-013736",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1289926.svg?engine=indigo
+Bafetinib,CHEMBL206834,Smiles=Cc1ccc(cc1Nc2nccc(n2)c3cncnc3)NC(=O)c4ccc(c(c4)C(F)(F)F)CN5CC[C@@H](C5)N(C)C,,2,InChiKey=ZGBAJMQHJDFTQJ-DEOSSOPVSA-N,'406',2e2b,2,2,576.3,5.4,99.2,8,2,8,Tyr,Single Stereoisomer,"CNS-9
+Bafetinib
+NS-187
+INNO-406",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL206834.svg?engine=indigo
+Balamapimod,CHEMBL2104954,Smiles=Cn1ccnc1Sc2ccc(cc2Cl)Nc3c4cc(c(cc4ncc3C#N)N5CCC(CC5)N6CCCC6)OC,,1,InChiKey=CVAKNHIXTWLGJO-UHFFFAOYSA-N,,,,2,573.2,6.5,82.2,9,1,7,"TKL
+STE",Achiral Molecule,"MKI-833
+Balamapimod",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2104954.svg?engine=indigo
+Barasertib,CHEMBL415049,Smiles=CCN(CCCOc1ccc2c(c1)ncnc2Nc3cc(n[nH]3)CC(=O)Nc4cccc(c4)F)CCOP(=O)(O)O,,3,InChiKey=GBJVVSCPOBPEIT-UHFFFAOYSA-N,,,,1,587.2,3.6,174.8,9,5,15,Other,Achiral Molecule,"Barasertib
+AZD-1152",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL415049.svg?engine=indigo
+Baricitinib,CHEMBL2105759,Smiles=CCS(=O)(=O)N1CC(C1)(CC#N)n2cc(cn2)c3c4cc[nH]c4ncn3,Olumiant,4,InChiKey=XUZMWHLSFXCVMG-UHFFFAOYSA-N,'3JW',4w9x,1,0,371.1,1.1,120.6,7,1,5,Tyr,Achiral Molecule,"Baricitinib
+LY-3009104
+INCB-28050
+INCB-028050",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2105759.svg?engine=indigo
+Bemcentinib,CHEMBL3809489,Smiles=c1ccc-2c(c1)CCCc3c2nnc(c3)n4c(nc(n4)Nc5ccc6c(c5)CC[C@H](CC6)N7CCCC7)N,,2,InChiKey=KXMZDGSRSGHMMK-VWLOTQADSA-N,,,,1,506.3,4.9,97.8,8,2,4,Tyr,,"BGB324; KEYTRUDA
+
+BEMCENTINIB",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3809489.svg?engine=indigo
+Bentamapimod,CHEMBL3545213,Smiles=N#CC(c1nc2ccccc2s1)c5nc(OCc3ccc(cc3)CN4CCOCC4)ncc5,,2,InChiKey=XCPPIJCBCWUBNT-UHFFFAOYSA-N,,,,0,457.2,4.2,84.2,8,0,7,CMGC,Racemic Mixture,"PGL-5001
+Bentamapimod
+AS-602801",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545213.svg?engine=indigo
+Berzosertib,CHEMBL3989870,Smiles=CC(C)S(=O)(=O)c1ccc(cc1)c2cnc(c(n2)c3cc(no3)c4ccc(cc4)CNC)N,,2,InChiKey=JZCWLJDSIRUGIN-UHFFFAOYSA-N,,,,0,463.2,3.9,124,8,2,7,,Achiral Molecule,"VX-970
+Berzosertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3989870.svg?engine=indigo
+Bimiralisib,CHEMBL4084907,Smiles=c1c(c(c[nH]c1=N)c2nc(nc(n2)N3CCOCC3)N4CCOCC4)C(F)(F)F,,2,InChiKey=ADGGYDAFIHSYFI-UHFFFAOYSA-N,'A3W',5oq4,,0,411.2,1,103.2,8,2,3,,,"PQR309
+BIMIRALISIB",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL4084907.svg?engine=indigo
+Binimetinib,CHEMBL3187723,Smiles=Cn1cnc2c1cc(c(c2F)Nc3ccc(cc3F)Br)C(=O)NOCCO,Mektovi,4,InChiKey=ACWZRVQXLIRSDF-UHFFFAOYSA-N,,,,0,440,3,88.4,6,3,6,STE,Achiral Molecule,"ARRY-162
+NVP-MEK162
+Binimetinib
+MEK-162
+ARRY-438162",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3187723.svg?engine=indigo
+Bosutinib,CHEMBL288441,Smiles=CN1CCN(CC1)CCCOc2cc3c(cc2OC)c(c(cn3)C#N)Nc4cc(c(cc4Cl)Cl)OC,Bosulif,4,InChiKey=UBPYILGKFZZVDX-UHFFFAOYSA-N,'DB8',3soa 3ue4 4mxo 4mxx 4mxy 4mxz 4qmn 5ajq 5i9x 5vc3 5vcy 6fdy 6op9,1,2,529.2,5.2,82.9,8,1,9,"Atypical
 Tyr
 STE
 CAMK
-CMGC",www.icoa.fr/pkidb/static/img/mol/Barasertib.svg
-Brigatinib,CHEMBL3545311,Smiles=CN1CCN(CC1)C2CCN(CC2)c3ccc(c(c3)OC)Nc4ncc(c(n4)Nc5ccccc5P(=O)(C)C)Cl,InChiKey=AILRADAXUVEEIR-UHFFFAOYSA-N,2,583.3,5.1,85.9,9,2,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Baricitinib.svg
-Brivanib,CHEMBL377300,Smiles=Cc1cc2c([nH]1)ccc(c2F)Oc3c4c(c(cn4ncn3)OC[C@@H](C)O)C,InChiKey=WCWUXEGQKLTGDX-LLVKDONJSA-N,0,370.1,3.5,84.7,6,2,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Bemcentinib.svg
-Buparlisib,CHEMBL2017974,Smiles=c1c(c(cnc1N)c2cc(nc(n2)N3CCOCC3)N4CCOCC4)C(F)(F)F,InChiKey=CWHUFRVAEUJCEF-UHFFFAOYSA-N,0,410.2,1.8,89.6,8,1,3,Atypical,www.icoa.fr/pkidb/static/img/mol/Bentamapimod.svg
-Cabozantinib,CHEMBL2105717,Smiles=COc1cc2c(ccnc2cc1OC)Oc3ccc(cc3)NC(=O)C4(CC4)C(=O)Nc5ccc(cc5)F,InChiKey=ONIQOQHATWINJY-UHFFFAOYSA-N,2,501.2,5.5,98.8,6,2,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Berzosertib.svg
-Canertinib,CHEMBL31965,Smiles=C=CC(=O)Nc1cc2c(cc1OCCCN3CCOCC3)ncnc2Nc4ccc(c(c4)Cl)F,InChiKey=OMZCMEYTWSXEPZ-UHFFFAOYSA-N,0,485.2,4.4,88.6,7,2,9,Tyr,www.icoa.fr/pkidb/static/img/mol/Bimiralisib.svg
-Capivasertib,CHEMBL2325741,Smiles=c1cc(ccc1[C@H](CCO)NC(=O)C2(CCN(CC2)c3c4cc[nH]c4ncn3)N)Cl,InChiKey=JDUBGYFRJFOXQC-KRWDZBQOSA-N,0,428.2,2.1,120.2,6,4,6,AGC,www.icoa.fr/pkidb/static/img/mol/Binimetinib.svg
-Capmatinib,CHEMBL3188267,Smiles=CNC(=O)c1ccc(cc1F)c2cnc3ncc(n3n2)Cc4ccc5c(c4)cccn5,InChiKey=LIOLIMKSCNQPLV-UHFFFAOYSA-N,0,412.1,3.4,85.1,6,1,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Bosutinib.svg
-Cediranib,CHEMBL491473,Smiles=Cc1cc2c([nH]1)ccc(c2F)Oc3c4cc(c(cc4ncn3)OCCCN5CCCC5)OC,InChiKey=XXJWYDDUDKYVKI-UHFFFAOYSA-N,1,450.2,5.2,72.5,6,1,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Brigatinib.svg
-Cenisertib,CHEMBL1614709,Smiles=Cc1cc(ccc1N2CCN(CC2)C)Nc3ncc(c(n3)N[C@@H]4[C@@H]5C[C@H]([C@@H]4C(=O)N)C=C5)F,InChiKey=KSOVGRCOLZZTPF-QMKUDKLTSA-N,0,451.2,2.5,99.4,7,3,6,Other,www.icoa.fr/pkidb/static/img/mol/Brivanib.svg
-Cerdulatinib,CHEMBL4116008,Smiles=CCS(=O)(=O)N1CCN(CC1)c2ccc(cc2)Nc3ncc(c(n3)NC4CC4)C(=O)N,InChiKey=BGLPECHZZQDNCD-UHFFFAOYSA-N,0,445.2,1.4,133.6,8,3,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Buparlisib.svg
-Ceritinib,CHEMBL2403108,Smiles=Cc1cc(c(cc1C2CCNCC2)OC(C)C)Nc3ncc(c(n3)Nc4ccccc4S(=O)(=O)C(C)C)Cl,InChiKey=VERWOWGGCGHDQE-UHFFFAOYSA-N,2,557.2,6.4,105.2,8,3,9,Tyr,www.icoa.fr/pkidb/static/img/mol/Cabozantinib.svg
-Cobimetinib,CHEMBL2146883,Smiles=c1c(cc(c(c1)Nc2c(c(ccc2C(=O)N3C[C@@](C3)(O)[C@H]4NCCCC4)F)F)F)I,InChiKey=BSMCAPRUBJMWDF-KRWDZBQOSA-N,1,531.1,3.8,64.6,4,3,4,STE,www.icoa.fr/pkidb/static/img/mol/Canertinib.svg
-Copanlisib,CHEMBL3218576,Smiles=COc1c(ccc2c1N=C(N3C2=NCC3)NC(=O)c4cnc(nc4)N)OCCCN5CCOCC5,InChiKey=PZBCKZWLPGJMAO-UHFFFAOYSA-N,1,480.2,0.7,139.8,11,2,7,Atypical,www.icoa.fr/pkidb/static/img/mol/Capivasertib.svg
-Crenolanib,CHEMBL2105728,Smiles=CC1(COC1)COc2ccc3c(c2)ncn3c4ccc5cccc(c5n4)N6CCC(CC6)N,InChiKey=DYNHJHQFHQTFTP-UHFFFAOYSA-N,0,443.2,3.9,78.4,7,1,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Capmatinib.svg
-Crizotinib,CHEMBL601719,Smiles=C[C@H](c1c(ccc(c1Cl)F)Cl)Oc2cc(cnc2N)c3cnn(c3)C4CCNCC4,InChiKey=KTEIFNKAUNYNJU-GFCCVEGCSA-N,1,449.1,5,78,6,2,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Cediranib.svg
-Dabrafenib,CHEMBL2028663,Smiles=CC(C)(C)c1nc(c(s1)c2ccnc(n2)N)c3cccc(c3F)NS(=O)(=O)c4c(cccc4F)F,InChiKey=BFSMGDJOXZAERB-UHFFFAOYSA-N,2,519.1,5.4,110.9,7,2,5,"NEK
+CMGC",Achiral Molecule,"Bosulif
+Bosutinib Monohydrate
+Bosutinib
+SKI-606",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL288441.svg?engine=indigo
+Brigatinib,CHEMBL3545311,Smiles=CN1CCN(CC1)C2CCN(CC2)c3ccc(c(c3)OC)Nc4ncc(c(n4)Nc5ccccc5P(=O)(C)C)Cl,Alunbrig,4,InChiKey=AILRADAXUVEEIR-UHFFFAOYSA-N,'6GY',6mx8,1,2,583.3,5.1,85.9,9,2,8,Tyr,Achiral Molecule,"Alunbrig
+AP-26113
+Brigatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545311.svg?engine=indigo
+Brivanib,CHEMBL377300,Smiles=Cc1cc2c([nH]1)ccc(c2F)Oc3c4c(c(cn4ncn3)OC[C@@H](C)O)C,,3,InChiKey=WCWUXEGQKLTGDX-LLVKDONJSA-N,,,,0,370.1,3.5,84.7,6,2,5,Tyr,Single Stereoisomer,"Brivanib
+BMS-540215",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL377300.svg?engine=indigo
+Buparlisib,CHEMBL2017974,Smiles=c1c(c(cnc1N)c2cc(nc(n2)N3CCOCC3)N4CCOCC4)C(F)(F)F,,3,InChiKey=CWHUFRVAEUJCEF-UHFFFAOYSA-N,'SD5',3sd5 5m7e,1,0,410.2,1.8,89.6,8,1,3,Atypical,Achiral Molecule,"NVP-BKM120
+BKM-120
+Buparlisib
+BKM120-NX",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2017974.svg?engine=indigo
+Cabozantinib,CHEMBL2105717,Smiles=COc1cc2c(ccnc2cc1OC)Oc3ccc(cc3)NC(=O)C4(CC4)C(=O)Nc5ccc(cc5)F,Cabometyx;Cometriq,4,InChiKey=ONIQOQHATWINJY-UHFFFAOYSA-N,,,2,2,501.2,5.5,98.8,6,2,8,Tyr,Achiral Molecule,"Cabometyx;Cometriq
+XL-184
+Cabozantinib
+BMS-907351",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2105717.svg?engine=indigo
+Canertinib,CHEMBL31965,Smiles=C=CC(=O)Nc1cc2c(cc1OCCCN3CCOCC3)ncnc2Nc4ccc(c(c4)Cl)F,,3,InChiKey=OMZCMEYTWSXEPZ-UHFFFAOYSA-N,,,,0,485.2,4.4,88.6,7,2,9,Tyr,Achiral Molecule,"CI-1033
+Canertinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL31965.svg?engine=indigo
+Capivasertib,CHEMBL2325741,Smiles=c1cc(ccc1[C@H](CCO)NC(=O)C2(CCN(CC2)c3c4cc[nH]c4ncn3)N)Cl,,2,InChiKey=JDUBGYFRJFOXQC-KRWDZBQOSA-N,'0XZ',4gv1,,0,428.2,2.1,120.2,6,4,6,AGC,,AZD-5363,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2325741.svg?engine=indigo
+Capmatinib,CHEMBL3188267,Smiles=CNC(=O)c1ccc(cc1F)c2cnc3ncc(n3n2)Cc4ccc5c(c4)cccn5,,3,InChiKey=LIOLIMKSCNQPLV-UHFFFAOYSA-N,,,,0,412.1,3.4,85.1,6,1,4,Tyr,Achiral Molecule,"INC280
+Capmatinib
+INCB-28060
+NVP-INC280
+NYP-INC280-NX
+INC-280",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3188267.svg?engine=indigo
+Cediranib,CHEMBL491473,Smiles=Cc1cc2c([nH]1)ccc(c2F)Oc3c4cc(c(cc4ncn3)OCCCN5CCCC5)OC,Recentin,3,InChiKey=XXJWYDDUDKYVKI-UHFFFAOYSA-N,,,,1,450.2,5.2,72.5,6,1,8,Tyr,Achiral Molecule,"Recentin
+ZD-2171
+AZD-2171
+Cediranib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL491473.svg?engine=indigo
+Cenisertib,CHEMBL1614709,Smiles=Cc1cc(ccc1N2CCN(CC2)C)Nc3ncc(c(n3)N[C@@H]4[C@@H]5C[C@H]([C@@H]4C(=O)N)C=C5)F,,1,InChiKey=KSOVGRCOLZZTPF-QMKUDKLTSA-N,,,,0,451.2,2.5,99.4,7,3,6,Other,Racemic Mixture,"R-763
+AS-703569",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1614709.svg?engine=indigo
+Cerdulatinib,CHEMBL4116008,Smiles=CCS(=O)(=O)N1CCN(CC1)c2ccc(cc2)Nc3ncc(c(n3)NC4CC4)C(=O)N,,2.5,InChiKey=BGLPECHZZQDNCD-UHFFFAOYSA-N,,,,0,445.2,1.4,133.6,8,3,8,Tyr,Single Stereoisomer,PRT-062070,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL4116008.svg?engine=indigo
+Ceritinib,CHEMBL2403108,Smiles=Cc1cc(c(cc1C2CCNCC2)OC(C)C)Nc3ncc(c(n3)Nc4ccccc4S(=O)(=O)C(C)C)Cl,Zykadia,4,InChiKey=VERWOWGGCGHDQE-UHFFFAOYSA-N,'4MK',4mkc,1,2,557.2,6.4,105.2,8,3,9,Tyr,Achiral Molecule,"Zykadia
+Ceritinib
+NVP-LDK378-NX",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2403108.svg?engine=indigo
+Cobimetinib,CHEMBL2146883,Smiles=c1c(cc(c(c1)Nc2c(c(ccc2C(=O)N3C[C@@](C3)(O)[C@H]4NCCCC4)F)F)F)I,Cotellic,4,InChiKey=BSMCAPRUBJMWDF-KRWDZBQOSA-N,'EUI',4an2 4lmn,3,1,531.1,3.8,64.6,4,3,4,STE,Single Stereoisomer,"Cotellic
+RG-7421
+GDC-0973
+RG-7420
+XL-518
+Cobimetinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2146883.svg?engine=indigo
+Copanlisib,CHEMBL3218576,Smiles=COc1c(ccc2c1N=C(N3C2=NCC3)NC(=O)c4cnc(nc4)N)OCCCN5CCOCC5,Aliqopa,4,InChiKey=PZBCKZWLPGJMAO-UHFFFAOYSA-N,'6E2',5g2n,1,1,480.2,0.7,139.8,11,2,7,Atypical,Achiral Molecule,"Copanlisib
+BAY 80-6946
+BAY-80-6946",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3218576.svg?engine=indigo
+Crenolanib,CHEMBL2105728,Smiles=CC1(COC1)COc2ccc3c(c2)ncn3c4ccc5cccc(c5n4)N6CCC(CC6)N,,3,InChiKey=DYNHJHQFHQTFTP-UHFFFAOYSA-N,'6T2',5lby 6bqp,1,0,443.2,3.9,78.4,7,1,5,Tyr,Achiral Molecule,"CP-868596
+ARO-002
+Crenolanib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2105728.svg?engine=indigo
+Crizotinib,CHEMBL601719,Smiles=C[C@H](c1c(ccc(c1Cl)F)Cl)Oc2cc(cnc2N)c3cnn(c3)C4CCNCC4,Xalkori,4,InChiKey=KTEIFNKAUNYNJU-GFCCVEGCSA-N,'VGH',2wgj 2xp2 2yfx 3zbf 4anq 4ans 4c9w 5aaa 5aab 5aac 6imz,1,1,449.1,5,78,6,2,5,Tyr,Single Stereoisomer,"Xalkori
+Crizotinib
+PF-2341066",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL601719.svg?engine=indigo
+Dabrafenib,CHEMBL2028663,Smiles=CC(C)(C)c1nc(c(s1)c2ccnc(n2)N)c3cccc(c3F)NS(=O)(=O)c4c(cccc4F)F,Tafinlar,4,InChiKey=BFSMGDJOXZAERB-UHFFFAOYSA-N,'P06',4xv2 5csw 5hie,1.5,2,519.1,5.4,110.9,7,2,5,"NEK
 TKL
-CAMK",www.icoa.fr/pkidb/static/img/mol/Cenisertib.svg
-Dacomitinib,CHEMBL2110732,Smiles=COc1cc2c(cc1NC(=O)/C=C/CN3CCCCC3)c(ncn2)Nc4ccc(c(c4)Cl)F,InChiKey=LVXJQMNHJWSHET-AATRIKPKSA-N,1,469.2,5.2,79.4,6,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Ceralasertib.svg
-Dactolisib,CHEMBL1879463,Smiles=CC(C)(C#N)c1ccc(cc1)n2c3c4cc(ccc4ncc3n(c2=O)C)c5cc6ccccc6nc5,InChiKey=JOGKUKXHTYWRGZ-UHFFFAOYSA-N,1,469.2,5.9,76.5,6,0,3,Atypical,www.icoa.fr/pkidb/static/img/mol/Cerdulatinib.svg
-Danusertib,CHEMBL402548,Smiles=CN1CCN(CC1)c2ccc(cc2)C(=O)Nc3c4c([nH]n3)CN(C4)C(=O)[C@@H](c5ccccc5)OC,InChiKey=XKFTZKGMDDZMJI-HSZRJFAPSA-N,0,474.2,2.6,93.8,6,2,6,Other,www.icoa.fr/pkidb/static/img/mol/Ceritinib.svg
-Dasatinib,CHEMBL1421,Smiles=Cc1cccc(c1NC(=O)c2cnc(s2)Nc3cc(nc(n3)C)N4CCN(CC4)CCO)Cl,InChiKey=ZBNZXTGUTAYRHI-UHFFFAOYSA-N,0,487.2,3.3,106.5,9,3,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Cobimetinib.svg
-Decernotinib,CHEMBL3039513,Smiles=CC[C@](C)(C(=O)NCC(F)(F)F)Nc1ccnc(n1)c2c[nH]c3c2cccn3,InChiKey=ASUGUQWIHMTFJL-QGZVFWFLSA-N,0,392.2,3.3,95.6,5,3,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Copanlisib.svg
-Defactinib,CHEMBL3137331,Smiles=CNC(=O)c1ccc(cc1)Nc2ncc(c(n2)NCc3c(nccn3)N(C)S(=O)(=O)C)C(F)(F)F,InChiKey=FWLMVFUGMHIOAA-UHFFFAOYSA-N,1,510.1,2.4,142.1,9,3,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Crenolanib.svg
-Dezapelisib,CHEMBL2216863,Smiles=Cc1csc2n1c(=O)c(c(n2)[C@H](C)Nc3c4c([nH]cn4)ncn3)c5cccc(c5)F,InChiKey=RSIWALKZYXPAGW-NSHDSACASA-N,0,421.1,3.7,100.9,8,2,4,,www.icoa.fr/pkidb/static/img/mol/Crizotinib.svg
-Dilmapimod,CHEMBL2103838,Smiles=Cc1cc(ccc1c2c3ccc(=O)n(c3nc(n2)NC(CO)CO)c4c(cccc4F)F)F,InChiKey=ORVNHOYNEHYKJG-UHFFFAOYSA-N,0,456.1,2.9,100.3,7,3,6,CMGC,www.icoa.fr/pkidb/static/img/mol/Dabrafenib.svg
-Dinaciclib,CHEMBL2103840,Smiles=CCc1cnn2c1nc(cc2NCc3ccc[n+](c3)[O-])N4CCCC[C@H]4CCO,InChiKey=PIMQWRZWLQKKBJ-SFHVURJKSA-N,0,396.2,2.3,92.6,7,2,7,"(*)
-CMGC",www.icoa.fr/pkidb/static/img/mol/Dacomitinib.svg
-Doramapimod,CHEMBL103667,Smiles=Cc1ccc(cc1)n2c(cc(n2)C(C)(C)C)NC(=O)Nc3ccc(c4c3cccc4)OCCN5CCOCC5,InChiKey=MVCOAUNKQVWQHZ-UHFFFAOYSA-N,2,527.3,6,80.7,6,2,7,CMGC,www.icoa.fr/pkidb/static/img/mol/Dactolisib.svg
-Dovitinib,CHEMBL522892,Smiles=CN1CCN(CC1)c2ccc3c(c2)[nH]c(n3)c4c(c5c(cccc5F)[nH]c4=O)N,InChiKey=PIQCTGMSNWUMAF-UHFFFAOYSA-N,0,392.2,2.5,94,5,3,2,"(*)
-Tyr",www.icoa.fr/pkidb/static/img/mol/Danusertib.svg
-Duvelisib,CHEMBL3039502,Smiles=C[C@@H](c1cc2cccc(c2c(=O)n1c3ccccc3)Cl)Nc4c5c([nH]cn5)ncn4,InChiKey=SJVQHLPISAIATJ-ZDUSSCGKSA-N,0,416.1,4.5,88.5,6,2,4,Atypical,www.icoa.fr/pkidb/static/img/mol/Dasatinib.svg
-Encorafenib,CHEMBL3301612,Smiles=C[C@@H](CNc1nccc(n1)c2cn(nc2c3cc(cc(c3F)NS(=O)(=O)C)Cl)C(C)C)NC(=O)OC,InChiKey=CMJCXYNUCSMDBY-ZDUSSCGKSA-N,1,539.2,3.9,140.1,9,3,9,TKL,www.icoa.fr/pkidb/static/img/mol/Decernotinib.svg
-Ensartinib,CHEMBL4113131,Smiles=C[C@@H]1CN(C[C@@H](N1)C)C(=O)c2ccc(cc2)NC(=O)c3cc(c(nn3)N)O[C@H](C)c4c(ccc(c4Cl)F)Cl,InChiKey=GLYMPHUVMRFTFV-QLFBSQMISA-N,1,560.2,4.7,122.5,7,3,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Defactinib.svg
-Entospletinib,CHEMBL3265032,Smiles=c1cc(ccc1Nc2c3nccn3cc(n2)c4ccc5cn[nH]c5c4)N6CCOCC6,InChiKey=XSMSNFMDVXXHGJ-UHFFFAOYSA-N,0,411.2,3.9,83.4,7,2,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Derazantinib.svg
-Entrectinib,CHEMBL1983268,Smiles=CN1CCN(CC1)c2ccc(c(c2)NC3CCOCC3)C(=O)Nc4c5cc(ccc5[nH]n4)Cc6cc(cc(c6)F)F,InChiKey=HAYYBYPASCDWEQ-UHFFFAOYSA-N,2,560.3,5,85.5,6,3,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Dezapelisib.svg
-Enzastaurin,CHEMBL300138,Smiles=Cn1cc(c2c1cccc2)C3=C(C(=O)NC3=O)c4cn(c5c4cccc5)C6CCN(CC6)Cc7ccccn7,InChiKey=AXRCEOKUDYDWLF-UHFFFAOYSA-N,1,515.2,4.9,72.2,6,1,5,,www.icoa.fr/pkidb/static/img/mol/Dilmapimod.svg
-Erdafitinib,CHEMBL3545376,Smiles=CC(C)NCCN(c1ccc2c(c1)nc(cn2)c3cnn(c3)C)c4cc(cc(c4)OC)OC,InChiKey=OLAHOMJCDNXHFI-UHFFFAOYSA-N,0,446.2,4.2,77.3,8,1,9,Tyr,www.icoa.fr/pkidb/static/img/mol/Dinaciclib.svg
-Erlotinib,CHEMBL553,Smiles=COCCOc1cc2c(cc1OCCOC)ncnc2Nc3cccc(c3)C#C,InChiKey=AAKJLRGGTJKAMG-UHFFFAOYSA-N,0,393.2,3.4,74.7,7,1,10,"(*)
-Tyr",www.icoa.fr/pkidb/static/img/mol/Doramapimod.svg
-Evobrutinib,CHEMBL4072833,Smiles=C=CC(=O)N1CCC(CC1)CNc2c(c(ncn2)N)c3ccc(cc3)Oc4ccccc4,InChiKey=QUIWHXQETADMGN-UHFFFAOYSA-N,0,429.2,4.4,93.4,6,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Dovitinib.svg
-Famitinib,CHEMBL1278146,Smiles=CCN(CC)CCN1CCc2c(c(c([nH]2)/C=C\3/c4cc(ccc4NC3=O)F)C)C1=O,InChiKey=GKEYKDOLBLYGRB-LGMDPLHJSA-N,0,410.2,3.3,68.4,3,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Duvelisib.svg
-Fasudil,CHEMBL38380,Smiles=c1cc2cnccc2c(c1)S(=O)(=O)N3CCCNCC3,InChiKey=NGOGFTYYXHNFQH-UHFFFAOYSA-N,0,291.1,1.2,62.3,4,1,2,,www.icoa.fr/pkidb/static/img/mol/Encorafenib.svg
-Fedratinib,CHEMBL1287853,Smiles=Cc1cnc(nc1Nc2cccc(c2)S(=O)(=O)NC(C)(C)C)Nc3ccc(cc3)OCCN4CCCC4,InChiKey=JOOXLOJCABQBSG-UHFFFAOYSA-N,1,524.3,4.8,108.5,8,3,10,"(*)
-Tyr",www.icoa.fr/pkidb/static/img/mol/Ensartinib.svg
-Filgotinib,CHEMBL3301607,Smiles=c1cc(n2c(c1)nc(n2)NC(=O)C3CC3)c4ccc(cc4)CN5CCS(=O)(=O)CC5,InChiKey=RIJLVEAXPNLDTC-UHFFFAOYSA-N,0,425.2,2,96.7,7,1,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Entospletinib.svg
-Flumatinib,CHEMBL3545413,Smiles=Cc1c(cc(cn1)NC(=O)c2ccc(c(c2)C(F)(F)F)CN3CCN(CC3)C)Nc4nccc(n4)c5cccnc5,InChiKey=BJCJYEYYYGBROF-UHFFFAOYSA-N,2,562.2,5,99.2,8,2,7,"Atypical
-Tyr",www.icoa.fr/pkidb/static/img/mol/Entrectinib.svg
-Foretinib,CHEMBL1230609,Smiles=COc1cc2c(ccnc2cc1OCCCN3CCOCC3)Oc4ccc(cc4F)NC(=O)C5(CC5)C(=O)Nc6ccc(cc6)F,InChiKey=CXQHYVUVSFXTMY-UHFFFAOYSA-N,2,632.2,5.8,111.2,8,2,12,Tyr,www.icoa.fr/pkidb/static/img/mol/Enzastaurin.svg
-Fostamatinib,CHEMBL2103830,Smiles=CC1(C(=O)N(c2c(ccc(n2)Nc3c(cnc(n3)Nc4cc(c(c(c4)OC)OC)OC)F)O1)COP(=O)(O)O)C,InChiKey=GKDRMWXFWHEQQT-UHFFFAOYSA-N,2,580.1,3.1,186.7,12,4,10,Tyr,www.icoa.fr/pkidb/static/img/mol/Erdafitinib.svg
-Galunisertib,CHEMBL2364611,Smiles=Cc1cccc(n1)c2c(c3n(n2)CCC3)c4ccnc5c4cc(cc5)C(=O)N,InChiKey=IVRXNBXKWIJUQB-UHFFFAOYSA-N,0,369.2,3.5,86.7,5,1,3,TKL,www.icoa.fr/pkidb/static/img/mol/Erlotinib.svg
-Gandotinib,CHEMBL2107823,Smiles=Cc1cc(n[nH]1)Nc2cc(c3nc(c(n3n2)Cc4ccc(cc4F)Cl)C)CN5CCOCC5,InChiKey=SQSZANZGUXWJEA-UHFFFAOYSA-N,0,469.2,4,83.4,7,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Evobrutinib.svg
-Gedatolisib,CHEMBL592445,Smiles=CN(C)C1CCN(CC1)C(=O)c2ccc(cc2)NC(=O)Nc3ccc(cc3)c4nc(nc(n4)N5CCOCC5)N6CCOCC6,InChiKey=DWZAEMINVBZMHQ-UHFFFAOYSA-N,1,615.3,3,128.3,10,2,7,Atypical,www.icoa.fr/pkidb/static/img/mol/Famitinib.svg
-Gefitinib,CHEMBL939,Smiles=COc1cc2c(cc1OCCCN3CCOCC3)c(ncn2)Nc4ccc(c(c4)Cl)F,InChiKey=XGALLCVXEZPNRQ-UHFFFAOYSA-N,0,446.2,4.3,68.7,7,1,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Fasudil.svg
-Gilteritinib,CHEMBL3301622,Smiles=CCc1c(nc(c(n1)C(=O)N)Nc2ccc(c(c2)OC)N3CCC(CC3)N4CCN(CC4)C)NC5CCOCC5,InChiKey=GYQYAJJFPNQOOW-UHFFFAOYSA-N,1,552.4,2.7,121.1,10,3,9,Tyr,www.icoa.fr/pkidb/static/img/mol/Fedratinib.svg
-Glesatinib,CHEMBL3989914,Smiles=COCCNCc1ccc(nc1)c2cc3c(s2)c(ccn3)Oc4ccc(cc4F)NC(=S)NC(=O)Cc5ccc(cc5)F,InChiKey=YRCHYHRCBXNYNU-UHFFFAOYSA-N,2,619.2,6.2,97.4,8,3,11,Tyr,www.icoa.fr/pkidb/static/img/mol/Filgotinib.svg
-Golvatinib,CHEMBL3039525,Smiles=CN1CCN(CC1)C2CCN(CC2)C(=O)Nc3cc(ccn3)Oc4ccc(c(c4)F)NC(=O)C5(CC5)C(=O)Nc6ccc(cc6)F,InChiKey=UQRCJCNVNUFYDX-UHFFFAOYSA-N,1,633.3,4.8,119.1,7,3,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Flumatinib.svg
-Henatinib,CHEMBL1277072,Smiles=Cc1c([nH]c2c1C(=O)N(CCC2)C[C@@H](CN3CCOCC3)O)/C=C\4/c5cc(ccc5NC4=O)F,InChiKey=MCTXSDCWFQAGFS-UEXNTNOUSA-N,0,468.2,2,97.9,5,3,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Foretinib.svg
-Ibrutinib,CHEMBL1873475,Smiles=C=CC(=O)N1CCC[C@H](C1)n2c3c(c(n2)c4ccc(cc4)Oc5ccccc5)c(ncn3)N,InChiKey=XYFPWWZEPKGCCK-GOSISDBHSA-N,0,440.2,4.2,99.2,7,1,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Fostamatinib.svg
-Icotinib,CHEMBL2087361,Smiles=C#Cc1cccc(c1)Nc2c3cc4c(cc3ncn2)OCCOCCOCCO4,InChiKey=QQLKULDARVNMAL-UHFFFAOYSA-N,0,391.2,3.2,74.7,7,1,2,Tyr,www.icoa.fr/pkidb/static/img/mol/Fruquintinib.svg
-Idelalisib,CHEMBL2216870,Smiles=CC[C@@H](c1nc2cccc(c2c(=O)n1c3ccccc3)F)Nc4c5c([nH]cn5)ncn4,InChiKey=IFSDAJWBUCMOAH-HNNXBMFYSA-N,0,415.2,3.8,101.4,7,2,5,Atypical,www.icoa.fr/pkidb/static/img/mol/Galunisertib.svg
-Ilorasertib,CHEMBL1980297,Smiles=c1cc(cc(c1)F)NC(=O)Nc2ccc(cc2)c3csc4c3c(ncc4c5cnn(c5)CCO)N,InChiKey=WPHKIQPVPYJNAX-UHFFFAOYSA-N,1,488.1,5.2,118.1,7,4,6,"Tyr
-Other",www.icoa.fr/pkidb/static/img/mol/Gandotinib.svg
-Imatinib,CHEMBL941,Smiles=Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)NC(=O)c4ccc(cc4)CN5CCN(CC5)C,InChiKey=KTUFNOKKBVMGRW-UHFFFAOYSA-N,0,493.3,4.6,86.3,7,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Gedatolisib.svg
-Infigratinib,CHEMBL1852688,Smiles=CCN1CCN(CC1)c2ccc(cc2)Nc3cc(ncn3)N(C)C(=O)Nc4c(c(cc(c4Cl)OC)OC)Cl,InChiKey=QADPYRIHXKWUSV-UHFFFAOYSA-N,2,559.2,5.4,95.1,8,2,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Gefitinib.svg
-Ipatasertib,CHEMBL2177390,Smiles=C[C@@H]1C[C@H](c2c1c(ncn2)N3CCN(CC3)C(=O)[C@H](CNC(C)C)c4ccc(cc4)Cl)O,InChiKey=GRZXWCHAXNAUHY-NSISKUIASA-N,0,457.2,3.1,81.6,6,2,6,AGC,www.icoa.fr/pkidb/static/img/mol/Gilteritinib.svg
-Itacitinib,CHEMBL3622820,Smiles=c1cnc-2[nH]cnc(c12)c3cnn(c3)C4(CN(C4)C5CCN(CC5)C(=O)c6ccnc(c6F)C(F)(F)F)CC#N,InChiKey=KTBSXLIQKWEBRB-UHFFFAOYSA-N,1,553.2,3.6,119.6,8,1,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Glesatinib.svg
-Lapatinib,CHEMBL554,Smiles=CS(=O)(=O)CCNCc1ccc(o1)c2ccc3c(c2)c(ncn3)Nc4ccc(c(c4)Cl)OCc5cccc(c5)F,InChiKey=BCFGMOOMADDAQU-UHFFFAOYSA-N,2,580.1,6.1,106.4,8,2,11,Tyr,www.icoa.fr/pkidb/static/img/mol/Golvatinib.svg
-Larotrectinib,CHEMBL3889654,Smiles=c1cc(c(cc1F)[C@H]2CCCN2c3ccn4c(n3)c(cn4)NC(=O)N5CC[C@@H](C5)O)F,InChiKey=NYNZQNWKBKUAII-KBXCAEBGSA-N,0,428.2,2.9,86,6,2,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Henatinib.svg
-Leniolisib,CHEMBL3643413,Smiles=CCC(=O)N1CC[C@@H](C1)Nc2c3c(ncn2)CCN(C3)c4cc(c(nc4)OC)C(F)(F)F,InChiKey=MWKYMZXCGYXLPL-ZDUSSCGKSA-N,0,450.2,2.9,83.5,7,1,5,,www.icoa.fr/pkidb/static/img/mol/Ibrutinib.svg
-Lenvatinib,CHEMBL1289601,Smiles=COc1cc2c(cc1C(=O)N)c(ccn2)Oc3ccc(c(c3)Cl)NC(=O)NC4CC4,InChiKey=WOSKHXYHFSIKNG-UHFFFAOYSA-N,0,426.1,4.1,115.6,5,3,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Icotinib.svg
-Lestaurtinib,CHEMBL603469,Smiles=C[C@@]12[C@](C[C@@H](O1)n3c4ccccc4c5c3c6n2c7ccccc7c6c8c5C(=O)NC8)(CO)O,InChiKey=UIARLYUEJFELEN-LROUJFHJSA-N,0,439.2,3.5,88.7,6,3,1,Tyr,www.icoa.fr/pkidb/static/img/mol/Idelalisib.svg
-Linifanib,CHEMBL223360,Smiles=Cc1ccc(c(c1)NC(=O)Nc2ccc(cc2)c3cccc4c3c(n[nH]4)N)F,InChiKey=MPVGZUGXCQEXTM-UHFFFAOYSA-N,0,375.1,4.9,95.8,3,4,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Ilorasertib.svg
-Linsitinib,CHEMBL1091644,Smiles=C[C@]1(C[C@@H](C1)c2n3c(c(ncc3)N)c(n2)c4cc5nc(ccc5cc4)c6ccccc6)O,InChiKey=PKCDDUHJAFVJJB-VLZXCDOPSA-N,0,421.2,4.8,89.3,6,2,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Imatinib.svg
-Lorlatinib,CHEMBL3286830,Smiles=C[C@@H]1c2cc(ccc2C(=O)N(Cc3c(c(n(n3)C)C#N)-c4cc(c(nc4)N)O1)C)F,InChiKey=IIXWYSCJSQVBQM-LLVKDONJSA-N,0,406.2,2.8,110.1,7,1,0,Tyr,www.icoa.fr/pkidb/static/img/mol/Infigratinib.svg
-Losmapimod,CHEMBL1088752,Smiles=Cc1c(cc(cc1F)C(=O)NC2CC2)c3ccc(cn3)C(=O)NCC(C)(C)C,InChiKey=KKYABQBFGDZVNQ-UHFFFAOYSA-N,0,383.2,3.9,71.1,3,2,5,CMGC,www.icoa.fr/pkidb/static/img/mol/Ipatasertib.svg
-Lucitanib,CHEMBL2220486,Smiles=CNC(=O)c1cccc2c1ccc(c2)Oc3ccnc4c3cc(c(c4)OCC5(CC5)N)OC,InChiKey=CUDVHEFYRIWYQD-UHFFFAOYSA-N,0,443.2,4.4,95.7,6,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Itacitinib.svg
-Masitinib,CHEMBL1908391,Smiles=Cc1ccc(cc1Nc2nc(cs2)c3cccnc3)NC(=O)c4ccc(cc4)CN5CCN(CC5)C,InChiKey=WJEOLQLKVOPQFV-UHFFFAOYSA-N,1,498.2,5.3,73.4,7,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Lapatinib.svg
-Mavelertinib,CHEMBL3989970,Smiles=Cn1cc(c(n1)OC)Nc2c3c(nc(n2)N4C[C@H]([C@@H](C4)F)NC(=O)C=C)n(cn3)C,InChiKey=JYIUNVOCEFIUIU-GHMZBOCLSA-N,0,415.2,0.7,115,10,2,6,,www.icoa.fr/pkidb/static/img/mol/Larotrectinib.svg
-Merestinib,CHEMBL3545307,Smiles=Cc1ccc(c(=O)n1c2ccc(cc2)F)C(=O)Nc3ccc(c(c3)F)Oc4cc5cnn(c5cc4c6c[nH]nc6)C,InChiKey=QHADVLVFMKEIIP-UHFFFAOYSA-N,2,552.2,5.7,106.8,7,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Lazertinib.svg
-Midostaurin,CHEMBL608533,Smiles=C[C@@]12[C@@H]([C@@H](C[C@@H](O1)n3c4ccccc4c5c3c6n2c7ccccc7c6c8c5C(=O)NC8)N(C)C(=O)c9ccccc9)OC,InChiKey=BMGQWWVMWDBQGC-IIFHNQTCSA-N,2,570.2,5.9,77.7,6,1,3,,www.icoa.fr/pkidb/static/img/mol/Leniolisib.svg
-Milciclib,CHEMBL564829,Smiles=CC1(Cc2cnc(nc2-c3c1c(nn3C)C(=O)NC)Nc4ccc(cc4)N5CCN(CC5)C)C,InChiKey=RXZMYLDMFYNEIM-UHFFFAOYSA-N,0,460.3,2.6,91.2,8,2,4,"Tyr
-CMGC",www.icoa.fr/pkidb/static/img/mol/Lenvatinib.svg
-Momelotinib,CHEMBL1078178,Smiles=c1cc(ccc1c2ccnc(n2)Nc3ccc(cc3)N4CCOCC4)C(=O)NCC#N,InChiKey=ZVHNDZWQTBEVRY-UHFFFAOYSA-N,0,414.2,3,103.2,7,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Lestaurtinib.svg
-Motesanib,CHEMBL572881,Smiles=CC1(CNc2c1ccc(c2)NC(=O)c3cccnc3NCc4ccncc4)C,InChiKey=RAHBGWKEPAQNFF-UHFFFAOYSA-N,0,373.2,4,78.9,5,3,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Linifanib.svg
-Mubritinib,CHEMBL1614707,Smiles=c1cc(ccc1CCCCn2ccnn2)OCc3coc(n3)/C=C/c4ccc(cc4)C(F)(F)F,InChiKey=ZTFBIUXIQYRUNT-MDWZMJQESA-N,1,468.2,6.1,66,6,0,10,Tyr,www.icoa.fr/pkidb/static/img/mol/Linsitinib.svg
-Naquotinib,CHEMBL3663929,Smiles=CCc1c(nc(c(n1)C(=O)N)Nc2ccc(cc2)N3CCC(CC3)N4CCN(CC4)C)O[C@@H]5CCN(C5)C(=O)C=C,InChiKey=QKDCLUARMDUUKN-XMMPIXPASA-N,1,562.3,2.3,120.2,9,2,9,Tyr,www.icoa.fr/pkidb/static/img/mol/Lorlatinib.svg
-Nazartinib,CHEMBL3787344,Smiles=Cc1cc(ccn1)C(=O)Nc2nc3cccc(c3n2[C@@H]4CCCCN(C4)C(=O)/C=C/CN(C)C)Cl,InChiKey=IOMMMLWIABWRKL-WUTDNEBXSA-N,0,494.2,4.3,83.4,6,1,6,,www.icoa.fr/pkidb/static/img/mol/Losmapimod.svg
-Neflamapimod,CHEMBL119385,Smiles=c1cc(c(c(c1)Cl)c2c3ccc(nn3cnc2=O)Sc4ccc(cc4F)F)Cl,InChiKey=VEPKQEUBKLEPRA-UHFFFAOYSA-N,1,435,5.5,47.3,5,0,3,CMGC,www.icoa.fr/pkidb/static/img/mol/Lucitanib.svg
-Nemiralisib,CHEMBL2216859,Smiles=CC(C)N1CCN(CC1)Cc2cnc(o2)c3cc(cc4c3cn[nH]4)c5cccc6c5cc[nH]6,InChiKey=MCIDWGZGWVSZMK-UHFFFAOYSA-N,0,440.2,4.9,77,5,2,5,,www.icoa.fr/pkidb/static/img/mol/Masitinib.svg
-Neratinib,CHEMBL180022,Smiles=CCOc1cc2c(cc1NC(=O)/C=C/CN(C)C)c(c(cn2)C#N)Nc3ccc(c(c3)Cl)OCc4ccccn4,InChiKey=JWNPDZNEKVCWMY-VQHVLOKHSA-N,2,556.2,5.9,112.4,8,2,11,Tyr,www.icoa.fr/pkidb/static/img/mol/Mavelertinib.svg
-Nilotinib,CHEMBL255863,Smiles=Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)C(=O)Nc4cc(cc(c4)n5cc(nc5)C)C(F)(F)F,InChiKey=HHZIURLSWUIHRB-UHFFFAOYSA-N,2,529.2,6.4,97.6,7,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Merestinib.svg
-Ningetinib,CHEMBL3984441,Smiles=Cc1c(c(=O)n(n1C)c2ccccc2)C(=O)Nc3ccc(c(c3)F)Oc4ccnc5c4ccc(c5)OCC(C)(C)O,InChiKey=VQYYQSZNRVQLIS-UHFFFAOYSA-N,2,556.2,5.4,107.6,8,2,8,,www.icoa.fr/pkidb/static/img/mol/Midostaurin.svg
-Nintedanib,CHEMBL502835,Smiles=CN1CCN(CC1)CC(=O)N(C)c2ccc(cc2)N/C(=C\3/c4ccc(cc4NC3=O)C(=O)OC)/c5ccccc5,InChiKey=XZXHXSATPCNXJR-ZIADKAODSA-N,1,539.3,3.6,94.2,7,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Milciclib.svg
-Oclacitinib,CHEMBL2103874,Smiles=CNS(=O)(=O)C[C@H]1CC[C@@H](CC1)N(c2ncnc3c2cc[nH]3)C,InChiKey=HJWLJNBZVZDLAQ-HAQNSBGRSA-N,0,337.2,1.5,91,5,2,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Momelotinib.svg
-Olmutinib,CHEMBL3786343,Smiles=CN1CCN(CC1)c2ccc(cc2)Nc3nc4ccsc4c(n3)Oc5cccc(c5)NC(=O)C=C,InChiKey=FDMQDKQUTRLUBU-UHFFFAOYSA-N,1,486.2,5.1,82.6,8,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Motesanib.svg
-Omipalisib,CHEMBL1236962,Smiles=COc1c(cc(cn1)c2ccc3c(c2)c(ccn3)c4ccnnc4)NS(=O)(=O)c5ccc(cc5F)F,InChiKey=CGBJSGAELGCMKE-UHFFFAOYSA-N,1,505.1,4.8,107,7,1,6,Atypical,www.icoa.fr/pkidb/static/img/mol/Mubritinib.svg
-Orantinib,CHEMBL274654,Smiles=Cc1c(c([nH]c1/C=C\2/c3ccccc3NC2=O)C)CCC(=O)O,InChiKey=NHFDRBXTEDBWCZ-ZROIWOOFSA-N,0,310.1,3.1,82.2,2,3,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Naquotinib.svg
-Osimertinib,CHEMBL3353410,Smiles=Cn1cc(c2c1cccc2)c3ccnc(n3)Nc4cc(c(cc4OC)N(C)CCN(C)C)NC(=O)C=C,InChiKey=DUYJMQONPNNFPI-UHFFFAOYSA-N,0,499.3,4.5,87.6,8,2,10,Tyr,www.icoa.fr/pkidb/static/img/mol/Nazartinib.svg
-Pacritinib,CHEMBL2035187,Smiles=c1cc2cc(c1)-c3ccnc(n3)Nc4ccc(c(c4)COC/C=C/COC2)OCCN5CCCC5,InChiKey=HWXVIOGONBBTBY-ONEGZZNKSA-N,0,472.2,5,68.7,7,1,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Neflamapimod.svg
-Palbociclib,CHEMBL189963,Smiles=Cc1c2cnc(nc2n(c(=O)c1C(=O)C)C3CCCC3)Nc4ccc(cn4)N5CCNCC5,InChiKey=AHJRHEGDXFFMBM-UHFFFAOYSA-N,0,447.2,3,105,9,2,5,CMGC,www.icoa.fr/pkidb/static/img/mol/Nemiralisib.svg
-Pamapimod,CHEMBL1090089,Smiles=Cn1c2c(cc(c1=O)Oc3ccc(cc3F)F)cnc(n2)NC(CCO)CCO,InChiKey=JYYLVUFNAHSSFE-UHFFFAOYSA-N,0,406.1,1.9,109.5,8,3,8,CMGC,www.icoa.fr/pkidb/static/img/mol/Neratinib.svg
-Pazopanib,CHEMBL477772,Smiles=Cc1ccc(cc1S(=O)(=O)N)Nc2nccc(n2)N(C)c3ccc4c(n(nc4c3)C)C,InChiKey=CUIHSIWYWATEQL-UHFFFAOYSA-N,0,437.2,3.1,119,8,2,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Netarsudil.svg
-Pelitinib,CHEMBL607707,Smiles=CCOc1cc2c(cc1NC(=O)/C=C/CN(C)C)c(c(cn2)C#N)Nc3ccc(c(c3)Cl)F,InChiKey=WVUNYSQLFKLYNI-AATRIKPKSA-N,1,467.2,5.1,90.3,6,2,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Nilotinib.svg
-Pexidartinib,CHEMBL3813873,Smiles=c1cc(ncc1Cc2c[nH]c3c2cc(cn3)Cl)NCc4ccc(nc4)C(F)(F)F,InChiKey=JGWRKYUXBBNENE-UHFFFAOYSA-N,1,417.1,5.2,66.5,4,2,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Ningetinib.svg
-Pexmetinib,CHEMBL3991932,Smiles=Cc1ccc(cc1)n2c(cc(n2)C(C)(C)C)NC(=O)NCc3cc(ccc3Oc4ccc5c(c4)cnn5CCO)F,InChiKey=LNMRSSIMGCDUTP-UHFFFAOYSA-N,2,556.3,6.1,106.2,7,3,8,"Tyr
-CMGC",www.icoa.fr/pkidb/static/img/mol/Nintedanib.svg
-Pictilisib,CHEMBL521851,Smiles=CS(=O)(=O)N1CCN(CC1)Cc2cc3c(s2)c(nc(n3)c4cccc5c4cn[nH]5)N6CCOCC6,InChiKey=LHNIIDJUOCFXAP-UHFFFAOYSA-N,1,513.2,2.1,107.6,9,1,5,Atypical,www.icoa.fr/pkidb/static/img/mol/Oclacitinib.svg
-Pilaralisib,CHEMBL3360203,Smiles=CC(C)(C(=O)Nc1cccc(c1)S(=O)(=O)Nc2c(nc3ccccc3n2)Nc4cc(ccc4Cl)OC)N,InChiKey=QINPEPAQOBZPOF-UHFFFAOYSA-N,1,540.1,4.5,148.3,8,4,8,Atypical,www.icoa.fr/pkidb/static/img/mol/Olmutinib.svg
-Pimasertib,CHEMBL2107832,Smiles=c1cc(c(cc1I)F)Nc2cnccc2C(=O)NC[C@@H](CO)O,InChiKey=VIUAUNHCRHHYNE-JTQLQIEISA-N,0,431,1.7,94.5,5,4,6,STE,www.icoa.fr/pkidb/static/img/mol/Omipalisib.svg
-Ponatinib,CHEMBL1171837,Smiles=Cc1ccc(cc1C#Cc2cnc3n2nccc3)C(=O)Nc4ccc(c(c4)C(F)(F)F)CN5CCN(CC5)C,InChiKey=PHXJVRSECIGDHY-UHFFFAOYSA-N,1,532.2,4.5,65.8,6,1,4,"Atypical
-Tyr",www.icoa.fr/pkidb/static/img/mol/Orantinib.svg
-Poziotinib,CHEMBL3545154,Smiles=COc1cc2c(cc1OC3CCN(CC3)C(=O)C=C)c(ncn2)Nc4ccc(c(c4F)Cl)Cl,InChiKey=LPFWVDIFUFFKJU-UHFFFAOYSA-N,1,490.1,5.4,76.6,6,1,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Osimertinib.svg
-Prexasertib,CHEMBL3544911,Smiles=COc1cccc(c1c2cc(n[nH]2)Nc3cnc(cn3)C#N)OCCCN,InChiKey=DOTGPNHGTYJDEP-UHFFFAOYSA-N,0,365.2,2.2,134.8,8,3,8,CAMK,www.icoa.fr/pkidb/static/img/mol/Pacritinib.svg
-Pyrotinib,CHEMBL3647420,Smiles=CCOc1cc2c(cc1NC(=O)/C=C/[C@H]3CCCN3C)c(c(cn2)C#N)Nc4ccc(c(c4)Cl)OCc5ccccn5,InChiKey=SADXACCFNXBCFY-IYNHSRRRSA-N,2,582.2,6.5,112.4,8,2,10,Tyr,www.icoa.fr/pkidb/static/img/mol/Palbociclib.svg
-Quizartinib,CHEMBL576982,Smiles=CC(C)(C)c1cc(no1)NC(=O)Nc2ccc(cc2)c3cn4c5ccc(cc5sc4n3)OCCN6CCOCC6,InChiKey=CVWXJKQAOSCOAB-UHFFFAOYSA-N,2,560.2,5.9,106.2,9,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Pamapimod.svg
-Rabusertib,CHEMBL3039517,Smiles=Cc1cc(c(cc1Br)NC(=O)Nc2cnc(cn2)C)OC[C@@H]3CNCCO3,InChiKey=SYYBDNPGDKKJDU-ZDUSSCGKSA-N,0,435.1,2.9,97.4,6,3,5,CAMK,www.icoa.fr/pkidb/static/img/mol/Panulisib.svg
-Ralimetinib,CHEMBL2364626,Smiles=CC(C)(C)Cn1c2c(ccc(n2)c3c(nc([nH]3)C(C)(C)C)c4ccc(cc4)F)nc1N,InChiKey=XPPBBJCBDOEXDN-UHFFFAOYSA-N,1,420.2,5.6,85.4,5,2,3,CMGC,www.icoa.fr/pkidb/static/img/mol/Parsaclisib.svg
-Ravoxertinib,CHEMBL3544964,Smiles=Cn1c(ccn1)Nc2nccc(n2)c3ccn(c(=O)c3)[C@H](CO)c4ccc(c(c4)F)Cl,InChiKey=RZUOCXOYPYGSKL-GOSISDBHSA-N,0,440.1,3.2,97.9,8,2,6,,www.icoa.fr/pkidb/static/img/mol/Pazopanib.svg
-Rebastinib,CHEMBL1738757,Smiles=CC(C)(C)c1cc(n(n1)c2ccc3c(c2)cccn3)NC(=O)Nc4ccc(cc4F)Oc5ccnc(c5)C(=O)NC,InChiKey=WVXNSAVVKYZVOE-UHFFFAOYSA-N,2,553.2,6,123.1,7,3,6,"Atypical
-Tyr",www.icoa.fr/pkidb/static/img/mol/Peficitinib.svg
-Recilisib,CHEMBL2219421,Smiles=c1cc(ccc1CS(=O)(=O)/C=C/c2ccc(cc2)C(=O)O)Cl,InChiKey=KBEKQQJUNVQLDZ-MDZDMXLPSA-N,0,336,3.6,71.4,3,1,5,,www.icoa.fr/pkidb/static/img/mol/Pelitinib.svg
-Refametinib,CHEMBL1236682,Smiles=COc1cc(c(c(c1NS(=O)(=O)C2(CC2)C[C@@H](CO)O)Nc3ccc(cc3F)I)F)F,InChiKey=RDSACQWTXKSHJT-NSHDSACASA-N,1,572,3.5,107.9,6,4,9,STE,www.icoa.fr/pkidb/static/img/mol/Pexidartinib.svg
-Regorafenib,CHEMBL1946170,Smiles=CNC(=O)c1cc(ccn1)Oc2ccc(c(c2)F)NC(=O)Nc3ccc(c(c3)C(F)(F)F)Cl,InChiKey=FNHKPVJBJVTLMP-UHFFFAOYSA-N,1,482.1,5.7,92.3,4,3,5,"TKL
+CAMK",Achiral Molecule,"Tafinlar
+GSK2118436A
+Dabrafenib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2028663.svg?engine=indigo
+Dacomitinib,CHEMBL2110732,Smiles=COc1cc2c(cc1NC(=O)/C=C/CN3CCCCC3)c(ncn2)Nc4ccc(c(c4)Cl)F,Vizimpro,4,InChiKey=LVXJQMNHJWSHET-AATRIKPKSA-N,'1C9',4i23 4i24,1,1,469.2,5.2,79.4,6,2,7,Tyr,Achiral Molecule,"Dacomitinib
+PF-00299804",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2110732.svg?engine=indigo
+Dactolisib,CHEMBL1879463,Smiles=CC(C)(C#N)c1ccc(cc1)n2c3c4cc(ccc4ncc3n(c2=O)C)c5cc6ccccc6nc5,,2,InChiKey=JOGKUKXHTYWRGZ-UHFFFAOYSA-N,,,,1,469.2,5.9,76.5,6,0,3,Atypical,Achiral Molecule,"Dactolisib
+NVP-BEZ235-NX
+BEZ-235
+NVP-BEZ235",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1879463.svg?engine=indigo
+Danusertib,CHEMBL402548,Smiles=CN1CCN(CC1)c2ccc(cc2)C(=O)Nc3c4c([nH]n3)CN(C4)C(=O)[C@@H](c5ccccc5)OC,,2,InChiKey=XKFTZKGMDDZMJI-HSZRJFAPSA-N,'627',2j50 2v7a 4qo9 5i9z,1,0,474.2,2.6,93.8,6,2,6,Other,Single Stereoisomer,"Danusertib
+PHA-739358",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL402548.svg?engine=indigo
+Dasatinib,CHEMBL1421,Smiles=Cc1cccc(c1NC(=O)c2cnc(s2)Nc3cc(nc(n3)C)N4CCN(CC4)CCO)Cl,Sprycel,4,InChiKey=ZBNZXTGUTAYRHI-UHFFFAOYSA-N,'1N1',2gqg 2y6o 2zva 3g5d 3k54 3lfa 3oct 3oht 3qlg 3sxr 4qms 4xey 4xli 5bvw 5h2u 5i9y 5owr 5vcv 6bsd 6fnm,1,0,487.2,3.3,106.5,9,3,7,Tyr,Achiral Molecule,"Sprycel;Dasatinib
+BMS-354825-03
+BMS-354825
+Dasatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1421.svg?engine=indigo
+Decernotinib,CHEMBL3039513,Smiles=CC[C@](C)(C(=O)NCC(F)(F)F)Nc1ccnc(n1)c2c[nH]c3c2cccn3,,2,InChiKey=ASUGUQWIHMTFJL-QGZVFWFLSA-N,'VJK',4yti,1,0,392.2,3.3,95.6,5,3,6,Tyr,Single Stereoisomer,"VRT-831509
+Adelatinib
+VX-509
+Decernotinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3039513.svg?engine=indigo
+Defactinib,CHEMBL3137331,Smiles=CNC(=O)c1ccc(cc1)Nc2ncc(c(n2)NCc3c(nccn3)N(C)S(=O)(=O)C)C(F)(F)F,,2,InChiKey=FWLMVFUGMHIOAA-UHFFFAOYSA-N,'7KD',5mah,1,1,510.1,2.4,142.1,9,3,8,Tyr,Achiral Molecule,"PF-04554878
+VS-6063
+Defactinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3137331.svg?engine=indigo
+Dezapelisib,CHEMBL2216863,Smiles=Cc1csc2n1c(=O)c(c(n2)[C@H](C)Nc3c4c([nH]cn4)ncn3)c5cccc(c5)F,,0,InChiKey=RSIWALKZYXPAGW-NSHDSACASA-N,,,,0,421.1,3.7,100.9,8,2,4,,Single Stereoisomer,"INCB040093
+Dezapelisib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2216863.svg?engine=indigo
+Dilmapimod,CHEMBL2103838,Smiles=Cc1cc(ccc1c2c3ccc(=O)n(c3nc(n2)NC(CO)CO)c4c(cccc4F)F)F,,2,InChiKey=ORVNHOYNEHYKJG-UHFFFAOYSA-N,,,,0,456.1,2.9,100.3,7,3,6,CMGC,Achiral Molecule,"Dilmapimod
+GW681323
+SB-681323",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103838.svg?engine=indigo
+Dinaciclib,CHEMBL2103840,Smiles=CCc1cnn2c1nc(cc2NCc3ccc[n+](c3)[O-])N4CCCC[C@H]4CCO,,3,InChiKey=PIMQWRZWLQKKBJ-SFHVURJKSA-N,,,,0,396.2,2.3,92.6,7,2,7,"(*)
+CMGC",Single Stereoisomer,"MK-7965
+SCH-727965
+Dinaciclib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103840.svg?engine=indigo
+Doramapimod,CHEMBL103667,Smiles=Cc1ccc(cc1)n2c(cc(n2)C(C)(C)C)NC(=O)Nc3ccc(c4c3cccc4)OCCN5CCOCC5,,2,InChiKey=MVCOAUNKQVWQHZ-UHFFFAOYSA-N,'B96',1kv2 3fzs 3npc 4jvg 4twn 5n66 6gtt,2,2,527.3,6,80.7,6,2,7,CMGC,Achiral Molecule,"Doramapimod
+BIRB-796",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL103667.svg?engine=indigo
+Dovitinib,CHEMBL522892,Smiles=CN1CCN(CC1)c2ccc3c(c2)[nH]c(n3)c4c(c5c(cccc5F)[nH]c4=O)N,,3,InChiKey=PIQCTGMSNWUMAF-UHFFFAOYSA-N,'38O',4tyi 5a46 5am6 5am7 5owq,1,0,392.2,2.5,94,5,3,2,"(*)
+Tyr",Achiral Molecule,"GFKI-258
+TKI-258
+CHIR-258
+NVP-TKI258
+Dovitinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL522892.svg?engine=indigo
+Duvelisib,CHEMBL3039502,Smiles=C[C@@H](c1cc2cccc(c2c(=O)n1c3ccccc3)Cl)Nc4c5c([nH]cn5)ncn4,Copiktra,4,InChiKey=SJVQHLPISAIATJ-ZDUSSCGKSA-N,,,,0,416.1,4.5,88.5,6,2,4,Atypical,Single Stereoisomer,"INK-1197
+INK-1147
+IPI-145
+Duvelisib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3039502.svg?engine=indigo
+Encorafenib,CHEMBL3301612,Smiles=C[C@@H](CNc1nccc(n1)c2cn(nc2c3cc(cc(c3F)NS(=O)(=O)C)Cl)C(C)C)NC(=O)OC,Braftovi,4,InChiKey=CMJCXYNUCSMDBY-ZDUSSCGKSA-N,,,,1,539.2,3.9,140.1,9,3,9,TKL,Single Stereoisomer,"NVP-LGX818-NXA
+LGX-818
+Encorafenib
+NVP-LGX818",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3301612.svg?engine=indigo
+Ensartinib,CHEMBL4113131,Smiles=C[C@@H]1CN(C[C@@H](N1)C)C(=O)c2ccc(cc2)NC(=O)c3cc(c(nn3)N)O[C@H](C)c4c(ccc(c4Cl)F)Cl,,3,InChiKey=GLYMPHUVMRFTFV-QLFBSQMISA-N,,,,1,560.2,4.7,122.5,7,3,6,Tyr,,"X-396
+X396
+X-396 CAPSULES
+ENSARTINIB",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL4113131.svg?engine=indigo
+Entospletinib,CHEMBL3265032,Smiles=c1cc(ccc1Nc2c3nccn3cc(n2)c4ccc5cn[nH]c5c4)N6CCOCC6,,2,InChiKey=XSMSNFMDVXXHGJ-UHFFFAOYSA-N,'CG9',4puz,1,0,411.2,3.9,83.4,7,2,4,Tyr,Achiral Molecule,"GS-9973
+Entospletinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3265032.svg?engine=indigo
+Entrectinib,CHEMBL1983268,Smiles=CN1CCN(CC1)c2ccc(c(c2)NC3CCOCC3)C(=O)Nc4c5cc(ccc5[nH]n4)Cc6cc(cc(c6)F)F,Rozlytrek,4,InChiKey=HAYYBYPASCDWEQ-UHFFFAOYSA-N,'YMX',5fto 5kvt,1,2,560.3,5,85.5,6,3,7,Tyr,Achiral Molecule,"Entrectinib
+RXDX-101
+NMS-E628",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1983268.svg?engine=indigo
+Enzastaurin,CHEMBL300138,Smiles=Cn1cc(c2c1cccc2)C3=C(C(=O)NC3=O)c4cn(c5c4cccc5)C6CCN(CC6)Cc7ccccn7,,3,InChiKey=AXRCEOKUDYDWLF-UHFFFAOYSA-N,,,,1,515.2,4.9,72.2,6,1,5,,Achiral Molecule,"LY-317615
+Enzastaurin",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL300138.svg?engine=indigo
+Erdafitinib,CHEMBL3545376,Smiles=CC(C)NCCN(c1ccc2c(c1)nc(cn2)c3cnn(c3)C)c4cc(cc(c4)OC)OC,Balversa,4,InChiKey=OLAHOMJCDNXHFI-UHFFFAOYSA-N,'5SF',5ew8,1,0,446.2,4.2,77.3,8,1,9,Tyr,Achiral Molecule,"Erdafitinib
+JNJ-42756493",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545376.svg?engine=indigo
+Erlotinib,CHEMBL553,Smiles=COCCOc1cc2c(cc1OCCOC)ncnc2Nc3cccc(c3)C#C,Tarceva,4,InChiKey=AAKJLRGGTJKAMG-UHFFFAOYSA-N,'AQ4',1m17 4hjo 6dwn,1.5,0,393.2,3.4,74.7,7,1,10,"(*)
+Tyr",Achiral Molecule,"Tarceva
+Erlotinib
+OSI-774
+RG-1415
+CP-358774
+R-1415
+Ro-508231",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL553.svg?engine=indigo
+Evobrutinib,CHEMBL4072833,Smiles=C=CC(=O)N1CCC(CC1)CNc2c(c(ncn2)N)c3ccc(cc3)Oc4ccccc4,,2,InChiKey=QUIWHXQETADMGN-UHFFFAOYSA-N,'MZJ',6omu,,0,429.2,4.4,93.4,6,2,7,Tyr,,EVOBRUTINIB,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL4072833.svg?engine=indigo
+Famitinib,CHEMBL1278146,Smiles=CCN(CC)CCN1CCc2c(c(c([nH]2)/C=C\3/c4cc(ccc4NC3=O)F)C)C1=O,,3,InChiKey=GKEYKDOLBLYGRB-LGMDPLHJSA-N,,,,0,410.2,3.3,68.4,3,2,6,Tyr,,SHR-1020,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1278146.svg?engine=indigo
+Fasudil,CHEMBL38380,Smiles=c1cc2cnccc2c(c1)S(=O)(=O)N3CCCNCC3,,4,InChiKey=NGOGFTYYXHNFQH-UHFFFAOYSA-N,'M77',1q8w 2esm 2f2u 2gni 3tku 5lcp 5nw8 5o0e 5ok3 5vef 6em2 6emb 6ers 6erw 6i2a 6i2c,,0,291.1,1.2,62.3,4,1,2,,Achiral Molecule,"HA-1077
+Fasudil
+ZK-258594
+AT-877",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL38380.svg?engine=indigo
+Fedratinib,CHEMBL1287853,Smiles=Cc1cnc(nc1Nc2cccc(c2)S(=O)(=O)NC(C)(C)C)Nc3ccc(cc3)OCCN4CCCC4,Inrebic,4,InChiKey=JOOXLOJCABQBSG-UHFFFAOYSA-N,'2TA',4ogj 4ps5,,1,524.3,4.8,108.5,8,3,10,"(*)
+Tyr",Achiral Molecule,"SAR-302503
+Fedratinib
+TG101348
+TG-101348",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1287853.svg?engine=indigo
+Filgotinib,CHEMBL3301607,Smiles=c1cc(n2c(c1)nc(n2)NC(=O)C3CC3)c4ccc(cc4)CN5CCS(=O)(=O)CC5,,3,InChiKey=RIJLVEAXPNLDTC-UHFFFAOYSA-N,'2HB',4p7e 5ut5,1,0,425.2,2,96.7,7,1,5,Tyr,Achiral Molecule,"G-146034
+GLPG-0634
+Filgotinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3301607.svg?engine=indigo
+Flumatinib,CHEMBL3545413,Smiles=Cc1c(cc(cn1)NC(=O)c2ccc(c(c2)C(F)(F)F)CN3CCN(CC3)C)Nc4nccc(n4)c5cccnc5,,3,InChiKey=BJCJYEYYYGBROF-UHFFFAOYSA-N,,,,2,562.2,5,99.2,8,2,7,"Atypical
+Tyr",Achiral Molecule,"HHGV-678
+Flumatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545413.svg?engine=indigo
+Foretinib,CHEMBL1230609,Smiles=COc1cc2c(ccnc2cc1OCCCN3CCOCC3)Oc4ccc(cc4F)NC(=O)C5(CC5)C(=O)Nc6ccc(cc6)F,,2,InChiKey=CXQHYVUVSFXTMY-UHFFFAOYSA-N,'88Z',3lq8 5ia4 6i2y 6sd9 6sdc,2,2,632.2,5.8,111.2,8,2,12,Tyr,Achiral Molecule,"EXEL-2880
+Foretinib
+GSK1363089G
+GSK1363089
+GSK-1363089
+XL-880
+GSK089",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1230609.svg?engine=indigo
+Fostamatinib,CHEMBL2103830,Smiles=CC1(C(=O)N(c2c(ccc(n2)Nc3c(cnc(n3)Nc4cc(c(c(c4)OC)OC)OC)F)O1)COP(=O)(O)O)C,Tavalisse,4,InChiKey=GKDRMWXFWHEQQT-UHFFFAOYSA-N,'2RC',4o75,,2,580.1,3.1,186.7,12,4,10,Tyr,Achiral Molecule,"R-935788
+R-788 Free acid
+R-935788 Free acid
+Fostamatinib
+R-788",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103830.svg?engine=indigo
+Galunisertib,CHEMBL2364611,Smiles=Cc1cccc(n1)c2c(c3n(n2)CCC3)c4ccnc5c4cc(cc5)C(=O)N,,2,InChiKey=IVRXNBXKWIJUQB-UHFFFAOYSA-N,,,,0,369.2,3.5,86.7,5,1,3,TKL,Achiral Molecule,"Galunisertib
+LY-2157299",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2364611.svg?engine=indigo
+Gandotinib,CHEMBL2107823,Smiles=Cc1cc(n[nH]1)Nc2cc(c3nc(c(n3n2)Cc4ccc(cc4F)Cl)C)CN5CCOCC5,,2,InChiKey=SQSZANZGUXWJEA-UHFFFAOYSA-N,,,,0,469.2,4,83.4,7,2,6,Tyr,Achiral Molecule,"LY-2784544
+Gandotinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2107823.svg?engine=indigo
+Gedatolisib,CHEMBL592445,Smiles=CN(C)C1CCN(CC1)C(=O)c2ccc(cc2)NC(=O)Nc3ccc(cc3)c4nc(nc(n4)N5CCOCC5)N6CCOCC6,,2,InChiKey=DWZAEMINVBZMHQ-UHFFFAOYSA-N,,,,1,615.3,3,128.3,10,2,7,Atypical,Achiral Molecule,"PKI-587
+Gedatolisib
+PF-05212384",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL592445.svg?engine=indigo
+Gefitinib,CHEMBL939,Smiles=COc1cc2c(cc1OCCCN3CCOCC3)c(ncn2)Nc4ccc(c(c4)Cl)F,Iressa,4,InChiKey=XGALLCVXEZPNRQ-UHFFFAOYSA-N,'IRE',2ito 2ity 2itz 3ug2 4i22 4wkq 5y7z 5y80,1.5,0,446.2,4.3,68.7,7,1,8,Tyr,Achiral Molecule,"Iressa
+Gefitinib
+Iressa
+ZD-1839",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL939.svg?engine=indigo
+Gilteritinib,CHEMBL3301622,Smiles=CCc1c(nc(c(n1)C(=O)N)Nc2ccc(c(c2)OC)N3CCC(CC3)N4CCN(CC4)C)NC5CCOCC5,Xospata,4,InChiKey=GYQYAJJFPNQOOW-UHFFFAOYSA-N,'C6F',6jqr,,1,552.4,2.7,121.1,10,3,9,Tyr,Achiral Molecule,"ASP-2215
+Gilteritinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3301622.svg?engine=indigo
+Glesatinib,CHEMBL3989914,Smiles=COCCNCc1ccc(nc1)c2cc3c(s2)c(ccn3)Oc4ccc(cc4F)NC(=S)NC(=O)Cc5ccc(cc5)F,,2,InChiKey=YRCHYHRCBXNYNU-UHFFFAOYSA-N,,,,2,619.2,6.2,97.4,8,3,11,Tyr,Achiral Molecule,"MG90265H9
+MG90265gly
+MGCD265
+MG90265
+MG90265X
+Glesatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3989914.svg?engine=indigo
+Golvatinib,CHEMBL3039525,Smiles=CN1CCN(CC1)C2CCN(CC2)C(=O)Nc3cc(ccn3)Oc4ccc(c(c4)F)NC(=O)C5(CC5)C(=O)Nc6ccc(cc6)F,,2,InChiKey=UQRCJCNVNUFYDX-UHFFFAOYSA-N,'GV0',5ia5,2,1,633.3,4.8,119.1,7,3,8,Tyr,Achiral Molecule,"E-7050
+Golvatinib
+E7050",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3039525.svg?engine=indigo
+Henatinib,CHEMBL1277072,Smiles=Cc1c([nH]c2c1C(=O)N(CCC2)C[C@@H](CN3CCOCC3)O)/C=C\4/c5cc(ccc5NC4=O)F,,1,InChiKey=MCTXSDCWFQAGFS-UEXNTNOUSA-N,,,,0,468.2,2,97.9,5,3,5,Tyr,Single Stereoisomer,,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1277072.svg?engine=indigo
+Ibrutinib,CHEMBL1873475,Smiles=C=CC(=O)N1CCC[C@H](C1)n2c3c(c(n2)c4ccc(cc4)Oc5ccccc5)c(ncn3)N,Imbruvica,4,InChiKey=XYFPWWZEPKGCCK-GOSISDBHSA-N,'1E8',4ifg 4rz7 5p9i 5yu9,1.5,0,440.2,4.2,99.2,7,1,5,Tyr,Single Stereoisomer,"Imbruvica
+PCI-32765
+PCI-32765-00
+Ibrutinib
+CRA-032765",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1873475.svg?engine=indigo
+Icotinib,CHEMBL2087361,Smiles=C#Cc1cccc(c1)Nc2c3cc4c(cc3ncn2)OCCOCCOCCO4,,4,InChiKey=QQLKULDARVNMAL-UHFFFAOYSA-N,,,,0,391.2,3.2,74.7,7,1,2,Tyr,,BPI-2009H,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2087361.svg?engine=indigo
+Idelalisib,CHEMBL2216870,Smiles=CC[C@@H](c1nc2cccc(c2c(=O)n1c3ccccc3)F)Nc4c5c([nH]cn5)ncn4,Zydelig,4,InChiKey=IFSDAJWBUCMOAH-HNNXBMFYSA-N,'40L',4xe0,1,0,415.2,3.8,101.4,7,2,5,Atypical,Single Stereoisomer,"Zydelig
+GS-1101
+GS-11CAL-101
+Idelalisib
+CAL-101",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2216870.svg?engine=indigo
+Ilorasertib,CHEMBL1980297,Smiles=c1cc(cc(c1)F)NC(=O)Nc2ccc(cc2)c3csc4c3c(ncc4c5cnn(c5)CCO)N,,2,InChiKey=WPHKIQPVPYJNAX-UHFFFAOYSA-N,,,,1,488.1,5.2,118.1,7,4,6,"Tyr
+Other",Achiral Molecule,"A-968660
+ABT-348
+Ilorasertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1980297.svg?engine=indigo
+Imatinib,CHEMBL941,Smiles=Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)NC(=O)c4ccc(cc4)CN5CCN(CC5)C,Gleevec,4,InChiKey=KTUFNOKKBVMGRW-UHFFFAOYSA-N,'STI',1iep 1opj 1t46 1xbb 2hyy 2oiq 2pl0 3fw1 3gvu 3hec 3k5v 3ms9 3mss 3oez 3pyy 4bkj 4csv 4r7i 5mqt 6hd4 6hd6 6npe 6npu 6npv,2,0,493.3,4.6,86.3,7,2,7,Tyr,Achiral Molecule,"Gleevec
+Imatinib
+STI-571",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL941.svg?engine=indigo
+Infigratinib,CHEMBL1852688,Smiles=CCN1CCN(CC1)c2ccc(cc2)Nc3cc(ncn3)N(C)C(=O)Nc4c(c(cc(c4Cl)OC)OC)Cl,,2,InChiKey=QADPYRIHXKWUSV-UHFFFAOYSA-N,'07J',3tt0,1,2,559.2,5.4,95.1,8,2,8,Tyr,,"BGJ-398
+NVP-BGJ398",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1852688.svg?engine=indigo
+Ipatasertib,CHEMBL2177390,Smiles=C[C@@H]1C[C@H](c2c1c(ncn2)N3CCN(CC3)C(=O)[C@H](CNC(C)C)c4ccc(cc4)Cl)O,,3,InChiKey=GRZXWCHAXNAUHY-NSISKUIASA-N,'0RF',4ekl,1,0,457.2,3.1,81.6,6,2,6,AGC,Single Stereoisomer,"GDC-0068
+Ipatasertib
+RG-7440",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2177390.svg?engine=indigo
+Itacitinib,CHEMBL3622820,Smiles=c1cnc-2[nH]cnc(c12)c3cnn(c3)C4(CN(C4)C5CCN(CC5)C(=O)c6ccnc(c6F)C(F)(F)F)CC#N,,3,InChiKey=KTBSXLIQKWEBRB-UHFFFAOYSA-N,,,,1,553.2,3.6,119.6,8,1,5,Tyr,Achiral Molecule,"INCB-039110
+INCB-39110
+Itacitinib
+INCB039110",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3622820.svg?engine=indigo
+Lapatinib,CHEMBL554,Smiles=CS(=O)(=O)CCNCc1ccc(o1)c2ccc3c(c2)c(ncn3)Nc4ccc(c(c4)Cl)OCc5cccc(c5)F,Tykerb,4,InChiKey=BCFGMOOMADDAQU-UHFFFAOYSA-N,'FMM',1xkk 3bbt,1.5,2,580.1,6.1,106.4,8,2,11,Tyr,Achiral Molecule,"Tyverb
+GW-2016
+GW-572016
+Lapatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL554.svg?engine=indigo
+Larotrectinib,CHEMBL3889654,Smiles=c1cc(c(cc1F)[C@H]2CCCN2c3ccn4c(n3)c(cn4)NC(=O)N5CC[C@@H](C5)O)F,Vitrakvi,4,InChiKey=NYNZQNWKBKUAII-KBXCAEBGSA-N,,,,0,428.2,2.9,86,6,2,3,Tyr,Single Stereoisomer,"Larotrectinib
+LOXO-101",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3889654.svg?engine=indigo
+Leniolisib,CHEMBL3643413,Smiles=CCC(=O)N1CC[C@@H](C1)Nc2c3c(ncn2)CCN(C3)c4cc(c(nc4)OC)C(F)(F)F,,0,InChiKey=MWKYMZXCGYXLPL-ZDUSSCGKSA-N,'9NQ',5o83,,0,450.2,2.9,83.5,7,1,5,,Single Stereoisomer,"CDZ173-NX
+Leniolisib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3643413.svg?engine=indigo
+Lenvatinib,CHEMBL1289601,Smiles=COc1cc2c(cc1C(=O)N)c(ccn2)Oc3ccc(c(c3)Cl)NC(=O)NC4CC4,Kisplyx;Lenvima,4,InChiKey=WOSKHXYHFSIKNG-UHFFFAOYSA-N,'LEV',3wzd 5zv2,1.5,0,426.1,4.1,115.6,5,3,6,Tyr,Achiral Molecule,"Lenvima;Kisplyx
+ER-203492-00
+Lenvatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1289601.svg?engine=indigo
+Lestaurtinib,CHEMBL603469,Smiles=C[C@@]12[C@](C[C@@H](O1)n3c4ccccc4c5c3c6n2c7ccccc7c6c8c5C(=O)NC8)(CO)O,,3,InChiKey=UIARLYUEJFELEN-LROUJFHJSA-N,,,,0,439.2,3.5,88.7,6,3,1,Tyr,Single Stereoisomer,"KT-5555
+KT-555
+Lestaurtinib
+SPM-924
+SP-924
+A-154475
+CEP-701
+Cep-701
+SP924
+A-1544750",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL603469.svg?engine=indigo
+Linifanib,CHEMBL223360,Smiles=Cc1ccc(c(c1)NC(=O)Nc2ccc(cc2)c3cccc4c3c(n[nH]4)N)F,,3,InChiKey=MPVGZUGXCQEXTM-UHFFFAOYSA-N,,,,0,375.1,4.9,95.8,3,4,3,Tyr,Achiral Molecule,"ABT-869
+RG-3635
+Linifanib
+AL-39324",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL223360.svg?engine=indigo
+Linsitinib,CHEMBL1091644,Smiles=C[C@]1(C[C@@H](C1)c2n3c(c(ncc3)N)c(n2)c4cc5nc(ccc5cc4)c6ccccc6)O,,3,InChiKey=PKCDDUHJAFVJJB-VLZXCDOPSA-N,,,,0,421.2,4.8,89.3,6,2,3,Tyr,Single Stereoisomer,"Linsitinib
+ASP-7487
+OSI-906
+OSI-906AA",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1091644.svg?engine=indigo
+Lorlatinib,CHEMBL3286830,Smiles=C[C@@H]1c2cc(ccc2C(=O)N(Cc3c(c(n(n3)C)C#N)-c4cc(c(nc4)N)O1)C)F,Lorbrena,4,InChiKey=IIXWYSCJSQVBQM-LLVKDONJSA-N,'5P8',4cli 4clj 4uxl 5a9u 5aa8 5aa9,1,0,406.2,2.8,110.1,7,1,0,Tyr,Single Stereoisomer,"Lorlatinib
+PF-06463922",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3286830.svg?engine=indigo
+Losmapimod,CHEMBL1088752,Smiles=Cc1c(cc(cc1F)C(=O)NC2CC2)c3ccc(cn3)C(=O)NCC(C)(C)C,,3,InChiKey=KKYABQBFGDZVNQ-UHFFFAOYSA-N,,,,0,383.2,3.9,71.1,3,2,5,CMGC,Achiral Molecule,"GSKAHAB
+GW856553
+GW856553X
+Losmapimod",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1088752.svg?engine=indigo
+Lucitanib,CHEMBL2220486,Smiles=CNC(=O)c1cccc2c1ccc(c2)Oc3ccnc4c3cc(c(c4)OCC5(CC5)N)OC,,2,InChiKey=CUDVHEFYRIWYQD-UHFFFAOYSA-N,'3ZC',4rwl,1,0,443.2,4.4,95.7,6,2,7,Tyr,Achiral Molecule,"E-3810
+CO-3810
+Lucitanib
+S-80881
+AL-3810",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2220486.svg?engine=indigo
+Masitinib,CHEMBL1908391,Smiles=Cc1ccc(cc1Nc2nc(cs2)c3cccnc3)NC(=O)c4ccc(cc4)CN5CCN(CC5)C,Kinavet;Masivet,3,InChiKey=WJEOLQLKVOPQFV-UHFFFAOYSA-N,'G65',5mql,,1,498.2,5.3,73.4,7,2,7,Tyr,Achiral Molecule,"Masivet;Kinavet
+Masitinib
+AB-1010",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1908391.svg?engine=indigo
+Mavelertinib,CHEMBL3989970,Smiles=Cn1cc(c(n1)OC)Nc2c3c(nc(n2)N4C[C@H]([C@@H](C4)F)NC(=O)C=C)n(cn3)C,,0,InChiKey=JYIUNVOCEFIUIU-GHMZBOCLSA-N,,,,0,415.2,0.7,115,10,2,6,,Single Stereoisomer,"PF-06747775
+Mavelertinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3989970.svg?engine=indigo
+Merestinib,CHEMBL3545307,Smiles=Cc1ccc(c(=O)n1c2ccc(cc2)F)C(=O)Nc3ccc(c(c3)F)Oc4cc5cnn(c5cc4c6c[nH]nc6)C,,2,InChiKey=QHADVLVFMKEIIP-UHFFFAOYSA-N,'L1X',4eev,2,2,552.2,5.7,106.8,7,2,6,Tyr,Achiral Molecule,"Merestinib
+LY-2801653",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545307.svg?engine=indigo
+Midostaurin,CHEMBL608533,Smiles=C[C@@]12[C@@H]([C@@H](C[C@@H](O1)n3c4ccccc4c5c3c6n2c7ccccc7c6c8c5C(=O)NC8)N(C)C(=O)c9ccccc9)OC,Rydapt,4,InChiKey=BMGQWWVMWDBQGC-IIFHNQTCSA-N,'2K2',4nct,,2,570.2,5.9,77.7,6,1,3,,Single Stereoisomer,"Rydapt
+Midostaurin
+NVP-PKC412
+PKC-412
+CGP-41251",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL608533.svg?engine=indigo
+Milciclib,CHEMBL564829,Smiles=CC1(Cc2cnc(nc2-c3c1c(nn3C)C(=O)NC)Nc4ccc(cc4)N5CCN(CC5)C)C,,2,InChiKey=RXZMYLDMFYNEIM-UHFFFAOYSA-N,'P48',2wih 5vc6 5vd1,1,0,460.3,2.6,91.2,8,2,4,"Tyr
+CMGC",Achiral Molecule,"PHA-848125
+Milciclib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL564829.svg?engine=indigo
+Momelotinib,CHEMBL1078178,Smiles=c1cc(ccc1c2ccnc(n2)Nc3ccc(cc3)N4CCOCC4)C(=O)NCC#N,,3,InChiKey=ZVHNDZWQTBEVRY-UHFFFAOYSA-N,'C87',6fdz,,0,414.2,3,103.2,7,2,6,Tyr,Achiral Molecule,"CYT-11387
+GS-0387
+Momelotinib
+CYT-387",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1078178.svg?engine=indigo
+Motesanib,CHEMBL572881,Smiles=CC1(CNc2c1ccc(c2)NC(=O)c3cccnc3NCc4ccncc4)C,,3,InChiKey=RAHBGWKEPAQNFF-UHFFFAOYSA-N,'706',3efl,2,0,373.2,4,78.9,5,3,5,Tyr,Achiral Molecule,"AMG-706
+Motesanib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL572881.svg?engine=indigo
+Mubritinib,CHEMBL1614707,Smiles=c1cc(ccc1CCCCn2ccnn2)OCc3coc(n3)/C=C/c4ccc(cc4)C(F)(F)F,,1,InChiKey=ZTFBIUXIQYRUNT-MDWZMJQESA-N,,,,1,468.2,6.1,66,6,0,10,Tyr,Achiral Molecule,"TAK-165
+Mubritinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1614707.svg?engine=indigo
+Naquotinib,CHEMBL3663929,Smiles=CCc1c(nc(c(n1)C(=O)N)Nc2ccc(cc2)N3CCC(CC3)N4CCN(CC4)C)O[C@@H]5CCN(C5)C(=O)C=C,,3,InChiKey=QKDCLUARMDUUKN-XMMPIXPASA-N,'8RC',5y9t,,1,562.3,2.3,120.2,9,2,9,Tyr,Single Stereoisomer,"Naquotinib
+ASP8273",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3663929.svg?engine=indigo
+Nazartinib,CHEMBL3787344,Smiles=Cc1cc(ccn1)C(=O)Nc2nc3cccc(c3n2[C@@H]4CCCCN(C4)C(=O)/C=C/CN(C)C)Cl,,3,InChiKey=IOMMMLWIABWRKL-WUTDNEBXSA-N,,,,0,494.2,4.3,83.4,6,1,6,,,NAZARTINIB,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3787344.svg?engine=indigo
+Neflamapimod,CHEMBL119385,Smiles=c1cc(c(c(c1)Cl)c2c3ccc(nn3cnc2=O)Sc4ccc(cc4F)F)Cl,,2,InChiKey=VEPKQEUBKLEPRA-UHFFFAOYSA-N,'52P',3fc1 3hp5 3zsi,,1,435,5.5,47.3,5,0,3,CMGC,Achiral Molecule,"Neflamapimod
+VD-31
+VRT-031745
+VX-745
+745",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL119385.svg?engine=indigo
+Nemiralisib,CHEMBL2216859,Smiles=CC(C)N1CCN(CC1)Cc2cnc(o2)c3cc(cc4c3cn[nH]4)c5cccc6c5cc[nH]6,,0,InChiKey=MCIDWGZGWVSZMK-UHFFFAOYSA-N,'VVX',5ae8,,0,440.2,4.9,77,5,2,5,,Single Stereoisomer,"GSK2269557A
+GSK-2269557
+Nemiralisib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2216859.svg?engine=indigo
+Neratinib,CHEMBL180022,Smiles=CCOc1cc2c(cc1NC(=O)/C=C/CN(C)C)c(c(cn2)C#N)Nc3ccc(c(c3)Cl)OCc4ccccn4,Nerlynx,4,InChiKey=JWNPDZNEKVCWMY-VQHVLOKHSA-N,,,,2,556.2,5.9,112.4,8,2,11,Tyr,Achiral Molecule,"WAY-179272
+CDP-820
+Neratinib
+HKI-272",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL180022.svg?engine=indigo
+Nilotinib,CHEMBL255863,Smiles=Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)C(=O)Nc4cc(cc(c4)n5cc(nc5)C)C(F)(F)F,Tasigna,4,InChiKey=HHZIURLSWUIHRB-UHFFFAOYSA-N,'NIL',3cs9 3gp0 5mo4,2,2,529.2,6.4,97.6,7,2,6,Tyr,Achiral Molecule,"Tasigna
+Nilotinib
+AMN-107",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL255863.svg?engine=indigo
+Ningetinib,CHEMBL3984441,Smiles=Cc1c(c(=O)n(n1C)c2ccccc2)C(=O)Nc3ccc(c(c3)F)Oc4ccnc5c4ccc(c5)OCC(C)(C)O,,1.5,InChiKey=VQYYQSZNRVQLIS-UHFFFAOYSA-N,,,,2,556.2,5.4,107.6,8,2,8,,,NINGETINIB,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3984441.svg?engine=indigo
+Nintedanib,CHEMBL502835,Smiles=CN1CCN(CC1)CC(=O)N(C)c2ccc(cc2)N/C(=C\3/c4ccc(cc4NC3=O)C(=O)OC)/c5ccccc5,Ofev;Vargatef,4,InChiKey=XZXHXSATPCNXJR-ZIADKAODSA-N,'XIN',3c7q 5maf 5te0 6nec,1,1,539.3,3.6,94.2,7,2,7,Tyr,Achiral Molecule,"Ofev;Vargatef
+Nintedanib
+BIBF-1120",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL502835.svg?engine=indigo
+Oclacitinib,CHEMBL2103874,Smiles=CNS(=O)(=O)C[C@H]1CC[C@@H](CC1)N(c2ncnc3c2cc[nH]3)C,,0,InChiKey=HJWLJNBZVZDLAQ-HAQNSBGRSA-N,,,,0,337.2,1.5,91,5,2,5,Tyr,Single Stereoisomer,"Oclacitinib
+JAKI
+PF-03394197",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103874.svg?engine=indigo
+Olmutinib,CHEMBL3786343,Smiles=CN1CCN(CC1)c2ccc(cc2)Nc3nc4ccsc4c(n3)Oc5cccc(c5)NC(=O)C=C,,2,InChiKey=FDMQDKQUTRLUBU-UHFFFAOYSA-N,,,,1,486.2,5.1,82.6,8,2,7,Tyr,Achiral Molecule,"BI 1482694
+Olmutinib
+HM61713
+HM-61713",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3786343.svg?engine=indigo
+Omipalisib,CHEMBL1236962,Smiles=COc1c(cc(cn1)c2ccc3c(c2)c(ccn3)c4ccnnc4)NS(=O)(=O)c5ccc(cc5F)F,,1,InChiKey=CGBJSGAELGCMKE-UHFFFAOYSA-N,'ZIG',3l08,1,1,505.1,4.8,107,7,1,6,Atypical,Achiral Molecule,"Omipalisib
+GSK2126458",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1236962.svg?engine=indigo
+Orantinib,CHEMBL274654,Smiles=Cc1c(c([nH]c1/C=C\2/c3ccccc3NC2=O)C)CCC(=O)O,,3,InChiKey=NHFDRBXTEDBWCZ-ZROIWOOFSA-N,'SU6',4jlc 5yvc,1,0,310.1,3.1,82.2,2,3,4,Tyr,Achiral Molecule,"TSU-68
+SU-6668
+Orantinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL274654.svg?engine=indigo
+Osimertinib,CHEMBL3353410,Smiles=Cn1cc(c2c1cccc2)c3ccnc(n3)Nc4cc(c(cc4OC)N(C)CCN(C)C)NC(=O)C=C,Tagrisso,4,InChiKey=DUYJMQONPNNFPI-UHFFFAOYSA-N,'YY3',4zau,1,0,499.3,4.5,87.6,8,2,10,Tyr,Achiral Molecule,"Tagrisso
+Osimertinib
+AZD-9291",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3353410.svg?engine=indigo
+Pacritinib,CHEMBL2035187,Smiles=c1cc2cc(c1)-c3ccnc(n3)Nc4ccc(c(c4)COC/C=C/COC2)OCCN5CCCC5,,3,InChiKey=HWXVIOGONBBTBY-ONEGZZNKSA-N,'6T3',5lbz,,0,472.2,5,68.7,7,1,4,Tyr,Achiral Molecule,"ONX-0803
+SB-1518
+SB1518
+Pacritinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2035187.svg?engine=indigo
+Palbociclib,CHEMBL189963,Smiles=Cc1c2cnc(nc2n(c(=O)c1C(=O)C)C3CCCC3)Nc4ccc(cn4)N5CCNCC5,Ibrance,4,InChiKey=AHJRHEGDXFFMBM-UHFFFAOYSA-N,'LQQ',2euf 5l2i,1,0,447.2,3,105,9,2,5,CMGC,Achiral Molecule,"Ibrance
+Palbociclib
+PD-0332991",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL189963.svg?engine=indigo
+Pamapimod,CHEMBL1090089,Smiles=Cn1c2c(cc(c1=O)Oc3ccc(cc3F)F)cnc(n2)NC(CCO)CCO,,2,InChiKey=JYYLVUFNAHSSFE-UHFFFAOYSA-N,'FLW',3flw,1,0,406.1,1.9,109.5,8,3,8,CMGC,Achiral Molecule,"R-1503
+JTT-705
+Pamapimod
+Ro-4402257",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1090089.svg?engine=indigo
+Pazopanib,CHEMBL477772,Smiles=Cc1ccc(cc1S(=O)(=O)N)Nc2nccc(n2)N(C)c3ccc4c(n(nc4c3)C)C,Votrient,4,InChiKey=CUIHSIWYWATEQL-UHFFFAOYSA-N,,,1,0,437.2,3.1,119,8,2,5,Tyr,Achiral Molecule,"Votrient
+Pazopanib
+GW786034",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL477772.svg?engine=indigo
+Pelitinib,CHEMBL607707,Smiles=CCOc1cc2c(cc1NC(=O)/C=C/CN(C)C)c(c(cn2)C#N)Nc3ccc(c(c3)Cl)F,,2,InChiKey=WVUNYSQLFKLYNI-AATRIKPKSA-N,'93J',5vcw,1,1,467.2,5.1,90.3,6,2,8,Tyr,Achiral Molecule,"WAY-EKB-569
+EKB-569
+Pelitinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL607707.svg?engine=indigo
+Pexidartinib,CHEMBL3813873,Smiles=c1cc(ncc1Cc2c[nH]c3c2cc(cn3)Cl)NCc4ccc(nc4)C(F)(F)F,Turalio,4,InChiKey=JGWRKYUXBBNENE-UHFFFAOYSA-N,'P31',4r7h,2,1,417.1,5.2,66.5,4,2,5,Tyr,Achiral Molecule,"CML-261
+Pexidartinib
+PLX3397",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3813873.svg?engine=indigo
+Pexmetinib,CHEMBL3991932,Smiles=Cc1ccc(cc1)n2c(cc(n2)C(C)(C)C)NC(=O)NCc3cc(ccc3Oc4ccc5c(c4)cnn5CCO)F,,1,InChiKey=LNMRSSIMGCDUTP-UHFFFAOYSA-N,,,,2,556.3,6.1,106.2,7,3,8,"Tyr
+CMGC",Single Stereoisomer,,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3991932.svg?engine=indigo
+Pictilisib,CHEMBL521851,Smiles=CS(=O)(=O)N1CCN(CC1)Cc2cc3c(s2)c(nc(n3)c4cccc5c4cn[nH]5)N6CCOCC6,,2,InChiKey=LHNIIDJUOCFXAP-UHFFFAOYSA-N,'GD9',2wxp 2y3a 3dbs,1,1,513.2,2.1,107.6,9,1,5,Atypical,Achiral Molecule,"RG-7321
+GDC-0941
+Pictilisib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL521851.svg?engine=indigo
+Pilaralisib,CHEMBL3360203,Smiles=CC(C)(C(=O)Nc1cccc(c1)S(=O)(=O)Nc2c(nc3ccccc3n2)Nc4cc(ccc4Cl)OC)N,,2,InChiKey=QINPEPAQOBZPOF-UHFFFAOYSA-N,,,,1,540.1,4.5,148.3,8,4,8,Atypical,Achiral Molecule,"Pilaralisib
+SAR-245408
+XL-147",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3360203.svg?engine=indigo
+Pimasertib,CHEMBL2107832,Smiles=c1cc(c(cc1I)F)Nc2cnccc2C(=O)NC[C@@H](CO)O,,2,InChiKey=VIUAUNHCRHHYNE-JTQLQIEISA-N,,,,0,431,1.7,94.5,5,4,6,STE,Single Stereoisomer,"MSC1936369A; AS703026; EMD 1036239
+AS-703026
+MSC-1936369B
+EMD 1036239
+Pimasertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2107832.svg?engine=indigo
+Ponatinib,CHEMBL1171837,Smiles=Cc1ccc(cc1C#Cc2cnc3n2nccc3)C(=O)Nc4ccc(c(c4)C(F)(F)F)CN5CCN(CC5)C,Iclusig,4,InChiKey=PHXJVRSECIGDHY-UHFFFAOYSA-N,'0LI',3ik3 3oxz 3zos 4c8b 4qrc 4tyj 4u0i 4uxq 4v01 4v04 6eg9,2,1,532.2,4.5,65.8,6,1,4,"Atypical
+Tyr",Achiral Molecule,"Iclusig
+AP-24534
+Ponatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1171837.svg?engine=indigo
+Poziotinib,CHEMBL3545154,Smiles=COc1cc2c(cc1OC3CCN(CC3)C(=O)C=C)c(ncn2)Nc4ccc(c(c4F)Cl)Cl,,2,InChiKey=LPFWVDIFUFFKJU-UHFFFAOYSA-N,,,,1,490.1,5.4,76.6,6,1,6,Tyr,Achiral Molecule,"NOV-120101
+Poziotinib
+HM-781-36B",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545154.svg?engine=indigo
+Prexasertib,CHEMBL3544911,Smiles=COc1cccc(c1c2cc(n[nH]2)Nc3cnc(cn3)C#N)OCCCN,,2,InChiKey=DOTGPNHGTYJDEP-UHFFFAOYSA-N,,,,0,365.2,2.2,134.8,8,3,8,CAMK,Achiral Molecule,"LY-2606368
+Prexasertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3544911.svg?engine=indigo
+Pyrotinib,CHEMBL3647420,Smiles=CCOc1cc2c(cc1NC(=O)/C=C/[C@H]3CCCN3C)c(c(cn2)C#N)Nc4ccc(c(c4)Cl)OCc5ccccn5,,3,InChiKey=SADXACCFNXBCFY-IYNHSRRRSA-N,,,,2,582.2,6.5,112.4,8,2,10,Tyr,Single Stereoisomer,SHR1258,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3647420.svg?engine=indigo
+Quizartinib,CHEMBL576982,Smiles=CC(C)(C)c1cc(no1)NC(=O)Nc2ccc(cc2)c3cn4c5ccc(cc5sc4n3)OCCN6CCOCC6,,3,InChiKey=CVWXJKQAOSCOAB-UHFFFAOYSA-N,'P30',4rt7 4xuf,2,2,560.2,5.9,106.2,9,2,7,Tyr,Achiral Molecule,"ASP-2689
+AC220
+Quizartinib
+AC010220
+AC-220",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL576982.svg?engine=indigo
+Rabusertib,CHEMBL3039517,Smiles=Cc1cc(c(cc1Br)NC(=O)Nc2cnc(cn2)C)OC[C@@H]3CNCCO3,,2,InChiKey=SYYBDNPGDKKJDU-ZDUSSCGKSA-N,,,,0,435.1,2.9,97.4,6,3,5,CAMK,Single Stereoisomer,"Rabusertib
+LY-2603618
+IC-83",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3039517.svg?engine=indigo
+Ralimetinib,CHEMBL2364626,Smiles=CC(C)(C)Cn1c2c(ccc(n2)c3c(nc([nH]3)C(C)(C)C)c4ccc(cc4)F)nc1N,,2,InChiKey=XPPBBJCBDOEXDN-UHFFFAOYSA-N,,,,1,420.2,5.6,85.4,5,2,3,CMGC,Achiral Molecule,"LY-2228820
+LY-22288220
+Ralimetinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2364626.svg?engine=indigo
+Ravoxertinib,CHEMBL3544964,Smiles=Cn1c(ccn1)Nc2nccc(n2)c3ccn(c(=O)c3)[C@H](CO)c4ccc(c(c4)F)Cl,,1,InChiKey=RZUOCXOYPYGSKL-GOSISDBHSA-N,'6QB',5k4i 5k4j 6oph,,0,440.1,3.2,97.9,8,2,6,,Single Stereoisomer,"Ravoxertinib
+RG-7842
+GDC-0994",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3544964.svg?engine=indigo
+Rebastinib,CHEMBL1738757,Smiles=CC(C)(C)c1cc(n(n1)c2ccc3c(c2)cccn3)NC(=O)Nc4ccc(cc4F)Oc5ccnc(c5)C(=O)NC,,2,InChiKey=WVXNSAVVKYZVOE-UHFFFAOYSA-N,'919',3qri 3qrj 5g6v 6cnh 6mwe,2,2,553.2,6,123.1,7,3,6,"Atypical
+Tyr",Achiral Molecule,"DP-1919
+DP-1919
+DCC-2036
+Rebastinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1738757.svg?engine=indigo
+Recilisib,CHEMBL2219421,Smiles=c1cc(ccc1CS(=O)(=O)/C=C/c2ccc(cc2)C(=O)O)Cl,Ex-RAD,1,InChiKey=KBEKQQJUNVQLDZ-MDZDMXLPSA-N,,,,0,336,3.6,71.4,3,1,5,,Achiral Molecule,"Ex-RAD
+ON-01210
+ON-01210.Na
+Recilisib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2219421.svg?engine=indigo
+Refametinib,CHEMBL1236682,Smiles=COc1cc(c(c(c1NS(=O)(=O)C2(CC2)C[C@@H](CO)O)Nc3ccc(cc3F)I)F)F,,2,InChiKey=RDSACQWTXKSHJT-NSHDSACASA-N,'VRA',3e8n,,1,572,3.5,107.9,6,4,9,STE,Single Stereoisomer,"BAY-86-9766
+Refametinib
+RDEA-119",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1236682.svg?engine=indigo
+Regorafenib,CHEMBL1946170,Smiles=CNC(=O)c1cc(ccn1)Oc2ccc(c(c2)F)NC(=O)Nc3ccc(c(c3)C(F)(F)F)Cl,Stivarga,4,InChiKey=FNHKPVJBJVTLMP-UHFFFAOYSA-N,,,2,1,482.1,5.7,92.3,4,3,5,"TKL
 Tyr
-CMGC",www.icoa.fr/pkidb/static/img/mol/Pexmetinib.svg
-Ribociclib,CHEMBL3545110,Smiles=CN(C)C(=O)c1cc2cnc(nc2n1C3CCCC3)Nc4ccc(cn4)N5CCNCC5,InChiKey=RHXHGRAEPCAFML-UHFFFAOYSA-N,0,434.3,2.8,91.2,8,2,5,CMGC,www.icoa.fr/pkidb/static/img/mol/Pictilisib.svg
-Rigosertib,CHEMBL1241855,Smiles=COc1ccc(cc1NCC(=O)O)CS(=O)(=O)/C=C/c2c(cc(cc2OC)OC)OC,InChiKey=OWBFCJROIKNMGD-BQYQJAHWSA-N,0,451.1,2.8,120.4,8,2,11,"Atypical
-Other",www.icoa.fr/pkidb/static/img/mol/Pilaralisib.svg
-Ripasudil,CHEMBL3426621,Smiles=C[C@H]1CNCCCN1S(=O)(=O)c2cccc3c2c(cnc3)F,InChiKey=QSKQVZWVLOIIEV-NSHDSACASA-N,0,323.1,1.7,62.3,4,1,2,,www.icoa.fr/pkidb/static/img/mol/Pimasertib.svg
-Riviciclib,CHEMBL3969723,Smiles=CN1CC[C@H]([C@@H]1CO)c2c(cc(c3c2oc(cc3=O)c4ccccc4Cl)O)O,InChiKey=QLUYMIVVAYRECT-OCCSQVGLSA-N,0,401.1,3.3,94.1,6,3,3,CMGC,www.icoa.fr/pkidb/static/img/mol/Ponatinib.svg
-Rivoceranib,CHEMBL3545414,Smiles=CS(=O)(=O)O.c1cc(c(nc1)NCc2ccncc2)C(=O)Nc3ccc(cc3)C4(CCCC4)C#N,InChiKey=FYJROXRIVQPKRY-UHFFFAOYSA-N,0,493.2,4.2,145.1,7,3,6,,www.icoa.fr/pkidb/static/img/mol/Poziotinib.svg
-Rociletinib,CHEMBL3545308,Smiles=CC(=O)N1CCN(CC1)c2ccc(c(c2)OC)Nc3ncc(c(n3)Nc4cccc(c4)NC(=O)C=C)C(F)(F)F,InChiKey=HUFOZJXAKZVRNJ-UHFFFAOYSA-N,1,555.2,4.8,111.7,8,3,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Pralsetinib.svg
-Rogaratinib,CHEMBL3963485,Smiles=Cc1cc2cc(sc2c(c1)OC)c3c(c(n4c3c(ncn4)N)CN5CCNC(=O)C5)COC,InChiKey=HNLRRJSKGXOYNO-UHFFFAOYSA-N,0,466.2,2.6,107,9,2,6,,www.icoa.fr/pkidb/static/img/mol/Prexasertib.svg
-Ruboxistaurin,CHEMBL91829,Smiles=CN(C)C[C@@H]1CCn2cc(c3c2cccc3)C4=C(c5cn(c6c5cccc6)CCO1)C(=O)NC4=O,InChiKey=ZCBUQCWBWNUWSU-SFHVURJKSA-N,0,468.2,3.5,68.5,6,1,2,,www.icoa.fr/pkidb/static/img/mol/Pyrotinib.svg
-Ruxolitinib,CHEMBL1789941,Smiles=c1c[nH]c2c1c(ncn2)c3cnn(c3)[C@H](CC#N)C4CCCC4,InChiKey=HFNKQEVNSGCOJV-OAHLLOKOSA-N,0,306.2,3.5,83.2,5,1,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Quizartinib.svg
-Sapanisertib,CHEMBL3545097,Smiles=CC(C)n1c2c(c(n1)c3ccc4c(c3)nc(o4)N)c(ncn2)N,InChiKey=GYLDXIAOMVERTK-UHFFFAOYSA-N,0,309.1,2.4,121.7,8,2,2,Atypical,www.icoa.fr/pkidb/static/img/mol/Rabusertib.svg
-Sapitinib,CHEMBL2408045,Smiles=CNC(=O)CN1CCC(CC1)Oc2cc3c(cc2OC)ncnc3Nc4cccc(c4F)Cl,InChiKey=DFJSJLGUIXFDJP-UHFFFAOYSA-N,0,473.2,3.8,88.6,7,2,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Radotinib.svg
-Saracatinib,CHEMBL217092,Smiles=CN1CCN(CC1)CCOc2cc3c(c(c2)OC4CCOCC4)c(ncn3)Nc5c(ccc6c5OCO6)Cl,InChiKey=OUKYUETWWIPKQR-UHFFFAOYSA-N,1,541.2,3.9,90.4,10,1,8,Tyr,www.icoa.fr/pkidb/static/img/mol/Ralimetinib.svg
-Savolitinib,CHEMBL3334567,Smiles=C[C@@H](c1ccc2nccn2c1)n3c4c(ncc(n4)c5cnn(c5)C)nn3,InChiKey=XYDNMOZJKOGZLS-NSHDSACASA-N,0,345.1,1.9,91.6,9,0,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Ravoxertinib.svg
-Selatinib,CHEMBL3040548,Smiles=CS(=O)CCNCc1ccc(o1)c2ccc3c(c2)c(ncn3)Nc4ccc(c(c4)Cl)OCc5cccc(c5)F,InChiKey=OAMVGUFHZPRXOM-UHFFFAOYSA-N,2,564.1,6.5,89.3,7,2,11,Tyr,www.icoa.fr/pkidb/static/img/mol/Rebastinib.svg
-Seliciclib,CHEMBL14762,Smiles=CC[C@H](CO)Nc1nc(NCc2ccccc2)c3ncn(C(C)C)c3n1,InChiKey=BTIHMVBBUGXLCJ-OAHLLOKOSA-N,0,354.2,3.2,87.9,7,3,8,CMGC,www.icoa.fr/pkidb/static/img/mol/Recilisib.svg
-Selonsertib,CHEMBL3916717,Smiles=Cc1cc(c(cc1n2cc(nc2)C3CC3)C(=O)Nc4cccc(n4)c5nncn5C(C)C)F,InChiKey=YIDDLAAKOYYGJG-UHFFFAOYSA-N,0,445.2,4.7,90.5,7,1,6,STE,www.icoa.fr/pkidb/static/img/mol/Refametinib.svg
-Selumetinib,CHEMBL1614701,Smiles=Cn1cnc2c1cc(c(c2F)Nc3ccc(cc3Cl)Br)C(=O)NOCCO,InChiKey=CYOHGALHFOKKQC-UHFFFAOYSA-N,0,456,3.5,88.4,6,3,6,STE,www.icoa.fr/pkidb/static/img/mol/Regorafenib.svg
-Semaxanib,CHEMBL276711,Smiles=Cc1cc([nH]c1/C=C\2/c3ccccc3NC2=O)C,InChiKey=WUWDLXZGHZSWQZ-WQLSENKSSA-N,0,238.1,3.1,44.9,1,2,1,Tyr,www.icoa.fr/pkidb/static/img/mol/Ribociclib.svg
-Silmitasertib,CHEMBL1230165,Smiles=c1cc(cc(c1)Cl)Nc2c3ccncc3c4ccc(cc4n2)C(=O)O,InChiKey=MUOKSQABCJCOPU-UHFFFAOYSA-N,0,349.1,4.9,75.1,4,2,3,Other,www.icoa.fr/pkidb/static/img/mol/Rigosertib.svg
-Simotinib,CHEMBL3545235,Smiles=COc1cc2c(cc1OCCN3CC4(CC4)C5(C3)OCCO5)c(ncn2)Nc6ccc(c(c6)Cl)F,InChiKey=OXWUWXCJDBRCCG-UHFFFAOYSA-N,1,500.2,4.4,78,8,1,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Ripasudil.svg
-Sitravatinib,CHEMBL3989926,Smiles=COCCNCc1ccc(nc1)c2cc3c(s2)c(ccn3)Oc4ccc(cc4F)NC(=O)C5(CC5)C(=O)Nc6ccc(cc6)F,InChiKey=WLAVZAAODLTUSW-UHFFFAOYSA-N,2,629.2,6.5,114.5,8,3,12,Tyr,www.icoa.fr/pkidb/static/img/mol/Ripretinib.svg
-Solcitinib,CHEMBL3301606,Smiles=CC1(CN(C1)C(=O)c2ccc(cc2)c3cccc4n3nc(n4)NC(=O)C5CC5)C,InChiKey=MPYACSQFXVMWNO-UHFFFAOYSA-N,0,389.2,3.2,79.6,5,1,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Riviciclib.svg
-Sonolisib,CHEMBL411907,Smiles=CC(=O)O[C@@H]1C[C@]2([C@@H](CCC2=O)C3=C1[C@]4([C@H](OC(=O)/C(=C/N(CC=C)CC=C)/C4=C(C3=O)O)COC)C)C,InChiKey=QIUASFSNWYMDFS-NILGECQDSA-N,1,525.2,3.1,119.4,9,1,8,Atypical,www.icoa.fr/pkidb/static/img/mol/Rivoceranib.svg
-Sorafenib,CHEMBL1336,Smiles=CNC(=O)c1cc(ccn1)Oc2ccc(cc2)NC(=O)Nc3ccc(c(c3)C(F)(F)F)Cl,InChiKey=MLDQJTXFUGDVEO-UHFFFAOYSA-N,1,464.1,5.5,92.3,4,3,5,"TKL
-Tyr",www.icoa.fr/pkidb/static/img/mol/Rociletinib.svg
-Sotrastaurin,CHEMBL565612,Smiles=CN1CCN(CC1)c2nc3ccccc3c(n2)C4=C(C(=O)NC4=O)c5c[nH]c6c5cccc6,InChiKey=OAVGBZOFDPFGPJ-UHFFFAOYSA-N,0,438.2,2.4,94.2,6,2,3,,www.icoa.fr/pkidb/static/img/mol/Rogaratinib.svg
-Spebrutinib,CHEMBL3301625,Smiles=COCCOc1ccc(cc1)Nc2ncc(c(n2)Nc3cccc(c3)NC(=O)C=C)F,InChiKey=KXBDTLQSDKGAEB-UHFFFAOYSA-N,0,423.2,4.3,97.4,7,3,10,Tyr,www.icoa.fr/pkidb/static/img/mol/Roniciclib.svg
-Sunitinib,CHEMBL535,Smiles=CCN(CC)CCNC(=O)c1c(c([nH]c1C)/C=C\2/c3cc(ccc3NC2=O)F)C,InChiKey=WINHZLLDWRZWRT-ATVHPVEESA-N,0,398.2,3.3,77.2,3,3,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Ruboxistaurin.svg
-Tafetinib,CHEMBL2180602,Smiles=CCN(CC)CCNC(=O)c1c([nH]c\2c1CCC/C2=C/3\c4cc(ccc4NC3=O)F)C,InChiKey=KGSRYTUWXUESJK-FXBPSFAMSA-N,0,424.2,3.7,77.2,3,3,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Ruxolitinib.svg
-Talmapimod,CHEMBL514201,Smiles=C[C@@H]1CN([C@H](CN1C(=O)c2cc3c(cc2Cl)n(cc3C(=O)C(=O)N(C)C)C)C)Cc4ccc(cc4)F,InChiKey=ZMELOYOKMZBMRB-DLBZAZTESA-N,1,512.2,4,65.9,5,0,5,CMGC,www.icoa.fr/pkidb/static/img/mol/Samotolisib.svg
-Tamatinib,CHEMBL475251,Smiles=CC1(C(=O)Nc2c(ccc(n2)Nc3c(cnc(n3)Nc4cc(c(c(c4)OC)OC)OC)F)O1)C,InChiKey=NHHQJBCNYHBUSI-UHFFFAOYSA-N,0,470.2,3.6,128.8,10,3,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Sapanisertib.svg
-Tandutinib,CHEMBL124660,Smiles=CC(C)Oc1ccc(cc1)NC(=O)N2CCN(CC2)c3c4cc(c(cc4ncn3)OCCCN5CCCCC5)OC,InChiKey=UXXQOJXBIDBUAC-UHFFFAOYSA-N,2,562.3,5,92.3,8,1,10,"(*)
-Tyr",www.icoa.fr/pkidb/static/img/mol/Sapitinib.svg
-Tanzisertib,CHEMBL1950289,Smiles=c1c(c(c(cc1F)F)Nc2n(c3nc(ncc3n2)N[C@H]4CC[C@@H](CC4)O)[C@@H]5COCC5)F,InChiKey=IBGLGMOPHJQDJB-IHRRRGAJSA-N,0,448.2,3.7,97.1,8,3,5,CMGC,www.icoa.fr/pkidb/static/img/mol/Saracatinib.svg
-Taselisib,CHEMBL2387080,Smiles=Cc1nc(n(n1)C(C)C)c2cn3c(n2)-c4ccc(cc4OCC3)c5cnn(c5)C(C)(C)C(=O)N,InChiKey=BEUQXVWXFDOSAQ-UHFFFAOYSA-N,0,460.2,3.2,118.7,9,1,5,Atypical,www.icoa.fr/pkidb/static/img/mol/Savolitinib.svg
-Telatinib,CHEMBL2079588,Smiles=CNC(=O)c1cc(ccn1)COc2c3c(cco3)c(nn2)Nc4ccc(cc4)Cl,InChiKey=QFCXANHHBCGMAS-UHFFFAOYSA-N,0,409.1,4,102.2,7,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Selatinib.svg
-Tepotinib,CHEMBL3402762,Smiles=CN1CCC(CC1)COc2cnc(nc2)c3cccc(c3)Cn4c(=O)ccc(n4)c5cccc(c5)C#N,InChiKey=AHYMHWXQRWRBKT-UHFFFAOYSA-N,0,492.2,4,96.9,8,0,7,Tyr,www.icoa.fr/pkidb/static/img/mol/Seliciclib.svg
-Tesevatinib,CHEMBL3544983,Smiles=CN1C[C@H]2C[C@H](C[C@H]2C1)COc3cc4c(cc3OC)c(ncn4)Nc5ccc(c(c5F)Cl)Cl,InChiKey=HVXKQKFEHMGHSL-QKDCVEJESA-N,1,490.1,5.8,59.5,6,1,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Selonsertib.svg
-Tivantinib,CHEMBL2103882,Smiles=c1ccc2c(c1)c(c[nH]2)[C@H]3[C@@H](C(=O)NC3=O)c4cn5c6c4cccc6CCC5,InChiKey=UCEQXRCJXIVODC-PMACEKPBSA-N,0,369.1,3.6,66.9,3,2,2,Tyr,www.icoa.fr/pkidb/static/img/mol/Selumetinib.svg
-Tivozanib,CHEMBL1289494,Smiles=Cc1cc(no1)NC(=O)Nc2ccc(cc2Cl)Oc3ccnc4c3cc(c(c4)OC)OC,InChiKey=SPMVMDHWKHCIDT-UHFFFAOYSA-N,1,454.1,5.6,107.7,7,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Semaxanib.svg
-Toceranib,CHEMBL13608,Smiles=Cc1c([nH]c(c1C(=O)NCCN2CCCC2)C)/C=C\3/c4cc(ccc4NC3=O)F,InChiKey=SRSGVKWWVXWSJT-ATVHPVEESA-N,0,396.2,3.1,77.2,3,3,5,KIT,www.icoa.fr/pkidb/static/img/mol/Silmitasertib.svg
-Tofacitinib,CHEMBL221959,Smiles=C[C@@H]1CCN(C[C@@H]1N(C)c2c3cc[nH]c3ncn2)C(=O)CC#N,InChiKey=UJLAWZDWDVHWOW-YPMHNXCESA-N,0,312.2,1.5,88.9,5,1,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Simotinib.svg
-Tomivosertib,CHEMBL4073443,Smiles=Cc1cc(c(=O)n2c1C(=O)NC23CCCCC3)Nc4cc(ncn4)N,InChiKey=HKTBYUWLRDZAJK-UHFFFAOYSA-N,0,340.2,1.6,114.9,7,3,2,,www.icoa.fr/pkidb/static/img/mol/Sitravatinib.svg
-Tozasertib,CHEMBL572878,Smiles=Cc1cc(n[nH]1)Nc2cc(nc(n2)Sc3ccc(cc3)NC(=O)C4CC4)N5CCN(CC5)C,InChiKey=GCIKSSRWRFVXBI-UHFFFAOYSA-N,0,464.2,3.5,102.1,8,3,7,Other,www.icoa.fr/pkidb/static/img/mol/Solcitinib.svg
-Trametinib,CHEMBL2103875,Smiles=Cc1c2c(c(n(c1=O)C)Nc3ccc(cc3F)I)c(=O)n(c(=O)n2c4cccc(c4)NC(=O)C)C5CC5,InChiKey=LIRYPHYGHXZJBZ-UHFFFAOYSA-N,1,615.1,3.9,107.1,8,2,5,"TKL
-STE",www.icoa.fr/pkidb/static/img/mol/Sonolisib.svg
-Trilaciclib,CHEMBL3894860,Smiles=CN1CCN(CC1)c2ccc(nc2)Nc3ncc4cc5n(c4n3)C6(CCCCC6)CNC5=O,InChiKey=PDGKHKMBHVFCMG-UHFFFAOYSA-N,0,446.3,2.7,91.2,8,2,3,CMGC,www.icoa.fr/pkidb/static/img/mol/Sorafenib.svg
-Tucatinib,CHEMBL3989868,Smiles=Cc1cc(ccc1Oc2ccn3c(c2)ncn3)Nc4c5cc(ccc5ncn4)NC6=NC(CO6)(C)C,InChiKey=SDEAXTCZPQIFQM-UHFFFAOYSA-N,1,480.2,5.1,110.9,10,2,5,Tyr,www.icoa.fr/pkidb/static/img/mol/Sotrastaurin.svg
-Ulixertinib,CHEMBL3590106,Smiles=CC(C)Nc1cc(c(cn1)Cl)c2cc([nH]c2)C(=O)N[C@H](CO)c3cccc(c3)Cl,InChiKey=KSERXGMCDHOLSS-LJQANCHMSA-N,0,432.1,4.7,90,4,4,7,CMGC,www.icoa.fr/pkidb/static/img/mol/Spebrutinib.svg
-Umbralisib,CHEMBL3948730,Smiles=C[C@@H](c1c(c(=O)c2cc(ccc2o1)F)c3cccc(c3)F)n4c5c(c(n4)c6ccc(c(c6)F)OC(C)C)c(ncn5)N,InChiKey=IUVCFHHAEHNCFT-INIZCTEOSA-N,2,571.2,6.7,109.1,8,1,6,,www.icoa.fr/pkidb/static/img/mol/Sunitinib.svg
-Upadacitinib,CHEMBL3622821,Smiles=CC[C@@H]1CN(C[C@@H]1c2cnc3n2c4cc[nH]c4nc3)C(=O)NCC(F)(F)F,InChiKey=WYQFJHHDOKWSHR-MNOVXSKESA-N,0,380.2,2.9,78.3,4,2,3,Tyr,www.icoa.fr/pkidb/static/img/mol/Tafetinib.svg
-Uprosertib,CHEMBL3137336,Smiles=Cn1c(c(cn1)Cl)c2cc(oc2Cl)C(=O)N[C@@H](Cc3ccc(c(c3)F)F)CN,InChiKey=AXTAPYRUEKNRBA-JTQLQIEISA-N,0,428.1,3.6,86.1,5,2,6,AGC,www.icoa.fr/pkidb/static/img/mol/Talmapimod.svg
-Vactosertib,CHEMBL3260567,Smiles=Cc1cccc(n1)c2c(nc([nH]2)CNc3ccccc3F)c4ccc5ncnn5c4,InChiKey=FJCDSQATIJKQKA-UHFFFAOYSA-N,0,399.2,4.2,83.8,6,2,5,,www.icoa.fr/pkidb/static/img/mol/Tamatinib.svg
-Vandetanib,CHEMBL24828,Smiles=CN1CCC(CC1)COc2cc3c(cc2OC)c(ncn3)Nc4ccc(cc4F)Br,InChiKey=UHTHHESEBZOYNR-UHFFFAOYSA-N,1,474.1,5,59.5,6,1,6,"(*)
-Tyr",www.icoa.fr/pkidb/static/img/mol/Tandutinib.svg
-Varlitinib,CHEMBL2103842,Smiles=C[C@@H]1COC(=N1)Nc2ccc3c(c2)c(ncn3)Nc4ccc(c(c4)Cl)OCc5nccs5,InChiKey=UWXSAYUXVSFDBQ-CYBMUJFWSA-N,1,466.1,5.2,93.5,9,2,6,Tyr,www.icoa.fr/pkidb/static/img/mol/Tanzisertib.svg
-Vatalanib,CHEMBL101253,Smiles=c1ccc2c(c1)c(nnc2Nc3ccc(cc3)Cl)Cc4ccncc4,InChiKey=YCOYDOIWSSHVCK-UHFFFAOYSA-N,1,346.1,5,50.7,4,1,4,Tyr,www.icoa.fr/pkidb/static/img/mol/Tarloxotinib.svg
-Vemurafenib,CHEMBL1229517,Smiles=CCCS(=O)(=O)Nc1ccc(c(c1F)C(=O)c2c[nH]c3c2cc(cn3)c4ccc(cc4)Cl)F,InChiKey=GPXBXXGIAQBQNI-UHFFFAOYSA-N,1,489.1,5.5,91.9,4,2,7,TKL,www.icoa.fr/pkidb/static/img/mol/Taselisib.svg
-Verosudil,CHEMBL3545065,Smiles=CN(C)C(c1ccsc1)C(=O)Nc2ccc3c(c2)cc[nH]c3=O,InChiKey=VDYRZXYYQMMFJW-UHFFFAOYSA-N,0,327.1,2.8,65.2,4,2,4,,www.icoa.fr/pkidb/static/img/mol/Telatinib.svg
-Vistusertib,CHEMBL2336325,Smiles=C[C@H]1COCCN1c2c3ccc(nc3nc(n2)N4CCOC[C@@H]4C)c5cccc(c5)C(=O)NC,InChiKey=JUSFANSTBFGBAF-IRXDYDNUSA-N,0,462.2,2.5,92.7,8,1,4,Atypical,www.icoa.fr/pkidb/static/img/mol/Tepotinib.svg
-Volasertib,CHEMBL1233528,Smiles=CC[C@H]1N(c2nc(ncc2N(C1=O)C)Nc3c(cc(cc3)C(=O)N[C@H]4CC[C@@H](CC4)N5CCN(CC5)CC6CC6)OC)C(C)C,InChiKey=SXNJFOWDRLKDSF-STROYTFGSA-N,1,618.4,4.3,106.2,9,2,10,Other,www.icoa.fr/pkidb/static/img/mol/Tesevatinib.svg
-Voruciclib,CHEMBL3905910,Smiles=CN1CC[C@H]([C@@H]1CO)c2c(cc(c3c2oc(cc3=O)c4ccc(cc4Cl)C(F)(F)F)O)O,InChiKey=MRPGRAKIAJJGMM-OCCSQVGLSA-N,0,469.1,4.3,94.1,6,3,3,CMGC,www.icoa.fr/pkidb/static/img/mol/Tivantinib.svg
-Voxtalisib,CHEMBL3545366,Smiles=CCn1c2c(cc(c1=O)c3ccn[nH]3)c(nc(n2)N)C,InChiKey=RGHYDLZMTYDBDT-UHFFFAOYSA-N,0,270.1,1.1,102.5,6,2,2,Atypical,www.icoa.fr/pkidb/static/img/mol/Tivozanib.svg
-Zanubrutinib,CHEMBL3973435,Smiles=C=CC(=O)N1CCC(CC1)C2CCNc3n2nc(c3C(=O)N)c4ccc(cc4)Oc5ccccc5,InChiKey=RNOAOAWBMHREKO-UHFFFAOYSA-N,0,471.2,4.2,102.5,6,2,6,,www.icoa.fr/pkidb/static/img/mol/Toceranib.svg
+CMGC",Achiral Molecule,"Stivarga
+Regorafenib
+BAY-734506 monohydrate
+BAY-73-4506",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1946170.svg?engine=indigo
+Ribociclib,CHEMBL3545110,Smiles=CN(C)C(=O)c1cc2cnc(nc2n1C3CCCC3)Nc4ccc(cn4)N5CCNCC5,Kisqali,4,InChiKey=RHXHGRAEPCAFML-UHFFFAOYSA-N,'6ZZ',5l2t,1,0,434.3,2.8,91.2,8,2,5,CMGC,Achiral Molecule,"Ribociclib
+LEE-011
+NVP-LEE011",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545110.svg?engine=indigo
+Rigosertib,CHEMBL1241855,Smiles=COc1ccc(cc1NCC(=O)O)CS(=O)(=O)/C=C/c2c(cc(cc2OC)OC)OC,,3,InChiKey=OWBFCJROIKNMGD-BQYQJAHWSA-N,'6FS',5j18 5j2r 5ov7,3,0,451.1,2.8,120.4,8,2,11,"Atypical
+Other",Achiral Molecule,"Rigosertib
+ON-01910",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1241855.svg?engine=indigo
+Ripasudil,CHEMBL3426621,Smiles=C[C@H]1CNCCCN1S(=O)(=O)c2cccc3c2c(cnc3)F,,2,InChiKey=QSKQVZWVLOIIEV-NSHDSACASA-N,,,,0,323.1,1.7,62.3,4,1,2,,,RIPASUDIL,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3426621.svg?engine=indigo
+Riviciclib,CHEMBL3969723,Smiles=CN1CC[C@H]([C@@H]1CO)c2c(cc(c3c2oc(cc3=O)c4ccccc4Cl)O)O,,2,InChiKey=QLUYMIVVAYRECT-OCCSQVGLSA-N,,,,0,401.1,3.3,94.1,6,3,3,CMGC,Racemic Mixture,,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3969723.svg?engine=indigo
+Rivoceranib,CHEMBL3545414,Smiles=CS(=O)(=O)O.c1cc(c(nc1)NCc2ccncc2)C(=O)Nc3ccc(cc3)C4(CCCC4)C#N,,1,InChiKey=FYJROXRIVQPKRY-UHFFFAOYSA-N,,,,0,493.2,4.2,145.1,7,3,6,,,YN-968D1,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545414.svg?engine=indigo
+Rociletinib,CHEMBL3545308,Smiles=CC(=O)N1CCN(CC1)c2ccc(c(c2)OC)Nc3ncc(c(n3)Nc4cccc(c4)NC(=O)C=C)C(F)(F)F,,3,InChiKey=HUFOZJXAKZVRNJ-UHFFFAOYSA-N,'8JC',5xdk 5xdl,1,1,555.2,4.8,111.7,8,3,8,Tyr,Achiral Molecule,"CNX-419
+AVL-301
+CO-1686
+Rociletinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545308.svg?engine=indigo
+Rogaratinib,CHEMBL3963485,Smiles=Cc1cc2cc(sc2c(c1)OC)c3c(c(n4c3c(ncn4)N)CN5CCNC(=O)C5)COC,,2,InChiKey=HNLRRJSKGXOYNO-UHFFFAOYSA-N,,,,0,466.2,2.6,107,9,2,6,,,"ROGARATINIB
+BAY 1163877",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3963485.svg?engine=indigo
+Ruboxistaurin,CHEMBL91829,Smiles=CN(C)C[C@@H]1CCn2cc(c3c2cccc3)C4=C(c5cn(c6c5cccc6)CCO1)C(=O)NC4=O,Arxxant,3,InChiKey=ZCBUQCWBWNUWSU-SFHVURJKSA-N,'LY4',1uu3 2j2i,,0,468.2,3.5,68.5,6,1,2,,Single Stereoisomer,"Arxxant
+LY-333531
+Ruboxistaurin",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL91829.svg?engine=indigo
+Ruxolitinib,CHEMBL1789941,Smiles=c1c[nH]c2c1c(ncn2)c3cnn(c3)[C@H](CC#N)C4CCCC4,Jakafi,4,InChiKey=HFNKQEVNSGCOJV-OAHLLOKOSA-N,'RXT',4u5j,1,0,306.2,3.5,83.2,5,1,4,Tyr,Single Stereoisomer,"Jakavi
+INCB-018424
+Ruxolitinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1789941.svg?engine=indigo
+Sapanisertib,CHEMBL3545097,Smiles=CC(C)n1c2c(c(n1)c3ccc4c(c3)nc(o4)N)c(ncn2)N,,2,InChiKey=GYLDXIAOMVERTK-UHFFFAOYSA-N,'FE5',6gvf,,0,309.1,2.4,121.7,8,2,2,Atypical,Achiral Molecule,"MLN-0128
+Sapanisertib
+TAK-228",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545097.svg?engine=indigo
+Sapitinib,CHEMBL2408045,Smiles=CNC(=O)CN1CCC(CC1)Oc2cc3c(cc2OC)ncnc3Nc4cccc(c4F)Cl,,2,InChiKey=DFJSJLGUIXFDJP-UHFFFAOYSA-N,,,,0,473.2,3.8,88.6,7,2,7,Tyr,Achiral Molecule,"Sapitinib
+AZD-8931",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2408045.svg?engine=indigo
+Saracatinib,CHEMBL217092,Smiles=CN1CCN(CC1)CCOc2cc3c(c(c2)OC4CCOCC4)c(ncn3)Nc5c(ccc6c5OCO6)Cl,,3,InChiKey=OUKYUETWWIPKQR-UHFFFAOYSA-N,'H8H',2h8h 4qmx 5vcx 5vd3,1,1,541.2,3.9,90.4,10,1,8,Tyr,Achiral Molecule,"AZD-0530
+Saracatinib
+AZ-10353926",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL217092.svg?engine=indigo
+Savolitinib,CHEMBL3334567,Smiles=C[C@@H](c1ccc2nccn2c1)n3c4c(ncc(n4)c5cnn(c5)C)nn3,,3,InChiKey=XYDNMOZJKOGZLS-NSHDSACASA-N,'V0L',5lbw 6sde,,0,345.1,1.9,91.6,9,0,3,Tyr,Single Stereoisomer,"AZD-6094
+Savolitinib
+HMPL-504
+AZD6094",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3334567.svg?engine=indigo
+Selatinib,CHEMBL3040548,Smiles=CS(=O)CCNCc1ccc(o1)c2ccc3c(c2)c(ncn3)Nc4ccc(c(c4)Cl)OCc5cccc(c5)F,,1,InChiKey=OAMVGUFHZPRXOM-UHFFFAOYSA-N,,,,2,564.1,6.5,89.3,7,2,11,Tyr,,,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3040548.svg?engine=indigo
+Seliciclib,CHEMBL14762,Smiles=CC[C@H](CO)Nc1nc(NCc2ccccc2)c3ncn(C(C)C)c3n1,,2,InChiKey=BTIHMVBBUGXLCJ-OAHLLOKOSA-N,'RRC',1unl 1ygk 2a4l 3ddq,1,0,354.2,3.2,87.9,7,3,8,CMGC,Single Stereoisomer,"Seliciclib
+CYC-202
+AL-39256",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL14762.svg?engine=indigo
+Selonsertib,CHEMBL3916717,Smiles=Cc1cc(c(cc1n2cc(nc2)C3CC3)C(=O)Nc4cccc(n4)c5nncn5C(C)C)F,,2,InChiKey=YIDDLAAKOYYGJG-UHFFFAOYSA-N,'NJV',6oyt,,0,445.2,4.7,90.5,7,1,6,STE,Achiral Molecule,"GS-4997
+Selonsertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3916717.svg?engine=indigo
+Selumetinib,CHEMBL1614701,Smiles=Cn1cnc2c1cc(c(c2F)Nc3ccc(cc3Cl)Br)C(=O)NOCCO,,3,InChiKey=CYOHGALHFOKKQC-UHFFFAOYSA-N,'3EW',4u7z,3,0,456,3.5,88.4,6,3,6,STE,Achiral Molecule,"ARRY-142886
+AZD-6244
+ARRY-886
+Selumetinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1614701.svg?engine=indigo
+Semaxanib,CHEMBL276711,Smiles=Cc1cc([nH]c1/C=C\2/c3ccccc3NC2=O)C,,3,InChiKey=WUWDLXZGHZSWQZ-WQLSENKSSA-N,'X2M',2x2m,1,0,238.1,3.1,44.9,1,2,1,Tyr,Achiral Molecule,"SU-5416
+Semaxinib
+Semaxanib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL276711.svg?engine=indigo
+Silmitasertib,CHEMBL1230165,Smiles=c1cc(cc(c1)Cl)Nc2c3ccncc3c4ccc(cc4n2)C(=O)O,,2,InChiKey=MUOKSQABCJCOPU-UHFFFAOYSA-N,'3NG',3nga 3pe1 5o11 6fyl 6fyp 6fyv 6hmb 6isj 6k3l 6khd 6khe 6khf 6p5s,1,0,349.1,4.9,75.1,4,2,3,Other,Achiral Molecule,"Silmitasertib
+CX-4945",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1230165.svg?engine=indigo
+Simotinib,CHEMBL3545235,Smiles=COc1cc2c(cc1OCCN3CC4(CC4)C5(C3)OCCO5)c(ncn2)Nc6ccc(c(c6)Cl)F,,3,InChiKey=OXWUWXCJDBRCCG-UHFFFAOYSA-N,,,,1,500.2,4.4,78,8,1,7,Tyr,,SIM-6802,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545235.svg?engine=indigo
+Sitravatinib,CHEMBL3989926,Smiles=COCCNCc1ccc(nc1)c2cc3c(s2)c(ccn3)Oc4ccc(cc4F)NC(=O)C5(CC5)C(=O)Nc6ccc(cc6)F,,3,InChiKey=WLAVZAAODLTUSW-UHFFFAOYSA-N,,,,2,629.2,6.5,114.5,8,3,12,Tyr,Achiral Molecule,"MGCD516
+Sitravatinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3989926.svg?engine=indigo
+Solcitinib,CHEMBL3301606,Smiles=CC1(CN(C1)C(=O)c2ccc(cc2)c3cccc4n3nc(n4)NC(=O)C5CC5)C,,2,InChiKey=MPYACSQFXVMWNO-UHFFFAOYSA-N,,,,0,389.2,3.2,79.6,5,1,4,Tyr,Achiral Molecule,"GLPG-0788
+GSK2586184A
+Solcitinib
+GSK2586184
+G-154578
+GLPG-0778",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3301606.svg?engine=indigo
+Sonolisib,CHEMBL411907,Smiles=CC(=O)O[C@@H]1C[C@]2([C@@H](CCC2=O)C3=C1[C@]4([C@H](OC(=O)/C(=C/N(CC=C)CC=C)/C4=C(C3=O)O)COC)C)C,,2,InChiKey=QIUASFSNWYMDFS-NILGECQDSA-N,,,,1,525.2,3.1,119.4,9,1,8,Atypical,Single Stereoisomer,"Sonolisib
+PX-866",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL411907.svg?engine=indigo
+Sorafenib,CHEMBL1336,Smiles=CNC(=O)c1cc(ccn1)Oc2ccc(cc2)NC(=O)Nc3ccc(c(c3)C(F)(F)F)Cl,Nexavar,4,InChiKey=MLDQJTXFUGDVEO-UHFFFAOYSA-N,'BAX',1uwh 1uwj 3gcs 3heg 3rgf 3wze 4asd 5hi2,2,1,464.1,5.5,92.3,4,3,5,"TKL
+Tyr",Achiral Molecule,"Nexavar
+Sorafenib
+BAY-43-9006",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1336.svg?engine=indigo
+Sotrastaurin,CHEMBL565612,Smiles=CN1CCN(CC1)c2nc3ccccc3c(n2)C4=C(C(=O)NC4=O)c5c[nH]c6c5cccc6,,2,InChiKey=OAVGBZOFDPFGPJ-UHFFFAOYSA-N,'LW4',3iw4,,0,438.2,2.4,94.2,6,2,3,,Achiral Molecule,"AEB-071
+NVP-AEB071
+AEB071
+Sotrastaurin",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL565612.svg?engine=indigo
+Spebrutinib,CHEMBL3301625,Smiles=COCCOc1ccc(cc1)Nc2ncc(c(n2)Nc3cccc(c3)NC(=O)C=C)F,,2,InChiKey=KXBDTLQSDKGAEB-UHFFFAOYSA-N,,,,0,423.2,4.3,97.4,7,3,10,Tyr,Achiral Molecule,"CC-292
+AVL-292
+Spebrutinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3301625.svg?engine=indigo
+Sunitinib,CHEMBL535,Smiles=CCN(CC)CCNC(=O)c1c(c([nH]c1C)/C=C\2/c3cc(ccc3NC2=O)F)C,Sutent,4,InChiKey=WINHZLLDWRZWRT-ATVHPVEESA-N,'B49',2y7j 3g0e 3g0f 3miy 3ti1 4agd 4ks8 4qmz 6nfy 6nfz 6ng0,1,0,398.2,3.3,77.2,3,3,7,Tyr,Achiral Molecule,"Sutent
+Sunitinib
+SU-11248
+Sutent",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL535.svg?engine=indigo
+Tafetinib,CHEMBL2180602,Smiles=CCN(CC)CCNC(=O)c1c([nH]c\2c1CCC/C2=C/3\c4cc(ccc4NC3=O)F)C,,1,InChiKey=KGSRYTUWXUESJK-FXBPSFAMSA-N,,,,0,424.2,3.7,77.2,3,3,6,Tyr,,,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2180602.svg?engine=indigo
+Talmapimod,CHEMBL514201,Smiles=C[C@@H]1CN([C@H](CN1C(=O)c2cc3c(cc2Cl)n(cc3C(=O)C(=O)N(C)C)C)C)Cc4ccc(cc4)F,,2,InChiKey=ZMELOYOKMZBMRB-DLBZAZTESA-N,'469',3hub 3zsh,1,1,512.2,4,65.9,5,0,5,CMGC,Single Stereoisomer,"Talmapimod
+SCIO-469",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL514201.svg?engine=indigo
+Tamatinib,CHEMBL475251,Smiles=CC1(C(=O)Nc2c(ccc(n2)Nc3c(cnc(n3)Nc4cc(c(c(c4)OC)OC)OC)F)O1)C,,2,InChiKey=NHHQJBCNYHBUSI-UHFFFAOYSA-N,'585',3fqs 3piy,1,0,470.2,3.6,128.8,10,3,7,Tyr,,R-406,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL475251.svg?engine=indigo
+Tandutinib,CHEMBL124660,Smiles=CC(C)Oc1ccc(cc1)NC(=O)N2CCN(CC2)c3c4cc(c(cc4ncn3)OCCCN5CCCCC5)OC,,2,InChiKey=UXXQOJXBIDBUAC-UHFFFAOYSA-N,,,,2,562.3,5,92.3,8,1,10,"(*)
+Tyr",Achiral Molecule,"Tandutinib
+MLN-0518
+CT-53518
+MLN-518",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL124660.svg?engine=indigo
+Tanzisertib,CHEMBL1950289,Smiles=c1c(c(c(cc1F)F)Nc2n(c3nc(ncc3n2)N[C@H]4CC[C@@H](CC4)O)[C@@H]5COCC5)F,,2,InChiKey=IBGLGMOPHJQDJB-IHRRRGAJSA-N,'KBI',3tti,1,0,448.2,3.7,97.1,8,3,5,CMGC,Single Stereoisomer,"Tanzisertib
+JNK-930
+CC-930",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1950289.svg?engine=indigo
+Taselisib,CHEMBL2387080,Smiles=Cc1nc(n(n1)C(C)C)c2cn3c(n2)-c4ccc(cc4OCC3)c5cnn(c5)C(C)(C)C(=O)N,,3,InChiKey=BEUQXVWXFDOSAQ-UHFFFAOYSA-N,'799',5t8f,1,0,460.2,3.2,118.7,9,1,5,Atypical,Racemic Mixture,"RG-7604
+Taselisib
+GDC-0032",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2387080.svg?engine=indigo
+Telatinib,CHEMBL2079588,Smiles=CNC(=O)c1cc(ccn1)COc2c3c(cco3)c(nn2)Nc4ccc(cc4)Cl,,2,InChiKey=QFCXANHHBCGMAS-UHFFFAOYSA-N,,,,0,409.1,4,102.2,7,2,6,Tyr,Achiral Molecule,"BAY-57-9352
+Telatinib
+BAY-579352",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2079588.svg?engine=indigo
+Tepotinib,CHEMBL3402762,Smiles=CN1CCC(CC1)COc2cnc(nc2)c3cccc(c3)Cn4c(=O)ccc(n4)c5cccc(c5)C#N,,2,InChiKey=AHYMHWXQRWRBKT-UHFFFAOYSA-N,'3E8',4r1v,1,0,492.2,4,96.9,8,0,7,Tyr,Achiral Molecule,"MSC-2156119
+Tepotinib
+MSC-2156119J
+EMD-1214063",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3402762.svg?engine=indigo
+Tesevatinib,CHEMBL3544983,Smiles=CN1C[C@H]2C[C@H](C[C@H]2C1)COc3cc4c(cc3OC)c(ncn4)Nc5ccc(c(c5F)Cl)Cl,,2,InChiKey=HVXKQKFEHMGHSL-QKDCVEJESA-N,,,,1,490.1,5.8,59.5,6,1,6,Tyr,Racemic Mixture,"Tesevatinib
+XL-647
+KD-020
+KD-019",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3544983.svg?engine=indigo
+Tivantinib,CHEMBL2103882,Smiles=c1ccc2c(c1)c(c[nH]2)[C@H]3[C@@H](C(=O)NC3=O)c4cn5c6c4cccc6CCC5,,3,InChiKey=UCEQXRCJXIVODC-PMACEKPBSA-N,'TIV',5cb4,,0,369.1,3.6,66.9,3,2,2,Tyr,Single Stereoisomer,"ARQ-197
+Tivantinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103882.svg?engine=indigo
+Tivozanib,CHEMBL1289494,Smiles=Cc1cc(no1)NC(=O)Nc2ccc(cc2Cl)Oc3ccnc4c3cc(c(c4)OC)OC,,4,InChiKey=SPMVMDHWKHCIDT-UHFFFAOYSA-N,'AV9',4ase,2,1,454.1,5.6,107.7,7,2,6,Tyr,Achiral Molecule,"AV-951
+Tivozanib
+Kil-8951
+Kil8951
+ASP-4130
+KRN-951",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1289494.svg?engine=indigo
+Toceranib,CHEMBL13608,Smiles=Cc1c([nH]c(c1C(=O)NCCN2CCCC2)C)/C=C\3/c4cc(ccc4NC3=O)F,,0,InChiKey=SRSGVKWWVXWSJT-ATVHPVEESA-N,,,,0,396.2,3.1,77.2,3,3,5,KIT,Achiral Molecule,"PHA-291639
+Toceranib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL13608.svg?engine=indigo
+Tofacitinib,CHEMBL221959,Smiles=C[C@@H]1CCN(C[C@@H]1N(C)c2c3cc[nH]c3ncn2)C(=O)CC#N,Xeljanz,4,InChiKey=UJLAWZDWDVHWOW-YPMHNXCESA-N,'MI1',3eyg 3fup 3lxk 3lxn 4oti,1,0,312.2,1.5,88.9,5,1,3,Tyr,Single Stereoisomer,"Tasocitinib
+550
+CP-690550
+CP-690
+Tofacitinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL221959.svg?engine=indigo
+Tomivosertib,CHEMBL4073443,Smiles=Cc1cc(c(=O)n2c1C(=O)NC23CCCCC3)Nc4cc(ncn4)N,,2,InChiKey=HKTBYUWLRDZAJK-UHFFFAOYSA-N,'N45',6ck6,,0,340.2,1.6,114.9,7,3,2,,,NK1 AND MNK2,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL4073443.svg?engine=indigo
+Tozasertib,CHEMBL572878,Smiles=Cc1cc(n[nH]1)Nc2cc(nc(n2)Sc3ccc(cc3)NC(=O)C4CC4)N5CCN(CC5)C,,2,InChiKey=GCIKSSRWRFVXBI-UHFFFAOYSA-N,'VX6',2f4j 2xyn 3amb 3e5a 4af3 4b8m 4jbq 4zog 5wnm 6brj 6gr9,1,0,464.2,3.5,102.1,8,3,7,Other,Achiral Molecule,"VX-680
+MK-0457
+Tozasertib
+VX-68
+MK-045",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL572878.svg?engine=indigo
+Trametinib,CHEMBL2103875,Smiles=Cc1c2c(c(n(c1=O)C)Nc3ccc(cc3F)I)c(=O)n(c(=O)n2c4cccc(c4)NC(=O)C)C5CC5,Mekinist,4,InChiKey=LIRYPHYGHXZJBZ-UHFFFAOYSA-N,,,3,1,615.1,3.9,107.1,8,2,5,"TKL
+STE",Achiral Molecule,"Mekinist
+GSK1120212
+Trametinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103875.svg?engine=indigo
+Trilaciclib,CHEMBL3894860,Smiles=CN1CCN(CC1)c2ccc(nc2)Nc3ncc4cc5n(c4n3)C6(CCCCC6)CNC5=O,,2,InChiKey=PDGKHKMBHVFCMG-UHFFFAOYSA-N,,,,0,446.3,2.7,91.2,8,2,3,CMGC,Achiral Molecule,"G1T28
+Trilaciclib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3894860.svg?engine=indigo
+Tucatinib,CHEMBL3989868,Smiles=Cc1cc(ccc1Oc2ccn3c(c2)ncn3)Nc4c5cc(ccc5ncn4)NC6=NC(CO6)(C)C,,2,InChiKey=SDEAXTCZPQIFQM-UHFFFAOYSA-N,,,,1,480.2,5.1,110.9,10,2,5,Tyr,Achiral Molecule,"Tucatinib
+ONT-380
+ARRY-380",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3989868.svg?engine=indigo
+Ulixertinib,CHEMBL3590106,Smiles=CC(C)Nc1cc(c(cn1)Cl)c2cc([nH]c2)C(=O)N[C@H](CO)c3cccc(c3)Cl,,2,InChiKey=KSERXGMCDHOLSS-LJQANCHMSA-N,'EVK',6gdq,,0,432.1,4.7,90,4,4,7,CMGC,Single Stereoisomer,"VRT752271
+VRT-752271
+BVD-523",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3590106.svg?engine=indigo
+Umbralisib,CHEMBL3948730,Smiles=C[C@@H](c1c(c(=O)c2cc(ccc2o1)F)c3cccc(c3)F)n4c5c(c(n4)c6ccc(c(c6)F)OC(C)C)c(ncn5)N,,3,InChiKey=IUVCFHHAEHNCFT-INIZCTEOSA-N,,,,2,571.2,6.7,109.1,8,1,6,,Single Stereoisomer,"Umbralisib
+TGR-1202 base
+RP-5264",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3948730.svg?engine=indigo
+Upadacitinib,CHEMBL3622821,Smiles=CC[C@@H]1CN(C[C@@H]1c2cnc3n2c4cc[nH]c4nc3)C(=O)NCC(F)(F)F,Rinvoq,4,InChiKey=WYQFJHHDOKWSHR-MNOVXSKESA-N,,,,0,380.2,2.9,78.3,4,2,3,Tyr,Single Stereoisomer,"ABT-494
+Upadacitinib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3622821.svg?engine=indigo
+Uprosertib,CHEMBL3137336,Smiles=Cn1c(c(cn1)Cl)c2cc(oc2Cl)C(=O)N[C@@H](Cc3ccc(c(c3)F)F)CN,,2,InChiKey=AXTAPYRUEKNRBA-JTQLQIEISA-N,,,,0,428.1,3.6,86.1,5,2,6,AGC,Single Stereoisomer,"Uprosertib
+GSK2141795C
+GSK2141795",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3137336.svg?engine=indigo
+Vactosertib,CHEMBL3260567,Smiles=Cc1cccc(n1)c2c(nc([nH]2)CNc3ccccc3F)c4ccc5ncnn5c4,,1.5,InChiKey=FJCDSQATIJKQKA-UHFFFAOYSA-N,,,,0,399.2,4.2,83.8,6,2,5,,,,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3260567.svg?engine=indigo
+Vandetanib,CHEMBL24828,Smiles=CN1CCC(CC1)COc2cc3c(cc2OC)c(ncn3)Nc4ccc(cc4F)Br,Caprelsa;Zactima,4,InChiKey=UHTHHESEBZOYNR-UHFFFAOYSA-N,'ZD6',2ivu,1.5,1,474.1,5,59.5,6,1,6,"(*)
+Tyr",Achiral Molecule,"Caprelsa;Zactima
+GNF-Pf-2188
+ZD-6474
+Vandetanib
+ZD-64",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL24828.svg?engine=indigo
+Varlitinib,CHEMBL2103842,Smiles=C[C@@H]1COC(=N1)Nc2ccc3c(c2)c(ncn3)Nc4ccc(c(c4)Cl)OCc5nccs5,,2.5,InChiKey=UWXSAYUXVSFDBQ-CYBMUJFWSA-N,,,,1,466.1,5.2,93.5,9,2,6,Tyr,Single Stereoisomer,"ARRY-543
+ASLAN-001
+Varlitinib
+ARRY-334543",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2103842.svg?engine=indigo
+Vatalanib,CHEMBL101253,Smiles=c1ccc2c(c1)c(nnc2Nc3ccc(cc3)Cl)Cc4ccncc4,,3,InChiKey=YCOYDOIWSSHVCK-UHFFFAOYSA-N,,,,1,346.1,5,50.7,4,1,4,Tyr,Achiral Molecule,"BAY-86-5127
+PTK-787
+NVP-PTK787
+ZK-222584
+K-222584
+CGP-79787
+PTK787
+Vatalanib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL101253.svg?engine=indigo
+Vemurafenib,CHEMBL1229517,Smiles=CCCS(=O)(=O)Nc1ccc(c(c1F)C(=O)c2c[nH]c3c2cc(cn3)c4ccc(cc4)Cl)F,Zelboraf,4,InChiKey=GPXBXXGIAQBQNI-UHFFFAOYSA-N,'032',3og7 4rzv 5hes,1.5,1,489.1,5.5,91.9,4,2,7,TKL,Achiral Molecule,"Zelboraf
+Vemurafenib
+PLX-4032
+Ro-5185426
+RG-7204",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1229517.svg?engine=indigo
+Verosudil,CHEMBL3545065,Smiles=CN(C)C(c1ccsc1)C(=O)Nc2ccc3c(c2)cc[nH]c3=O,,2,InChiKey=VDYRZXYYQMMFJW-UHFFFAOYSA-N,,,,0,327.1,2.8,65.2,4,2,4,,Racemic Mixture,"Verosudil
+AR-12286",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545065.svg?engine=indigo
+Vistusertib,CHEMBL2336325,Smiles=C[C@H]1COCCN1c2c3ccc(nc3nc(n2)N4CCOC[C@@H]4C)c5cccc(c5)C(=O)NC,,2,InChiKey=JUSFANSTBFGBAF-IRXDYDNUSA-N,,,,0,462.2,2.5,92.7,8,1,4,Atypical,Single Stereoisomer,"AZD-2014
+AZD2014
+Vistusertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL2336325.svg?engine=indigo
+Volasertib,CHEMBL1233528,Smiles=CC[C@H]1N(c2nc(ncc2N(C1=O)C)Nc3c(cc(cc3)C(=O)N[C@H]4CC[C@@H](CC4)N5CCN(CC5)CC6CC6)OC)C(C)C,,3,InChiKey=SXNJFOWDRLKDSF-STROYTFGSA-N,'IBI',3fc2 5v67 5vbr,1,1,618.4,4.3,106.2,9,2,10,Other,Single Stereoisomer,"BI-6727
+Volasertib",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL1233528.svg?engine=indigo
+Voruciclib,CHEMBL3905910,Smiles=CN1CC[C@H]([C@@H]1CO)c2c(cc(c3c2oc(cc3=O)c4ccc(cc4Cl)C(F)(F)F)O)O,,2,InChiKey=MRPGRAKIAJJGMM-OCCSQVGLSA-N,,,,0,469.1,4.3,94.1,6,3,3,CMGC,Single Stereoisomer,,https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3905910.svg?engine=indigo
+Voxtalisib,CHEMBL3545366,Smiles=CCn1c2c(cc(c1=O)c3ccn[nH]3)c(nc(n2)N)C,,2,InChiKey=RGHYDLZMTYDBDT-UHFFFAOYSA-N,,,,0,270.1,1.1,102.5,6,2,2,Atypical,Achiral Molecule,"SAR-245409
+Voxtalisib
+XL-765",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3545366.svg?engine=indigo
+Zanubrutinib,CHEMBL3973435,Smiles=C=CC(=O)N1CCC(CC1)C2CCNc3n2nc(c3C(=O)N)c4ccc(cc4)Oc5ccccc5,,4,InChiKey=RNOAOAWBMHREKO-UHFFFAOYSA-N,,,,0,471.2,4.2,102.5,6,2,6,,,"BGB-3111
+ZANUBRUTINIB",https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL3973435.svg?engine=indigo
