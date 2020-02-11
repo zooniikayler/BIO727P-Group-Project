@@ -26,7 +26,7 @@ class KinaseSearchForm(Form):
 
 
 class InhibitorSearchForm(Form):
-	choices = [('Inhibitor Name', 'Inhibitor Name'), ('ChEMBL ID', 'ChEMBL ID')] # Define choices for the kinase search
+	choices = [('Inhibitor International Nonproprietary Name (INN)', 'Inhibitor International Nonproprietary Name (INN)'), ('ChEMBL ID', 'ChEMBL ID')] # Define choices for the kinase search
 	select = SelectField('Search for Inhibitor:', choices=choices) 
 	search = StringField('Search',validators=[DataRequired()])
 
@@ -72,12 +72,12 @@ def kinase_results(search):
 			inhib_qry = db_session.query(InhibitorRef, InhibitorInfo)\
 					.filter(InhibitorRef.Kinase_Target.ilike(search_string))\
 					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
-			inhib_results = inhib_qry.all()
+			inhibitor_results = inhib_qry.all()
 
 			sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
 					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-			sub_results = sub_qry.all()
+			substrate_results = sub_qry.all()
 
 		elif search.data['select'] == 'Uniprot Accession Number': #check Uniprot Accession Number search was selected
 			qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.ilike(search_string)) #qry uniprot accession number 
@@ -86,12 +86,12 @@ def kinase_results(search):
 			inhib_qry = db_session.query(InhibitorRef, InhibitorInfo)\
 					.filter(InhibitorRef.Kinase_Target.ilike(search_string))\
 					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
-			inhib_results = inhib_qry.all()
+			inhibitor_results = inhib_qry.all()
 
 			sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
 					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-			sub_results = sub_qry.all()
+			substrate_results = sub_qry.all()
 
 		else:
 			qry = db_session.query(KinaseInfo)
@@ -103,7 +103,7 @@ def kinase_results(search):
 
 
 	else:
-		return render_template('kinase_results.html', results=results, inhib_results=inhib_results, sub_results=sub_results)
+		return render_template('kinase_results.html', results=results, inhibitor_results=inhibitor_results, substrate_results=substrate_results)
 
 @app.route('/Kinases/<Kinase_Symbol>')
 def profile(Kinase_Symbol):
@@ -112,13 +112,13 @@ def profile(Kinase_Symbol):
     
     inhib_qry = db_session.query(KinaseInfo, InhibitorInfo)\
             .join(InhibitorRef, KinaseInfo.Kinase_Symbol== InhibitorRef.Kinase_Target)
-    inhib_results = inhib_qry.all()
+    inhibitor_results = inhib_qry.all()
       
     sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
-    sub_results = subs_qry.all()
+    substrate_results = sub_qry.all()
     
-    return render_template('kinase_results.html', results=results, inhib_results = inhib_results, sub_results = sub_results)
+    return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
 
 
 ############################  About us   #########################################################
@@ -250,22 +250,34 @@ def Inhibitors():
 @app.route('/Inhibitors_results')
 def inhibitor_results(search):
 	results = []
+	inhibitor_results = []
 	search_string = search.data['search']
 
 	if search_string:
 		if search.data['select'] == 'CHEMBL ID':
-			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.ilike(search_string))\
-			.join(InhibitorInfo,InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID)
+			# qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.contains(search_string))
+			# results = qry.all()
+
+			qry = db_session.query(InhibitorRef, InhibitorInfo)\
+					.filter(InhibitorRef.CHEMBL_ID.ilike(search_string))\
+					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
 			results = qry.all()
 
-		elif search.data['select'] == 'Inhibitor Name':
-			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.ilike(search_string))\
-            .join(InhibitorInfo,InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID)
+		elif search.data['select'] == 'Inhibitor International Nonproprietary Name (INN)':
+			# qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.contains(search_string))
+			# results = qry.all()
+
+			qry = db_session.query(InhibitorRef, InhibitorInfo)\
+					.filter(InhibitorInfo.Inhibitor_Name.ilike(search_string))\
+					.join(InhibitorRef, InhibitorRef.CHEMBL_ID == InhibitorInfo.CHEMBLID) #run join query to find all inhibitors with the corresponding kinase symbol target
 			results = qry.all()
+
 		else:
 			qry = db_session.query(InhibitorInfo)
 			results = qry.all()
-
+	print("-----------------------")
+	for i in results:
+		print(i)
 	if not results:
 		flash('No results found. Please search again')
 		return redirect ('/Inhibitors')
