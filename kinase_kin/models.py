@@ -63,5 +63,6 @@ class InhibitorRef(db.Model):
     """"""
     __tablename__ = "InhibitorRef" #Selects the the InhibitorRef table from the db
     
-    CHEMBL_ID = db.Column("CHEMBL_ID", db.String, primary_key = True)
+    Inhibitor_RefID = db.Column('Inhibitor_RefID', db.Integer, prrimary_key = True)
+    CHEMBL_ID = db.Column("CHEMBL_ID", db.String)
     Kinase_Target = db.Column('Kinase_Target', db.String)
