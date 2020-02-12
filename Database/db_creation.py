@@ -119,8 +119,8 @@ c.execute("""CREATE TABLE SubstrateInfo(
             Sub_Mod_Rsd TEXT NOT NULL,
             Site_AA TEXT,
             Sub_Domain TEXT,
-            Chromosome NUMERIC,
-            Leg NUMERIC,
+            Chromosome INTEGER,
+            Leg TEXT,
             FOREIGN KEY (Kinase) REFERENCES KinaseInfo(Kinase_Symbol))""")
 
 #Populating the substrate table

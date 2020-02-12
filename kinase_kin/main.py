@@ -1,9 +1,9 @@
 from flask import Flask, render_template, flash, redirect, request, url_for, send_from_directory
-from kinase_kin.app import app
-from kinase_kin.analysis_pipe import *
+from app import application
+from analysis_pipe import *
 import numpy as np
-from kinase_kin.db_creator import init_db, db_session
-from kinase_kin.models import KinaseInfo,SubstrateInfo,InhibitorInfo,InhibitorRef
+from db_creator import init_db, db_session
+from models import KinaseInfo,SubstrateInfo,InhibitorInfo,InhibitorRef
 
 import os
 from werkzeug.utils import secure_filename
@@ -38,15 +38,15 @@ init_db() #initialise the db
 
 ############################  Home   #############################################################
 
-@app.route('/')
-@app.route('/Home')
+@application.route('/')
+@application.route('/Home')
 def Home():
 	return render_template('Home.html')
 
 
 ############################  Kinases   ##########################################################
 
-@app.route('/Kinases', methods=['GET', 'POST'])
+@application.route('/Kinases', methods=['GET', 'POST'])
 def Kinases():
 	search = KinaseSearchForm(request.form) #request search from & run request
 	if request.method== 'POST': #if user posting search string to get info from db
@@ -54,7 +54,7 @@ def Kinases():
 	return	render_template('Kinases.html', form=search)
 
 
-@app.route('/kinase_results')
+@application.route('/kinase_results')
 def kinase_results(search):
 	results = []
 	search_string = search.data['search'] #when given user input data
@@ -66,26 +66,26 @@ def kinase_results(search):
 
 			inhib_qry = db_session.query(InhibitorRef, InhibitorInfo)\
 					.filter(InhibitorRef.Kinase_Target.ilike(search_string))\
-					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
+					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) # queries the database for the inhibitors with the corresponding kinase symbol target when a kinase is searched
 			inhibitor_results = inhib_qry.all()
 
 			sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
-					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
+					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase) # query to search for the joined columns to extract inforamation from the substrate table
 			substrate_results = sub_qry.all()
 
 		elif search.data['select'] == 'Uniprot Accession Number': #check Uniprot Accession Number search was selected
-			qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.ilike(search_string)) #qry uniprot accession number 
+			qry =db_session.query(KinaseInfo).filter(KinaseInfo.Uniprot_Accession_Number.ilike(search_string)) #query uniprot accession number 
 			results= qry.all()
 
 			inhib_qry = db_session.query(InhibitorRef, InhibitorInfo)\
 					.filter(InhibitorRef.Kinase_Target.ilike(search_string))\
-					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
+					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #queries the database for the inhibitors with the corresponding kinase symbol target
 			inhibitor_results = inhib_qry.all()
 
 			sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
 					.filter(KinaseInfo.Kinase_Symbol.ilike(search_string))\
-					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
+					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase) # query to search for the joined columns to extract inforamation from the substrate tabl
 			substrate_results = sub_qry.all()
 
 		else:
@@ -98,19 +98,19 @@ def kinase_results(search):
 
 
 	else:
-		return render_template('kinase_results.html', results=results, inhibitor_results=inhibitor_results, substrate_results=substrate_results)
+		return render_template('kinase_results.html', results=results, inhibitor_results=inhibitor_results, substrate_results=substrate_results) #renders the kinase_results.html page
 
-@app.route('/Kinases/<Kinase_Symbol>')
+@application.route('/Kinases/<Kinase_Symbol>') #allows user to search for kinases using the URL
 def profile(Kinase_Symbol):
-    qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol))
+    qry = db_session.query(KinaseInfo).filter(KinaseInfo.Kinase_Symbol.ilike(Kinase_Symbol)) # queries the KinaseInfo table
     results= qry.all()
     
     inhib_qry = db_session.query(KinaseInfo, InhibitorInfo)\
-            .join(InhibitorRef, KinaseInfo.Kinase_Symbol== InhibitorRef.Kinase_Target)
-    inhibitor_results = inhib_qry.all()
+            .join(InhibitorRef, KinaseInfo.Kinase_Symbol== InhibitorRef.Kinase_Target) # queries the database for the inhibitors the with the corresponding kinase target
+    inhibitor_results = inhib_qry.all() 
       
     sub_qry = db_session.query(KinaseInfo, SubstrateInfo)\
-					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase)
+					.join(SubstrateInfo, KinaseInfo.Kinase_Symbol == SubstrateInfo.Kinase) #queries the database for thesubstrate inforamtion of the searched query
     substrate_results = sub_qry.all()
     
     return render_template('kinase_results.html', results=results, inhibitor_results = inhibitor_results, substrate_results = substrate_results)
@@ -119,7 +119,7 @@ def profile(Kinase_Symbol):
 ############################  About us   #########################################################
 
 
-@app.route('/About_us')
+@application.route('/About_us')
 def About_us():
 	return	render_template('About_us.html')
 
@@ -130,7 +130,7 @@ UPLOAD_FOLDER = 'cache'
 
 ALLOWED_EXTENSIONS= {'csv', 'tsv'}
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 def allowed_file(filename):
@@ -138,7 +138,7 @@ def allowed_file(filename):
 		filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@app.route('/Data_Analysis', methods = ['GET', 'POST'])
+@application.route('/Data_Analysis', methods = ['GET', 'POST'])
 def Upload():
 	form = FileForm()
 	if request.method == 'POST':
@@ -151,21 +151,21 @@ def Upload():
 			if file and allowed_file(file.filename):
 				if not os.path.exists(UPLOAD_FOLDER):
 					os.makedirs(UPLOAD_FOLDER)
-				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+				file.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
 				return redirect(url_for('results', filename = filename))
 	return render_template('Data_Analysis.html', form=form)
 
 
-@app.route('/data_results')
+@application.route('/data_results')
 def results():
 	print("getting results page")
 	# passing uploaded file to the results function
 	filename = request.args.get('filename')
-	if get_format(os.path.join(app.config['UPLOAD_FOLDER'], filename)) == 1:
+	if get_format(os.path.join(application.config['UPLOAD_FOLDER'], filename)) == 1:
 		return redirect(url_for('format_error'))
 	print("hi")
 	# creating/cleaning a dataframe from database and userdata
-	df = create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+	df = create_df_user(os.path.join(application.config['UPLOAD_FOLDER'], filename))
 	x_axis = list(set(df.Kinase))  # getting unique set of kinases from uploaded file
 
 	# calculating mean score for all values of y without using a for-loop
@@ -226,33 +226,32 @@ def results():
 ############################  Error Message   ########################################################
 
 
-@app.route('/error-message')
+@application.route('/error-message')
 def format_error():
 	render_template("format_error.html")
 
 
 ############################  Inhibitors   ########################################################
 
-@app.route('/Inhibitors', methods=['GET', 'POST'])
+@application.route('/Inhibitors', methods=['GET', 'POST'])
 def Inhibitors():
-	search = InhibitorSearchForm(request.form) 
-	if request.method== 'POST':
+	search = InhibitorSearchForm(request.form)  #request search from & run request
+	if request.method== 'POST': #if user posting search string to get info from db
 		return inhibitor_results(search) #return inhibitor search function
 	return	render_template('Inhibitors.html', form=search)
 
-@app.route('/Inhibitors_results')
+@application.route('/Inhibitors_results')
 def inhibitor_results(search):
 	results = []
-	inhibitor_results = []
 	search_string = search.data['search']
 
 	if search_string:
 		if search.data['select'] == 'Inhibitor International Nonproprietary Name (INN)':
-			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.contains(search_string))
+			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.contains(search_string)) # queries the Inhibitor_Name column on the InhibitorInfo table for search_string passed by the user
 			results = qry.all()
 
 		else:
-			qry = db_session.query(InhibitorInfo)
+			qry = db_session.query(InhibitorInfo) #queries the every column of the InhibitorInfo table
 			results = qry.all()
 
 	if not results:
@@ -262,59 +261,58 @@ def inhibitor_results(search):
 	else:
 		return render_template('inhibitor_results.html', results=results)
 
-@app.route('/Inhibitors/<Inhibitor_Name>')
+@application.route('/Inhibitors/<Inhibitor_Name>')
 def inhibitorprofile(Inhibitor_Name):
 	qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.ilike(Inhibitor_Name))
 	results = qry.all()
 	return render_template('inhibitor_results.html', results=results)
 
 ############################  Substrates   ########################################################
-@app.route('/Substrates', methods=['GET', 'POST'])
+@application.route('/Substrates', methods=['GET', 'POST'])
 def Substrates():
-	search = SubstrateSearchForm(request.form) #request search from & run request
-	#may need to try submit as difference in forms
+	search = SubstrateSearchForm(request.form) #request search from & run requests
 	if request.method== 'POST': #if user posting search string to get info from db
-		return substrate_results(search)
+		return substrate_results(search) #return substrate  search function
 	return	render_template('Substrates.html', form=search)
 
-@app.route('/Substrate_results')
+@application.route('/Substrate_results')
 def substrate_results(search):
 	results= []
 	search_string = search.data['search']
 
 	if search_string:
 		if search.data['select'] == 'Substrate':
-			qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.contains(search_string))
+			qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.contains(search_string)) # queries the Substrate_symbol column on the substrateInfo table
 			results = qry.all()
 		else:
-			qry = db_session.query(SubstrateInfo)
+			qry = db_session.query(SubstrateInfo) # queries the whole of the SubstrateInfo table
 			results = qry.all()
 
 	if not results:
-		flash('No results found. Please search again')#
+		flash('No results found. Please search again') #flashes an error message
 		return redirect('/Substrates')
 	else:
-		return render_template('substrate_results.html', results=results)
+		return render_template('Substrate_results.html', results=results) # renders the html template
 
 
 
-@app.route('/Substrates/<Substrate>')
+@application.route('/Substrates/<Substrate>')
 def substrateprofile(Substrate):
-	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate))
+	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate)) # queries the database for the whatever the user entered into the url
 	results = qry.all()
 	#chromosome = qry.Chromosome()
 	#source_url = 'http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr' + chromosome + '%3A' + view1 + '%2D' + view2 + '&hgsid=235662278_hbN0IQVHHXUisaAA0FwbcsOHxqqQ'
-	return render_template('Substrate_results.html', results = results)
+	return render_template('Substrate_results.html', results = results) # renders the html template
 
 
-@app.route('/genome_browser')
+@application.route('/genome_browser')
 def genome_browser():
-	return render_template('genome_browser.html')
+	return render_template('genome_browser.html') #renders the html template
 
 
 ######################################################################################################
 if __name__=='__main__':
-	app.run(debug=True)
+	application.run(debug=True)
 	# from waitress import serve
 	# serve(app, host="0.0.0.0", port=8080)
     
