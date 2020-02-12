@@ -81,8 +81,8 @@ Plotly.newPlot('barplot2', data, layout);
 <script>
 var data = [
   {
-    x: ['Not', 'Working'],
-    y: [1,2],
+    x: {{delta_x | safe}},
+    y: {{delta_y}},
     type: 'bar',
     marker: {
        color: {{ colours }}
@@ -106,22 +106,35 @@ var trace = {
   y: {{volcano_y}},
   mode: 'markers',
   type: 'scatter',
-  name: 'Team A',
-  text: ['A-1', 'A-2', 'A-3', 'A-4', 'A-5'],
-  marker: { size: 12 }
+  name: 'Phosphosites',
+  text: {{ labels |safe }},
+  marker: { size: 6 }
 };
 
+var trace2 = {
+  x: [-10,10],
+  y: [0.05, 0.05],
+  mode: 'lines',
+  name: '0.05',
+  type: 'scatter'
+};
 
-var data = [ trace ];
+var data = [ trace, trace2 ];
 
 var layout = {
+  title: 'Volcano Plot (All Data)',
+  titlefont: {
+      size: 16,
+      color: 'rgb(107, 107, 107)'
+   },
   xaxis: {
-    range: [ -4, 4 ]
+    range: [ -5, 5 ],
+    title: 'Log(2) Fold Change'
   },
   yaxis: {
-    range: [0, 2]
+    range: [0, {{ y_range }}],
+    title: 'P-Value'
   },
-  title:'Volcano Plot'
 };
 
 Plotly.newPlot('volcano', data, layout);</script>

@@ -5,6 +5,8 @@
 <title>Search Substrates</title>
 <head>
     <script src="http://ebi-uniprot.github.io/CDN/protvista/protvista.js"></script>
+    <script type=”text/javascript” src=”http://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js”></script>
+
     <link href="http://ebi-uniprot.github.io/CDN/protvista/main.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/static/tabs.css">
 </head>
@@ -26,9 +28,9 @@
     <!-- Tab 2 -->
     <input type="radio" name="tabset" id="tab2" aria-controls="annot">
     <label for="tab2">{{ x.Substrate_Symbol.upper() }} Features</label>
-    <!-- Tab 3 -->
-    <input type="radio" name="tabset" id="tab3" aria-controls="inter">
-    <label for="tab3">Genome Browser</label>
+    <!--&lt;!&ndash; Tab 3 &ndash;&gt;-->
+    <!--<input type="radio" name="tabset" id="tab3" aria-controls="Genome">-->
+    <!--<label for="tab3">Genome Browser</label>-->
   
   <!-- Define Tab Panels -->
     <div class="tab-panels">
@@ -46,8 +48,12 @@
           <h5> Amino Acid Site of Phosphorylation: <span class="w3-opacity">{{ x.Site_AA }}</span></h5>
           <h5> Substrate Domain: <span class="w3-opacity">{{ x.Sub_Domain }}</span></h5>
           <h5> Chromosome Number: <span class="w3-opacity">{{ x.Chromosome }}</span></h5> 
-          <h5> Chrosome Region: <span class="w3-opacity">{{ x.Leg }}</span></h5> 
-        </div>
+          <h5> Chrosome Region: <span class="w3-opacity">{{ x.Leg }}</span></h5>
+
+          <div id="gviewer1" class="SeqViewerApp" data-autoload>
+            <a href="?embedded=true&id=NC_000012.12&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD649220238,annots:Sequence,ShowLabel:false,ColorGaps:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD3194982005,annots:Unnamed,Options:ShowAll,CDSProductFeats:false,NtRuler:true,AaRuler:true,HighlightMode:2,ShowLabel:true,shown:true,order:784][key:alignment_track,name:Alignments---NG Alignments,display_name:NG Alignments,id:STD4206364812,annots:NG Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:true,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:785]&assm_context=GCF_000001405.35&mk=9095637|Ribosomal%20slippage|008000&v=9095582:9095714&c=666699&select=null&slim=0&appname=kinase_kin"></a>
+                </div>
+
       </section>
 
       <!-- Substrate Features -->
@@ -69,6 +75,10 @@
               }
         </script></center>
       </section>
+
+        <!-- Genome Browser -->
+        <section id="Genome" class="tab-panel">
+
 
 
     </div>
