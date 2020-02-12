@@ -6,34 +6,36 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js">
 </script>
 
- <center><h1> Data Analysis Results </h1></center>
+ <center><h1 style="color: #000;"> Data Analysis Results </h1></center>
 
 <body>
 
 
 
-<div id='barplot'><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id='barplot' ><!-- Plotly chart will be drawn inside this DIV --></div>
 <br>
 <br>
-<center><h3>  Relative Kinase Activity Mean Score Explained: </h3></center>
-<center><p>  The kinase activity in this plot was calculated by taking the mean of the log2 of fold change of all substrates affected by each kinase. Thus, the kinase with the greatest mean effect size is shown to be most "active". To see more Kinases, click and drag to select the area you wish to zoom in on. </p></center>
+  <div class="container" style=" color: #000; text-align: center;">
+  <center><h3>  Relative Kinase Activity Mean Score Explained: </h3></center>
+  <center><p >  The kinase activity in this plot was calculated by taking the mean of the log2 of fold change of all substrates affected by each kinase. Thus, the kinase with the greatest mean effect size is shown to be most "active". To see more Kinases, click and drag to select the area you wish to zoom in on. Hover over the icons in the top right corner to see all additional features. (download png, zoom, autoscale, etc.)</p></center>
+  </div>
 
 <div id='barplot2'><!-- Plotly chart will be drawn inside this DIV --></div>
 <br>
 <br>
-<center><h3>  Top Ten Kinase Activities Explained: </h3></center>
-<center><p>  These are the Kinases showing the greatest change in activity level.
+<center><h3 style="color: #000;">  Top Ten Kinase Activities Explained: </h3></center>
+<center><p style="color: #000;">  These are the Kinases showing the greatest change in activity level.
 
 <div id='alternative_score'><!-- Plotly chart will be drawn inside this DIV --></div>
 <br>
 <br>
-<center><h3>  Alternative Kinase Score Explained: </h3></center>
-<center><p>  For each kinase, this shows the number of substrates with a positive fold change minus the number of substrates with a negative fold change. Only kinases with significant p-value (<0.05) shown.
+<center><h3 style="color: #000;">  Alternative Kinase Score Explained: </h3></center>
+<center><p style="color: #000;">  For each kinase, this shows the number of substrates with a positive fold change minus the number of substrates with a negative fold change. Only kinases with significant p-value (<0.05) shown.
 
 
 <div id='volcano'><!-- Plotly chart will be drawn inside this DIV --></div>
 
- <center><p>  For each kinase, this shows the number of substrates with a positive fold change minus the number of substrates with a negative fold change.
+ <center><p style="color: #000;">  For each kinase, this shows the number of substrates with a positive fold change minus the number of substrates with a negative fold change.
 
 <!-- put |safe -->
 
