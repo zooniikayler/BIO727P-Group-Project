@@ -23,16 +23,16 @@
   <div class="tabset">
     <!-- Tab 1 -->
     <input type="radio" name="tabset" id="tab1" aria-controls="info" checked>
-    <label for="tab1">General Information</label>
+    <label for="tab1">{{ x.Inhibitor_Name }} Properties</label>
     <!-- Tab 2 -->
-    <input type="radio" name="tabset" id="tab2" aria-controls="prop">
-    <label for="tab2">{{ x.Inhibitor_Name }} Properties</label>
+    <input type="radio" name="tabset" id="tab2" aria-controls="annot" checked>
+    <label for="tab2">{{ x.Inhibitor_Name }} Kinase Targets</label>
 
   <!-- Define Tab Panels  -->
     <div class="tab-panels">
       <!-- General Information  tab panels -->
       <section id="info" class="tab-panel">
-        <h4 class="w3-border-bottom w3-border-light-gray w3-padding-12 w3-cyan">General Information </h4>
+        <h4 class="w3-border-bottom w3-border-light-gray w3-padding-12 w3-cyan">{{ x.Inhibitor_Name }} Properties </h4>
 
         <!-- figure for chembl structure-->
         <figure style="">
@@ -42,16 +42,25 @@
         <br>
 
         <h5> Inhibitor Name: <span class="w3-opacity"><td>{{ x.Inhibitor_Name }}</td></span>
-        <!-- <h5> Kainase Targets: <span class="w3-opacity"><td>{{ x.Kinase_Target }}</td></span> -->
+        <h5> Kinase Targets: <span class="w3-opacity"><td>{{ x.Kinase_Target }}</td></span>
         <h5> Canonical Smiles: <span class="w3-opacity"><td>{{ x.Smiles }}</td></span>
         <h5> Standard InCHI Key: <span class="w3-opacity"><td>{{ x.InCHI_Key }}</td></span>
-      </section>
-      
-      <!-- Inhibitor Properties -->
-      <section id="prop" class="tab-panel">
+        <h5> Kinase Family: <span class="w3-opacity"><td>{{ x.Kinase_Families }}</td></span>
+        <h5> Chirality: <span class="w3-opacity"><td>{{ x.Chirality }}</td></span>
+        <h5> Synonyms: <span class="w3-opacity"><td>{{ x.Inhibitor_Synonyms }}</td></span>
+        <h5> Brand Name: <span class="w3-opacity"><td>{{ x.Brand_Name }}</td></span>
+        <br>
+        <br>
+        <br>
+        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-cyan">External Research</h4>
+        <br>
+        <h5> PDBID: <span class="w3-opacity"><td><a href="https://www.rcsb.org/structure/{{ x.PDBID }}">{{ x.PDBID }}</a></td></span>
+        <h5> LigID: <span class="w3-opacity"><td><a href="http://www.rcsb.org/ligand/{{x.LigID }}">{{ x.LigID }}</a></td></span>
+        <h5> ChEMBL ID : <span class="w3-opacity"><td><a href="https://www.ebi.ac.uk/chembl/compound_report_card/{{x.CHEMBLID }}">{{ x.CHEMBLID }}</a></td></span>
+        <br>
+        <br>
         <h4 class="w3-border-bottom w3-border-light-grey w3-padding-12 w3-light-grey">{{ x.Inhibitor_Name }} Properties </h4>
         <div class="container">
-          <br>
           <table class="zui-table" align="left">   <!-- use the zui table style sheet -->
               <thead>
                   <tr>
@@ -62,7 +71,8 @@
                       <th>HBA</th>
                       <th>HBD</th>
                       <th>NRB</th>
-                      <th>Kinase_Families</th>
+                      <th>Type</th>
+                      <th>Phase</th>
                   </tr>
               </thead>
               <tbody>
@@ -74,13 +84,58 @@
                       <td>{{ x.HBA }}</td>
                       <td>{{ x.HBD }}</td>
                       <td>{{ x.NRB}}</td>
-                      <td>{{ x.Kinase_Families}}</td>
+                      <td>{{ x.Type}}</td>
+                      <td>{{ x.Phase}}</td>
                   </tr>
               </tbody>
           </table>
           <br><br><br><br><br><br><br><br><br>
-        </div>
+
+
+
+
+{% for x in inhibitor_results %}
+  <section id="annot" class="tab-panel">
+        <!-- Define table CSS -->
+        <style>
+          table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          td, th {
+            border: 1px solid #1abc9c;
+            text-align: left;
+            padding: 8px;
+          }
+
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+          </style>
+
+          <table>
+
+          <tr>
+            <td><b>NAME</td>
+            <td><b>ChEMBL ID</td>
+          </tr>
+          <tr>
+    <div class="container">
+        <table>
+      <td><a href="/Kinases/{{x.InhibitorRef.Kinase_Target}}">{{ x.InhibitorRef.Kinase_Target }}</a></td>
+    </table>
+  </tr>
+{% endfor %}
+
+  </section>
+
+        
+
       </section>
+        </div>
+
         </div>
   {% endfor %}
 {% endif %}

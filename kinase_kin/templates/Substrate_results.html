@@ -2,14 +2,21 @@
 
 {% block content %}
 <doctype html>
-<title>Search Substrates</title>
+<title>Results Substrates</title>
 <head>
     <script src="http://ebi-uniprot.github.io/CDN/protvista/protvista.js"></script>
     <script type=”text/javascript” src=”http://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js”></script>
 
     <link href="http://ebi-uniprot.github.io/CDN/protvista/main.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/static/tabs.css">
-</head>
+
+    <!-- protVista Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 {% if results %}
   {% for x in results %}
@@ -17,37 +24,42 @@
       <div class="w3-container">
         <br>
 
-        <center> <h3><b>Substrate</b></h3> <center>
-        <span class="w3-teal"><td>{{ x.Sub_Gene.upper() }}</td></span>
+        <center> <h3><b>Substrate: {{ x.Sub_Gene.upper() }} </b></h3> <center>
       </div>
   <!-- Define Tabs -->
   <div class="tabset">
     <!-- Tab 1 -->
     <input type="radio" name="tabset" id="tab1" aria-controls="info" checked>
-    <label for="tab1">General Information</label>
+    <label for="tab1">{{ x.Substrate_Symbol.upper() }} Information</label>
     <!-- Tab 2 -->
     <input type="radio" name="tabset" id="tab2" aria-controls="annot">
     <label for="tab2">{{ x.Substrate_Symbol.upper() }} Features</label>
+<<<<<<< HEAD
     <!--&lt;!&ndash; Tab 3 &ndash;&gt;-->
     <!--<input type="radio" name="tabset" id="tab3" aria-controls="Genome">-->
     <!--<label for="tab3">Genome Browser</label>-->
+=======
+    <!-- Tab 3 -->
+    <input type="radio" name="tabset" id="tab3" aria-controls="annot">
+    <label for="tab2">Genome Browser</label>
+>>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
   
   <!-- Define Tab Panels -->
     <div class="tab-panels">
       <!-- General Information  tab panels -->
       <section id="info" class="tab-panel">
-          <h4 class="w3-border-bottom w3-border-light-red w3-padding-12 w3-light-cyan"> General Information </h4>
-
+          <h4 class="w3-border-bottom w3-border-light-red w3-padding-12 w3-light-cyan">{{ x.Substrate_Symbol.upper() }} Information</h4>
 
           <br>
-          <h5> Substrate: <span class="w3-opacity">{{ x.Sub_Gene.upper() }}</span></h5>
-          <h5> Gene: <span class="w3-opacity">{{ x.Substrate_Symbol.upper() }}</span></h5>
+          <h5> Substrate: <span class="w3-opacity">{{ x.Substrate_Symbol.upper() }}</span></h5>
+          <h5> Gene: <span class="w3-opacity">{{ x.Sub_Gene.upper() }}</span></h5>
           <h5> Phosphorylator : <span class="w3-opacity">{{ x.Kinase.upper() }}</span></h5>
-          <h5> Substrate Accession Number: <span class="w3-opacity">{{ x.Sub_ACC_ID }}</span></h5>
+          <h5> Substrate Accession Number: <span class="w3-opacity"><td><a href="https://www.uniprot.org/uniprot/{{x.Sub_ACC_ID}}">{{ x.Sub_ACC_ID}}</a></td></span>
           <h5> Modified Residue: <span class="w3-opacity">{{ x.Sub_Mod_Rsd }}</span></h5>
           <h5> Amino Acid Site of Phosphorylation: <span class="w3-opacity">{{ x.Site_AA }}</span></h5>
           <h5> Substrate Domain: <span class="w3-opacity">{{ x.Sub_Domain }}</span></h5>
           <h5> Chromosome Number: <span class="w3-opacity">{{ x.Chromosome }}</span></h5> 
+<<<<<<< HEAD
           <h5> Chrosome Region: <span class="w3-opacity">{{ x.Leg }}</span></h5>
 
           <div id="gviewer1" class="SeqViewerApp" data-autoload>
@@ -55,18 +67,23 @@
                 </div>
 
       </section>
+=======
+          <h5> Chromosome Region: <span class="w3-opacity">{{ x.Leg }}</span></h5> 
+        </div>
+>>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
 
-      <!-- Substrate Features -->
-      <section id="annot" class="tab-panel">
-        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-teal">{{ x.Substrate_Symbol.upper() }} Features </h4>
         <!-- Provista Script-->
-        <div id="my_graph" style="width:1024px; margin:auto;"></div>
-            <center><script>
+        <section id="annot" class="tab-panel">
+          <h4 class="w3-border-bottom w3-border-light-grey w3-padding-12 w3-light-grey">{{ x.Substrate_Symbol.upper() }} Features </h4>
+            <center>
+              <div id="yourDiv" style="width:1024px; margin:auto;"></div>
+            </center>
+            <script>
               window.onload = function () {
-                  var my_graph = document.getElementById('my_graph');
+                  var  yourDiv= document.getElementById('yourDiv');
                   var ProtVista = require('ProtVista');
                   var instance = new ProtVista({
-                      el: my_graph,
+                      el: yourDiv,
                       uniprotacc: '{{ x.Sub_ACC_ID }}'
 
                       //These categories will **not** be rendered.

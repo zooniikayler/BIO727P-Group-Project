@@ -2,6 +2,24 @@
 {% block content %}
 
 
+<title>Inhibitor Search</title>
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+
+<br>
+    <center>
+        <header class="w3-center w3-margin-bottom">
+            <p>Search for Kinase Inhibitors via it's Inhibitor International Nonproprietary Name (INN) or ChEMBL ID.</p>
+        {% with messages = get_flashed_messages() %}
+        <!-- if there is an error message then output this message -->
+            {% if messages %}
+                <l class=flashes>
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+                </l>
+    </center>
+  {% endif %}
+{% endwith %}
 
 <!-- search Function -->
 {% from "helperforms.html" import render_field %}
@@ -15,7 +33,7 @@
             <br>
             <br>
 
-            {{ form.search(class="searchTerm", placeholder="Type in the Inhibitor Name or ChEMBL ID")}}
+            {{ form.search(class="searchTerm", placeholder="Type in the Inhibitor International Nonproprietary Name (INN) or ChEMBL ID")}}
             <p></p>
             <br>
             <br>

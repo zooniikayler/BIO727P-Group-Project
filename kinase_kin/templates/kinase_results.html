@@ -50,14 +50,18 @@
     <label for="tab4">{{ x.Kinase_Symbol.upper() }} Substrates</label>
       <!-- Genome Browser Tab -->
     <input type="radio" name="tabset" id="tab5" aria-controls="genome">
+<<<<<<< HEAD
     <label for="tab5">{{ x.Kinase_Symbol.upper() }} Genome Browser</label>
+=======
+    <label for="genome">{{ x.Kinase_Symbol.upper() }} Genome Browser</label>
+>>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
 
 
 
     <!-- Define tab area -->
     <div class="tab-panels">
       <!-- General Information -->
-      <section id="Information" class="tab-panel">
+      <section id="info" class="tab-panel">
         <h4 class="w3-border-bottom w3-border-light-red w3-padding-12 w3-light-cayan"></h4>
         
         <!-- figure for Kinase structure-->
@@ -74,7 +78,7 @@
         <h5> Gene: <span class="w3-opacity"><td>{{ x.gene_name }}</td></span>
         <h5> Synonyms: <span class="w3-opacity"><td>{{ x. Synonym }}</td></span>
         <h5> Genomic Location: <span class="w3-opacity"><td>{{ x.Genomic_location }}</td></span>
-        <h5> Uniprot Accession Number: <span class="w3-opacity"><td>{{ x.Uniprot_Accession_Number }}</td></span>
+        <h5> Uniprot Accession Number : <span class="w3-opacity"><td><a href="https://www.uniprot.org/uniprot/{{x.Uniprot_Accession_Number }}">{{ x.Uniprot_Accession_Number}}</a></td></span>
         <br>
         <br>
         <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-cyan"></h4>
@@ -88,10 +92,15 @@
 
       </section>
 
-      <!-- Kinase Annotation -->
+      <!-- Kinase Features-->
       <section id="annot" class="tab-panel">
+<<<<<<< HEAD
         <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-teal">{{ x.Kinase_Symbol.upper() }} Kinase Annotation </h4>
 
+=======
+        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-teal">{{ x.Kinase_Symbol.upper() }} Features </h4>
+        <!-- Provista javascript -->
+>>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
         <div id="yourDiv" style="width:1024px; margin:auto;"></div>
         <center><script>
             window.onload = function() {
@@ -134,20 +143,20 @@
   	      <table>
 
   	      <tr>
+  	        <td><b>NAME</td>
   	        <td><b>ChEMBL ID</td>
-  	        <td><b>Name</td>
   	      </tr>
   	      <tr>
   	         {% for x in inhibitor_results  %}
+             <td><a href="/Inhibitors/{{x.InhibitorInfo.Inhibitor_Name}}">{{ x.InhibitorInfo.Inhibitor_Name}}</a></td>
+             <td>{{ x.InhibitorInfo.CHEMBLID}}</td>
 
-  	         <td><a href="{{ url_for('inhibitor_results', chembl = x.InhibitorInfo.CHEMBLID) }}">{{ x.InhibitorInfo.Inhibitor_Name }}</a>
-  	         <td>{{ x.InhibitorInfo.CHEMBLID }}</td>
   	      </tr>
   	      {% endfor %}
   	      </table>
   	  	{% else %}
   	  	<!-- if there are no results render the following: -->
-  	    	<center> No known GSK kinase inhibitors found </center>
+  	    	<center> PDKIB kinase inhibitor not found </center>
         {% endif %}
     	</section>
 
@@ -177,7 +186,7 @@
   		{% for x in substrate_results %}
   		<!-- Internal hyperlink -->
   		  <table>
-  		     <td><a href="{{ url_for('substrate_results', Substrate = x.SubstrateInfo.Substrate_Symbol) }}">{{ x.SubstrateInfo.Substrate_Symbol }}</a>
+          <td><a href="/Substrates/{{x.SubstrateInfo.Substrate_Symbol}}">{{ x.SubstrateInfo.Substrate_Symbol }}</a></td>
   		  </table>
   		</tr>
   		{% endfor %}
