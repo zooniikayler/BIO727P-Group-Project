@@ -1,4 +1,4 @@
-from kinase_kin.app import db
+from app import db
 
 class KinaseInfo(db.Model):
     """"""

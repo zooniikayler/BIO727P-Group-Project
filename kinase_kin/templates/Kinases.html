@@ -1,45 +1,55 @@
 {% extends "layout.html" %}
 {% block content %}
 <title>Kinase Search</title>
-    <link rel="stylesheet" type="text/css" href="static/main.css">
-
-<br>
-    <center>
-        <header class="w3-center w3-margin-bottom">
-            <p>Search for a Protein Kinase via it's Kinase Symbol or Uniprot Accession Number.</p>
-        {% with messages = get_flashed_messages() %}
-        <!-- if there is an error message then output this message -->
-            {% if messages %}
-                <l class=flashes>
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
-                </l>
-    </center>
-  {% endif %}
-{% endwith %}
-
-<!-- Search Function -->
-{% from "helperforms.html" import render_field %}
-<form method="POST">
-  <div class="search">
-    <div class="wrap">
-
-      <!-- drop down menu -->
-      {{ form.select(class_="searchTerm")}}
-      <br>
+    
+<body>
+  <div class="w3-card-4 w3-margin w3-white" style="color: #000;">
+      <div class="w3-container">
+  
       <br>
 
-      <!-- search bar -->
-      {{ form.search(class_="searchTerm", placeholder="Type in the Kinase Name or Uniprot Accession Number") }}
-      <p></p>
+      <center>
+          <header class="w3-center w3-margin-bottom" style="color: #000;">
+              <p>Search for a Protein Kinase via it's Kinase Symbol or Uniprot Accession Number.</p>
+          {% with messages = get_flashed_messages() %}
+          <!-- if there is an error message then output this message -->
+              {% if messages %}
+                  <l class=flashes>
+                  {% for message in messages %}
+                      {{ message }}
+                  {% endfor %}
+                  </l>
+      </center>
+        {% endif %}
+      {% endwith %}
+
+      <!-- Search Function -->
+      {% from "helperforms.html" import render_field %}
+      <form method="POST">
+        <div class="search">
+          <div class="wrap">
+
+            <!-- drop down menu -->
+            {{ form.select(class_="searchTerm")}}
+            <br>
+            <br>
+
+            <!-- search bar -->
+            {{ form.search(class_="searchTerm", placeholder="Type in the Kinase Name or Uniprot Accession Number") }}
+            <p></p>
+            <br>
+            <br>
+          <input type=submit value=Search class=searchButton>
+        </div>
+       </div>
+      </form>
       <br>
       <br>
-    <input type=submit value=Search class=searchButton>
+    </div>
   </div>
- </div>
-</form>
-<br>
-<br>
+
+
+
 
 {% endblock content %}
+

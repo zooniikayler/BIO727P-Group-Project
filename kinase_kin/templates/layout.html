@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="href="https://www.w3schools.com/w3css/4/w3.css">
+
 
     {% if title %}
         <title> {{ title }}</title>
@@ -30,58 +30,50 @@
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
-  <link href="static/main.css" rel="stylesheet" > 
+  
 
     
-  </head>
+</head>
 
 
 
-  <body>
+<body>
   <!-- NAVIGATION -->
-    <nav class="navbar  navbar-expand navbar-light bg-light sticky-top-top">
-    <div class="container">
-      <a class="nav-brand" href="/Home"></a">
-      <img src="/static/img/bootstrap-solid.png" width="50" height="50" alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/Home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Kinases">Kinases</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Substrates">Substrates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Inhibitors">Inhibitors</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/About_us">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Data_Analysis">Data Analysis</a>
-          </li>
-        </ul>
-    </div>
-    </nav>
+  <header class="site-header">
+      <nav class="navbar  navbar-expand navbar-light sticky-top-top" style="background-color: #008080;" >
+        <div class="container">
+          <a class="navbar-brand mr-4" style="color: #fff;" href="/">Kinase Kinpendium</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" style="color: #fff;" href="/Kinases">Kinases</a>
+              <a class="nav-item nav-link" style="color: #fff;" href="/Substrates">Substrates</a>
+              <a class="nav-item nav-link" style="color: #fff;" href="/Inhibitors">Inhibitors</a>
+              <a class="nav-item nav-link" style="color: #fff;" href="/Data_Analysis">Data Analysis</a>
+              <a class="nav-item nav-link" style="color: #fff;" href="/About_us">About Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
 
 
 
 
-  </body>
+
 {% block content %} 
 {% endblock %}
-  </html>
+
 <!-- End Page Content -->
 
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px; color: #73ADE3;" >
+    <h4 class="w3-medium" style="text-align: center;">A QMUL MSc Bioinformatics Project </h4>
+  </footer>
+</body>
+</html>
 
-<!-- Footer -->
-<!-- <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
-  <p class="w3-medium">A QMUL MSc Bioinformatics Project </p>
-</footer> -->
