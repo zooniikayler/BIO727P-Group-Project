@@ -8,6 +8,8 @@
 <title>Results Substrates</title>
 <head>
     <script src="http://ebi-uniprot.github.io/CDN/protvista/protvista.js"></script>
+    <script type=”text/javascript” src=”http://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js”></script>
+
     <link href="http://ebi-uniprot.github.io/CDN/protvista/main.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/static/tabs.css">
 
@@ -42,11 +44,11 @@
     <input type="radio" name="tabset" id="tab2" aria-controls="annot">
     <label for="tab2">Genome Browser</label>
 
-        <!-- Define tab area -->
+
+  <!-- Define Tab Panels -->
     <div class="tab-panels">
       <!-- General Information -->
       <section id="info" class="tab-panel">
-
        <table class="table table-hover">
                <tr>
                 <th id="sub">Substrate</th>
@@ -67,7 +69,7 @@
                 <td >{{ x.Chromosome }}</td>
                 <td>{{ x.Leg }}</td>
                 </tr>
-    {% endfor %}
+            {% endfor %}
 
         </table>
       </section>

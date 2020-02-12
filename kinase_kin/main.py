@@ -11,9 +11,6 @@ from wtforms import Form, StringField, SelectField, validators, SubmitField, Fil
 from wtforms.validators import DataRequired
 from flask_wtf.file import FileRequired, FileField, FileAllowed
 
-
-
-
 class FileForm(Form):
     file = FileField(validators=[FileRequired()])
     submit = SubmitField('Submit')
@@ -129,7 +126,7 @@ def About_us():
 ############################  Data Analysis   #########################################################
 
 
-UPLOAD_FOLDER = '/Users/zooniikayler/PycharmProjects/BIO727P-Group-Project/kinase_kin/Data_Upload'
+UPLOAD_FOLDER = 'cache'
 
 ALLOWED_EXTENSIONS= {'csv', 'tsv'}
 
@@ -143,7 +140,7 @@ def allowed_file(filename):
 
 @app.route('/Data_Analysis', methods = ['GET', 'POST'])
 def Upload():
-	form=FileForm()
+	form = FileForm()
 	if request.method == 'POST':
 		if request.files:
 			file=request.files['file']
@@ -151,7 +148,6 @@ def Upload():
 				flash('No file selected')
 				return redirect(request.url)
 			filename = secure_filename(file.filename)
-			#filename = np.random()
 			if file and allowed_file(file.filename):
 				if not os.path.exists(UPLOAD_FOLDER):
 					os.makedirs(UPLOAD_FOLDER)
@@ -162,71 +158,70 @@ def Upload():
 
 @app.route('/data_results')
 def results():
+	print("getting results page")
+	# passing uploaded file to the results function
 	filename = request.args.get('filename')
-	if check_format(os.path.join(app.config['UPLOAD_FOLDER'], filename)) == 1:
+	if get_format(os.path.join(app.config['UPLOAD_FOLDER'], filename)) == 1:
 		return redirect(url_for('format_error'))
-
-	df= create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+	print("hi")
+	# creating/cleaning a dataframe from database and userdata
+	df = create_df_user(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 	x_axis = list(set(df.Kinase))  # getting unique set of kinases from uploaded file
-	#y_axis_mean = kinase_barplot_x(df)  # getting mean score for each kinase
 
-	y_value = lambda y: mean_score(y, dataset=df)
-	y_axis_mean = [y_value(x) for x in x_axis]
+	# calculating mean score for all values of y without using a for-loop
+	y_value_mean = lambda y: mean_score(y, dataset=df)
+	y_value_delta = lambda y: delta_score(0.05, y, dataset=df)
+	y_axis_mean = [y_value_mean(x) for x in x_axis]
+	y_axis_delta = [y_value_delta(x) for x in x_axis]
 
-	#y_axis_delta = kinase_delta(df)
-
-	list_obj = []  # creating dictionary of kinases/activity for mean score
+	list_obj = []  # creating dictionary of kinases/activity for mean score without kinases of score 0
 	for a in range(len(x_axis)):
 		obj = {
 			"x": x_axis[a],
 			"y": y_axis_mean[a],
 		}
-		list_obj.append(obj)
+		if obj["y"] != 0:
+			list_obj.append(obj)
 
+	list_obj_delta = []  # creating dictionary of kinases/activity for delta score without kinases of score 0
+	for a in range(len(x_axis)):
+		obj = {
+			"x": x_axis[a],
+			"y": y_axis_delta[a],
+		}
+		if obj["y"] != 0:
+			list_obj_delta.append(obj)
 
-	#list_obj_delta = []  # creating dictionary of kinases/activity for delta score
-	#for a in range(len(x_axis)):
-	#	obj = {
-	#		"x": x_axis[a],
-	#		"y": y_axis_delta[a],
-	#	}
-	#	list_obj_delta.append(obj)
-
-
-
-	sorted_list_mean = sorted(list_obj, key=lambda k: k[
-		'y'])  # sorting dictionary of kinases/activity so they appear in ascending order
-
-	volcano_x = list(df.FC_log2)  # extracting fold change data from the uploaded file
-	volcano_y = list(df.pval5)  # extracting pvalues from the uploaded file
+	# sorting lists of dictionary objects by key so they appear in ascending order
+	sorted_list_mean = sorted(list_obj, key=lambda k: k['y'])
+	sorted_list_delta = sorted(list_obj_delta, key=lambda k: k['y'])
 
 	barplot_x = [item['x'] for item in sorted_list_mean]  # extracting x from dictionary
 	barplot_y = [item['y'] for item in sorted_list_mean]  # extracting y from dictionary
 	colours = [i for i in range(len(x_axis))]  # creating a color index for each kinase
 
+	# getting bottom and top ten lists of greatest fold change
 	tten_x1 = barplot_x[:10]
 	tten_x2 = barplot_x[-10:]
 	tten_y1 = barplot_y[:10]
 	tten_y2 = barplot_y[-10:]
 
+	# concatenating bottom and top ten lists of greatest fold change kinases
 	tten_x = tten_x1 + tten_x2
 	tten_y = tten_y1 + tten_y2
 
+	delta_x = [item['x'] for item in sorted_list_delta]  # extracting x from dictionary
+	delta_y = [item['y'] for item in sorted_list_delta]  # extracting y from dictionary
 
-	#list_obj_delta2 = {x:y for x, y in list_obj_delta.items() if y != 0} #removing values of 0
-
-	#sorted_list_delta = sorted(list_obj_delta2, key=lambda k: k[
-	#	'y'])  # sorting dictionary of kinases/activity so they appear in ascending order
-
-	#delta_x = [item['x'] for item in sorted_list_delta]  # extracting x from dictionary
-	#delta_y = [item['y'] for item in sorted_list_delta]  # extracting y from dictionary
-
-	#delta_x = delta_x[]
+	# volcano plot
+	volcano_x = list(df.FC_log2)  # extracting fold change data from the uploaded file
+	volcano_y = list(df.pval5)  # extracting pvalues from the uploaded file
+	volcano_range = max(volcano_y)
+	labels = list(df.Kinase)
 
 	return render_template("data_results.html", y_axis=barplot_y, x_axis=barplot_x, colours=colours,  volcano_x=volcano_x,
-						volcano_y=volcano_y, tten_x=tten_x, tten_y=tten_y)
+						volcano_y=volcano_y, tten_x=tten_x, tten_y=tten_y, delta_y=delta_y, delta_x=delta_x, labels=labels, y_range=volcano_range)
 
-#arguments are passing the variables from python for use in html script
 
 ############################  Error Message   ########################################################
 
@@ -307,8 +302,15 @@ def substrate_results(search):
 def substrateprofile(Substrate):
 	qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(Substrate))
 	results = qry.all()
-
+	#chromosome = qry.Chromosome()
+	#source_url = 'http://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr' + chromosome + '%3A' + view1 + '%2D' + view2 + '&hgsid=235662278_hbN0IQVHHXUisaAA0FwbcsOHxqqQ'
 	return render_template('Substrate_results.html', results = results)
+
+
+@app.route('/genome_browser')
+def genome_browser():
+	return render_template('genome_browser.html')
+
 
 ######################################################################################################
 if __name__=='__main__':

@@ -2,24 +2,21 @@
 {% block content %}
 
     <title>Upload new File</title>
-    <body>
-    	
-
         
         <br>
         <center><h1 style="color: #000;">Data Analysis</h1>
         <br>
         <br>
         <header class="w3-center w3-margin-bottom" style="color: #000;">
-            <h2>Instructions to upload a new file!!</h2>
-    </center>
-    <br>
-    <br>
-   <center>
-    <form method=post enctype=multipart/form-data>
-      <input type=file name=file>
-      <input type=submit value=Analyse>
-    </form> </center>
+          <form method=post enctype=multipart/form-data>
+            <input type=file name=file>
+            <input type=submit value=Analyse>
+          </form>
+          <br>
+          <p> This tool analyzes phosphoproteomic data. To see a relative estimate of the activity of the kinases known to phosphorylate the substrates in your dataset, please upload a file containing 7 columns (Substrate, control_mean, inhibitor_mean, fold change, p-value, control_CV, and inhibitor_CV. This analysis can only handle one inhibitor at a time.  </p>
+        </center>
+
+
 
 {% endblock content %}
 
