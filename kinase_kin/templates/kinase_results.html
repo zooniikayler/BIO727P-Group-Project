@@ -9,7 +9,7 @@
     <script src="http://ebi-uniprot.github.io/CDN/protvista/protvista.js"></script>
     <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script></head><!-- protvista script source -->
     <link href="http://ebi-uniprot.github.io/CDN/protvista/css/main.css" rel="stylesheet"/> <!-- protvista CSS -->
-    <link rel="stylesheet" type="text/css" href="/static/tabs.css?version=3423"> <!-- main CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/tabs.css"> <!-- main CSS -->
 
     <!-- protVista Meta Tags -->
     <meta charset="utf-8">
@@ -18,15 +18,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
-    <!-- Place favicon.ico in the root directory -->
-<!-- </head> -->
 
 <!-- Loop through results -->
 {% if results %}
   {% for x in results %} 
 
-  <div class="w3-card-4 w3-margin w3-light-blue">
+  <div class="w3-card-4 w3-margin w3-white" style="color: #000;">
       <div class="w3-container">
         <br>
 
@@ -48,13 +45,7 @@
     <!-- Substrates Tab -->
     <input type="radio" name="tabset" id="tab4" aria-controls="subs">
     <label for="tab4">{{ x.Kinase_Symbol.upper() }} Substrates</label>
-      <!-- Genome Browser Tab -->
-    <input type="radio" name="tabset" id="tab5" aria-controls="genome">
-<<<<<<< HEAD
-    <label for="tab5">{{ x.Kinase_Symbol.upper() }} Genome Browser</label>
-=======
-    <label for="genome">{{ x.Kinase_Symbol.upper() }} Genome Browser</label>
->>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
+
 
 
 
@@ -94,13 +85,6 @@
 
       <!-- Kinase Features-->
       <section id="annot" class="tab-panel">
-<<<<<<< HEAD
-        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-teal">{{ x.Kinase_Symbol.upper() }} Kinase Annotation </h4>
-
-=======
-        <h4 class="w3-border-bottom w3-border-blue-gray w3-padding-12 w3-light-teal">{{ x.Kinase_Symbol.upper() }} Features </h4>
-        <!-- Provista javascript -->
->>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
         <div id="yourDiv" style="width:1024px; margin:auto;"></div>
         <center><script>
             window.onload = function() {

@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+
+
 <doctype html>
 <title>Results Substrates</title>
 <head>
@@ -18,94 +21,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-{% if results %}
-  {% for x in results %}
-  <div class="w3-card-4 w3-margin w3-white">
-      <div class="w3-container">
+  </head>
+
+
+
+  <body>
+
+
+
+  <div class="w3-card-4 w3-margin w3-white" style="color: #000;">
+      <div class="w3-container" >
         <br>
 
-        <center> <h3><b>Substrate: {{ x.Sub_Gene.upper() }} </b></h3> <center>
+        <center> <h3><b></b></h3> <center>
       </div>
-  <!-- Define Tabs -->
+   <!-- Define tabs -->
   <div class="tabset">
-    <!-- Tab 1 -->
-    <input type="radio" name="tabset" id="tab1" aria-controls="info" checked>
-    <label for="tab1">{{ x.Substrate_Symbol.upper() }} Information</label>
-    <!-- Tab 2 -->
+    <!-- General Info -->
+    <input type="radio" name="tabset" id="tab1" style="color: #06c;" aria-controls="info" checked>
+    <label for="tab1">General Information</label>
+    <!-- Genome Browser -->
     <input type="radio" name="tabset" id="tab2" aria-controls="annot">
-    <label for="tab2">{{ x.Substrate_Symbol.upper() }} Features</label>
-<<<<<<< HEAD
-    <!--&lt;!&ndash; Tab 3 &ndash;&gt;-->
-    <!--<input type="radio" name="tabset" id="tab3" aria-controls="Genome">-->
-    <!--<label for="tab3">Genome Browser</label>-->
-=======
-    <!-- Tab 3 -->
-    <input type="radio" name="tabset" id="tab3" aria-controls="annot">
     <label for="tab2">Genome Browser</label>
->>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
-  
+
+
   <!-- Define Tab Panels -->
     <div class="tab-panels">
-      <!-- General Information  tab panels -->
+      <!-- General Information -->
       <section id="info" class="tab-panel">
-          <h4 class="w3-border-bottom w3-border-light-red w3-padding-12 w3-light-cyan">{{ x.Substrate_Symbol.upper() }} Information</h4>
+       <table class="table table-hover">
+               <tr>
+                <th id="sub">Substrate</th>
+                <th id="phos" >Accession Number </th>
+                <th >Phosphorylator</th>
+                <th >Modified Residue</th>
+                <th>Site of Phosphorylation</th>
+                <th>Chromosome Number</th>
+                <th>Chromosome Region</th>
+               </tr>
 
-          <br>
-          <h5> Substrate: <span class="w3-opacity">{{ x.Substrate_Symbol.upper() }}</span></h5>
-          <h5> Gene: <span class="w3-opacity">{{ x.Sub_Gene.upper() }}</span></h5>
-          <h5> Phosphorylator : <span class="w3-opacity">{{ x.Kinase.upper() }}</span></h5>
-          <h5> Substrate Accession Number: <span class="w3-opacity"><td><a href="https://www.uniprot.org/uniprot/{{x.Sub_ACC_ID}}">{{ x.Sub_ACC_ID}}</a></td></span>
-          <h5> Modified Residue: <span class="w3-opacity">{{ x.Sub_Mod_Rsd }}</span></h5>
-          <h5> Amino Acid Site of Phosphorylation: <span class="w3-opacity">{{ x.Site_AA }}</span></h5>
-          <h5> Substrate Domain: <span class="w3-opacity">{{ x.Sub_Domain }}</span></h5>
-          <h5> Chromosome Number: <span class="w3-opacity">{{ x.Chromosome }}</span></h5> 
-<<<<<<< HEAD
-          <h5> Chrosome Region: <span class="w3-opacity">{{ x.Leg }}</span></h5>
+            {% for x in results %}
+                <td >{{ x.Substrate_Symbol.upper()  }}</td>
+                <td><a href="https://www.uniprot.org/uniprot/{{x.Sub_ACC_ID  }}">{{ x.Sub_ACC_ID }}</a></td>
+                <td >{{ x.Kinase.upper() }}</td>
+                <td >{{ x.Sub_Mod_Rsd }}</td>
+                <td >{{x.Site_AA }}</td>
+                <td >{{ x.Chromosome }}</td>
+                <td>{{ x.Leg }}</td>
+                </tr>
+            {% endfor %}
 
-          <div id="gviewer1" class="SeqViewerApp" data-autoload>
-            <a href="?embedded=true&id=NC_000012.12&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD649220238,annots:Sequence,ShowLabel:false,ColorGaps:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD3194982005,annots:Unnamed,Options:ShowAll,CDSProductFeats:false,NtRuler:true,AaRuler:true,HighlightMode:2,ShowLabel:true,shown:true,order:784][key:alignment_track,name:Alignments---NG Alignments,display_name:NG Alignments,id:STD4206364812,annots:NG Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:true,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:785]&assm_context=GCF_000001405.35&mk=9095637|Ribosomal%20slippage|008000&v=9095582:9095714&c=666699&select=null&slim=0&appname=kinase_kin"></a>
-                </div>
-
-      </section>
-=======
-          <h5> Chromosome Region: <span class="w3-opacity">{{ x.Leg }}</span></h5> 
-        </div>
->>>>>>> 44b43f6e0d7e370d51229dd13ffb593ffbeb4565
-
-        <!-- Provista Script-->
-        <section id="annot" class="tab-panel">
-          <h4 class="w3-border-bottom w3-border-light-grey w3-padding-12 w3-light-grey">{{ x.Substrate_Symbol.upper() }} Features </h4>
-            <center>
-              <div id="yourDiv" style="width:1024px; margin:auto;"></div>
-            </center>
-            <script>
-              window.onload = function () {
-                  var  yourDiv= document.getElementById('yourDiv');
-                  var ProtVista = require('ProtVista');
-                  var instance = new ProtVista({
-                      el: yourDiv,
-                      uniprotacc: '{{ x.Sub_ACC_ID }}'
-
-                      //These categories will **not** be rendered.
-                      exclusions: ['SEQUENCE_INFORMATION', 'STRUCTURAL', 'TOPOLOGY', 'MUTAGENESIS', 'MOLECULE_PROCESSING']
-                  });
-              }
-        </script></center>
+        </table>
       </section>
 
-        <!-- Genome Browser -->
-        <section id="Genome" class="tab-panel">
+      <!-- Genome Browser -->
+      <section id="annot" class="tab-panel">
+        <center>
+          <header class="w3-center w3-margin-bottom" style="color: #000;">
+              <p>To visualise the neighbouring genes and sequences surrounding a phosphosite, please search for your phosphorite of interest in the UCSC search bar by its accession number or substrate name. From the drop down suggestions make sure to click on the "human" version of your phosphosite of interest. Click "Go". To see individual phosphosites, hover your cursor over the modified residue track markings. </p>
+              <br>
+              <iframe src="https://genome-euro.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1%3A11102837%2D11267747&hgsid=235684767_bxBepybLAlvefdgPeSdsNaGQZDN4" width="1430" height="340" frameborder="0"></iframe>
+              <br>
+
+      </section>
 
 
 
-    </div>
-  </div>
-  {% else %}
-  <br>
-    <center> No Results - Please try again! </center>
-    {% endfor %}
-  {% endif %}
-
-  <div class="w3-row"></div>
+         
 
 {% endblock %}

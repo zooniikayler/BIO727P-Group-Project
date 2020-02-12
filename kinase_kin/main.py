@@ -5,7 +5,6 @@ import numpy as np
 from kinase_kin.db_creator import init_db, db_session
 from kinase_kin.models import KinaseInfo,SubstrateInfo,InhibitorInfo,InhibitorRef
 
-#from forms import FileRequired
 import os
 from werkzeug.utils import secure_filename
 from wtforms import Form, StringField, SelectField, validators, SubmitField, FileField
@@ -23,7 +22,7 @@ class KinaseSearchForm(Form):
 
 
 class InhibitorSearchForm(Form):
-	choices = [('Inhibitor International Nonproprietary Name (INN)', 'Inhibitor International Nonproprietary Name (INN)'), ('ChEMBL ID', 'ChEMBL ID')] # Define choices for the kinase search
+	choices = [('Inhibitor International Nonproprietary Name (INN)', 'Inhibitor International Nonproprietary Name (INN)')] # Define choices for the kinase search
 	select = SelectField('Search for Inhibitor:', choices=choices) 
 	search = StringField('Search',validators=[DataRequired()])
 
@@ -44,12 +43,12 @@ init_db() #initialise the db
 def Home():
 	return render_template('Home.html')
 
+
 ############################  Kinases   ##########################################################
 
 @app.route('/Kinases', methods=['GET', 'POST'])
 def Kinases():
 	search = KinaseSearchForm(request.form) #request search from & run request
-	#may need to try submit as difference in forms
 	if request.method== 'POST': #if user posting search string to get info from db
 		return kinase_results(search) #Run kinase search function
 	return	render_template('Kinases.html', form=search)
@@ -59,7 +58,6 @@ def Kinases():
 def kinase_results(search):
 	results = []
 	search_string = search.data['search'] #when given user input data
-	#search_string = search_string.upper()
 
 	if search_string:
 		if search.data['select']=='Kinase Name': #check if kinase symbol was selected
@@ -95,7 +93,7 @@ def kinase_results(search):
 			results = qry.all()
 
 	if not results:
-		flash('No results found!') #flash error message
+		flash('No results found!', "error") #flash error message
 		return redirect('/Kinases') #return back to kinase search
 
 
@@ -249,30 +247,14 @@ def inhibitor_results(search):
 	search_string = search.data['search']
 
 	if search_string:
-		if search.data['select'] == 'CHEMBL ID':
-			# qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.CHEMBLID.contains(search_string))
-			# results = qry.all()
-
-			qry = db_session.query(InhibitorRef, InhibitorInfo)\
-					.filter(InhibitorRef.CHEMBL_ID.ilike(search_string))\
-					.join(InhibitorInfo, InhibitorInfo.CHEMBLID == InhibitorRef.CHEMBL_ID) #run join query to find all inhibitors with the corresponding kinase symbol target
-			results = qry.all()
-
-		elif search.data['select'] == 'Inhibitor International Nonproprietary Name (INN)':
-			# qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.contains(search_string))
-			# results = qry.all()
-
-			qry = db_session.query(InhibitorRef, InhibitorInfo)\
-					.filter(InhibitorInfo.Inhibitor_Name.ilike(search_string))\
-					.join(InhibitorRef, InhibitorRef.CHEMBL_ID == InhibitorInfo.CHEMBLID) #run join query to find all inhibitors with the corresponding kinase symbol target
+		if search.data['select'] == 'Inhibitor International Nonproprietary Name (INN)':
+			qry = db_session.query(InhibitorInfo).filter(InhibitorInfo.Inhibitor_Name.contains(search_string))
 			results = qry.all()
 
 		else:
 			qry = db_session.query(InhibitorInfo)
 			results = qry.all()
-	print("-----------------------")
-	for i in results:
-		print(i)
+
 	if not results:
 		flash('No results found. Please search again')
 		return redirect ('/Inhibitors')
@@ -302,7 +284,7 @@ def substrate_results(search):
 
 	if search_string:
 		if search.data['select'] == 'Substrate':
-			qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.contains(search))
+			qry = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.contains(search_string))
 			results = qry.all()
 		else:
 			qry = db_session.query(SubstrateInfo)
@@ -314,12 +296,6 @@ def substrate_results(search):
 	else:
 		return render_template('substrate_results.html', results=results)
 
-
-	# sub_obj = db_session.query(SubstrateInfo).filter(SubstrateInfo.Substrate_Symbol.ilike(search)).first()
-
-	# if sub_obj:
-	# 	results['Substrate_Name'] = sub_obj.Substrate_Symbol
-	# return render_template('substrate_results.html', results=results)
 
 
 @app.route('/Substrates/<Substrate>')

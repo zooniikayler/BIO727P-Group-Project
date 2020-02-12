@@ -1,90 +1,112 @@
 {% extends "layout.html" %}
 {% block content %}
-<title>Kinase Search</title>
-    <link rel="stylesheet" type="text/css" href="static/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
 
-<!-- <div class="w3-content w3-padding" style="max-width:1564px"> -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <header class="masthead text-white text-center">
-  <img src="static/img/molecules.png" alt="">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-9 mx-auto">
-        <h1 class="mb-5">Kinase Kinpendium</h1>
-      </div>
-      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-        <h4>Research with Ease</h4>
-      </div>
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="static/img/image.png" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h1>Research with Ease</h1>
+      <h3>Functional Human Kinase Search Engine with functional annotations to provide background information about Human Kinases</h3>   
     </div>
   </div>
-  </header>
-
-
-
-
-  <!-- Icons Grid -->
-  <section class="features-icons bg-light text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
-            </div>
-            <h3>Research Kinases</h3>
-            <p class="lead mb-0">Functional Human Kinase Search Engine with functional annotations to provide background information about Human Kinases</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
-            </div>
-            <h3>Research Inhibitors & Substrate Phosphorylation Sites</h3>
-            <p class="lead mb-0">Functional Human Kinase Search Engine with functional annotations to provide background information about Human Kinases</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
-            </div>
-            <h3>Data Analysis</h3>
-            <p class="lead mb-0">Upload quantitative phosphoproteomics data & identify the most reactive Kinases</p>
-          </div>
-        </div>
-      </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="static/img/image.png" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h1>Research Inhibitors & Substrate Phosphorylation Sites</h1>
+      <h3>Functional Human Kinase Search Engine with functional annotations to provide background information about Human Kinases<h3>    
     </div>
-  </section>
-
-<!--
-  <div class="w3-container w3-padding-32" id="about">
-    <i></i>
-    <center><h3 class="w3-border-bottom w3-border-light-blue w3-padding-16">Research with Ease</h3></center>
-    <font size="4"> Kinase Kinpendium is a web application that allowes researches to access background information on all known Human Kinases, their phosphorylation sites, the inhibitors that work on them and upload sample data to be analysed. 
-    </font>
   </div>
-    <br>
-    <br>
-    <br>
-  <div class="w3-row-padding w3-light-blue">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <i class="fas fa-8x fa-desktop">Research Kinases </i>
-      <p>Functional Human Kinase Search Engine with functional annotations to provide background information about Human Kinases</p>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="static/img/image.png" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h1>Data Analysis</h1>
+      <h3>Upload quantitative phosphoproteomics data & identify the most reactive Kinases</h3>    
+    </div>
   </div>
 
-  <div class="w3-col l3 m6 w3-margin-bottom">
-      <i class="fab fa-8x fa-searchengin">Research Inhibitors & Substrate Phosphorylation Sites</i>
-      <p> Experience in web development and component integration </p>
+<!-- style="background-color: #008080;" -->
+    <!-- Info Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px; color: #008080; " id="band">
+    <h1 class="w3-wide">Kinase Kinpendium </h1>
+    <h2 class="w3-opacity">Research with Ease</h2>
+    <h3 class="w3-justify">Kinase Kinpendium is a web application that allowes researches to access background information on all known Human Kinases, their phosphorylation sites & the inhibitors that work on them. Users can also upload quantitative phosphoproteomics data to be analysed. Please see below for an idea of what functionality Kinase Kinpendium provides</h3>
   </div>
 
-  <div class="w3-col l3 m6 w3-margin-bottom">
-      <i class="far fa-8x fa-chart-bar">Data Analysis</i>
-      <p> Upload quantitative phosphoproteomics data & identify the most reactive Kinases  </p>
-  </div> -->
-  
+  <!-- Functions Container -->
+<div class="w3-row"><br>
+<div class="w3-quarter">
+  <h3 style="background-color:#008080; color: #fff;">Search Kinases</h3>
+  <p style="background-color:#008080; color: #fff;">Click Kinases tab on the top of any page to search Kinases by thier symbols or Uniprot Accession Numbers & get background information on their gene symbols, the families they belong to, cellular location & further annotation.</p>
 </div>
+<div class="w3-quarter">
+  <h3 style="background-color:#73ADE3; color: #fff;" >Search Kinase Inhibitors</h3>
+  <p style="background-color:#73ADE3; color: #fff;">Click on the Inhibitor tab on the top of any page to search Inhibnitors and find out about; their respective ChEMBL ID's, chemical structure, which kinases they are known to inhibit & other information
+
+  </p>
+</div>
+<div class="w3-quarter">
+  <h3 style="background-color:#008080; color: #fff;">Search Subsrates</h3>
+  <p style="background-color:#008080; color: #fff;">Click on the Substrates tab on the top of any page to search kinase substrates and find out; which Kinase phosphorylates them, browse genomic location, neighbouring sequences, modified residues & other information</p>
+</div>
+<div class="w3-quarter">
+  <h3 style="background-color:#73ADE3; color: #fff;">Upload Data</h3>
+  <p style="background-color:#73ADE3; color: #fff;">Click on the Data Analysis tab on the top of any page to upload quantitative phosphoproteomics data (be sure to follow upload instructions) to visualise the corresponding relative Kinase activity of your sample.</p>
+</div>
+</div>
+
+
+
+
+
+  
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
 {% endblock content %}
 
 

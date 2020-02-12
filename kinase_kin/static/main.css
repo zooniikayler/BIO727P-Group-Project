@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #060101;
+  color: #000;
   background: #fff ;
 }
 s
@@ -13,13 +13,12 @@ h4,
 h5,
 h6 {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  color: #1562B8
 }
 
 header.masthead {
   position: relative;
   background-color: #fff;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;

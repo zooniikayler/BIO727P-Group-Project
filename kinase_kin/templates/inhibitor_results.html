@@ -1,19 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<doctype html>
 <title> Inhibitor Search Results</title>
 <head>
-    <!-- link Stylesheets for the tabs and the main style sheet -->
+    <!-- link Stylesheets for the tabs style sheet -->
     <link rel="stylesheet" type="text/css" href="/static/tabs.css">
 </head>
 
+  <div class="w3-card-4 w3-margin w3-white" style="color: #000;">
+      <div class="w3-container">
 <!-- loop through results -->
 {% if results %}
   {% for x in results %}
-  <div class="w3-card-4 w3-margin w3-white">
-      <div class="w3-container">
-        <br>
+
         <center> <h3><b>{{ x.CHEMBLID }}</b></h3> <center>
         <h5> <span class="w3-blue"><td>{{ x.Inhibitor_Name }}</td></span></h5>
 
@@ -24,9 +23,6 @@
     <!-- Tab 1 -->
     <input type="radio" name="tabset" id="tab1" aria-controls="info" checked>
     <label for="tab1">{{ x.Inhibitor_Name }} Properties</label>
-    <!-- Tab 2 -->
-    <input type="radio" name="tabset" id="tab2" aria-controls="annot" checked>
-    <label for="tab2">{{ x.Inhibitor_Name }} Kinase Targets</label>
 
   <!-- Define Tab Panels  -->
     <div class="tab-panels">
@@ -90,44 +86,6 @@
               </tbody>
           </table>
           <br><br><br><br><br><br><br><br><br>
-
-
-
-
-{% for x in inhibitor_results %}
-  <section id="annot" class="tab-panel">
-        <!-- Define table CSS -->
-        <style>
-          table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-          }
-
-          td, th {
-            border: 1px solid #1abc9c;
-            text-align: left;
-            padding: 8px;
-          }
-
-          tr:nth-child(even) {
-            background-color: #f2f2f2;
-          }
-          </style>
-
-          <table>
-
-          <tr>
-            <td><b>NAME</td>
-            <td><b>ChEMBL ID</td>
-          </tr>
-          <tr>
-    <div class="container">
-        <table>
-      <td><a href="/Kinases/{{x.InhibitorRef.Kinase_Target}}">{{ x.InhibitorRef.Kinase_Target }}</a></td>
-    </table>
-  </tr>
-{% endfor %}
 
   </section>
 
